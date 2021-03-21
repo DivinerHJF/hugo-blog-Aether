@@ -1,6 +1,6 @@
 baseURL = "https://divinerhjf.netlify.app/"
 languageCode = "zh-cn"
-title = "Aether"
+title = "Aether's BLOG"
 theme = "Aether"
 
 paginate = 10000
@@ -43,7 +43,7 @@ preserveTaxonomyNames = true
     since = 2017
     author = "Jianfeng.Hao"                           # Author's name
     avatar = "/images/me/avatar.jpeg"           # Author's avatar
-    subtitle = "我会更好，因为我没有停止"         # Subtitle
+    subtitle = "Okay guys class is over ...."         # Subtitle
     cdn_url = ""           # Base CDN URL
     home_mode = "" # post or other
 
