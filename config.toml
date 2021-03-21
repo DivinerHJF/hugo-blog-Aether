@@ -23,7 +23,7 @@ preserveTaxonomyNames = true
 
 [menu]
   [[menu.main]]
-    name = "Blog"
+    name = "Archives"
     url = "/posts/"
     weight = 1
 
