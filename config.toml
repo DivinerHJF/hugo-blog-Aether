@@ -1,7 +1,7 @@
 baseURL = "https://divinerhjf.netlify.app/"
 languageCode = "zh-cn"
 title = "Aether"
-theme = "LeaveIt"
+theme = "Aether"
 
 paginate = 10000
 ArchivePaginate = 10000
