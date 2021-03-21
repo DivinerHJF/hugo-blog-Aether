@@ -61,13 +61,13 @@ preserveTaxonomyNames = true
     license= '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/" target="_blank">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'
 
 [params.social]
-    GitHub = "xxoo"
-    Twitter = "xxoo"
-    Email   = "xxoo"
-    Instagram = "xxoo"
+    GitHub = "https://github.com/DivinerHJF"
+    #Twitter = "xxoo"
+    Email   = "haojianfeng1997@gmail.com"
+    Instagram = "haojianfeng1997"
     Wechat = "/images/me/wechat.png"  # Wechat QRcode image
-    Facebook = "xxoo"
-    Telegram = "xxoo"
-    Dribbble = "xxoo"
-    Medium = "xxoo"
+    #Facebook = "xxoo"
+    Telegram = "Aether_Q"
+    #Dribbble = "xxoo"
+    #Medium = "xxoo"
 
