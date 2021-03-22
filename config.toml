@@ -6,6 +6,8 @@ theme = "Aether"
 paginate = 10000
 ArchivePaginate = 10000
 
+DisqusShortname = "divinerhjf"
+
 enableEmoji = true
 enableRobotsTXT = true
 hasCJKLanguage = true
@@ -51,7 +53,7 @@ preserveTaxonomyNames = true
     autoCollapseToc = true   # Auto expand and collapse toc
 
     google_verification = ""
-   
+
     description = "DivinerHJF's BLOG" # site description
     keywords = "BLOG, Tech, Life" # site keywords
 
