@@ -13,5 +13,7 @@ date: 2014-09-28
 
 
 ```r
+# 参考文件
+install.packages('hms')
 library(hms)
 ```
