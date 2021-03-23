@@ -9,9 +9,11 @@ images:
 
 ---
 
-	This is a bug-fix release with a couple of important fixes (and one enhancement).
+This is a bug-fix release with a couple of important fixes (and one enhancement).
 
 ## Enhancements
+
+- 重点
 
 * Add Page.FirstSection [016dd4a6](https://github.com/gohugoio/hugo/commit/016dd4a69a765061bb3da8490d3cac6ec47a91eb) [@bep](https://github.com/bep) 
 
