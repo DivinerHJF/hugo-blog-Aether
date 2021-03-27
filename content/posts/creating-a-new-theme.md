@@ -1,9 +1,12 @@
 ---
 title: 測試
-author: "Jianfeng Hao"
-tags: ["課題", "Hugo"]
-categories: ["細分類"]
 date: 2014-09-28
+categories: ["数据分析坊"]
+tags: 
+    - 技术
+    - R
+    - apply
+    - 数据操作
 ---
 
 ## 二級標題
