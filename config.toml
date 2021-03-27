@@ -25,17 +25,17 @@ preserveTaxonomyNames = true
 
 [menu]
   [[menu.main]]
-    name = "Archives"
+    name = "🗃️ 归档"
     url = "/posts/"
     weight = 1
 
   [[menu.main]]
-    name = "Categories"
+    name = "🍱 分类"
     url = "/categories/"
     weight = 2
 
   [[menu.main]]
-    name = "Tags"
+    name = "🏷️ 标签"
     url = "/tags/"
     weight = 3
 
