@@ -3,7 +3,6 @@ title: "customLayout：R 语言自由拼图"
 date: 2018-11-10T10:51:49+08:00
 categories: ["数据可视化"]
 tags: 
-    - 技术
     - R
     - customLayout
     - 绘图

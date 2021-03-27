@@ -3,7 +3,6 @@ title: "数据可视化 - formattable 包"
 date: 2018-03-22T14:00:11+08:00
 categories: ["数据可视化"]
 tags: 
-    - 技术
     - R
     - formattable
     - 数据展示

@@ -3,7 +3,6 @@ title: "Linux 探索 01 - Bash Script"
 date: 2020-03-07T18:22:24+08:00
 categories: [江湖百晓生]
 tags:
-    - 技术
     - shell
     - bash
 ---

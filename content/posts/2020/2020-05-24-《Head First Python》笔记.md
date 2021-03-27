@@ -1,9 +1,8 @@
 ---
 title: "《Head First Python》笔记"
 date: 2020-05-24T11:14:03+08:00
-categories: [编程面面观]
+categories: [数据操作坊]
 tags:
-    - 技术
     - python
     - 读书笔记
 
