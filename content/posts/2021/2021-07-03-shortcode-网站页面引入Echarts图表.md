@@ -16,7 +16,7 @@ tags:
 
 [如何在Hugo静态博客中嵌入echarts图表 - Zeqiang Fang | 方泽强](https://zeqiang.fun/post/techstack/echarts/)
 
-{{<echarts charts_id="210703-01" width="426px" height="501px">}}
+{{<echarts charts_id="210703-01" width="100%" height="20rem">}}
 
   {"series":[{
 

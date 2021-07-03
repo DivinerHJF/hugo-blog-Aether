@@ -4,7 +4,7 @@ date = "2014-04-09"
 menu = "main"
 +++
 
-{{<echarts charts_id="210703-01" width="426px" height="501px">}}
+{{<echarts charts_id="210703-02" width="100%" height="26rem">}}
 
   {"series":[{
 
