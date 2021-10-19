@@ -427,18 +427,18 @@ theme = "aether"
       # Waline 评论系统设置
       [params.page.comment.waline]
         # 
-        enable = false
-        serverURL = ""
-        visitor = false
+        enable = true
+        serverURL = "https://blog-commit-api-ky0ab1rc7-aetherhjf.vercel.app/"
+        visitor = true
         emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
         meta = ['nick', 'mail', 'link']
         requiredMeta = []
         login = 'enable'
         wordLimit = 0
         pageSize = 10
-        uploadImage = false
+        uploadImage = true
         highlight = true
-        mathTagSupport = false
+        mathTagSupport = true
         commentCount = true
       # Facebook 评论系统设置
       [params.page.comment.facebook]
