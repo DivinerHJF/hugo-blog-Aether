@@ -1,4 +1,4 @@
-baseURL = "https://example.org/"
+baseURL = "https://aetherhjf.netlify.app/"
 # [en, zh-cn, fr, ...] 设置默认的语言
 defaultContentLanguage = "zh-cn"
 # 网站语言, 仅在这里 CN 大写
@@ -8,6 +8,8 @@ hasCJKLanguage = true
 
 # 更改使用 Hugo 构建网站时使用的默认主题
 theme = "aether"
+
+title = "JianFeng Hao | 郝建锋"
 
 [menu]
   [[menu.main]]
@@ -50,7 +52,7 @@ theme = "aether"
   #  DoIt 主题版本
   version = "0.2.X"
   # 网站名称
-  title = "AetherHJF's BLOG"
+  title = "灿若星河"
   # 网站描述
   description = "这是我的全新 Hugo 网站"
   # 网站关键词
