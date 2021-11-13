@@ -5,6 +5,8 @@ menu = "main"
 comment = false
 +++
 
+{{< music auto="https://music.163.com/#/playlist?id=60198" >}}
+
 ## 我是谁？
 
 我是郝建锋，一个在不断尝试追寻自己，惟愿昂首前行但又经常思绪迷路的小家伙。
