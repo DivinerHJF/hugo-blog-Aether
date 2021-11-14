@@ -5,45 +5,6 @@ menu = "main"
 comment = false
 +++
 
-{{<echarts charts_id="210703-02" width="100%" height="26rem">}}
-
-  {"series":[{
-
-    "type":"gauge","anchor":{"show":true,"showAbove":true,"size":18,"itemStyle":{"color":"#FAC858"}},
-      
-    "pointer":{"icon":"path://M2.9,0.7L2.9,0.7c1.4,0,2.6,1.2,2.6,2.6v115c0,1.4-1.2,2.6-2.6,2.6l0,0c-1.4,0-2.6-1.2-2.6-2.6V3.3C0.3,1.9,1.4,0.7,2.9,0.7z","width":8,"length":"80%","offsetCenter":[0,"8%"]},
-      
-    "progress":{"show":true,"overlap":true,"roundCap":true},
-    "axisLine":{"roundCap":true},
-    "data":[
-      {
-        "value":29,"name":"🏃","title":{"offsetCenter":["-40%","80%"]},"detail":{"offsetCenter":["-40%","95%"]}
-      },{
-        "value":26,"name":"📖","title":{"offsetCenter":["0%","80%"]},"detail":{"offsetCenter":["0%","95%"]}
-      },{
-        "value":20,"name":"👁️","title":{"offsetCenter":["40%","80%"]},"detail":{"offsetCenter":["40%","95%"]}
-      }],
-      "title":{"fontSize":14},
-      "detail":{
-        "width":40,"height":14,"fontSize":12,"color":"#fff","backgroundColor":"auto","borderRadius":3,"formatter":"{value}%"
-      }
-    }]
-  }
-
-{{</echarts>}}
-
-
-## 网站导航
-
-本站目前采用 Hugo 作为后台系统，我希望这是我的最后一站。此前我曾走过很多地方：2004 年我开始在博客中国（后来改名为 bokee）写博客，后来改到 blog.com.cn，再后来到 MSN Space 写英文，再后来自己用 Bo-blog 建站，两年后再次换系统为如今流行的 WordPress，三年后我到了码农的乐土，Jekyll，一个以纯文本文件形式写博客的系统，五年后我越来越不能忍受 Jekyll 之慢（本地预览动不动要花 30 秒），于是投奔了以速度见长的 Hugo，并写了一个 R 包装 blogdown。
-
-博客模板是我从一个小巧的静态网站编译工具 Ivy 那里抄来的；为了表达对原作者使用 “无许可证”（Unlicense）的敬意，我仔细着把它的样式整理成了一个 Hugo 模板 hugo-ivy，并且同样使用无许可证；这个许可证的意思是你特么想拿这个软件干什么就干什么，是删是改是烹煮蒸炸，敬请随意，都与我无关。所有页面都基于 Markdown 创建，源文件可以在 Github 上找到；如果你发现任何页面有任何错误，可以点击菜单栏上的编辑链接编辑该文的源文件，并在 Github 上向我提交一个合并请求。对了，本站的日志文章可以用键盘上的左右箭头导航，如果你要从盘古开天辟地看起，就到第一篇文章开始一步步按右箭头吧。因为搬过几次家，所以偶尔可能会遇到格式乱糟糟的文字或图片缺失，若有此类情况，请帮忙给我留言提醒一下。本站在苹果系统下浏览体验最佳（有漂亮的宋体和楷体）；建议不要用 IE 浏览器；为了最赏心悦目的阅读体验，我强烈建议安装思源宋体。
-
-## 一些须知
-
-本列表根据下面的历史留言整理，供新来者参考。本站采用了两套留言系统：一套是 Disqus，在国内需要翻墙才能使用；另一套是 Utterances，需要用 Github 账号登录。
-
----
 
 数据科学笔记： https://divinerhjf.github.io/
 
