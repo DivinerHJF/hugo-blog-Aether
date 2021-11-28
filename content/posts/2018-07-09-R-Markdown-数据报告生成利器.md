@@ -1,7 +1,7 @@
 ---
-title: "R Markdown: 数据报告生成利器"
+title: "R 包 | R Markdown：数据报告生成利器"
 date: 2018-07-09T22:44:09+08:00
-categories: [数据可视化]
+categories: [数据流水线]
 tags:
     - 技术
     - R Markdown

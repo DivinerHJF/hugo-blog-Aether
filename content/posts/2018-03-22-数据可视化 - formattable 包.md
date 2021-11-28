@@ -1,7 +1,7 @@
 ---
-title: "数据可视化 - formattable 包"
+title: "R 包 | formattable：格式化输出数据表"
 date: 2018-03-22T14:00:11+08:00
-categories: ["数据可视化"]
+categories: ["数据流水线"]
 tags: 
     - R
     - formattable

@@ -1,7 +1,7 @@
 ---
-title: "《Head First Python》笔记"
+title: "Py 库 |《Head First Python》笔记"
 date: 2020-05-24T11:14:03+08:00
-categories: [数据操作坊]
+categories: [数据流水线]
 tags:
     - python
     - 读书笔记

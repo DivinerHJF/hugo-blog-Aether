@@ -1,5 +1,5 @@
 ---
-title: "ShortCode - 网站页面引入 Echarts 图表"
+title: "前端 | ShortCode：网站页面引入 Echarts 图表"
 date: 2021-07-03T16:36:59+08:00
 categories: [江湖百晓生]
 tags:

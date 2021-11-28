@@ -1,7 +1,7 @@
 ---
-title: "stargazer：R 语言输出统计表"
+title: "R 包 | stargazer：R 语言输出统计表"
 date: 2018-10-30T16:20:03+08:00
-categories: [数据可视化]
+categories: [数据流水线]
 tags: 
     - 技术
     - R

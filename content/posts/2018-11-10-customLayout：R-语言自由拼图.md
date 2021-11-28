@@ -1,7 +1,7 @@
 ---
-title: "customLayout：R 语言自由拼图"
+title: "R 包 | customLayout：R 语言自由拼图"
 date: 2018-11-10T10:51:49+08:00
-categories: ["数据可视化"]
+categories: ["数据流水线"]
 tags: 
     - R
     - customLayout

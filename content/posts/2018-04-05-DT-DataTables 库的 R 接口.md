@@ -1,7 +1,7 @@
 ---
-title: "DT：DataTables 库的 R 接口"
+title: "R 包 | DT：DataTables 库的 R 接口"
 date: 2018-04-05T15:00:11+08:00
-categories: ["数据可视化"]
+categories: ["数据流水线"]
 tags: 
     - R
     - DT
