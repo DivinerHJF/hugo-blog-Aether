@@ -36,7 +36,7 @@ comment = false
 
 {{</echarts>}}
 
-<table>
+<table cellspacing="0" cellpadding="4"><tbody>
   <tr>
     <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/github_2021.svg" border=0></td>
     <td rowspan="2"><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/grid.svg" border=0></td>
@@ -44,7 +44,10 @@ comment = false
   <tr>
     <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/year_2021.svg" border=0></td>
   </tr>
-</table>
+  <tr>
+    <td align="center" colspan="2"><a href="https://aether-running-page.vercel.app/" target="_blank">我的跑步页面</a></td>
+  </tr>
+</tbody></table>
 
 <script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=favorite&amp;picsize=small&amp;show=collection&amp;n=10&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=5"></script>
 
