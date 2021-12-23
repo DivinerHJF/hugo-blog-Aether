@@ -36,7 +36,7 @@ comment = false
 
 {{</echarts>}}
 
-<script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=favorite&amp;picsize=small&amp;show=collection&amp;n=8&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=2"></script>
+<script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=favorite&amp;picsize=small&amp;show=collection&amp;n=12&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=6"></script>
 
 我自己经常陷入杂而不精的隐性舒适圈，这部分源于我喜爱接触并学习一切能够触及的新事物与新发现，但常常限于浅尝辄止，这就常导致会出现一组爱好过了三分钟热度期，新旧一起全军覆灭的惨状，细究起来这常源于地基不牢且心思过散，这种情况下一经时光冲刷就垮台也不足为奇。
 
