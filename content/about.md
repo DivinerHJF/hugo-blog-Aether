@@ -29,7 +29,7 @@ comment = false
       }],
       "title":{"fontSize":14},
       "detail":{
-        "width":40,"height":14,"fontSize":12,"color":"#fff","backgroundColor":"auto","borderRadius":3,"formatter":"{value}%"
+        "width":35,"height":14,"fontSize":12,"color":"#fff","backgroundColor":"auto","borderRadius":3,"formatter":"{value}%"
       }
     }]
   }
@@ -38,11 +38,11 @@ comment = false
 
 <table cellspacing="0" cellpadding="4"><tbody>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/github_2021.svg" border=0></td>
-    <td rowspan="2"><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/grid.svg" border=0></td>
+    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/github_2021.svg" border=0></td>
+    <td rowspan="2"><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/grid.svg  " border=0></td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/da624e2168af2b6543d35298ac9c6981e5fe4b73/assets/year_2021.svg" border=0></td>
+    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/year_2021.svg" border=0></td>
   </tr>
   <tr>
     <td align="center" colspan="2"><a href="https://aether-running-page.vercel.app/" target="_blank">我的跑步页面</a></td>
@@ -51,14 +51,31 @@ comment = false
 
 <script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=favorite&amp;picsize=small&amp;show=collection&amp;n=10&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=5"></script>
 
+<table width="300" cellspacing="0" cellpadding="4"><tbody>
+  <tr>
+    <td width="100" rowspan="2"><a href="/series/" target="_blank"><img src="https://lh3.googleusercontent.com/mgKykiTyf4FVSspEb-8hs1HZ8XINLK3z_5gj8UZa_HJqdmqHvOz6gwBgB9ZewTwTlQcb8gfiTgUY7pJG_UyfnhOZCU5CmcF8QtyUur4SzHhUPXod4F7u5is5xp-cABCGwbaIrARatDVSx9-kbmNo6rOy_3r-qFQ7LPaDfxeWBwtQkNs2RjJEk9o0TGm-EYrJPqp1TYk3PaNtukD2QrXy3Ejk72GJbbq0kMXPjgSjvAHmRUz10m0QsiQX8AdtPipV5MaOvylSianfQ3SfI1IUlNcfOZR6ydLPoudcHV2rHKqpG4ZVIyps9YEeshI3hcQa_RRhvrhhYOj4NkVpcltgHO1tr0tg7LtTkV35F2CFIVw_3y4oASak2o83V3zv34wQOoE5mupMUlBf9Od9CvdLhlIvnszaO66YhIL1SaovywpZAHdJmdq9SmpPpRKZ-pDBphlz7ACvHj2ykwZ6ZRuelSdumsubXlR7IiAr60Iml7t0xZ87SPw6AymRjR7QNmR2X0eCVPbKGkcjiVS3j0w23xP5F7rSOBrpvMp23WmepsARV_QxN4zxx4Bx61MA57klT68NQ12vuxtMsPyi--tdQVP1sat_-6xSRM1Qoba6J8KhU2WcYXFxLW2klSzn38zVniq5fBohy6KoUK8Ki-ontUCBzmw6qilGUE1MmNfkSUXBbAVipupTtLWPceBmmMyszilbst2Oars0IenMK7Fk2xc=w524-h1048-no?authuser=0" border=0></a></td>
+    <td width="100" colspan="2"><a href="/posts/" target="_blank"><img src="https://lh3.googleusercontent.com/X6us0Lve9SRBb5wKdt_BKqSLLxzlGukExPaeKentZYkCyc2W5Soa619BWWwEF-jY0QsJZTAGDzixPbaAj-EOmRXL4c_8NJKXLkFJ57JtM154uj6CFF0RGTIhAlmYXGwxfZuiKrdkPgDaVPYwiSHpCd4SUQTFHA_QWC-Fyl2JtG6YIjCR_P5n5XZJLpu8ZH_kCJCiLj7G8lNtZebjsejKCqmbcqtimByyKAVt2riZ8yz8JCPtLuELtdV-c_W3Kt2SNmKwMT9IoomiXtCbnuh5B9GnzuJLtfJTVG4D0OkFTsmk8899A8ruhq--6pIkjEvQZ_u5z1VCI46ZYXq7SEpYTC17APxDUgbwpaU_U9qCbypJLjkgQdZN88VqFBiSoqpI3w_Y4el3YUYW6FJ8uw8-j25sqFw3Ifk3-uo5zUaTeL9NUMhHb1a4MeBtKtL4QtblMGvxFwUFBefwGfwdWqDiJurcEbAygvKYBsOEeuPllWrky48FXO13ATDOl1cRcvT5DGAfl-46u41i-dv91GOYZ0BKQti84zplEjZKs8DQDaQ_FkT32lUWdUDGOywJQJjmFcpqv1GmESJMgTwH8hsMl_JHN0TK_X1LLF3ejj0df8dDX75MxBaXaskZEBa6wkbAxTvfsmlyn6X3sa0rbD6pKKOGRwu7-WtJ8S-v32unDA9x3LWLxhOr6vrhtRZxr9GnPlsQiEDF0vbwkVie-yz-48E=w1366-h683-no?authuser=0" border=0></a></td>
+  </tr>
+  <tr>
+    <td width="100"><a href="/about/" target="_blank"><img src="https://lh3.googleusercontent.com/QPFxDw5bLF473IRL3JXtHT5YsZWU5ESoxkgUIEwXf5ZgZnWsn1mXFUpk-l97pBTlnATvCOU4VOteBHTAb7iP-YVHZ3FNC9kdHC16hrcsv95e46JJJHhfjBhV2WyM61wkKFPZbUOLmP23t78cFnTVo77LGCtRRy2iyPDuvfYm3ee_wxJ5EC-Oog5vGNRr_8lqePiF6rcdC8ZQjUmgLMn6CZihi4YfiL5g4y9JvYJw4e89QFc8E5fRRd-3I-t881ILX9pnF4kUei1GvVMuUBiCcSD9Gp_gBsimGkY6cWbgO0GpFaM0PbkFOj7tK138YwPLLgTlsJeLKaU92QrvE6wqXoicPmAmwsakMmlHlSYi0QMtamFuXOQO5bxGzopmAQCtPzDbYZrNzQsUW-t-g70ujsTGUh37N0rFMDdLH_SCENvaf2dhPOxBzlYaUT5FokwUN2isSnkxSPgvBQOrU_6zPIMewbQgqZfTNT6Z3mZSn_QMx8kAEuux-VIMAGzcce7a_W5-bpC6pYmfU8dqZL_HUNGEGHJgKDxpnvljJw0JsBq_CTcPUFngQYRY5kIMKXj8IbWgp2Kchyv_tA2gTtKFGpmiVJIJztmJHL0SjqIqkIdEBLpw6v5yesGK20c7ned-HVQ1mLRI0KXvG0MRtdptH1kdMQRDQZv4vbih7cGc_iM24rPg6koztS8pWFJQB2vk18LW78jofz_MQ-viI0fdW9U=s683-no?authuser=0" border=0></a></td>
+    <td width="100" rowspan="2"><a href="/categories/" target="_blank"><img src="https://lh3.googleusercontent.com/JVkUjolmCOwTUtEM08I7jm5Tnkfa1c2rNRB5Ka2MfKkeafq31goNcm_TO6TFbYtLtoKJotuWobTZ3Oeq1iBuzQHNeegfbXbjKKwAIYG2lM8NMbBr0PUYCvs2MOg_Khzf6IhRdWEcJLtYm7n0NQXqtcbunC1Q0FpienVu986RW4nJ0vKNqiid0cPCqW4rzTuTlN8ZEK4KDAWvvAmOpci2Kd8ygfG-1eG4UadDMQA1In6f7upHdj4p3D-oMz9ATOeHkzh7OC2YRK3YGyLhoAOSudXFgHPPtFq4gT0I4WhlSVwZYzz9XUdtSma8dOMjuGlQVczk-kU96I8xCN9JlHefNYGZeQejJp6T-AKYh73J13WM42gtIKCJuwg4UGfJgiPz7nFBgw7C85Q6OxnAVD38I5_57mXLs3mAE6qkRxZWutscuY0mSkCNMiNP6yCHpr0U2NWzfscyzNrhPUsBJ9TfA9sFLR58WRiRUG93PR5UxUrel8D8PwOaGf-tXRQNlu8qvBPqZtiilnP2RrLNkTws1E6qz7kuEiEcdFDc24M0E1xNS9XBecCcjnK2WEjz8Ro_OQk99qiHOVkge801k431RFES6Om__CKv6uuVn47TdF0mLF16vkExTvgHsZ_fjbDB9PcixnXVr5EkYD5T0SdBgKda5aZ5K3orgzISlxi2qq5SMZkN4SNaf8XLGGrtIh9m6rvi76g2ZOfYgGtp9S1pcno=w524-h1048-no?authuser=0" border=0></a></td>
+  </tr>
+  <tr>
+    <td width="100" colspan="2"><a href="/series/朝花夕拾/" target="_blank"><img src="https://lh3.googleusercontent.com/5BHLC1O8pGjEps9lOe27nssiObGKo7C1Osu7Js7vkYUF4TNg1JjvngwX72rXxolXGITjQVdb8f60fF6Xfvww_ia7Rc8pnQMcU4PUJE4AMvPTxbzIv8bG0EfzGwM3iVk5uuVsWZXlR5MTq1w_HjIL6W4AjCktpekskQDMGxPHW3LyEhfjl3R6n39Q-ve0GpnKuhvsPObKv2rrtqRLOXUEkKpTm8nMchicrrgi8pTH4CQqhSNB-clqboD7imlRxMAxHjzFcrE1OO0DYalyStfdFZ75sb07HI2-TJpVMyg5frzFUXabDEtsIsmZiADTfvng6iLtVKju0HAbEphHJGQd_VFj5cJCSMpUuu9KWB3sJVEugeKOxGojeZnSOsXHIO1aXn5YcdXPJC7zKR2fuVl_9cW51TzwDBjKBsogCpeF6BpQfcGH6ZAA06lJ5XvKiVZWoUxzzWqLf8KhKrpE1WtFqnAjRbUXOaVLcr02CTvnWIJ7PuVfilS45Vql818pxOLSOPJKsA5e7jOidn1MjQHETzVIM3aGPlSa2AGa1IgZepoV_38HBG0EexkFdXZbmWOtFmklwOQT1zmQDr_268VL7h-n-J8yOpZrSLPOap1i0P89s_RhrQncC9u-qr2IPtNDhUIk2QCTzAQrO_bRPrnFwaXXt9jjjbJjTbpo0rqC6Ju-mnRSN7BGtBF11Mhl1eBSyca35H-Mhh0JKPLXWGmEGPE=w1366-h683-no?authuser=0" border=0></a></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3"><a href="https://aether-running-page.vercel.app/" target="_blank">我的网站地图</a></td>
+  </tr>
+</tbody></table>
+
 我自己经常陷入杂而不精的隐性舒适圈，这部分源于我喜爱接触并学习一切能够触及的新事物与新发现，但常常限于浅尝辄止，这就常导致会出现一组爱好过了三分钟热度期，新旧一起全军覆灭的惨状，细究起来这常源于地基不牢且心思过散，这种情况下一经时光冲刷就垮台也不足为奇。
 
 具体一点儿，以强身健体这一项来讲，一个人常常喜欢多项运动，各类健身、无氧、球类等层出不穷，如果选择开始练习，往往一周内还充满激情，但渐渐会松弛懈怠，再不问津。这种事情有也常常出现在我的身上，我就想了个笨方法来应对，我想——对我而言，我做这些锻炼想要的效果就是想体验那种年轻身体所迸发的活力，之前做那很多很复杂的动作于我是在做什么呢？是为我这个目标服务吗？还是自嗨自慰、惶惶乱寻及潜意识的炫耀追逐之心多一些呢？如果是这样的话，也无怪乎在这些事情上会常常半途而废了，毕竟时间与坚持最能检验一个人的选择与其本性是否契合。于是，我做的选择就是回归我的本心，对于这副身体我想要的很简单，我不追求那流动美感的肌肉、我不羡慕那瞬时迸发的力量，我追求的只是少年光景里田间打闹、四处疯跑、上树下水，仿佛永远不觉疲惫的当初的自己。于是，一切都简单点儿，一项长久的坚持就从跑步开始吧，踏着时间的路我逐渐体验到了与少年身影的重合，这种体验一来，其他运动如游泳、健身当作偶尔的调味反而自己找上门来，因为对于这一切来说，身体的活力就是它们的地基，随着我不再追逐各种迷人眩光，回归初始，这些反而是能够坚持的更久了，因为我的根基是稳定的，我的身体是有活力的，它们依托并发展于此，互补相成。
 
-顺着这种思路，我对自己的爱好做了梳理，同时也根据梳理结果初步定下了网站的基本架构，之所以把这些在网络上记录，也算是个小激励了（毕竟谁不喜欢亲手搭建一间属于自己的小屋呢😊），当然记录这些不能成为负担，要合理自然的进行，否则也会很难进行下去的 >_<。在 [关于 >> 人生进度表](./#%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA) 中可以看到，我确定了三项要坚持的目标——跑步、阅读和记录，分别对应身体、精神和人生：
+顺着这种思路，我对自己的爱好做了梳理，同时也根据梳理结果初步定下了网站的基本架构，之所以把这些在网络上记录，也算是个小激励了（毕竟谁不喜欢亲手搭建一间属于自己的小屋呢😊），当然记录这些不能成为负担，要合理自然的进行，否则也会很难进行下去的 >_<。在 [关于 >> 人生进度表](./#%E7%BD%91%E7%AB%99%E5%AF%BC%E8%88%AA) 中可以看到，我确定了三项要坚持的目标——跑步、观察和记录，分别对应身体、精神和人生：
 
 - [跑步](https://aether-running-page.vercel.app/)：用运动手表来记录基础数据，自动上传至 Strava，通过 [yihong](https://github.com/yihong0618/running_page) 提供的思路将轨迹和基本信息进行汇总记录。
-- [观察]()：用书伴做摘录文字、Telegram 存档播客影音，对深有感触的书影音在网站上对自己当时的感想进行真情实感的归结。
+- [观察](https://www.douban.com/people/Aether_Q/)：书影音，在有限的时光中追寻与仰望那无限的可能性。
 - [记录](../series/%E6%9C%9D%E8%8A%B1%E5%A4%95%E6%8B%BE/)：每日记录一下当天值得记下的一件小事儿、一个瞬间或者一个画面。
 
 通过坚持跑步保持`身体活力`，持续观察促进`精神更新`，每日记录串联`人生轨迹`，这三个目标基本就是我目前归结出的我所喜爱并渴望坚守的。通过坚持这三项相对简单的活动，将身体、精神和人生的地基打牢，其他诸如健身运动、知识学习及总结输出等一系列活动也就能够层层垒上，最终搭成自己的坚实小屋 ^\_^!!
