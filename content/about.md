@@ -49,7 +49,7 @@ comment = false
   </tr>
 </tbody></table>
 
-<script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=favorite&amp;picsize=small&amp;show=collection&amp;n=10&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=5"></script>
+<script type="text/javascript" src="https://www.douban.com/service/badge/Aether_Q/?selection=latest&amp;picsize=small&amp;show=collection&amp;n=10&amp;hidelogo=on&amp;cat=drama%7Cmovie%7Cbook%7Cmusic&amp;columns=5"></script>
 
 <table width="300" cellspacing="0" cellpadding="4"><tbody>
   <tr>
