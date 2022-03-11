@@ -49,7 +49,7 @@ url = "/tags/"
 weight = 4
 [[menu.main]]
 identifier = ""
-name = "周報"
+name = "周报"
 post = ""
 pre = "📜"
 title = "着笔烙印下时光印记"
