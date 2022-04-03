@@ -39,7 +39,7 @@ comment = false
 
 <table cellspacing="0" cellpadding="4"><tbody>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/github_2021.svg" border=0></td>
+    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/github_2022.svg" border=0></td>
     <td rowspan="2"><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/grid.svg  " border=0></td>
   </tr>
   <tr>
