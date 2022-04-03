@@ -129,7 +129,7 @@ font_add[_google](
 
 像上图中那些小人儿背后代表的其实就是一个个英文字母，只是在这种字体下那些枯燥的 ABC 变成了有趣的各种形式！
 
-在 [fontspace](https://www.fontspace.com/category/people)、[dafont](https://www.dafont.com/search.php?q=people) 等网站上提供了超级多有意思的字体，还等什么，快快行动吧，让你的图表活起来吧！🤗
+像 [fontspace](https://www.fontspace.com/category/people)、[dafont](https://www.dafont.com/search.php?q=people) 等网站，有提供超级多有意思的字体，还等什么，快快行动吧，让你的图表活起来吧！🤗
 
 ---
 
