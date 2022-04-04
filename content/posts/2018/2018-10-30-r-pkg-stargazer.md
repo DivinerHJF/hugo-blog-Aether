@@ -2,12 +2,13 @@
 title: "R 包 | stargazer：R 语言输出统计表"
 date: 2018-10-30T16:20:03+08:00
 categories: [数据流水线]
-tags: 
-    - 技术
-    - R
-    - stargazer
-    - 可视化
-    - 统计表
+series: [R 包历险记]
+tags:
+  - 技术
+  - R
+  - stargazer
+  - 可视化
+  - 统计表
 ---
 
 <center>
@@ -21,13 +22,9 @@ tags:
 
 <!--more-->
 
-
-
 ## 简介
 
-R 包 `stargazer` 可以将 **数据统计汇总** （格式可以为数据框、向量和矩阵等）和 **统计模型结果** 输出为标准统计表格式的 `LATEX` 、`HTML` 和 `ASCII` 格式的字符文本，***将其复制到对应的软件中*** 即可生成标准的统计表，当然也可以配合 `rmarkdown` 使用直接渲染输出为表格，更加方便直接。
-
-
+R 包 `stargazer` 可以将 **数据统计汇总** （格式可以为数据框、向量和矩阵等）和 **统计模型结果** 输出为标准统计表格式的 `LATEX` 、`HTML` 和 `ASCII` 格式的字符文本，**_将其复制到对应的软件中_** 即可生成标准的统计表，当然也可以配合 `rmarkdown` 使用直接渲染输出为表格，更加方便直接。
 
 ## 安装及加载
 
@@ -42,12 +39,9 @@ library(stargazer)
 stargazer 包的输出结果是相应格式的，例如输出 LATEX 格式，可以直接将结果粘贴进在线编辑器 [Overleaf](https://www.overleaf.com) 中输出表格。下文直接将结果以对应表格的形式展示。
 </p></div>
 
-
 ---
 
-
 ## 数据统计汇总
-
 
 ### 统计汇总数据
 
@@ -58,7 +52,6 @@ stargazer(attitude)
 ```
 
 ![统计汇总数据](http://static.datartisan.com/upload/attachment/2016/12/qCOW9qcQ.png)
-
 
 ### 原始数据展示
 
@@ -73,7 +66,6 @@ stargazer(attitude[1:4,], summary = FALSE, rownames = TRUE)
 
 可以看到，`attitude` 数据集中包括 `rating`、`complaints` 等多个变量，数据展示形式为 **三线表** 。
 
-
 ### 列联表
 
 `stargazer ` 也可以用来展示向量、矩阵或者数据框的内容。在这里我们建立了 `attitude` 数据集中变量 `rating`、`complaints`、`privileges` 的相关系数矩阵，并予以展示：
@@ -85,11 +77,7 @@ stargazer(correlation.matrix, title = "Correlation Matrix")
 
 ![矩阵展示](http://static.datartisan.com/upload/attachment/2016/12/cC2cR66K.png)
 
-
-
 ---
-
-
 
 ## 统计模型结果
 
@@ -112,15 +100,13 @@ stargazer(linear.1, linear.2, probit.model, title = "Results", align = TRUE)
 
 ![回归表](http://static.datartisan.com/upload/attachment/2016/12/Cyqs7adZ.png)
 
-
-
 #### 回归表的修饰
 
 为了使表格更加标准，我们还可以通过调整参数进行以下操作：
 
 - 删除表中的空白行：`no.space`
 - 移除不关心的统计量：`omit.stat`
-- 修改因变量和自变量的名称：`dep.var.labels` 、 `covariate.labels` 
+- 修改因变量和自变量的名称：`dep.var.labels` 、 `covariate.labels`
 
 ```R 回归表的修饰
 stargazer(linear.1, linear.2, probit.model, title = "Regression Results",
@@ -140,10 +126,6 @@ omit.stat = c("LL", "ser", "f"), no.space = TRUE)
 >
 > 3. 使用`no.space`参数将输出表格中的空行删去。
 
-
-
-
-
 #### 展示置信区间
 
 - 设置是否展示置信区间：`ci`
@@ -160,8 +142,6 @@ omit.stat = c("LL","ser","f"), ci = TRUE, ci.level = 0.90, single.row = TRUE)
 
 ![展示置信区间](http://static.datartisan.com/upload/attachment/2016/12/rUe11IM4.png)
 
-
-
 #### 其他修饰功能
 
 > 控制自变量展示的顺序：`order`
@@ -176,8 +156,6 @@ keep.stat = "n", ci = TRUE, ci.level = 0.90, single.row = TRUE)
 
 ![其他修饰功能](http://static.datartisan.com/upload/attachment/2016/12/u0K7suc0.png)
 
-
-
 #### 控制输出格式
 
 可以使用 `type` 参数控制以 `ASCII` 、`text`、`html`、`latex` 格式输出，默认为`LATEX` 格式。
@@ -185,13 +163,11 @@ keep.stat = "n", ci = TRUE, ci.level = 0.90, single.row = TRUE)
 ```R 控制输出格式
 stargazer(linear.1, linear.2, type = "text", title = "Regression Results",
 dep.var.labels = c("Overall Rating", "High Rating"),
-order = c("learning", "privileges"), 
+order = c("learning", "privileges"),
 keep.stat = "n", ci = TRUE, ci.level = 0.90, single.row = TRUE, header = F)
 ```
 
 ![控制输出格式](http://static.datartisan.com/upload/attachment/2016/12/gOA9wyCN.png)
-
-
 
 #### 自定义统计量
 
@@ -208,39 +184,34 @@ column.labels = c("default", "robust"))
 
 ![自定义统计量](http://static.datartisan.com/upload/attachment/2016/12/PC8L8NoB.png)
 
-
-
 ### 支持的模型
 
 目前 `stargazer` 支持以下模型结果的展示：
 
 > aftreg (eha), arima (stats), betareg (betareg), binaryChoice (sampleSelection), bj (rms), brglm (brglm), censReg (censReg), coeftest (lmtest), coxph (survival), coxreg (eha), clm (ordinal), clogit (survival), cph (rms), dynlm (dynlm), ergm(ergm), errorsarlm (spdev), felm (lfe), gam (mgcv), garchFit (fGarch), gee (gee), glm (stats), Glm (rms), glmer (lme4), glmrob(robustbase), gls (nlme), Gls (rms), gmm (gmm), heckit (sampleSelection), hetglm (glmx), hurdle (pscl), ivreg (AER), lagarlm (spdep), lm(stats), lme (nlme), lmer (lme4), lmrob (robustbase), lrm (rms), maBina (erer), mclogit (mclogit), mlogit (mlogit), mnlogit (mnlogit), mlreg (eha), multinom (nnet), nlme (nlme), nlmer (lme4), ols (rms), pgmm(plm), phreg (eha), plm (plm), pmg (plm), polr (MASS), psm (rms), rem.dyad (relevent), rlm(MASS), rq (quantreg), Rq (rms), selection (sampleSelection), svyglm (survey), survreg (survival), tobit (AER), weibreg (eha), zeroinfl (pscl), as well as from the implementation of these in zelig. In addition, stargazer also supports the following zelig models: “relogit”, “cloglog.net”, “gamma.net”, “probit.net” and “logit.net”.
 
-
-
 ### 支持的模板
 
-`style` 参数可以用来选择统计表的展现形式，你可以通过  `?stargazer` 查看具体参数的设置来获取具体支持的格式，目前支持的期刊统计图格式有 `American Economic Review`、 `Quarterly Journal of Economics`  等。
-
+`style` 参数可以用来选择统计表的展现形式，你可以通过 `?stargazer` 查看具体参数的设置来获取具体支持的格式，目前支持的期刊统计图格式有 `American Economic Review`、 `Quarterly Journal of Economics` 等。
 
 ## 结合 rmarkdown 使用
 
-~~~r 代码格式
+````r 代码格式
 ```{r, results='asis'}
 stargazer(model, header = F)
 ```
-~~~
+````
 
 > **注意事项：**
+>
 > - 要加上 `results='asis'` 保证输出的是表格，而不是 LATEX 文本；
 > - 参数 `align` 失效，不能使用；
 > - 加上参数 `header=FALSE`，避免输出关于包作者的一些文本信息。
 
-
 ## 致谢
 
-
 > ### 参考文章
-> * [stargazer.pdf](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
-> * Hlavac, Marek (2018). stargazer: Well-Formatted Regression and Summary Statistics 
+>
+> - [stargazer.pdf](https://cran.r-project.org/web/packages/stargazer/vignettes/stargazer.pdf)
+> - Hlavac, Marek (2018). stargazer: Well-Formatted Regression and Summary Statistics
 >   Tables. R package version 5.2.2. https://CRAN.R-project.org/package=stargazer

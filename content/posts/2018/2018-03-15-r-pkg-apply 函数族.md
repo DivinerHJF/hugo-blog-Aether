@@ -2,10 +2,11 @@
 title: "R 包 | apply 函数族：向量化操作数据框"
 date: 2018-03-15T12:19:00+08:00
 categories: [数据流水线]
-tags: 
-    - R
-    - apply
-    - 数据操作
+series: [R 包历险记]
+tags:
+  - R
+  - apply
+  - 数据操作
 ---
 
 R 作为一种向量化的编程语言，一大特征便是以向量计算替代了循环计算，使效率大大提升。
@@ -13,28 +14,32 @@ R 作为一种向量化的编程语言，一大特征便是以向量计算替代
 `apply` 函数族正是为解决数据循环处理问题而生的 —— 面向不同数据类型，生成不同返回值的包含 8 个相关函数的函数族。
 
 <br>![apply函数.PNG](https://blog-1255524710.cos.ap-beijing.myqcloud.com/cover/apply函数.PNG)
+
 <!--more-->
 
 ## 为何要用 apply？
-在使用 R 时，要尽量用 array 的方式思考，避免 for 循环，写过多的 for 循环代码，最后把 R 代码写的跟 C 似得说明你没有进入 R 的思考方式，是一种费力不讨好的行为。那么不用循环怎么实现迭代呢？apply函数族是一把利器，它不是一个函数，而是一族功能类似的函数。
+
+在使用 R 时，要尽量用 array 的方式思考，避免 for 循环，写过多的 for 循环代码，最后把 R 代码写的跟 C 似得说明你没有进入 R 的思考方式，是一种费力不讨好的行为。那么不用循环怎么实现迭代呢？apply 函数族是一把利器，它不是一个函数，而是一族功能类似的函数。
 
 <br>
 
 ---
 
 ## 语法详解
+
 ### apply
+
 ```r apply-函数定义：在 X 上，沿 margin 方向，依次调用 FUN
 apply(X, margin, FUN, ...)
 ```
 
 > **参数列表：**
 > X：数组、矩阵、数据框
-> margin：按维度运算，1表示按行，2表示按列，c(1,3)表示第1、3维
+> margin：按维度运算，1 表示按行，2 表示按列，c(1,3)表示第 1、3 维
 > FUN：要使用的函数
 
-
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-矩阵按列求和
 > mat <- matrix(1:12, 3, 4)
 > mat
@@ -76,12 +81,14 @@ apply(X, margin, FUN, ...)
 5  5 10
 
 > apply(data, 2, mean)
-x1 x2 
- 3  8 
+x1 x2
+ 3  8
 ```
 
 ---
+
 ### tapply
+
 ```r tapply-函数定义：按 INDEX 值分组，相同值对应下标的 X 中的元素形成一个集合，应用到 FUN
 tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
 ```
@@ -90,9 +97,10 @@ tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
 > X：向量、数组
 > INDEX：用于分组的索引
 > FUN：要使用的函数
-> simplify : 是否数组化，当值TRUE时，输出结果按数组进行分组输出
+> simplify : 是否数组化，当值 TRUE 时，输出结果按数组进行分组输出
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-当FUN为NULL，返回分组的结果，返回值中相等的元素所对应的下标属于同一组
 > x <- 1:6
 > INDEX <- c('a','a','b','c','c','c')
@@ -102,8 +110,8 @@ tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
 
 ```r eg2-向量按 INDEX 分组求和
 > tapply(x, INDEX, sum)
- a  b  c 
- 3  3 15 
+ a  b  c
+ 3  3 15
 ```
 
 ```r eg3-矩阵按 INDEX 分组求均值
@@ -120,12 +128,14 @@ tapply(X, INDEX, FUN = NULL, ..., simplify = TRUE)
 > tapply(mat, INDEX)
  [1] 1 1 1 1 1 2 2 2 2 2
 > tapply(mat, INDEX, mean)
-1 2 
-3 8 
+1 2
+3 8
 ```
 
 ---
+
 ### lapply
+
 ```r lapply-函数定义：在 X 上逐个元素调用 FUN, 返回和 X 等长的 list 作为结果集
 lapply(X, FUN, ...)
 ```
@@ -135,6 +145,7 @@ lapply(X, FUN, ...)
 > FUN：要使用的函数
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-计算 list 中的每个 KEY 对应数据的均值
 > lst <- list(a=1:10, b=seq(0,7,2), c=c(2,5,8))
 > lst
@@ -181,7 +192,9 @@ $x2
 ```
 
 ---
+
 ### rapply
+
 ```r rapply-函数定义：递归版lapply，对list遍历直至无list，最终非list元素若类型是classes参数指定的类型，则调用FUN
 rapply(list, f, classes = "ANY", deflt = NULL,how = c("unlist", "replace", "list"), ...)
 ```
@@ -189,14 +202,16 @@ rapply(list, f, classes = "ANY", deflt = NULL,how = c("unlist", "replace", "list
 > **参数列表：**
 > list：列表
 > f：要使用的函数
-> classes： 匹配类型, ANY为所有类型
+> classes： 匹配类型, ANY 为所有类型
 > deflt: 非匹配类型的默认值
-> how: 3种操作方式，
-> - replace：则用调用f后的结果替换原list中原来的元素；
-> - list：新建一个list，类型匹配调用f函数，不匹配赋值为deflt；
-> - unlist：执行一次unlist(recursive = TRUE)操作
+> how: 3 种操作方式，
+>
+> - replace：则用调用 f 后的结果替换原 list 中原来的元素；
+> - list：新建一个 list，类型匹配调用 f 函数，不匹配赋值为 deflt；
+> - unlist：执行一次 unlist(recursive = TRUE)操作
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-遍历 list 分组求和
 > lst <- list(a=list(aa=c(1:5), ab=c(6:10)), b=list(ba=c(1:10)))
 > lst
@@ -220,13 +235,14 @@ $b$ba
 [1] 55
 
 > rapply(lst, sum, how="unlist")   # 输出结果为vector
-a.aa a.ab b.ba 
-  15   40   55 
+a.aa a.ab b.ba
+  15   40   55
 ```
 
-
 ---
+
 ### sapply
+
 ```r sapply-函数定义：简化版lapply，增加参数simplify和USE.NAMES，可设定输出类型
 sapply(X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)
 ```
@@ -234,10 +250,11 @@ sapply(X, FUN, ..., simplify = TRUE, USE.NAMES = TRUE)
 > **参数列表：**
 > X：列表、向量、数据框
 > FUN：要使用的函数
-> simplify: 若FALSE，等价于lapply。否则，将lapply输出的list简化为vector或matrix
-> USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置
+> simplify: 若 FALSE，等价于 lapply。否则，将 lapply 输出的 list 简化为 vector 或 matrix
+> USE.NAMES: 如果 X 为字符串，TRUE 设置字符串为数据名，FALSE 不设置
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-simplify参数设定输出类型
 > lst <- list(a=c(1:5), b=c(6:10))
 > sapply(lst, sum, simplify = F)    # 输出list
@@ -247,8 +264,8 @@ $b
 [1] 40
 
 > sapply(lst, sum)                  # 输出vector
- a  b 
-15 40 
+ a  b
+15 40
 
 > sapply(lst, fivenum)              # 输出matrix
      a  b
@@ -264,14 +281,16 @@ $b
 > val
 [1] "a" "b" "c" "d" "e" "f"
 > sapply(val, paste)
-  a   b   c   d   e   f 
-"a" "b" "c" "d" "e" "f" 
+  a   b   c   d   e   f
+"a" "b" "c" "d" "e" "f"
 > sapply(val, paste, USE.NAMES = F)
 [1] "a" "b" "c" "d" "e" "f"
 ```
 
 ---
+
 ### vapply
+
 ```r vapply-函数定义：类似sapply，但提供参数FUN.VALUE用以设定返回值的行名
 vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
 ```
@@ -279,10 +298,11 @@ vapply(X, FUN, FUN.VALUE, ..., USE.NAMES = TRUE)
 > **参数列表：**
 > X：列表、数据框
 > FUN：要使用的函数
-> FUN.VALUE：定义返回值的行名row.names
-> USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置
+> FUN.VALUE：定义返回值的行名 row.names
+> USE.NAMES: 如果 X 为字符串，TRUE 设置字符串为数据名，FALSE 不设置
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-FUN.VALUE参数设置返回值行名
 > lst <- list(a=c(1:5), b=c(6:10))
 > res <- vapply(lst, function(x) c(min(x), max(x)), c(min.=0, max.=0))
@@ -310,7 +330,9 @@ d 12 12
 ```
 
 ---
+
 ### mapply
+
 ```r mapply-函数定义：多变量版sapply，将FUN应用于多个同结构数据第一个元素组成的数组，然后是第二个元素组成的数组，依此类推
 mapply(FUN, ..., MoreArgs=NULL, SIMPLIFY=TRUE, USE.NAMES=TRUE)
 ```
@@ -318,15 +340,16 @@ mapply(FUN, ..., MoreArgs=NULL, SIMPLIFY=TRUE, USE.NAMES=TRUE)
 > **参数列表：**
 > FUN：要使用的函数
 > …: 接收多个数据(list、vector)
-> MoreArgs: FUN的参数列表
-> simplify: 若FALSE，输出list。否则，将输出的list简化为vector或matrix
-> USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置
+> MoreArgs: FUN 的参数列表
+> simplify: 若 FALSE，输出 list。否则，将输出的 list 简化为 vector 或 matrix
+> USE.NAMES: 如果 X 为字符串，TRUE 设置字符串为数据名，FALSE 不设置
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-输入两个list并分组求和
 > mapply(sum, list(a=1,b=2,c=3), list(a=10,b=20,d=30))
- a  b  c 
-11 22 33 
+ a  b  c
+11 22 33
 ```
 
 ```r eg2-比较两个向量大小，按索引顺序取较大的值
@@ -348,9 +371,10 @@ mapply(FUN, ..., MoreArgs=NULL, SIMPLIFY=TRUE, USE.NAMES=TRUE)
 [3,]    0    0    0    0    0
 ```
 
-
 ---
+
 ### eapply
+
 ```r eapply-函数定义：对一个环境空间中的所有变量进行遍历
 eapply(env, FUN, ..., all.names = FALSE, USE.NAMES = TRUE)
 ```
@@ -358,10 +382,11 @@ eapply(env, FUN, ..., all.names = FALSE, USE.NAMES = TRUE)
 > **参数列表：**
 > env: 环境空间
 > FUN：要使用的函数
-> all.names: 匹配类型, ANY为所有类型
-> USE.NAMES: 如果X为字符串，TRUE设置字符串为数据名，FALSE不设置
+> all.names: 匹配类型, ANY 为所有类型
+> USE.NAMES: 如果 X 为字符串，TRUE 设置字符串为数据名，FALSE 不设置
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg-eapply操作示例
 > # 定义一个环境空间
 > env <- new.env()
@@ -389,12 +414,16 @@ $logic
 <br>
 
 ---
+
 ## 应用及拓展
+
 ### 应用展示
-原始数据为按年份year、地区loc和商品类别type进行统计的销售量。我们要制作两个销售总量的crosstable，一个以年份为行、地区为列，一个以年份为行，类别为列。
+
+原始数据为按年份 year、地区 loc 和商品类别 type 进行统计的销售量。我们要制作两个销售总量的 crosstable，一个以年份为行、地区为列，一个以年份为行，类别为列。
+
 ```r 应用1-tapply实现crosstable功能
-> df <- data.frame(year=kronecker(2001:2003, rep(1,4)), 
-                 loc=c('beijing','beijing','shanghai','shanghai'), 
+> df <- data.frame(year=kronecker(2001:2003, rep(1,4)),
+                 loc=c('beijing','beijing','shanghai','shanghai'),
                  type=rep(c('A','B'),6), sale=rep(1:12))
 > df
    year      loc type sale
@@ -459,8 +488,11 @@ $b$d
 ```
 
 ---
+
 ### 相关函数
+
 #### by
+
 ```r by-函数定义：by可以当成data.frame上的tapply，在数据框行上施用索引分组运算
 by(data, INDICES, FUN, ..., simplify = TRUE)
 ```
@@ -471,6 +503,7 @@ by(data, INDICES, FUN, ..., simplify = TRUE)
 > FUN：要使用的函数
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg-by对数据框进行按行索引分组计算
 > data <- data.frame(a=c(1:5), b=c(6:10))
 > data
@@ -484,32 +517,34 @@ by(data, INDICES, FUN, ..., simplify = TRUE)
 
 > by(data, INDICES, colMeans)
 INDICES: 1
-  a   b 
-1.5 6.5 
+  a   b
+1.5 6.5
 -------------------------------------------------------------------------------
 INDICES: 2
-a b 
-4 9 
+a b
+4 9
 > by(data, INDICES, rowMeans)
 INDICES: 1
-  1   2 
-3.5 4.5 
+  1   2
+3.5 4.5
 -------------------------------------------------------------------------------
 INDICES: 2
-  3   4   5 
-5.5 6.5 7.5 
+  3   4   5
+5.5 6.5 7.5
 ```
 
 #### outer
+
 ```r outer-函数定义：作用于数组的类似于矩阵外积运算方式的运算函数
 outer(X, Y, FUN = "*", ...)
 ```
 
 > **参数列表：**
 > X、Y: 向量、数组
-> FUN：当为空时即为外积运算，否则为将FUN代替外积运算符进行类似外积的运算操作
+> FUN：当为空时即为外积运算，否则为将 FUN 代替外积运算符进行类似外积的运算操作
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg-outer的使用
 > x <- 1:4; y <- 2:4
 > x; y
@@ -525,7 +560,7 @@ outer(X, Y, FUN = "*", ...)
 > month.abb
  [1] "Jan" "Feb" "Mar" "Apr" "May" "Jun" "Jul" "Aug" "Sep" "Oct" "Nov" "Dec"
 > outer(month.abb, 1999:2003, FUN = "paste")
-      [,1]       [,2]       [,3]       [,4]       [,5]      
+      [,1]       [,2]       [,3]       [,4]       [,5]
  [1,] "Jan 1999" "Jan 2000" "Jan 2001" "Jan 2002" "Jan 2003"
  [2,] "Feb 1999" "Feb 2000" "Feb 2001" "Feb 2002" "Feb 2003"
  [3,] "Mar 1999" "Mar 2000" "Mar 2001" "Mar 2002" "Mar 2003"
@@ -540,20 +575,22 @@ outer(X, Y, FUN = "*", ...)
 [12,] "Dec 1999" "Dec 2000" "Dec 2001" "Dec 2002" "Dec 2003"
 ```
 
-
 ---
+
 #### sweep
+
 ```r sweep-函数定义：对数组、矩阵按维度进行运算
 sweep(x, MARGIN, STATS, FUN = "-", check.margin = TRUE, ...)
 ```
 
 > **参数列表：**
 > x: 数组、矩阵
-> MARGIN：运算维度，1表示行，2表示列，3即第三维度，以此类推
+> MARGIN：运算维度，1 表示行，2 表示列，3 即第三维度，以此类推
 > STATS：运算参数，类似于减法中的减数，除法中的除数
 > FUN：要使用的函数
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg1-对数组按行运算
 > mat <- matrix(1:9, 3)
 > mat
@@ -608,7 +645,9 @@ sweep(x, MARGIN, STATS, FUN = "-", check.margin = TRUE, ...)
 ```
 
 ---
+
 #### replicate
+
 ```r replicate-函数定义：rep能把输入参数重复数次，replicate则能调用表达式数次
 replicate(n, expr, simplify = "array")
 ```
@@ -618,6 +657,7 @@ replicate(n, expr, simplify = "array")
 > expr：调用的表达式
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg-建立一个函数，模拟扔两个骰子的点数之和，然后重复运行10次
 > game <- function() {
 +   n <- sample(1:6,2,replace=T)
@@ -627,19 +667,21 @@ replicate(n, expr, simplify = "array")
  [1]  6  6  6  7  7  7 11  8  7  9
 ```
 
-
 ---
+
 #### aggregate
+
 ```r aggregate-函数定义：可按要求把数据分组，然后对分组后的数据进行各种操作
 aggregate(x, by, FUN, ...)
 ```
 
 > **参数列表：**
-> x: 一种R数据结构，通常为数据框
-> by：分组索引，必须为list格式
+> x: 一种 R 数据结构，通常为数据框
+> by：分组索引，必须为 list 格式
 > FUN：要使用的函数
 
 {% label info@<b>举例阐释</b> %}
+
 ```r eg-按性别分组查看年龄和身高的均值
 > data <- data.frame(name=c("张三","李四","王五","赵六"),
 +              sex=c("M","M","F","F"), age=c(20,40,22,30),
@@ -657,13 +699,14 @@ aggregate(x, by, FUN, ...)
 2       M  30  168.0
 ```
 
-
 <br>
 
 ---
+
 ## 致谢
 
 > ### 参考文章
-> - [R语言apply函数族笔记](https://www.cnblogs.com/aquastone/p/r-apply.html)
-> - [掌握R语言中的apply函数族](http://blog.fens.me/r-apply/)
+>
+> - [R 语言 apply 函数族笔记](https://www.cnblogs.com/aquastone/p/r-apply.html)
+> - [掌握 R 语言中的 apply 函数族](http://blog.fens.me/r-apply/)
 > - [Dr. Feng Li-Personal Site](https://feng.li/)

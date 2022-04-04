@@ -2,6 +2,7 @@
 title: "R 包 | sysfonts & showtext：绘图字体自由定制"
 date: 2022-03-31T19:46:30+08:00
 categories: [数据流水线]
+series: [R 包历险记]
 tags:
   - 技术
   - sysfonts
