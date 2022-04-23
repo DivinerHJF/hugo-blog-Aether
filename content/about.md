@@ -43,7 +43,7 @@ comment = false
     <td rowspan="2"><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/grid.svg  " border=0></td>
   </tr>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/year_2021.svg" border=0></td>
+    <td><img src="https://raw.githubusercontent.com/DivinerHJF/running_page/master/assets/year_2022.svg" border=0></td>
   </tr>
   <tr>
     <td align="center" colspan="2"><a href="https://aether-running-page.vercel.app/" target="_blank">我的跑步页面</a></td>
