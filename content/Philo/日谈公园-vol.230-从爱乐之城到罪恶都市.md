@@ -1,6 +1,6 @@
 +++
-title = "📻 【日谈公园】vol.230 看世界：从爱乐之城到罪恶都市"
-date = "2022-08-01"
+title = "📻 【日谈公园】vol.230 从爱乐之城到罪恶都市"
+date = "2022-08-01T02:03:00+08:00"
 tags = ["日谈公园"]
 comment = true
 +++
@@ -8,6 +8,8 @@ comment = true
 # 🎲
 
 {{<music url="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbEdINUpERFN3Z3RpSlIzSUhQeHpzUnp3LTMzUUE_ZT01UnFNdmM.m4a" name="vol.230 看世界：从爱乐之城到罪恶都市" artist="日谈公园" cover="https://link.jscdn.cn/1drv/aHR0cHM6Ly8xZHJ2Lm1zL3UvcyFBbEdINUpERFN3Z3RpSlJudmxzWE5qODdDWkdqNGc_ZT1SdzNJZDU.jpg" mutex=false >}}
+
+> 主播｜李叔 Hooky 3000
 
 > 日谈看世界再次启程，刚从美国旅行归来的 3000 老师，（硬被拉来的）美国旅行达人 Hooky，以及从未涉足美洲大陆的李叔一起聊了聊美国自驾游，从《爱乐之城》的拍摄地洛杉矶，到传说中的“Sin City”拉斯维加斯，一路上的种种精彩经历。
 
