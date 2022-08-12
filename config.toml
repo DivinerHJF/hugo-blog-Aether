@@ -47,14 +47,14 @@ pre = "🏷️"
 title = "采点点星光络结为网"
 url = "/tags/"
 weight = 4
-[[menu.main]]
-identifier = ""
-name = "周报"
-post = ""
-pre = "📜"
-title = "着笔烙印下时光印记"
-url = "/series/朝花夕拾/"
-weight = 5
+# [[menu.main]]
+# identifier = ""
+# name = "周报"
+# post = ""
+# pre = "📜"
+# title = "着笔烙印下时光印记"
+# url = "/series/朝花夕拾/"
+# weight = 5
 
 [params]
 #  DoIt 主题版本

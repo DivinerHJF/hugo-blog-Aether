@@ -5,22 +5,12 @@ menu = "main"
 comment = false
 +++
 
-# 壹 · 关于网站
+# 壹 · 页面导航
 
-## 站点导航
-
-本站内容创作形式并不复杂，主要由 [Weekly-周报](../series/朝花夕拾/) 和 [Article-文章](../posts/) 两种文体构成。
-
-- **Weekly-周报**  
-  此处的周报并不严格限制于每个日历周，而是将一个月分为四个阶段，记录下当期所发生的，所经历的，值得记下的 —— 生活、点滴、见闻，以及思索。时间会带来改变，也会冲涮记忆，祈盼着能给这些匆匆走过的片段拍一张定格，留下一道剪影。
-- **Article-文章**  
-  网站的文章有 [归档](../posts/)、[分类](../categories/) 和 [系列](../series/) 三种组织形式，分别<u>从时间线、广度和深度方面对发布的文章进行了组织与展现</u>。归档以时间倒叙陈列了自建站之初创作的所有文章；分类将所有文章依据类别特征分门别类归集查看；系列是对某一主题的一系列的深入探究。
-
-## 其他页面
-
-- [Logseq](https://logseq.aetherhjf.com)：主力笔记本，好记性不如烂笔头
-- [跑步记录](https://run.aetherhjf.com)：人类贴地奔跑，恰似鸟儿振翅飞翔
-- [豆瓣书影音标记](https://www.douban.com/people/Aether_Q/?_i=1372783WM6vpYT)：一本好书，镌刻了一个时代；一部佳作，描绘了一段人生
+- [#Philo 写](../posts/)：我的记忆不是很好，我想记住我，使我更爱我
+- [#Philo 跑](https://run.aetherhjf.com)：人类贴地奔跑，恰似鸟儿振翅飞翔
+- [#Philo 听](https://photos.app.goo.gl/4tzV7WqJmTA6Va9E9)：听赫兹的排列组合，听他人的生命律动
+- [#Philo 食](https://photos.app.goo.gl/qstSqXW7bsTxAZdo8)：我的肚子像个商人，它会拿幸福来换我的食物
 
 ---
 
