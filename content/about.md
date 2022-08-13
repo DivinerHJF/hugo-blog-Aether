@@ -7,7 +7,7 @@ comment = false
 
 # 壹 · 页面导航
 
-- [#Philo 写](../posts/)：我的记忆不是很好，我想记住我，使我更爱我
+- [#Philo 写](../posts/)：我的记忆不是很好，我要记住我，使我更爱我
 - [#Philo 跑](https://run.aetherhjf.com)：人类贴地奔跑，恰似鸟儿振翅飞翔
 - [#Philo 听](https://photos.app.goo.gl/4tzV7WqJmTA6Va9E9)：听赫兹的排列组合，听他人的生命律动
 - [#Philo 食](https://photos.app.goo.gl/qstSqXW7bsTxAZdo8)：我的肚子像个商人，它会拿幸福来换我的食物
