@@ -670,7 +670,7 @@ priority = 0.5
 # Permalinks 配置
 [Permalinks]
 # posts = ":year/:month/:filename"
-posts = ":filename"
+posts = ":year/:month/:filename"
 
 # 隐私信息配置
 [privacy]
