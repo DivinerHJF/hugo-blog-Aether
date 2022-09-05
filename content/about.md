@@ -5,12 +5,19 @@ menu = "main"
 comment = false
 +++
 
+<br />
+{{< music server="netease" type="song" id="1954090536" mutex="false" >}}
+<br />
+
 # 你好，认识一下
 
-- [#Philo 写](../posts/)：我的记忆有些糟，要写下来才得
-- [#Philo 跑](https://run.aetherhjf.com)：人类贴地奔跑，恰似鸟儿振翅飞翔
-- [#Philo 听](https://photos.app.goo.gl/4tzV7WqJmTA6Va9E9)：听赫兹的排列组合，听他人的生命律动
-- [#Philo 食](https://photos.app.goo.gl/qstSqXW7bsTxAZdo8)：我的肚子像个商人，它会拿幸福来换我的食物
+{{< showcase title="#Philo 写" summary="我的记忆有些糟，要写下来才得" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../posts/" column=2 >}}
+
+{{< showcase title="#Philo 跑" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160739.png" link="https://run.aetherhjf.com" column=2 >}}
+
+{{< showcase title="#Philo 听" summary="听赫兹的排列组合，听他人的生命律动" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160619.png" link="https://photos.app.goo.gl/4tzV7WqJmTA6Va9E9" column=2 >}}
+
+{{< showcase title="#Philo 食" summary="我的肚子像个商人，它会拿幸福来换我的食物" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160534.png" link="https://photos.app.goo.gl/qstSqXW7bsTxAZdo8" column=2 >}}
 
 ---
 
