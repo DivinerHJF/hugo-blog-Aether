@@ -11,7 +11,7 @@ comment = false
 
 # 你好，认识一下
 
-{{< showcase title="#Philo 写" summary="我的记忆有些糟，要写下来才得" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../posts/" column=2 >}}
+{{< showcase title="#Philo 写" summary="我的记忆有些糟糕，要写下来才安心" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../posts/" column=2 >}}
 
 {{< showcase title="#Philo 跑" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160739.png" link="https://run.aetherhjf.com" column=2 >}}
 
