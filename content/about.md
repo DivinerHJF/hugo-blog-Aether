@@ -6,7 +6,7 @@ comment = false
 +++
 
 <br />
-{{< music server="netease" type="song" id="1954090536" mutex="false" >}}
+{{< music server="netease" type="playlist" id="7620729304" mutex="false" list-folded="true" >}}
 <br />
 
 # 你好，认识一下
