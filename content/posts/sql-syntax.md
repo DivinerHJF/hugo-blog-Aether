@@ -39,18 +39,7 @@ LIMIT
 
 随着 Mysql 版本的更新换代，其优化器也在不断的升级，优化器会分析不同执行顺序产生的性能消耗不同而动态调整 `执行顺序`。下面是经常出现的查询顺序：
 
-```sql
-FROM <left_table>
-ON <join_condition>
-<join_type> JOIN <right_table>
-WHERE <where_condition>
-GROUP BY <group_by_list>
-HAVING <having_condition>
-SELECT
-[DISTINCT] <select_list>
-ORDER BY <sorting_columns> [ASC|DESC]
-LIMIT <offset_start, row_length>
-```
+![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/sql-execution.jpg "SQL Query Execution Order")
 
 ### Condition - 行筛选条件
 
