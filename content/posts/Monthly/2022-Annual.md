@@ -18,19 +18,107 @@ series: [夕拾花]
 
 ---
 
-# 想简单点儿，做认真点儿
+## 回看
 
 ![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/2022.png "2022 年的第一条朋友圈")
 
-## 贪心与渴求
+### 贪心与渴求
 
-## 做点儿什么
+### 做点儿什么
 
 ---
 
-# 习惯
+## 记录
 
-## 幸福在哪里
+### 读了啥
+
+> 2022 年阅读完毕的书籍 & 有记忆残留的文章
+
+- **《[挽救计划](https://book.douban.com/subject/35494160/)》[美] 安迪·威尔 / 耿辉 / 译林出版社**
+- 《[R for Data Science](https://book.douban.com/subject/26757974/)》Hadley Wickham、Garrett Grolemund / O'Reilly Media
+- 《[雕塑家](https://book.douban.com/subject/34978160/)》[美] 斯科特·麦克劳德 编绘 / 孙侃 / 湖南美术出版社
+- **《[献给阿尔吉侬的花束](https://book.douban.com/subject/26362836/)》[美] 丹尼尔·凯斯 / 陈澄和 / 广西师范大学出版社**
+- 《[跨越边界的社区](https://book.douban.com/subject/1051928/)》项飙 / 新知三联书店
+- 《[把自己作为方法](https://book.douban.com/subject/35092383/)》项飙、吴琦 / 上海文艺出版社
+- 《[大医·破晓篇](https://book.douban.com/subject/36069426/)》马伯庸 / 上海文艺出版社
+- 《夹边沟记事》《定西孤儿院》《甘南纪事》杨显惠命运三部曲
+- **《[房思琪的初恋乐园](https://book.douban.com/subject/27614904/)》林奕含 / 北京联合出版公司**
+- 《[大师与玛格丽特](https://book.douban.com/subject/27069991/)》米·阿·布尔加科夫 / 白桦熊 / 中央编译出版社
+- 《[漫长的告别](https://book.douban.com/subject/30316475/)》[美] 雷蒙德·钱德勒 / 姚向辉 / 海南出版社
+- 《卡尔马佐夫兄弟》
+- 《古文观止》
+- [关于 Type-C / 雷电 3 接口的科普（上）](https://www.notion.so/14e0423bd9524110aae44a7a1f8d96c9)
+- [关于 Type-C / 雷电 3 接口的科普（下）](https://zhuanlan.zhihu.com/p/101486153)
+- [Bloomberg：How Xi Rewrote China’s Rulebook to Build the Party Around Himself](https://www.bloomberg.com/graphics/2022-china-national-party-congress-xi-rules/?leadSource=uverify%20wall)
+
+### 看了啥
+
+> 2022 年观看完毕的电影剧集 & 有记忆残留的视频
+
+- **《[控方证人 / Witness for the Prosecution](https://movie.douban.com/subject/5294851/)》1982-12-04(美国)**
+- 《[不要抬头 / Don't Look Up](https://movie.douban.com/subject/34884712/)》2021-12-24(美国网络)
+- 《[遗传厄运 / Hereditary](https://movie.douban.com/subject/27621727/)》2018-06-08(美国)
+- 《[美味毒妇 / Paulette](https://movie.douban.com/subject/20397453/)》2013-01-16(法国)
+- 《[历史系男生 / The History Boys](https://movie.douban.com/subject/1871817/)》2006-10-13(英国)
+- 《[你可曾见过萤火虫？](https://movie.douban.com/subject/35412350/)》2021-04-09(土耳其)
+- 《[花束般的恋爱 / 花束みたいな恋をした](https://movie.douban.com/subject/34874432/)》2021-01-29(日本)
+- **《[人生第二次](https://movie.douban.com/subject/35664467/)》2022-05-19(中国大陆)**
+- 《[一年一度喜剧大赛](https://movie.douban.com/subject/35467072/)》2021-10-15(中国大陆)
+- 《[沙丘 / Dune](https://movie.douban.com/subject/3001114/)》2021-10-22(美国/中国大陆)
+- **《[1公升的泪](https://movie.douban.com/subject/1436900/)》2005-10-11(日本)**
+- 《[健听女孩 / CODA](https://movie.douban.com/subject/35048413/)》2021-08-13(美国网络)
+- 《[云上的日子](https://movie.douban.com/subject/1291558/)》1995-10-27(意大利)
+- 《[精灵旅社](https://movie.douban.com/subject/3269068/)》2012-09-28(美国)
+- 《[精灵旅社2](https://movie.douban.com/subject/21327493/)》2015-09-25(美国)
+- 《[精灵旅社4：变身大冒险](https://movie.douban.com/subject/30472643/)》2022-01-14(美国网络)
+- **《[隐入尘烟](https://movie.douban.com/subject/35131346/)》2022-07-08(中国大陆)**
+- 《[士兵之歌](https://movie.douban.com/subject/1295614/)》1959-12-01(苏联)
+- 《[万里归途](https://movie.douban.com/subject/26654184/)》2022-09-30(中国大陆)
+- 《[土拨鼠之日 / Groundhog Day](https://movie.douban.com/subject/1300613/)》1993-02-12(美国)
+- **《[中岛美雪 · 2007 歌旅演唱会](https://www.bilibili.com/video/BV1uK411P7JE)》Bilibili**
+- 《[中岛美雪 · 2016 一会演唱会](https://www.bilibili.com/video/BV144411i7mb)》Bilibili
+- 《[睡前消息](https://space.bilibili.com/316568752?spm_id_from=333.337.search-card.all.click)》Bilibili
+- 《[爱跳绳的鲁西西](https://space.bilibili.com/383458566)》Bilibili
+- 《[陈一枝你坐下](https://space.bilibili.com/1937416537/)》Bilibili
+- 《[彭世职业培训学校](https://space.bilibili.com/1433760771/)》Bilibili
+- 《[PDF里，到底都是些啥？](https://www.bilibili.com/video/BV1Mr4y1679f)》Bilibili
+- 《[Git基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0)》Youtube
+- 《[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)》Youtube
+- 《[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)》Youtube
+- 《[御坂美琴-中国近代史专题](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)》Youtube
+- 《[CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)》Youtube
+
+### 听了啥
+
+> 2022 年一直有在收听的播客
+
+- [**文化有限**](https://www.xiaoyuzhoufm.com/podcast/5e4515bd418a84a046e2b11a)
+- [枫言枫语](https://fyfy.fm/)
+- [ByteTalk](https://bytetalk.fm/)
+- [限时肤浅](https://www.xiaoyuzhoufm.com/podcast/5f56592d83c34e85dd9b6d53)
+- [**不叁不肆**](https://dao.fm/%E4%B8%8D%E5%8F%81%E4%B8%8D%E8%82%86/)
+- [展开讲讲](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9bfb)
+- [日谈公园](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8)
+- [不把天聊si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)
+- [跟宇宙结婚](https://www.xiaoyuzhoufm.com/podcast/5e284c39418a84a046263d8a)
+- [**你吃香菜吗**](https://www.xiaoyuzhoufm.com/podcast/62ce4812b94ef3c7f6c71f93)
+- [谐星聊天会](https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b)
+- [三五环](https://www.xiaoyuzhoufm.com/podcast/5e280fab418a84a0461faa3c)
+- [乱翻书](https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2)
+- [疯投圈](https://crazy.capital/)
+- [硅谷101](https://sv101.fireside.fm/)
+- [商业WHY酱](https://msbussinesswhy.fireside.fm/)
+- [商业就是这样](https://thatisbiz.fireside.fm/)
+- [螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
+- [东亚观察局](https://www.xiaoyuzhoufm.com/podcast/5e9a4e25418a84a046bc6156)
+- [**不明白播客**](https://www.bumingbai.net/)
+- [**The Prince - The Economist**](https://www.economist.com/theprincepod)
+
+---
+
+## 习惯
+
+### 幸福在哪里
 
 心理治疗学家 William Glasser 提出的，人类的五大不分先后等级的基本心理需求，也是影响我们幸福感的五个维度：
 
