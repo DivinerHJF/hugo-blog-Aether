@@ -4,9 +4,14 @@ date: 2022-09-30T22:22:22+08:00
 series: [夕拾花]
 ---
 
+> **Tips:**
+>
+> 1. PC 端食用更佳，手机端自动换行未作处理；
+> 2. Chrome 浏览器在视频上两次右击鼠标可选择画中画模式悬浮视频，一边看演唱，一边看文字体验更好呦！
+
 {{< bilibili id=BV1uK411P7JE p=4 >}}
 
-> 这首歌出自中岛美雪的 1990 年的第 18 张专辑［穿越夜色］，专辑歌曲层层递进，通过描绘一段段人会经历的苦情与离别，体悟到人生而来就伴随着孤独、空虚和疑惑 —— 文字和话语的能力是如此苍白，『**每个人都被锁在一座没有出口的玻璃城之中**』，一个人总不会真正地了解另一个人，每个人的经历也不会真正地被了解，走入一个人的心『**那会像在遥远的沙漠里旅行般艰巨**』。
+> 这首歌出自中岛美雪的 1990 年的第 18 张专辑［穿越夜色］，专辑歌曲层层递进，通过描绘一段段人会经历的苦情与离别，体悟到人生而来就伴随着孤独、空虚和疑虑 —— 文字和话语的能力是如此苍白，『**每个人都被锁在一座没有出口的玻璃城之中**』，一个人总不会真正地了解另一个人，每个人的经历也不会真正地被了解，走入一个人的心『**那会像在遥远的沙漠里旅行般艰巨**』。
 
 > 在经历了一系列漫长的、深渊般的黑夜之后，终于迎来了温暖的晨光，那便是专辑的最后一首歌，黑暗中的一缕光 ——《WITH》。温暖的光终于照进你心底的那个角落，照到了那个蜷缩在黑暗中的另一个自己。
 
@@ -14,7 +19,7 @@ series: [夕拾花]
 
 > 2007 年歌旅演唱会上，中岛美雪一袭红裙，鹤立高歌。曲末，跟随往复回旋的主调，中岛美雪用手语打出了这首歌的真正寓意：WITH LOVE －－ 与爱同行。
 
-> 流畅的旋律如滑翔翼般四处翩飞，中岛美雪稳定的中高音潇洒鸣亮，在我看来，她歌唱着一个人生活的自在，也歌唱着一个人生活的遗憾：『**不管是谁都可以一个人开启这旅程，在孤独时也可以一个人放声哭泣，但是自己一个人在欢笑却感觉好孤寂。**』所以将爱放在 WITH 的身旁吧，WITH LOVE，真正地与爱同行，这样一个人也不会有寂寞、空虚和疑惑。
+> 流畅的旋律如滑翔翼般四处翩飞，中岛美雪稳定的中高音潇洒鸣亮，在我看来，她歌唱着一个人生活的自在，也歌唱着一个人生活的遗憾：『**不管是谁都可以一个人开启这旅程，在孤独时也可以一个人放声哭泣，但是自己一个人在欢笑却感觉好孤寂。**』所以将爱放在 WITH 的身旁吧，WITH LOVE，真正地与爱同行，这样一个人也不会有寂寞、空虚和疑虑。
 
 ---
 
@@ -65,24 +70,24 @@ series: [夕拾花]
 - **《[人生第二次](https://movie.douban.com/subject/35664467/)》2022-05-19(中国大陆)**
 - 《[一年一度喜剧大赛](https://movie.douban.com/subject/35467072/)》2021-10-15(中国大陆)
 - 《[沙丘 / Dune](https://movie.douban.com/subject/3001114/)》2021-10-22(美国/中国大陆)
-- **《[1公升的泪](https://movie.douban.com/subject/1436900/)》2005-10-11(日本)**
+- **《[1 公升的泪](https://movie.douban.com/subject/1436900/)》2005-10-11(日本)**
 - 《[健听女孩 / CODA](https://movie.douban.com/subject/35048413/)》2021-08-13(美国网络)
 - 《[云上的日子](https://movie.douban.com/subject/1291558/)》1995-10-27(意大利)
 - 《[精灵旅社](https://movie.douban.com/subject/3269068/)》2012-09-28(美国)
-- 《[精灵旅社2](https://movie.douban.com/subject/21327493/)》2015-09-25(美国)
-- 《[精灵旅社4：变身大冒险](https://movie.douban.com/subject/30472643/)》2022-01-14(美国网络)
+- 《[精灵旅社 2](https://movie.douban.com/subject/21327493/)》2015-09-25(美国)
+- 《[精灵旅社 4：变身大冒险](https://movie.douban.com/subject/30472643/)》2022-01-14(美国网络)
 - **《[隐入尘烟](https://movie.douban.com/subject/35131346/)》2022-07-08(中国大陆)**
 - 《[士兵之歌](https://movie.douban.com/subject/1295614/)》1959-12-01(苏联)
 - 《[万里归途](https://movie.douban.com/subject/26654184/)》2022-09-30(中国大陆)
 - 《[土拨鼠之日 / Groundhog Day](https://movie.douban.com/subject/1300613/)》1993-02-12(美国)
 - **《[中岛美雪 · 2007 歌旅演唱会](https://www.bilibili.com/video/BV1uK411P7JE)》Bilibili**
-- 《[中岛美雪 · 2016 一会演唱会](https://www.bilibili.com/video/BV144411i7mb)》Bilibili
+- 《[中岛美雪  · 2016 一会演唱会](https://www.bilibili.com/video/BV144411i7mb)》Bilibili
 - 《[睡前消息](https://space.bilibili.com/316568752?spm_id_from=333.337.search-card.all.click)》Bilibili
 - 《[爱跳绳的鲁西西](https://space.bilibili.com/383458566)》Bilibili
 - 《[陈一枝你坐下](https://space.bilibili.com/1937416537/)》Bilibili
 - 《[彭世职业培训学校](https://space.bilibili.com/1433760771/)》Bilibili
-- 《[PDF里，到底都是些啥？](https://www.bilibili.com/video/BV1Mr4y1679f)》Bilibili
-- 《[Git基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0)》Youtube
+- 《[PDF 里，到底都是些啥？](https://www.bilibili.com/video/BV1Mr4y1679f)》Bilibili
+- 《[Git 基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0)》Youtube
 - 《[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)》Youtube
 - 《[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)》Youtube
 - 《[御坂美琴-中国近代史专题](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)》Youtube
@@ -99,15 +104,15 @@ series: [夕拾花]
 - [**不叁不肆**](https://dao.fm/%E4%B8%8D%E5%8F%81%E4%B8%8D%E8%82%86/)
 - [展开讲讲](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9bfb)
 - [日谈公园](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8)
-- [不把天聊si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)
+- [不把天聊 si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)
 - [跟宇宙结婚](https://www.xiaoyuzhoufm.com/podcast/5e284c39418a84a046263d8a)
 - [**你吃香菜吗**](https://www.xiaoyuzhoufm.com/podcast/62ce4812b94ef3c7f6c71f93)
 - [谐星聊天会](https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b)
 - [三五环](https://www.xiaoyuzhoufm.com/podcast/5e280fab418a84a0461faa3c)
 - [乱翻书](https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2)
 - [疯投圈](https://crazy.capital/)
-- [硅谷101](https://sv101.fireside.fm/)
-- [商业WHY酱](https://msbussinesswhy.fireside.fm/)
+- [硅谷 101](https://sv101.fireside.fm/)
+- [商业 WHY 酱](https://msbussinesswhy.fireside.fm/)
 - [商业就是这样](https://thatisbiz.fireside.fm/)
 - [螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
 - [东亚观察局](https://www.xiaoyuzhoufm.com/podcast/5e9a4e25418a84a046bc6156)
