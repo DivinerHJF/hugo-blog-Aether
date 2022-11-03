@@ -11,7 +11,7 @@ comment = false
 
 # 你好，认识一下
 
-{{< showcase title="#Philo 写" summary="我的记忆有些糟糕，要写下来才安心" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../posts/" column=2 >}}
+{{< showcase title="#Philo 写" summary="我的记忆有些糟糕，要写下来才安心" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../series/" column=2 >}}
 
 {{< showcase title="#Philo 跑" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160739.png" link="https://run.aetherhjf.com" column=2 >}}
 
@@ -39,7 +39,7 @@ comment = false
 
 ## 我的写作原则
 
-1. 文字追求简洁，废话连牍与机械造轮除了陶醉自嗨之外毫无意义；
+1. 文字简练，用自己的话把想说的说清楚；
 2. 内容追求有趣，理性的文章应富有逻辑，感性的文章该充满感情。
 
 ## 我的人生版本号[^1]
