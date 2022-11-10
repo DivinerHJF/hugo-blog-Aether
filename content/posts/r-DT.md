@@ -2,7 +2,7 @@
 title: "R 包 | DT：DataTables 库的 R 接口"
 date: 2018-04-05T15:00:11+08:00
 categories: ["数据流水线"]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - DT

@@ -2,7 +2,7 @@
 title: "R 包 | 地图可视化系列文章"
 date: 2018-04-05T22:30:49+08:00
 categories: ["数据流水线"]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - API

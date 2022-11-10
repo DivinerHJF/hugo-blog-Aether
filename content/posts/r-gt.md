@@ -2,7 +2,7 @@
 title: "R 包 | gt：R 语言输出丰富多彩的表格"
 date: 2022-04-03T15:39:33+08:00
 categories: [数据流水线]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - 技术
   - R

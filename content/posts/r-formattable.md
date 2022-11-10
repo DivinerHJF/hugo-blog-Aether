@@ -2,7 +2,7 @@
 title: "R 包 | formattable：格式化输出数据表"
 date: 2018-03-22T14:00:11+08:00
 categories: ["数据流水线"]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - formattable

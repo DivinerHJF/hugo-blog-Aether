@@ -2,7 +2,7 @@
 title: "R 包 | stargazer：R 语言输出统计表"
 date: 2018-10-30T16:20:03+08:00
 categories: [数据流水线]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - 技术
   - R

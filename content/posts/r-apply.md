@@ -2,7 +2,7 @@
 title: "R 包 | apply 函数族：向量化操作数据框"
 date: 2018-03-15T12:19:00+08:00
 categories: [数据流水线]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - apply

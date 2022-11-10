@@ -2,7 +2,7 @@
 title: "R 包 | 绘图系统综览"
 date: 2018-04-07T17:30:49+08:00
 categories: ["数据流水线"]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - graphics

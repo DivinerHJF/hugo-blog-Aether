@@ -2,7 +2,7 @@
 title: "R 包 | customLayout：R 语言自由拼图"
 date: 2018-11-10T10:51:49+08:00
 categories: ["数据流水线"]
-series: [R 包历险记]
+series: [R 包武器库]
 tags:
   - R
   - customLayout
