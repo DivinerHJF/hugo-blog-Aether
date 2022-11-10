@@ -1,5 +1,5 @@
 ---
-title: "2022 回看：贪图与渴求，做点儿什么"
+title: "2022 回看：平凡的一年，但是大战的前夜"
 date: 2022-11-03T22:22:22+08:00
 series: [夕拾花]
 ---
@@ -12,7 +12,7 @@ series: [夕拾花]
 {{< bilibili id=BV1uK411P7JE p=4 >}}
 
 <details>
-  <summary><b>WITH - 中島みゆき</b></summary>
+  <summary><b>中島みゆき - WITH | 与爱同行</b></summary>
 
 > 此曲出自中岛美雪的 1990 年的第 18 张专辑［穿越夜色］，专辑中的前几首歌层层递进，描绘出一段段人会经历的苦情与离别，流露着人生而来就伴随着的孤独、空虚和疑虑 —— 文字和话语的能力是如此苍白，「**每个人都被锁在一座没有出口的玻璃城之中**」，一个人总不会真正地了解另一个人，每个人的经历也不会真正地被了解，走入一个人的心「**那会像在遥远的沙漠里旅行般艰巨**」。
 
@@ -70,19 +70,14 @@ series: [夕拾花]
 
 在这过去的一年里，有很长一段时间囿于自己的幼稚和软弱，我会在深夜睡不着胡思乱想或是一个人在街上逛荡觉得困苦无助不知如何排解时，给一些朋友念念叨叨了不少可能会干扰人心情的莫名其妙的小作文，感谢善良的你们在那段时期没有删掉我这个日渐话痨但又经常说话晕头转向、不知所谓的呓语人，真的无比感谢 🥺。
 
----
-
 倒垃圾那一段话 balabala
 
 我已然腐朽，所以我苦苦追寻的无非是精神与肉体保持轻松活力，很让我开心的是 —— 我能感受到自己还是对一切那么充满好奇，这可能是老天赐给我的最宝贵的礼物。
 
----
+### 记录下一些
 
-## 记录
-
-### 读了啥
-
-> 2022 年阅读完毕的书籍 & 有记忆残留的文章
+> 2022 年阅读完毕的书籍 & 有记忆残留的文章  
+> 2022 年观看的电影、剧集 & 有记忆残留的视频
 
 <details>
   <summary><b>» 书籍</b></summary>
@@ -93,8 +88,8 @@ series: [夕拾花]
 - **《[献给阿尔吉侬的花束](https://book.douban.com/subject/26362836/)》[美] 丹尼尔·凯斯 / 陈澄和 / 广西师范大学出版社**
 - 《[跨越边界的社区](https://book.douban.com/subject/1051928/)》项飙 / 新知三联书店
 - 《[把自己作为方法](https://book.douban.com/subject/35092383/)》项飙、吴琦 / 上海文艺出版社
+- **《夹边沟记事》《定西孤儿院》《甘南纪事》杨显惠命运三部曲**
 - 《[大医·破晓篇](https://book.douban.com/subject/36069426/)》马伯庸 / 上海文艺出版社
-- 《夹边沟记事》《定西孤儿院》《甘南纪事》杨显惠命运三部曲
 - **《[房思琪的初恋乐园](https://book.douban.com/subject/27614904/)》林奕含 / 北京联合出版公司**
 - 《[大师与玛格丽特](https://book.douban.com/subject/27069991/)》米·阿·布尔加科夫 / 白桦熊 / 中央编译出版社
 - 《[漫长的告别](https://book.douban.com/subject/30316475/)》[美] 雷蒙德·钱德勒 / 姚向辉 / 海南出版社
@@ -120,10 +115,6 @@ series: [夕拾花]
 - [How Xi’s Shakeup Shattered Decades of Succession Rules in China](https://www.bloomberg.com/graphics/2022-china-party-congress-xi-new-leaders/?ai=eyJpc1N1YnNjcmliZWQiOnRydWUsImFydGljbGVSZWFkIjpmYWxzZSwiYXJ0aWNsZUNvdW50IjowLCJ3YWxsSGVpZ2h0IjoxfQ==)
 
 </details>
-
-### 看了啥
-
-> 2022 年观看的电影、剧集 & 有记忆残留的视频
 
 <details>
   <summary><b>» 影剧</b></summary>
@@ -168,20 +159,7 @@ series: [夕拾花]
 </details>
 
 <details>
-  <summary><b>» Up 主 / Youtuber</b></summary>
-
-- 《[睡前消息](https://space.bilibili.com/316568752?spm_id_from=333.337.search-card.all.click)》Bilibili - 中国社会议题分析
-- 《[爱跳绳的鲁西西](https://space.bilibili.com/383458566)》Bilibili - 踩着点 码着脸 体重刷刷往下减
-- 《[彭世职业培训学校](https://space.bilibili.com/1433760771/)》Bilibili - 推拿按摩，包教包会
-- 《[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)》Youtube - 科幻小说推介
-- 《[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)》Youtube - 新冠杂谈系列
-- 《[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)》Youtube - 中国近代史专题系列讲座
-
-</details>
-
-### 听了啥
-
-> 2022 年一直有在收听的播客
+  <summary><b>» 播客</b></summary>
 
 - **声音发掘：**[不在场](https://buzaichang.xyz/)
 - **读书分享：**[文化有限](https://www.xiaoyuzhoufm.com/podcast/5e4515bd418a84a046e2b11a)
@@ -190,6 +168,17 @@ series: [夕拾花]
 - **社论观察：**[东亚观察局](https://www.xiaoyuzhoufm.com/podcast/5e9a4e25418a84a046bc6156)、[不明白播客](https://www.bumingbai.net/)、[The Prince - The Economist](https://www.economist.com/theprincepod)
 - **商业分析：**[三五环](https://www.xiaoyuzhoufm.com/podcast/5e280fab418a84a0461faa3c)、[乱翻书](https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2)、[疯投圈](https://crazy.capital/)、[硅谷 101](https://sv101.fireside.fm/)、[商业 WHY 酱](https://msbussinesswhy.fireside.fm/)、[商业就是这样](https://thatisbiz.fireside.fm/)
 - **闲聊讨论：**[限时肤浅](https://www.xiaoyuzhoufm.com/podcast/5f56592d83c34e85dd9b6d53)、[不叁不肆](https://dao.fm/%E4%B8%8D%E5%8F%81%E4%B8%8D%E8%82%86/)、[展开讲讲](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9bfb)、[日谈公园](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8)、[不把天聊 si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)、[跟宇宙结婚](https://www.xiaoyuzhoufm.com/podcast/5e284c39418a84a046263d8a)、[你吃香菜吗](https://www.xiaoyuzhoufm.com/podcast/62ce4812b94ef3c7f6c71f93)、[谐星聊天会](https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b)
+
+</details>
+
+<details>
+  <summary><b>» 其他</b></summary>
+
+- **Blog：**[Yihui Xie | 谢益辉](https://yihui.org/)
+- **Bilibili：**[睡前消息](https://space.bilibili.com/316568752?spm_id_from=333.337.search-card.all.click)、[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[彭世职业培训学校](https://space.bilibili.com/1433760771/)
+- **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)
+
+</details>
 
 ---
 
@@ -208,6 +197,14 @@ series: [夕拾花]
 
 我到底在期待些什么呢？如此敷衍，显而易见，她的话可信吗？人家就是不和你说真话又如何呢？为什么不能好好交流呢，自闭给谁看！自私鬼！
 
+### 身体的习惯
+
+> 说不如做，把在想的做成习惯  
+> 习惯了跑步后，再躺着会觉得很舒服，但去跑步也并不觉得累，各有各的好。  
+> 习惯了看图书后，再看网文不觉有甚，但看图书也不觉有甚了，各有各的特色。  
+> 习惯了更多的一些资讯后，再看国内的。  
+> 确实，本质都是一种行为、一种阅读习惯、一种选择，但我很开心的是我都可以选，都乐在其中，并在我当下都体验过之后选了更喜欢的那个。
+
 从我的角度来看，无论是语言蕴含的感情还是实际行为的表现出的活力都到了冰点。
 
 我因为没有体验过，从来没有一个能说说心里话的朋友，所以一旦有了之后，就擅自做主，自然而然把人当成最亲密的朋友，直接吐露自己的心声。后果就是个人情绪起伏很大程度上都和他人的回应画上等号。也给别人很大压力，实在是对不起，我想把一切都倾诉出去，却忘记了自己的身份。
@@ -216,6 +213,13 @@ series: [夕拾花]
 
 但我认为人世间我没有什么欲望，最珍视的反而是人与人间的关系，我个人的发展也好、世俗意义上的成功也好在我的排序里都会无限往后，从这点儿来看我好像不是一个自私的人，但其实我是最自私的那一个，我想要的东西是人的真心，还有比这更自私的要求么。
 
+### 内心的习惯
+
+> 关系：习惯一个人  
+> 价值：习惯无价值  
+> 习惯自己的幼稚、习惯自己的奋斗  
+> 我不用和解这个词，在我看来，我无法与我之前的经历和解，也没有什么谅不谅解， —— 因为我本就觉得每个人都在照着自己的想法行事，无法谅解也不必谅解，我会一直记着，时间其实并不能抹去什么，我虽然善于开导自己，但不善于欺骗自己，所以我会尝试习惯，不是妥协去习惯接纳它，而是习惯它的存在，习惯本就如此糟糕这件事，我不接纳、亦不妥协，做不到宣战，且想要一个活着的理由与方式，此刻想到的支点便是习惯。
+
 你哪一刻感觉天塌了，我好像弄丢了一个朋友。
 
 要想明白，人本就是生来孤独的，不能自己好好生活、自救的话，他者也不能救。
@@ -223,3 +227,19 @@ series: [夕拾花]
 慢慢地和别人的世界节奏脱轨了，不知道朋友在做什么，是怎么想的，试图交流也总是失败，由此产生的精神状态也愈发糟糕，总有打扰人的感觉，我还是停下来试图交流吧，放过自己也放过他人。
 
 让自己进入一个更开阔的世界，内心学会关注一个更大的图景，才会有效减少人与人之间的鸡毛蒜皮。繁殖，越是封闭的环境，越是小圈子，就越容易产生一些是非。如果所有事情都耗在这上面实在是悲哀。
+
+### 人生在路上
+
+{{< bilibili id=BV1uK411P7JE p=8 >}}
+
+<details open>
+  <summary><b>中島みゆき - 命の別名 | 命名为心，愿举灯火</b></summary>
+
+<p align="center">
+致敬人生中又度过的平凡一年<br />
+我还没准备停下呢<br />
+未来的道路<br /> 
+我来了
+</p>
+
+</details>
