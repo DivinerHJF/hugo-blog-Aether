@@ -18,7 +18,7 @@ series: [夕拾花]
 
 > WITH ，带祂出来吧！ WITH，下一次出发，写上同样的名字，没有人知道，那是另一个迷失的自己。
 
-> 2007 年歌旅演唱会上，55 岁的中岛美雪一袭红裙，鹤立高歌。曲末，跟随往复回旋的主调，依然独身的中岛美雪用手语打出了那时刻她对于这首歌的理解：WITH LOVE －－ 与爱同行。
+> 2007 年歌旅演唱会上，55 岁的中岛美雪一袭红裙，鹤立高歌。曲末，跟随往复回旋的主调，依然独身的美雪用手语打出了那时刻她对于这首歌的理解：WITH LOVE －－ 与爱同行。
 
 > 流畅的旋律如滑翔翼般四处翩飞，中岛美雪稳定的中高音潇洒鸣亮，她歌唱着一个人生活的自在，也歌唱着一个人生活的遗憾：「**不管是谁都可以一个人开启这旅程，在孤独时也可以一个人放声哭泣，但是自己一个人在欢笑却感觉好孤寂**」。这种状态并不是说拥有亲情、爱情抑或友情就会消除的，人都是只身降生在人世的，独自过活、形单影只是如此天经地义，人生来就是孤单的啊。
 
@@ -42,35 +42,37 @@ series: [夕拾花]
 
 有段时间里，我以为自己是一个能够自得其乐的人，也以自己无人管教可以肆意行动从来也不会有人钳制而颇觉骄傲。但其实慢慢明白，我小时候有家人一直陪伴身边，上学后有同学穿行左右，我表面上可以很独，但其实各种关系联系一直在托着我呢。当我这种人真正一个人生活后，会发现由于自己一贯的行径，自己把自己不自觉地变成了可以消失很久不会有人在意的那种，与一切都没什么联结，然而自己也不像最初认为的那样可以那么自得其乐。
 
-> 没有一定要达到的目标，没有相互交流的人，没有支点，也搞不懂一个人与一个人之间什么样、怎么样才能连接、才叫连接，怎么才能与其他节点在同一片时空共同律动，我的触角未曾深入触摸过这个领域，无知又脆弱。
+> 没有一定要达到的目标，没有相互交流的人，没有支点，也搞不懂人与人之间什么样、怎么样才能连接、才叫连接，怎么才能与其他节点产生律动，我的触角未曾深入触摸过这个领域，无知又脆弱，努力却愚笨。
 
-也正因此，我算是经历了关系情感上的由奢入俭难，我开始有一种病态的无聊感。于是我在每天晚上结束工作到睡前的几个小时，以及每天早上起来的一两个小时间，都会找一些让自己开心或者有意义的事去做，想找一两件事来充满空空的自己，但是很遗憾，我一直没找到。
+也正因此，我算是经历了情绪理智上的由奢入俭难，我开始有一种病态的无聊感。于是我在每天晚上结束工作到睡前的几个小时，以及每天早上起来的一两个小时间，都会找一些让自己开心或者有意义的事去做，想找一两件事来充满空空的自己，但是很遗憾，我一直没找到。
 
 ![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142003119.png "那是一种怎样的状态呢？")
 
-> 大概是你站在江岸边伸手触摸脖颈，能感受到从温度却似乎没了血肉，全身布满空洞四处漏风，江风轻易贯透你的身体，你张开手却只能是什么也抓不住；就像是半夜你躺在床上，闭上眼时无数画面串联、并行、旋转、重叠，晃得你头晕，睁开眼时皮肤好像在拉伸、压缩、肚子在无规则的扭动缠绕，顶着炫目的灯光你踱去厕所干呕、反酸、催吐，多希望能把腐烂的自己连同那呕吐物一起冲走；又好似你把自己的一部分投射出去，但当你想寻着投影拼凑回自己时，才发现你视若珍宝的印记没在他人他物那里留下一丝痕迹，想找又找不回，想丢又丢不下，你支离破碎。
+> 大概是你站在江岸边伸手触摸脖颈，能感受到从温度却似乎没了血肉，全身布满空洞四处漏风，江风轻易贯透你的身体，你张开手却只能是什么也抓不住；就像是半夜你躺在床上，闭上眼时无数画面串联、并行、旋转、重叠，晃得你头晕，睁开眼时皮肤好像在拉伸、压缩、肚子在无规则的扭动缠绕，顶着炫目的灯光你踱去厕所干呕、反酸、催吐，多希望能把腐烂的自己连同那呕吐物一起冲走；又好似你把自己的一部分投射出去，但当你想寻着投影拼凑回自己时，才发现你视若珍宝的印记在他人他物那里没能留下一丝痕迹，想找又找不回，想丢又丢不下，你支离破碎。
 
 在 21 年的某一天，我开始尝试跑步，一开始 1 千米就累得不行，现在十来公里完全不觉得疲惫。我有过在细雨里从图书馆一路沿江跑回出租屋，也曾经在夜间睡不着对着空荡荡的无星的天空一路不知疲倦地跑，更多的时候是沿着家周边路跑，最近几个月就开始想着用双腿把这座城市的道路在地图上全部点亮，不知道能不能实现呢，不过看着一条条道路被点亮也开始算是一件蛮有吸引力的事了。可能我喜欢不动脑子的简单重复的运动，今年 10 月开始跳绳，每一天从 30\*10，40\*10，50\*10 到了现在可以一直跳很久很久了，不知道我什么时候可以跳花式，毕竟我是看到一个 up 主跳的花式如此轻盈如此优美才买的这根同款跳绳，总会想着能跳到和她可真好啊。
 
 > 我也不知道上学时那么多时间也没能养成这习惯的我为什么现在能不间断的跑啊跑、跳啊跳，可是不跑不跳了真的会很无聊不知道该干嘛。
 
-我记得我初中很喜欢看那些网络小说，一本一本看了不知道几百上千本，出来工作后觉得无聊时也下载过几本但全然看不下去了，那时候不觉得有啥，只是回想起来觉得挺好，还好我小时候那么痴迷过这些东西，不然我可能一辈子也无法理解这东西有啥可看的。现在看的书有的剧情很好、有的情节曲折、有的力透纸背都是很好的书，但我学生时是绝对读不来的，现在的我却看能看得如痴如醉，就像我小时候的网络小说津津有味一样。其实我一直喜欢读啊读的理由很简单，我只是想通过别人的眼看看别人的世界，因为小时候生活在很偏远的农村对外面的一切什么都不懂，爸爸有个手机，那时流量很贵忘了是 5 元 30MB 还是更贵的了，小小的我常偷偷下载 txt 格式的小说在小小的屏幕上一屏一屏地读，网络小说里的都市生活、哪怕是玄幻仙侠类作者写出来的里面的人们说的那些话，对我来讲都是那么新奇，我如饥似渴窥视着一个我从未接触的名词，我从未看到过的生活，拿上百本书来拼凑出了一个世界。现在也差不多，我的生活如此枯燥总想看看别人的人生是怎么理解的，有时候觉得是在读内容，有时候又觉得是在读写书的人，可能我还是和小时候一样，自己好像已经慢慢腐烂掉了反而更想看看别人经历的与我不同的世界吧。
+我记得我初中很喜欢看那些网络小说，一本一本看了不知道几百上千本，出来工作后觉得无聊时也下载过几本但全然看不下去了，那时候不觉得有啥，现在回想起来却觉得挺好，还好我小时候那么痴迷过这些东西，不然我可能一辈子也无法理解这东西有啥可看的。现在看的书有的剧情很好、有的情节曲折、有的力透纸背都是很好的书，但我学生时是绝对读不来的，现在的我却看能看得如痴如醉，就像我小时候的网络小说津津有味一样，没有什么不同。其实我一直喜欢读啊读的理由很简单，我只是想通过别人的眼看看别人的世界，因为小时候生活在很偏远的农村对外面的一切什么都不懂，爸爸有个手机，那时流量很贵忘了是 5 元 30MB 还是更贵的了，小小的我常偷偷下载 txt 格式的小说在小小的屏幕上一屏一屏地读，网络小说里的都市生活、哪怕是玄幻仙侠类作者写出来的里面的人们说的那些话，对我来讲都是那么新奇，我如饥似渴窥视着一个我从未接触的名词，我从未看到过的生活，拿上百本书来拼凑出了一个世界。现在也差不多，我的生活如此枯燥总想看看别人的人生是怎么理解的，有时候觉得是在读内容，有时候又觉得是在读写书的人，可能我还是和小时候一样，自己好像已经慢慢腐烂掉了反而更想看看别人经历的与我不同的世界吧。
 
 > **我逐渐分不清自己是欲望填不满的贪心兽，还是干涸到了极点的渴求者。** 我在做的好似想抓住那些自己想像出的东西，可终究是幻想，我似乎没成功过也永远成功不了。我纵容、我克制，我不停地伸出手一遍一遍地想要抓住一些实在，可到手的全是幻影和泡沫，这反过来更在不断地击溃着我。
 
 ![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142015373.png "我看到你了。")
 
-幸运的是，我眩晕、下坠、痛苦，却不曾有一刻选择闭目躲闪，我睁大眼睛想要看清楚自己的内心，曾经我苦苦追寻的无非是精神与肉体保持轻松活力。很让我开心的是，我能感受到自己还是对一切那么充满好奇，也不缺乏一探到底的勇气，这可能是老天赐给我的最宝贵的礼物 —— 如果我想要看一眼自己，这似乎是一次绝佳的机会呢。
+幸运的是，我眩晕、下坠、痛苦，却不曾有一刻选择闭目躲闪，我睁大眼睛想要看清楚自己的内心，曾经我苦苦追寻的无非是精神与肉体保持轻松活力罢。很让我开心的是，我能感受到自己还是对一切那么充满好奇，也不缺乏一探到底的勇气，这可能是老天赐给我的最宝贵的礼物 —— 如果我想要看一眼自己，这似乎是一次绝佳的机会呢。
 
 ### 做点儿什么
 
-很有意思，在我开始动手写这篇时，我有去重新翻看了之前写的今年的所有[月报]({{< relref "posts/Monthly/_index.md" >}})，发现自己时好时坏的症状表现确实比记忆里要鲜活不少呢 🤣，无论是前几个月的还能保持阴晴不定努力支撑、中间几个月的迷茫无措直接断线还是十月开始的逐渐回归，算是挺诚实地还原了一部分的我出来，记忆这东西果然会模糊，有些东西写的没写的都随着那些文字慢慢流回来了，勾起了我不少回忆。
-
-全用故事、细节：从割裂开始，谈自己从小到大感受到的割裂，最后谈到自己对一些想法、关系的迷思不解，发现我最近的迷思不在于政治性抑郁，而是来源于最亲近的人，我的焦虑感来自于我的家庭、朋友，然后讲想清楚之后干的事 —— 十一回家谈话我们家负债还清了，母亲好转了兄弟们都工作了；和这两年对我帮助最大的朋友坦露了自己确实因为不确定感有诸多担忧、不安与不解。
+很有意思，在我开始动手写这篇时，我有去重新翻看了之前写的今年的所有[月报]({{< relref "posts/Monthly/_index.md" >}})，发现自己时好时坏的症状表现确实比记忆里要鲜活不少呢 🤣，无论是前几个月的还能保持阴晴不定努力支撑、中间几个月的迷茫无措直接断线还是十月开始的逐渐回归，算是挺诚实地还原了一部分的我出来，记忆这东西果然会模糊，有些东西写的没写的随着那些文字慢慢都流回来了，勾起了我不少回忆。
 
 因为其实这些事情我行动了之后无论任何结果如何，发现自己都是能够且心甘情愿承受的，比如谈完话回来后就早睡早起了；会更愿意积极主动但是不会预设期望的去搭建一些连接。
 
-> 没必要钻牛角尖，也少了很多自我内耗，更不可能因爱而恨，没必要去否定之前的和正在经历的一切，贪心与渴求也并非是什么羞耻与缺陷，其实贪图的是安心、渴求的是真心，倒不得不说我胃口还是蛮大的哈。
+![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142040300.png "愿你得安歇")
+
+全用故事、细节：从割裂开始，谈自己从小到大感受到的割裂，最后谈到自己对一些想法、关系的迷思不解，发现我最近的迷思不在于政治性抑郁，而是来源于最亲近的人，我的焦虑感来自于我的家庭、朋友，然后讲想清楚之后干的事 —— 十一回家谈话我们家负债还清了，母亲好转了兄弟们都工作了；和这两年对我帮助最大的朋友坦露了自己确实因为不确定感有诸多担忧、不安与不解。
+
+> 没必要钻牛角尖，也少了很多自我内耗，更不可能对什么去因爱而恨，没必要去否定之前的和正在经历的一切，贪心与渴求也并非是什么羞耻与缺陷，其实贪图的是安心、渴求的是真心，倒不得不说我胃口还是蛮大的哈。
 
 ![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142023143.png "I AM")
 
@@ -81,11 +83,17 @@ series: [夕拾花]
 做认真点儿 --> 做点儿什么。
 </p>
 
-就这样，一年里的波波折折莫名就和年初的含糊一语搭上了呢，这必然有我写这篇时的下意识的结构设计在里面，但我喜欢这种沾着些匠气但又好似本该如此的感觉。是了，感觉好像冥冥中走在一条编织的线上，好似活在精巧编排的话本里，偏偏又是自己作的开篇词，自己演的人间戏，这感觉还不错的。
+就这样，一年里的波波折折莫名就和年初的含糊一语搭上了呢，这必然有我写这篇时的下意识的结构设计在里面，但我还挺喜欢这种沾着些匠气但又好似本该如此的感觉。是了，就如同冥冥中走在一条编织的线上，好似活在精巧编排的话本里，偏偏又是自己作的开篇词，自己演的人间戏，这感觉还不错的。
 
 ### 来一份快照
 
-2022 年阅读完毕的书籍 & 有记忆残留的文章；2022 年观看的电影、剧集 & 有记忆残留的视频
+之前一直没有好好记录，不过和 6-9 月的月报没有记录也是一种记录一样，我也不想再去追溯收集以前看的那些东西了，不过自己的口味从小到大还是挺多变的，今年看的听的东西想了一下就算和 21 年相比看的东西也变了不少呢，那就从今年开始简单的做个记录吧，感觉上是件比较有意思的事。希望之后每年也能类似的不带评述地来张快照即可，这样子简简单单的也不至于有压力，没准儿日后可以成为一个年轮连环画哈哈。
+
+1. 时间维度：2022/1/1 - 2022/12/31
+2. **书籍 & 影剧**：应该是包含年内所有完整看完的了，综艺、漫画、番剧之类的今年看得不多零星一两个也都写在这里了就。大多数书和剧是因缘际会兴头上来直接开看的就显得有点儿杂乱，所以其中印象比较深的特意加粗了一下下
+3. **文章 & 视频**：有几篇文章和视频当初看完感觉真的写得做得还蛮不错的，感觉挺花心思的，这里也存下来当个备忘了
+4. **播客**：比较习惯于运动或睡觉时听点儿东西，所以这两年基本耳朵也没咋闲着。这一年里陆陆续续订阅的不少，取关的倒也不少，就把此刻还有订阅也基本一直在听的播客分分类摞上来吧
+5. **其他**：还有一些常看的就想记一下，又不好归到上面去，就先统一塞到这里喽
 
 <details>
   <summary><b>» 书籍</b></summary>
@@ -104,23 +112,6 @@ series: [夕拾花]
 - 《[大师与玛格丽特](https://book.douban.com/subject/27069991/)》米·阿·布尔加科夫 / 白桦熊 / 中央编译出版社
 - 《卡尔马佐夫兄弟》
 - 《古文观止》
-
-</details>
-
-<details>
-  <summary><b>» 文章</b></summary>
-
-- [财新 | 2021 年最具影响力的 21 件事](https://datanews.caixin.com/interactive/2021/2021final/)
-- [关于 Type-C / 雷电 3 接口的科普（上）](https://zhuanlan.zhihu.com/p/101434503)
-- [关于 Type-C / 雷电 3 接口的科普（下）](https://zhuanlan.zhihu.com/p/101486153)
-- [五天剥夺理性，解密洗脑培训的千层套路](https://mp.weixin.qq.com/s/F4sQ6GOxONr--JBA5Y2EMA)
-- [医院做的这些「拍片」检查，你可以多了解一点](https://sspai.com/post/67474)
-- [Breiman 访谈录 |《统计建模：两种文化》20 周年纪念](https://mp.weixin.qq.com/s?__biz=MjM5NDQ3NTkwMA==&mid=2650148161&idx=1&sn=ab1d9a8c504389c6d53f6f749fa865cb)
-- [让 YAML 变得像它看起来一样简单](https://linux.cn/article-13842-1.html)
-- [SQL Style Guide](https://www.sqlstyle.guide/)
-- [Handbook for Writers](https://saylordotorg.github.io/text_handbook-for-writers/index.html)
-- [How Xi Rewrote China’s Rulebook to Build the Party Around Himself](https://www.bloomberg.com/graphics/2022-china-national-party-congress-xi-rules/?leadSource=uverify%20wall)
-- [How Xi’s Shakeup Shattered Decades of Succession Rules in China](https://www.bloomberg.com/graphics/2022-china-party-congress-xi-new-leaders/?ai=eyJpc1N1YnNjcmliZWQiOnRydWUsImFydGljbGVSZWFkIjpmYWxzZSwiYXJ0aWNsZUNvdW50IjowLCJ3YWxsSGVpZ2h0IjoxfQ==)
 
 </details>
 
@@ -156,6 +147,25 @@ series: [夕拾花]
 - 《[一九四二](https://movie.douban.com/subject/6011805/)》2012-11-29(中国大陆)
 - **《[菊次郎の夏](https://movie.douban.com/subject/1293359/)》1999-06-05(日本)**
 - 《[狩猎](https://movie.douban.com/subject/6985810/)》2013-01-10(丹麦)
+- **《[憨豆先生](https://movie.douban.com/subject/1302958/)》1990-01-01(英国)**
+- 《[魔法咪路咪路](https://movie.douban.com/subject/3115194/)》2002-04-06(日本)
+
+</details>
+
+<details>
+  <summary><b>» 文章</b></summary>
+
+- [财新 | 2021 年最具影响力的 21 件事](https://datanews.caixin.com/interactive/2021/2021final/)
+- [关于 Type-C / 雷电 3 接口的科普（上）](https://zhuanlan.zhihu.com/p/101434503)
+- [关于 Type-C / 雷电 3 接口的科普（下）](https://zhuanlan.zhihu.com/p/101486153)
+- [五天剥夺理性，解密洗脑培训的千层套路](https://mp.weixin.qq.com/s/F4sQ6GOxONr--JBA5Y2EMA)
+- [医院做的这些「拍片」检查，你可以多了解一点](https://sspai.com/post/67474)
+- [Breiman 访谈录 |《统计建模：两种文化》20 周年纪念](https://mp.weixin.qq.com/s?__biz=MjM5NDQ3NTkwMA==&mid=2650148161&idx=1&sn=ab1d9a8c504389c6d53f6f749fa865cb)
+- [让 YAML 变得像它看起来一样简单](https://linux.cn/article-13842-1.html)
+- [SQL Style Guide](https://www.sqlstyle.guide/)
+- [Handbook for Writers](https://saylordotorg.github.io/text_handbook-for-writers/index.html)
+- [How Xi Rewrote China’s Rulebook to Build the Party Around Himself](https://www.bloomberg.com/graphics/2022-china-national-party-congress-xi-rules/?leadSource=uverify%20wall)
+- [How Xi’s Shakeup Shattered Decades of Succession Rules in China](https://www.bloomberg.com/graphics/2022-china-party-congress-xi-new-leaders/?ai=eyJpc1N1YnNjcmliZWQiOnRydWUsImFydGljbGVSZWFkIjpmYWxzZSwiYXJ0aWNsZUNvdW50IjowLCJ3YWxsSGVpZ2h0IjoxfQ==)
 
 </details>
 
@@ -175,8 +185,8 @@ series: [夕拾花]
 
 - **声音发掘：**[不在场](https://buzaichang.xyz/)
 - **读书分享：**[文化有限](https://www.xiaoyuzhoufm.com/podcast/5e4515bd418a84a046e2b11a)
-- **泛文讲谈：**[一席](https://yixi.tv)、[螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
 - **技术编程：**[枫言枫语](https://fyfy.fm/)、[ByteTalk](https://bytetalk.fm/)
+- **泛文讲谈：**[四季办公室](https://siji.typlog.io/)、[一席](https://yixi.tv)、[螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
 - **社论观察：**[东亚观察局](https://www.xiaoyuzhoufm.com/podcast/5e9a4e25418a84a046bc6156)、[不明白播客](https://www.bumingbai.net/)、[The Prince - The Economist](https://www.economist.com/theprincepod)
 - **商业分析：**[三五环](https://www.xiaoyuzhoufm.com/podcast/5e280fab418a84a0461faa3c)、[乱翻书](https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2)、[疯投圈](https://crazy.capital/)、[硅谷 101](https://sv101.fireside.fm/)、[商业 WHY 酱](https://msbussinesswhy.fireside.fm/)、[商业就是这样](https://thatisbiz.fireside.fm/)
 - **闲聊讨论：**[限时肤浅](https://www.xiaoyuzhoufm.com/podcast/5f56592d83c34e85dd9b6d53)、[不叁不肆](https://dao.fm/%E4%B8%8D%E5%8F%81%E4%B8%8D%E8%82%86/)、[展开讲讲](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9bfb)、[日谈公园](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8)、[不把天聊 si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)、[跟宇宙结婚](https://www.xiaoyuzhoufm.com/podcast/5e284c39418a84a046263d8a)、[你吃香菜吗](https://www.xiaoyuzhoufm.com/podcast/62ce4812b94ef3c7f6c71f93)、[谐星聊天会](https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b)
@@ -186,9 +196,9 @@ series: [夕拾花]
 <details>
   <summary><b>» 其他</b></summary>
 
-- **Blog：**[Yihui Xie | 谢益辉](https://yihui.org/)
-- **Bilibili：**[睡前消息](https://space.bilibili.com/316568752?spm_id_from=333.337.search-card.all.click)、[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[彭世职业培训学校](https://space.bilibili.com/1433760771/)
-- **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)
+- **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)
+- **Bilibili：**[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[马督工](https://space.bilibili.com/316568752)、[陈一枝你坐下](https://space.bilibili.com/1937416537)、[彭世职业培训学校](https://space.bilibili.com/1433760771)、[小约翰可汗](https://space.bilibili.com/23947287)、[吸奇侠](https://space.bilibili.com/414350632)、[DuDu 杜银玲](https://space.bilibili.com/355324923)
+- **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、[李永乐老师](https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw/videos)、[老雷](https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos)、[Simone Giertz](https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos)、[StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw/videos)、[zedstatistics](https://www.youtube.com/c/zedstatistics/videos)
 
 </details>
 
