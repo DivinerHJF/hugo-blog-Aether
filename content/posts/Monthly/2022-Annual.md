@@ -36,9 +36,9 @@ series: [夕拾花]
 
 ### 贪心与渴求
 
-我一直觉得自己是一个表面还算呆钝乖巧，但其实比较不顺管教、比较「野」的人。
+我一直觉得自己是一个表面还算呆钝乖巧，但其实比较不顺规训、比较「野」的人。
 
-过往的日子里，我总以为自己是能够自得其乐的，也常以自己无人管教可以肆意行动从来也不会有人钳制而颇觉骄傲 —— 很巧地，我从小生活在一个天主教与共产党的双料环境规训夹击下，但同时家长虽然没受过多久学校教育又是虔诚的天主教徒却有一种在我看来都惊讶的开明以及完全的放任，农村城市南南北北的求学之路跌跌撞撞经历了七八次轮转，脑子和身体在我的感知里暴露于相悖的生活与信息中，总是在一个人习惯新环境同时又总在擦除过去，总是在宕机、无所适从、沉默观察以及拙劣模仿的路径下循环捏塑自己。
+过往的日子里，我总以为自己是能够自得其乐的，也常以自己无人管教可以肆意行动从来也不会有人钳制而颇觉骄傲 —— 很巧地，我从小生活在一个天主教与共产党的双料环境浸染下，但家长虽然没受过多久学校教育又是虔诚的天主教徒却有一种在我看来都惊讶的开明以及完全的放任，农村城市南南北北的求学之路跌跌撞撞经历了七八次轮转，脑子和身体在我的感知里常暴露于相悖的生活与信息中，无人引导迷迷瞪瞪地粗野生长着，总是在一个人习惯新环境同时又总在擦除过去，总是在宕机、无所适从、沉默观察以及拙劣模仿的路径下循环捏塑自己。
 
 因为总是在飘荡 —— 无论身体还是脑子，便习得了大部分时间都自顾自地埋头走的能力，片段式的活在自己的世界里，接触的关系好像都很浅显与短暂，不太有亲情的羁绊，也从不祈盼真的有 Close Friend 的存在，常以也许本性如此涂抹自己。但其实慢慢明白，一路走来无论亲疏远近，亲人、同学穿梭身旁，人来人往总归是热闹的，我表面上可以很独，但周围人散发营造的氛围一直在托着我呢。当我这种人真正一个人生活后，会发现由于自己一贯的行径，把自己捏成了一个空心人，当与一切都没什么联结时，自己也不像最初认为的那样可以那么自得其乐。
 
@@ -64,36 +64,50 @@ series: [夕拾花]
 
 ### 做点儿什么
 
-很有意思，在我开始动手写这篇时，我有去重新翻看了之前写的今年的所有[月报]({{< relref "posts/Monthly/_index.md" >}})，发现自己时好时坏的症状表现确实比记忆里要鲜活不少呢，无论是前几个月的还能保持阴晴不定努力支撑、中间几个月的迷茫无措直接断线还是十月开始的逐渐回归，算是挺诚实地还原了一部分的我出来，记忆这东西果然会模糊，有些东西写的没写的随着那些文字慢慢都流回来了，勾起了我不少回忆。
+很有意思，在我开始动手写这篇时，我有去重新翻看了之前写的今年的所有[月报]({{< relref "posts/Monthly/_index.md" >}})，发现自己时好时坏的症状表现确实比记忆里要鲜活不少，无论是前几个月的还能保持阴晴不定努力支撑、中间几个月的迷茫无措直接断线还是十月开始的逐渐回归，算是挺诚实地还原了一部分的我，记忆这东西果然会模糊，有些东西写的没写的随着那些文字慢慢都流回来了，勾起了我不少回忆。
 
-> 当你开始盯着某物一直看，久一些你会觉得陌生，再久一些你会怀疑，然后可能会开始害怕，当我在看我自己时，我能做的就是比这再看得久一些，然后行动。
+> 当你开始盯着某物一直看，久一些你会觉得陌生，再久一些你会疑惑，然后可能会开始害怕，当我选择看自己时，我能做的就是比这再看得久一些，方能看到自己。
 
-<details>
-  <summary><b>» 占位</b></summary>
+1. 我有骨子里的自卑，看不起自己与家庭，不坦荡，别扭
+   - 父母露面与参观时的不耐烦与催促；
+   - 假期去工地干活赚钱，父亲骑着车一身泥土在路上躲认识人的目光。
+2. 我对人与人的关系缺乏足够的的心理支撑，没有韧性、弱小；
+3. 无法对自己交待，没有信心，愧疚而怯懦，我并不坚信自己做的
 
-1. 价值观：我不再追求他人的价值观。三分金钱就仿佛对自己昭示着目前我对过往经历的回应。宗教与社会 —— 爱，我可能一直会是那个不怎么进教堂、不进行所谓的告罪、不遵守大多数宗教规矩的教徒，家庭与关系 —— 心，以及自己。
-2. 人生观：被需要是我的毒品，被推开的感觉太难受了。待探索的秘境有很多，我会习惯。
+第一个映现在我脑海中的就是心理柔弱、没有韧性、弱小，在我找到足够的心理支撑之前，我不想再尝试，我现在的心理太脆弱了。社交的代餐：最好的防守是进攻，最好的掩饰是公开，任何一种状态都不自然的话，我公开我最放心的，那我就真的把不好的自己给掩藏了，连我自己也找不到，扼杀掉不好的自己最好的方式伪装成理想中的自己。
 
-</details>
+![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142040300.png "愿你得安眠")
 
-全用故事、细节：从割裂开始，谈自己从小到大感受到的割裂，最后谈到自己对一些想法、关系的迷思不解，发现我最近的迷思不在于政治性抑郁，而是来源于最亲近的人，我的焦虑感来自于我的家庭、朋友，然后讲想清楚之后干的事 —— 十一回家谈话我们家负债还清了，母亲好转了兄弟们都工作了；和这两年对我帮助最大的朋友坦露了自己确实因为不确定感有诸多担忧、不安与不解。
+我想不清楚的事很多，为什么不结婚就好像没有任何责任，为什么 xxx 就可以 xxx 了，难道就因为这一认定，这逻辑反了吧，我不理解。觉得看起来反我直觉的事变多了，但他们如此理直气壮，我不理解。
 
-![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142040300.png "愿你得安歇")
+脚底没有实感也不再总是战战兢兢担忧坠落，或许 ——
+
+> 我一脚踏空，我要飞起来了。
+
+十一回家谈话我们家负债还清了，母亲好转了兄弟们都工作了；和这两年对我帮助最大的朋友坦露了自己确实因为不确定感有诸多担忧、不安与不解。
+
+或许应该在现实里找回自己，我却更习惯于在虚拟里定位自身。
+
+我的倾诉欲、陪伴感的解决要寻找一个稳固的途径，根源在于我确实想有一个真心的朋友。而我并没有。
+
+一切并不能和解，就像《房思琪的初恋乐园》中存在了就是存在了，不要通过责备自己更不要通过贬低自己或他人抑或是扭曲自己脑海中的事实来迎合他人将事情合理化。我的选择是习惯，我做不到和解。不要纠结于烂人烂事上，你会失去的更多。
+
+让自己进入一个更开阔的世界，内心学会关注一个更大的图景，才会有效减少人与人之间的鸡毛蒜皮。繁殖，越是封闭的环境，越是小圈子，就越容易产生一些是非。如果所有事情都耗在这上面实在是悲哀。
 
 因为其实这些事情我行动了之后无论任何结果如何，发现自己都是能够且心甘情愿承受的，比如谈完话回来后就早睡早起了；会更愿意积极主动但是不会预设期望的去搭建一些连接。
 
-> 贪心与渴求也并非是什么羞耻与缺陷，其实贪图的是安心、渴求的是真心，倒不得不说小伙子胃口还蛮大的哩。摸着牛角尖不觉扎手，观瞧自己也少了审视，不以贬抑去合理化痛苦，也不对什么都套上爱恨纠葛，之前的和正在经历的一切都在，我正在。
+> 贪心与渴求也并非是什么羞耻与缺陷，**贪图的是爱与自由，渴求的是心与赤诚**，倒不得不说小伙子胃口还蛮大的哩。摸着牛角尖不再觉扎手，观瞧自己也少了些审视，不以贬抑去合理化痛苦，也不对什么都套上爱恨纠葛，之前的和正在经历的一切都在，我正在。
 
 ![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202211142023143.png "I AM")
 
-看来，在经济、身体逐渐自立之后，我的精神也在开始学习真正地适应一个人的生活呢。
+看来，在经济、身体逐渐自立之后，我的精神也在开始学习真正地适应一个人的生活。
 
 <p align="center">
-想简单点儿 --> 贪心与渴求；<br />
-做认真点儿 --> 做点儿什么。
+想简单点儿 👉 贪心与渴求；<br />
+做认真点儿 👉 做点儿什么。
 </p>
 
-就这样，一年里的波波折折莫名就和年初的含糊一语搭上了呢，这必然有我写这篇时的下意识的结构设计在里面，但我还挺喜欢这种沾着些匠气但又好似本该如此的感觉。是了，就如同冥冥中走在一条编织的线上，好似活在精巧编排的话本里，偏偏又是自己作的开篇词，自己演的人间戏，这感觉还不错的。
+就这样，一年里的波波折折莫名就和年初的含糊一语搭上了，这必然有我写这篇时的下意识的结构设计在里面，但我还挺喜欢这种沾着些匠气但又好似本该如此的感觉。是了，就如同冥冥中走在一条编织的线上，好似活在精巧编排的话本里，偏偏又是自己作的开篇词，自己演的人间戏，这感觉还不错的。
 
 ### 来一份快照
 
@@ -145,6 +159,7 @@ series: [夕拾花]
 - 《[精灵旅社 2](https://movie.douban.com/subject/21327493/)》2015-09-25(美国)
 - 《[精灵旅社 4：变身大冒险](https://movie.douban.com/subject/30472643/)》2022-01-14(美国网络)
 - **《[隐入尘烟](https://movie.douban.com/subject/35131346/)》2022-07-08(中国大陆)**
+- **《[利兹与青鸟](https://movie.douban.com/subject/27062637/)》2018-04-21(日本)**
 - 《[士兵之歌](https://movie.douban.com/subject/1295614/)》1959-12-01(苏联)
 - 《[乌龙山伯爵](https://www.douban.com/location/drama/10863480/)》开心麻花舞台剧
 - 《[万里归途](https://movie.douban.com/subject/26654184/)》2022-09-30(中国大陆)
@@ -157,6 +172,7 @@ series: [夕拾花]
 - 《[一九四二](https://movie.douban.com/subject/6011805/)》2012-11-29(中国大陆)
 - **《[菊次郎の夏](https://movie.douban.com/subject/1293359/)》1999-06-05(日本)**
 - 《[狩猎](https://movie.douban.com/subject/6985810/)》2013-01-10(丹麦)
+- **《[殡棺](https://movie.douban.com/subject/25917973/)》2015-10-16(中国大陆)**
 - **《[憨豆先生](https://movie.douban.com/subject/1302958/)》1990-01-01(英国)**
 - 《[魔法咪路咪路](https://movie.douban.com/subject/3115194/)》2002-04-06(日本)
 
@@ -171,9 +187,9 @@ series: [夕拾花]
 - [五天剥夺理性，解密洗脑培训的千层套路](https://mp.weixin.qq.com/s/F4sQ6GOxONr--JBA5Y2EMA)
 - [医院做的这些「拍片」检查，你可以多了解一点](https://sspai.com/post/67474)
 - [Breiman 访谈录 |《统计建模：两种文化》20 周年纪念](https://mp.weixin.qq.com/s?__biz=MjM5NDQ3NTkwMA==&mid=2650148161&idx=1&sn=ab1d9a8c504389c6d53f6f749fa865cb)
-- [让 YAML 变得像它看起来一样简单](https://linux.cn/article-13842-1.html)
 - [SQL Style Guide](https://www.sqlstyle.guide/)
-- [Handbook for Writers](https://saylordotorg.github.io/text_handbook-for-writers/index.html)
+- [让 YAML 变得像它看起来一样简单](https://linux.cn/article-13842-1.html)
+- [新冠肺炎的经济学分析：病死率的因果识别与防控的机会成本](https://archive.ph/KLusN)
 - [How Xi Rewrote China’s Rulebook to Build the Party Around Himself](https://www.bloomberg.com/graphics/2022-china-national-party-congress-xi-rules/?leadSource=uverify%20wall)
 - [How Xi’s Shakeup Shattered Decades of Succession Rules in China](https://www.bloomberg.com/graphics/2022-china-party-congress-xi-new-leaders/?ai=eyJpc1N1YnNjcmliZWQiOnRydWUsImFydGljbGVSZWFkIjpmYWxzZSwiYXJ0aWNsZUNvdW50IjowLCJ3YWxsSGVpZ2h0IjoxfQ==)
 
@@ -184,9 +200,13 @@ series: [夕拾花]
 
 - [中岛美雪 · 2007 歌旅演唱会](https://www.bilibili.com/video/BV1uK411P7JE)
 - [中岛美雪 · 2016 一会演唱会](https://www.bilibili.com/video/BV144411i7mb)
-- [先看测评 - 选投影仪：从入门到精通，3000 元 10 款横评](https://www.bilibili.com/video/BV13L4y1n7WQ/?share_source=copy_web&vd_source=dfeb89feb5ee367d116e92e86e0834fd)
+- [选投影仪：从入门到精通，3000 元 10 款横评](https://www.bilibili.com/video/BV13L4y1n7WQ/?share_source=copy_web&vd_source=dfeb89feb5ee367d116e92e86e0834fd "先看测评")
 - [Vercel 与 Next.js：开源全明星团队背后的商业逻辑｜ Monetizing Open Source](https://www.bilibili.com/video/BV1gR4y1u76v)
-- [Git Basic](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0)、[Hugo Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3)、[CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V)
+- [Git 基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0 "麦兜搞 IT")
+- [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
+- [Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3 "Mike Dane")
+- [北大肖臻 - 区块链技术与应用](http://zhenxiao.com/blockchain/ "北京大学 - 肖臻")
+- [CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V "Harvard Courses")
 
 </details>
 
@@ -196,7 +216,7 @@ series: [夕拾花]
 - **声音发掘：**[不在场](https://buzaichang.xyz/)
 - **读书分享：**[文化有限](https://www.xiaoyuzhoufm.com/podcast/5e4515bd418a84a046e2b11a)
 - **技术编程：**[枫言枫语](https://fyfy.fm/)、[ByteTalk](https://bytetalk.fm/)
-- **泛文讲谈：**[四季办公室](https://siji.typlog.io/)、[一席](https://yixi.tv)、[螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
+- **泛文讲谈：**[四季办公室](https://siji.typlog.io/)、[螺丝在拧紧](https://www.xiaoyuzhoufm.com/podcast/6038445497d1b2c8c42d29ba)
 - **社论观察：**[东亚观察局](https://www.xiaoyuzhoufm.com/podcast/5e9a4e25418a84a046bc6156)、[不明白播客](https://www.bumingbai.net/)、[The Prince - The Economist](https://www.economist.com/theprincepod)
 - **商业分析：**[三五环](https://www.xiaoyuzhoufm.com/podcast/5e280fab418a84a0461faa3c)、[乱翻书](https://www.xiaoyuzhoufm.com/podcast/61358d971c5d56efe5bcb5d2)、[疯投圈](https://crazy.capital/)、[硅谷 101](https://sv101.fireside.fm/)、[商业 WHY 酱](https://msbussinesswhy.fireside.fm/)、[商业就是这样](https://thatisbiz.fireside.fm/)
 - **闲聊讨论：**[限时肤浅](https://www.xiaoyuzhoufm.com/podcast/5f56592d83c34e85dd9b6d53)、[不叁不肆](https://dao.fm/%E4%B8%8D%E5%8F%81%E4%B8%8D%E8%82%86/)、[展开讲讲](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9bfb)、[日谈公园](https://www.xiaoyuzhoufm.com/podcast/5e280faa418a84a0461f9ad8)、[不把天聊 si](https://www.xiaoyuzhoufm.com/podcast/60de960e82b7520df0026844)、[跟宇宙结婚](https://www.xiaoyuzhoufm.com/podcast/5e284c39418a84a046263d8a)、[你吃香菜吗](https://www.xiaoyuzhoufm.com/podcast/62ce4812b94ef3c7f6c71f93)、[谐星聊天会](https://www.xiaoyuzhoufm.com/podcast/5e280fa7418a84a0461f912b)
@@ -206,7 +226,7 @@ series: [夕拾花]
 <details>
   <summary><b>» 其他</b></summary>
 
-- **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)
+- **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[Thesephist | Linus Lee](https://thesephist.com/posts/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[有据 | 国际新闻事实核查](https://chinafactcheck.com/)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)
 - **Bilibili：**[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[马督工](https://space.bilibili.com/316568752)、[陈一枝你坐下](https://space.bilibili.com/1937416537)、[彭世职业培训学校](https://space.bilibili.com/1433760771)、[小约翰可汗](https://space.bilibili.com/23947287)、[吸奇侠](https://space.bilibili.com/414350632)、[DuDu 杜银玲](https://space.bilibili.com/355324923)
 - **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、[李永乐老师](https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw/videos)、[老雷](https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos)、[Simone Giertz](https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos)、[StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw/videos)、[zedstatistics](https://www.youtube.com/c/zedstatistics/videos)
 
@@ -216,38 +236,13 @@ series: [夕拾花]
 
 ## 习惯
 
-观念上的悟？经历上的悟！
+等待、思考、斋戒 - 接触（经历）、感受、习惯（接纳）。
 
-等待、思考、斋戒
-接触（经历）、感受、习惯（接纳）。一切并不能和解，就像《房思琪的初恋乐园》中存在了就是存在了，不要通过责备自己更不要通过贬低自己或他人抑或是扭曲自己脑海中的事实来迎合他人将事情合理化。我的选择是习惯，我做不到和解
+我自己在把自己当一个宠物来养，幻想了这么多，感受了这么久，一切还要习惯，习惯养个新宠物，习惯这个新的我。
 
-迄今为止，我没去放纵去做一些事，不是我有多高尚，只是我爱做梦，让我别醒。
+一个真人养成游戏：找出一个日常生活中遇到的小问题，比如什么东西坏了、最近睡眠不规律、家里什么角落比较乱，然后一个一个去解决，不断循环。每一次问题的解决都是在提升生活质量，锻炼自己对身体、脑力、钱等资源的使用，不断减少耗散在琐事上的精力，甚至能提升对生活的掌控感和自信。
 
-我的倾诉欲、陪伴感的解决要寻找一个稳固的途径，根源在于我确实想有一个真心的朋友。而我并没有。我是一个空心人，找不到可以定位的东西。
-
-最大的感受是别人并不会享受，或者说有点儿讨厌，只是心善应付下罢了。我不怕你不想说话或者觉得和我交流很累，这些都可以直接说，我最怕没头没尾，毫无头绪地发生了，让人难受。怕失去一个朋友，本来我觉得朋友间沉默是正常的，但这次的经历让我感受到了毫无头绪，像是一下子戛然而止了，有没有一个理由的，但就很冷漠对我来讲像是突然转变，我极度恐惧。
-
-我到底在期待些什么呢？如此敷衍，显而易见，她的话可信吗？人家就是不和你说真话又如何呢？为什么不能好好交流呢，自闭给谁看！自私鬼！
-
-### 身体的习惯
-
-> 说不如做，把在想的做成习惯  
-> 习惯了跑步后，再躺着会觉得很舒服，但去跑步也并不觉得累，各有各的好。  
-> 习惯了看图书后，再看网文不觉有甚，但看图书也不觉有甚了，各有各的特色。  
-> 习惯了更多的一些资讯后，再看国内的。
-
-### 内心的习惯
-
-> 关系：习惯一个人  
-> 价值：习惯无价值  
-> 习惯自己的幼稚、习惯自己的奋斗  
 > 我不用和解这个词，在我看来，我无法与我之前的经历和解，也没有什么谅不谅解， —— 因为我本就觉得每个人都在照着自己的想法行事，无法谅解也不必谅解，我会一直记着，时间其实并不能抹去什么，我虽然善于开导自己，但不善于欺骗自己，所以我会尝试习惯，不是妥协去习惯接纳它，而是习惯它的存在，习惯本就如此糟糕这件事，我不接纳、亦不妥协，做不到宣战，且想要一个活着的理由与方式，此刻想到的支点便是习惯。
-
-你哪一刻感觉天塌了，我好像弄丢了一个朋友。
-
-要想明白，人本就是生来孤独的，不能自己好好生活、自救的话，他者也不能救。
-
-让自己进入一个更开阔的世界，内心学会关注一个更大的图景，才会有效减少人与人之间的鸡毛蒜皮。繁殖，越是封闭的环境，越是小圈子，就越容易产生一些是非。如果所有事情都耗在这上面实在是悲哀。
 
 ### 人生在路上
 
