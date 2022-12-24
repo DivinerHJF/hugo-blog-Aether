@@ -106,7 +106,7 @@ toc = false
 - [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
 - [Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3 "Mike Dane")
 - [北大肖臻 - 区块链技术与应用](http://zhenxiao.com/blockchain/ "北京大学 - 肖臻")
-- [CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V "Harvard Courses")
+- [CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V "Harvard Courses")、[尚硅谷 Vue2.0+Vue3.0 全套教程](https://www.bilibili.com/video/BV1Zy4y1K7SH)
 
 </details>
 
@@ -126,8 +126,8 @@ toc = false
 <details open>
   <summary><b>» 其他</b></summary>
 
-- **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[Pseudoyu | Yu Zhang](https://www.pseudoyu.com/zh/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[有据 | 国际新闻事实核查](https://chinafactcheck.com/)、[知识分子](http://zhishifenzi.com/)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)
-- **Bilibili：**[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[马督工](https://space.bilibili.com/316568752)、[陈一枝你坐下](https://space.bilibili.com/1937416537)、[彭世职业培训学校](https://space.bilibili.com/1433760771)、[小约翰可汗](https://space.bilibili.com/23947287)、[吸奇侠](https://space.bilibili.com/414350632)、[DuDu 杜银玲](https://space.bilibili.com/355324923)
-- **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、[李永乐老师](https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw/videos)、[老雷](https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos)、[Simone Giertz](https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos)、[StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw/videos)、[zedstatistics](https://www.youtube.com/c/zedstatistics/videos)
+- **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[Pseudoyu | Yu Zhang](https://www.pseudoyu.com/zh/)、[文字森林 | 天仙子](https://tianxianzi.me/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[有据 | 国际新闻事实核查](https://chinafactcheck.com/)、[知识分子](http://zhishifenzi.com/)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)
+- **Bilibili：**[爱跳绳的鲁西西](https://space.bilibili.com/383458566)、[小平爱爬墙](https://space.bilibili.com/407978871/)、[陈一枝你坐下](https://space.bilibili.com/1937416537)、[彭世职业培训学校](https://space.bilibili.com/1433760771)、[小约翰可汗](https://space.bilibili.com/23947287)、[吸奇侠](https://space.bilibili.com/414350632)、[DuDu 杜银玲](https://space.bilibili.com/355324923)
+- **Youtube：**[幻海航行](https://www.youtube.com/channel/UCp1nO1bgVwks9b5EhKQGVag/videos)、[眼见为识](https://www.youtube.com/channel/UChASrP18ZKeWic0wA3E08Pg/videos)、[御坂美琴](https://www.youtube.com/channel/UCNUS6e1M0eUIv1F88kxRJ-g/playlists)、[睡前消息](https://www.youtube.com/channel/UCR4U_q_MojVVqYnawAVlryw/videos)、[医痴的木头屋](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、[李永乐老师](https://www.youtube.com/channel/UCSs4A6HYKmHA2MG_0z-F0xw/videos)、[老雷](https://www.youtube.com/channel/UCT3YvT4kdEiJ3up3PINhyQQ/videos)、[Simone Giertz](https://www.youtube.com/channel/UC3KEoMzNz8eYnwBC34RaKCQ/videos)、[StatQuest with Josh Starmer](https://www.youtube.com/channel/UCtYLUTtgS3k1Fg4y5tAhLbw/videos)、[zedstatistics](https://www.youtube.com/c/zedstatistics/videos)
 
 </details>
