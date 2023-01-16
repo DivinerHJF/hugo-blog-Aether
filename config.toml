@@ -17,7 +17,7 @@ identifier = "posts"
 # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 pre = "🗃️"
 # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-name = "时间线"
+name = "归档"
 post = ""
 url = "/posts/"
 # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
@@ -49,7 +49,7 @@ weight = 3
 # weight = 4
 [[menu.main]]
 identifier = ""
-name = "读看听"
+name = "快照"
 post = ""
 pre = "🎡"
 title = "采点点星光络结为网"
@@ -62,7 +62,7 @@ version = "0.2.X"
 # 网站名称
 title = "灿若星河"
 # 网站描述
-description = "这是我的全新 Hugo 网站"
+description = "Personal website of JianFeng Hao | 郝建锋的个人网站"
 # 网站关键词
 keywords = ["blog", "Hugo", "郝建锋", "博客"]
 #  网站默认主题样式 ("light", "dark", "black", "auto")
@@ -75,7 +75,7 @@ fingerprint = ""
 #  日期格式
 dateFormat = "2006-01-02"
 # 网站图片, 用于 Open Graph 和 Twitter Cards
-images = ["https://blog-1255524710.cos.ap-beijing.myqcloud.com/master/2022031021531069866.svg"]
+images = ["/images/me/favicon.svg"]
 #  开启PWA支持
 enablePWA = true
 #  应用图标配置
@@ -85,7 +85,7 @@ title = "Aether"
 # 是否隐藏网站图标资源链接
 noFavicon = false
 # 更现代的 SVG 网站图标, 可替代旧的 .png 和 .ico 文件
-svgFavicon = "https://blog-1255524710.cos.ap-beijing.myqcloud.com/master/2022031021531069866.svg"
+svgFavicon = "/images/me/favicon.svg"
 # Safari 图标颜色
 iconColor = "#5bbad5"
 # Windows v8-10磁贴颜色
@@ -136,7 +136,7 @@ themeChangeMode = "select"
 #  页面头部导航栏标题配置
 [params.header.title]
 # LOGO 的 URL
-logo = "https://blog-1255524710.cos.ap-beijing.myqcloud.com/master/2022031021545432128.svg"
+logo = "/images/me/logo.svg"
 # 标题名称
 name = "星河一方"
 # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
@@ -186,12 +186,12 @@ paginate = 1000
 # 日期格式 (月和日)
 dateFormat = "01-02"
 # RSS 文章数目
-rss = 10
+rss = 100
 
 # 主页配置
 [params.home]
 #  RSS 文章数目
-rss = 10
+rss = 100
 # 主页个人信息
 [params.home.profile]
 enable = true
@@ -200,7 +200,7 @@ gravatarEmail = ""
 # 主页显示头像的 URL
 # 将你的头像文件放置于 static 或者 assets 目录下
 # 文件路径是相对于 static 或者 assets 目录的
-avatarURL = "https://blog-1255524710.cos.ap-beijing.myqcloud.com/master/2022031022004295160.svg"
+avatarURL = "/images/me/avatar.svg"
 #  主页显示的网站标题 (支持 HTML 格式)
 title = "Aether"
 # 主页显示的网站副标题
