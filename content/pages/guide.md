@@ -15,6 +15,35 @@ toc = false
 <details open>
   <summary><b>» 影剧</b></summary>
 
+- 《[弥留之国的爱丽丝 第二季](https://movie.douban.com/subject/35300122/)》2022-12-22(日本)
+- 《[珀尔 / Pearl](https://movie.douban.com/subject/35801819/)》2022-09-16(美国)
+- 《[星期三 第一季](https://movie.douban.com/subject/35364243/)》2022-11-23(美国)
+- **《[对不起，我们错过了你](https://movie.douban.com/subject/30209084/)》2019-11-01(英国)**
+- 《[风味人间 4·谷物星球](https://movie.douban.com/subject/35686327/)》2022-11-24(中国大陆)
+- **《[大侦探波洛 第一季](https://movie.douban.com/subject/2030879/)》1989-01-08(英国)**
+- 《[满江红](https://movie.douban.com/subject/35766491/)》2023-01-22(中国大陆)
+- 《[三体](https://movie.douban.com/subject/26647087/)》2023-01-15(中国大陆)
+- **《[狂飙](https://movie.douban.com/subject/35465232/)》2023-01-14(中国大陆)**
+
+</details>
+
+<details open>
+  <summary><b>» 文章</b></summary>
+
+- [The 2022 Pornhub Year in Review](https://www.pornhub.com/insights/2022-year-in-review)
+- [2021 全国跨性别健康调查报告](https://srp1z3xn00.feishu.cn/file/boxcnXRTGAWeYuvntJJOCdqTMed)
+- [淺談 Atomic CSS 的發展背景與 Tailwind CSS](https://blog.huli.tw/2022/05/23/atomic-css-and-tailwind-css/)
+- [史上最全 SSH 暗黑技巧详解](https://plantegg.github.io/2019/06/02/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8_SSH_%E6%9A%97%E9%BB%91%E6%8A%80%E5%B7%A7%E8%AF%A6%E8%A7%A3--%E6%94%B6%E8%97%8F%E4%BF%9D%E5%B9%B3%E5%AE%89/)
+- [Harvard CS197: AI Research Experiences](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc)
+
+</details>
+
+<details open>
+  <summary><b>» 视频</b></summary>
+
+- [Learn Tailwind CSS – Course for Beginners](https://www.youtube.com/watch?v=ft30zcMlFao)
+- [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
+
 </details>
 
 ---
@@ -117,7 +146,6 @@ toc = false
 - [选投影仪：从入门到精通，3000 元 10 款横评](https://www.bilibili.com/video/BV13L4y1n7WQ/?share_source=copy_web&vd_source=dfeb89feb5ee367d116e92e86e0834fd "先看测评")
 - [Vercel 与 Next.js：开源全明星团队背后的商业逻辑｜ Monetizing Open Source](https://www.bilibili.com/video/BV1gR4y1u76v)
 - [Git 基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0 "麦兜搞 IT")
-- [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
 - [Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3 "Mike Dane")
 - [北大肖臻 - 区块链技术与应用](http://zhenxiao.com/blockchain/ "北京大学 - 肖臻")
 - [CS50P](https://youtube.com/playlist?list=PLhQjrBD2T3817j24-GogXmWqO5Q5vYy0V "Harvard Courses")、[尚硅谷 Vue2.0+Vue3.0 全套教程](https://www.bilibili.com/video/BV1Zy4y1K7SH)
