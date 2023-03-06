@@ -8,7 +8,13 @@ toc = false
 # 2023
 
 <details open>
-  <summary><b>» 书籍</b></summary>
+  <summary><b>» 书刊</b></summary>
+
+- 《[财新周刊](https://weekly.caixin.com/)》2023 第 01 期 - 2023 第 50 期
+- 《[第一财经](https://www.cbnweek.com/#/read)》NO.584 - NO.595
+- 《[三联生活周刊](https://www.lifeweek.com.cn/)》
+- 《[Bloomberg](https://www.bloomberg.com)》
+- 《[The Economist](https://www.economist.com/)》
 
 </details>
 
@@ -22,16 +28,17 @@ toc = false
 - 《[风味人间 4·谷物星球](https://movie.douban.com/subject/35686327/)》2022-11-24(中国大陆)
 - **《[大侦探波洛 第一季](https://movie.douban.com/subject/2030879/)》1989-01-08(英国)**
 - 《[满江红](https://movie.douban.com/subject/35766491/)》2023-01-22(中国大陆)
+- 《[狂飙](https://movie.douban.com/subject/35465232/)》2023-01-14(中国大陆)
 - 《[三体](https://movie.douban.com/subject/26647087/)》2023-01-15(中国大陆)
-- **《[狂飙](https://movie.douban.com/subject/35465232/)》2023-01-14(中国大陆)**
+- **《[搏击俱乐部](https://movie.douban.com/subject/1292000/)》1999-10-15(美国)**
+- 《[最后生还者 第一季](https://movie.douban.com/subject/25848328/)》2023-01-15(美国)
+- **《[王冠 第一季](https://movie.douban.com/subject/26427152/)》2016-11-04(美国)**
 
 </details>
 
 <details open>
   <summary><b>» 文章</b></summary>
 
-- [The 2022 Pornhub Year in Review](https://www.pornhub.com/insights/2022-year-in-review)
-- [2021 全国跨性别健康调查报告](https://srp1z3xn00.feishu.cn/file/boxcnXRTGAWeYuvntJJOCdqTMed)
 - [淺談 Atomic CSS 的發展背景與 Tailwind CSS](https://blog.huli.tw/2022/05/23/atomic-css-and-tailwind-css/)
 - [史上最全 SSH 暗黑技巧详解](https://plantegg.github.io/2019/06/02/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8_SSH_%E6%9A%97%E9%BB%91%E6%8A%80%E5%B7%A7%E8%AF%A6%E8%A7%A3--%E6%94%B6%E8%97%8F%E4%BF%9D%E5%B9%B3%E5%AE%89/)
 - [Harvard CS197: AI Research Experiences](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc)
@@ -42,6 +49,7 @@ toc = false
   <summary><b>» 视频</b></summary>
 
 - [Learn Tailwind CSS – Course for Beginners](https://www.youtube.com/watch?v=ft30zcMlFao)
+- [南京大学 2022 操作系统 - 蒋炎岩](https://www.bilibili.com/video/BV1Cm4y1d7Ur)
 - [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
 
 </details>
