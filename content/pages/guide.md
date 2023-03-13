@@ -84,8 +84,8 @@ toc = false
 - **《[漫长的告别](https://book.douban.com/subject/30316475/)》[美] 雷蒙德·钱德勒 / 姚向辉 / 海南出版社**
 - 《[电锯人](https://chainsaw-man.fandom.com/zh/wiki/%E7%94%B5%E9%94%AF%E4%BA%BA_Wiki?variant=zh)》[日] 藤本树 / 漫画
 - **《[沉默的大多数](https://book.douban.com/subject/1054685/)》王小波 / 中国青年出版社**
-- **《[我的精神家园](https://book.douban.com/subject/1054685/)》王小波 / 中国青年出版社**
-- **《[爱你就像爱生命](https://book.douban.com/subject/1054685/)》王小波 / 李银河 / 上海锦绣文章出版社**
+- **《[我的精神家园](https://book.douban.com/subject/27156834/)》王小波 / 中国青年出版社**
+- **《[爱你就像爱生命](https://book.douban.com/subject/3071717/)》王小波 / 李银河 / 上海锦绣文章出版社**
 
 </details>
 
