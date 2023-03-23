@@ -5,6 +5,8 @@ categories: [高手传习录]
 tags:
   - CS50P
   - Course-Note
+toc:
+  auto: false
 ---
 
 ## Course Info.
@@ -13,8 +15,8 @@ CS50P is an introductory course to Programming using Python. Enroll for free at 
 
 Course Syllabus:
 
-- Learn how to read and write code as well as how to test and "debug" it.
-- Learn about functions, arguments, and return values; variables and types; conditionals and Boolean expressions; and loops.
+- Improve coding skills by mastering reading, writing, testing and debugging code.
+- Learn fundamental programming concepts such as functions, arguments, and return values; variables and types; conditionals and Boolean expressions; and loops.
 - Learn how to handle exceptions, find and fix bugs, and write unit tests; use third-party libraries; validate and extract data with regular expressions; model real-world entities with classes, objects, methods, and properties; and read and write files.
 
 ## Course Note
@@ -95,8 +97,53 @@ main()
 
 ### Conditionals
 
-```python
+> Ref05: https://docs.python.org/3/tutorial/controlflow.html  
+> https://docs.python.org/3/reference/expressions.html#comparisons
 
+```python
+x = int(input("What's x? "))
+y = int(input("What's y? "))
+
+if x < y:  # Boolean expressions
+  print("x is less than y.")
+elif x > y:
+  print("x is greater than y.")
+else:
+  print("x is equal to y.")
+
+if y < x or x > y:
+  print("x is not equal to y.")
+else:
+  print("x is equal to y.")
+```
+
+```python
+def main():
+  x = int(input("What's x? "))
+  if is_even(x):
+    print("Even")
+  else:
+    print("Odd")
+
+def is_even(n):
+  # return True if n % 2 == 0 else False
+  return n % 2 == 0
+
+main()
+```
+
+> Ref06: https://docs.python.org/3.10/reference/compound_stmts.html#the-match-statement
+
+```python
+name = input("What's your name? ")
+
+match name:
+  case "Harry" | "Hermione" | "Ron":
+    print("Grayffidor")
+  case "Draco":
+    print("Slytherin")
+  case _:
+    print("Who?")
 ```
 
 ### Loops
