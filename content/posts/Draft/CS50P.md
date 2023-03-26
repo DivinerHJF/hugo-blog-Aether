@@ -126,7 +126,7 @@ def main():
     print("Odd")
 
 def is_even(n):
-  # return True if n % 2 == 0 else False
+  # return True if n % 2 == 0 else False  # Pythonic Code
   return n % 2 == 0
 
 main()
@@ -147,6 +147,8 @@ match name:
 ```
 
 ### Loops
+
+> Ref07:
 
 ```python
 

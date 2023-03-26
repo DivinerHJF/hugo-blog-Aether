@@ -12,8 +12,8 @@ toc = false
 
 - 《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社
 - 《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社
-- 《[天使与魔鬼](https://book.douban.com/subject/3654604/)》[美]丹·布朗 / 朱振武 / 信艳 / 王巧俐 / 人民文学出版社
 - 《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社
+- 《[天使与魔鬼](https://book.douban.com/subject/3654604/)》[美]丹·布朗 / 朱振武 / 信艳 / 王巧俐 / 人民文学出版社
 - 《[占星术杀人魔法](https://book.douban.com/subject/35880252/)》[日] 岛田庄司 / 吕灵芝 / 新星出版社
 - 《[财新周刊](https://weekly.caixin.com/)》2023 第 01 期 - 2023 第 50 期
 - 《[第一财经](https://www.cbnweek.com/#/read)》NO.584 - NO.595
@@ -39,8 +39,8 @@ toc = false
 - 《[王冠 第一季](https://movie.douban.com/subject/26427152/)》2016-11-04(美国)
 - 《[最后生还者 第一季](https://movie.douban.com/subject/25848328/)》2023-01-15(美国)
 - **《[MH370：消失的航班](https://movie.douban.com/subject/36247626/)》2023-03-08(美国)**
-- 《黑暗荣耀》
-- 《安眠书店 / 你 / YOU》
+- 《[黑暗荣耀](https://movie.douban.com/subject/35314632/)》2022-12-30(韩国)
+- 《[安眠书店 / 你 第一季](https://movie.douban.com/subject/26955946/)》2018-09-09(美国)
 
 </details>
 
