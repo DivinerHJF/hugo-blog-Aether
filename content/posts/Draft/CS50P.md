@@ -161,7 +161,7 @@ def get_number():
     if n > 0: break
   return n
 
-def meow(n):  
+def meow(n):
   # print("meow\n" * n, end="")  # Pythonic Statements
   for _ in range(n): print("meow")
 
@@ -217,23 +217,31 @@ def main():
 def print_square(size):
   for i in range(size):
     # print("#" * size)  # Pythonic Code
-    for j in range(size): print("#", end="")
+    for j in range(size):
+      print("#", end="")
     print()
 
 main()
 ```
 
-
 ### Exceptions
 
-```python
-
-```
-
-### Debugging
+> Ref10: https://docs.python.org/3/library/exceptions.html  
+> https://docs.python.org/3/tutorial/errors.html
 
 ```python
+def main():
+  x = gey_int("What's x? ")
+  print(f"x is {x}")
 
+def gey_int(prompt):
+  while True:
+    try:
+      return int(input(prompt))
+    except ValueError:
+      pass  # print("x is not an integer.")
+
+main()
 ```
 
 ### Libraries
