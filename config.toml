@@ -97,7 +97,7 @@ enable = true
 # 搜索引擎的类型 ("lunr", "algolia", "fuse")
 type = "fuse"
 # 文章内容最长索引长度
-contentLength = 50000
+contentLength = 1000000
 # 搜索框的占位提示语
 placeholder = ""
 #  最大结果数目
