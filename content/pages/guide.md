@@ -60,6 +60,13 @@ toc = false
 
 </details>
 
+<details open>
+  <summary><b>» 其他</b></summary>
+
+- **Somebody：**[医痴](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、
+
+</details>
+
 ---
 
 # 2022
