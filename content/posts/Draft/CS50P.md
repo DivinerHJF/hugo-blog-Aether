@@ -246,14 +246,128 @@ main()
 
 ### Libraries
 
-```python
+> Ref11: https://docs.python.org/3/library/random.html
 
+```python
+import random
+
+# random.randint(a, b)
+number = random.randint(1, 10)
+print(number)
+
+# random.shuffle(x)
+cards = ["Jack", "queen", "king"]
+random.shuffle(card)
+for card in cards:
+  print(card)
 ```
 
-### Style
+```python
+# random.choice(seq)
+from random import choice
+
+coin = choice(["heads","tails"])
+print(coin)
+```
+
+> Ref12: https://docs.python.org/3/library/sys.html
 
 ```python
+import sys
 
+# Check for errors
+if len(sys.argv) < 2:
+  sys.exit("Too few arguments")
+elif len(sys.argv) > 2:
+  sys.exit("Too many arguments")
+
+# Print name tags
+print("hello, my name is", sys.argv[1]="Default")
+```
+
+```bash
+# Command-line Arguments
+$ python name.py David
+hello, my name is David
+
+$ python name.py "David Malan"
+hello, my name is David Malan
+```
+
+> Ref13: https://docs.python.org/3/installing/index.html  
+> https://pypi.org  
+> https://pypi.org/project/cowsay
+
+```python
+# pip install cowsay
+import cowsay
+import sys
+
+if len(sys.argv) == 2:
+  cowsay.cow("hello, " + sys.argv[1])
+```
+
+```bash
+$ python say.py David
+```
+
+> Ref14: https://pypi.org/project/requests  
+> https://docs.python.org/3/library/json.html
+
+```python
+# itunes.py
+import requests
+import json
+import sys
+
+if len(sys.argv) != 2:
+  sys.exit()
+
+# Itunes API
+response = requests.get("https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1])
+
+# print(json.dumps(response.json(), indent=2))
+o = response.json()
+for result in o["results"]:
+  print(result["trackName"])
+```
+
+```bash
+$ python itunes.py weezer
+```
+
+> Ref15: https://docs.python.org/3/reference/datamodel.html#special-method-names
+
+In Python, `name` is a built-in special global variable that represents the name of a module. When the Python interpreter executes code in a .py file, it treats this file as a module and stores the name of this module in the **name** variable. If this file is imported into other files as a module, then the value of **name** is the name of this module; if this file is executed directly, then the value of **name** is **main**. Therefore, we can usually use `if __name__ == "__main__":` to determine whether a module is being executed directly or imported into other modules.
+
+```python
+# ~/sayings.py
+def main():
+  hello("world")
+  goodbye("world")
+
+def hello(name):
+  print(f"hello, {name}")
+
+def goodbye(name):
+  print(f"goodbye, {name}")
+
+if __name__ == "__main__":
+  main()
+```
+
+```python
+# ~/say.py
+import sys
+from sayings import hello
+
+if len(sys.argv) == 2:
+  hello(sys.argv[1])
+```
+
+```bash
+$ python say.py David
+hello, David
 ```
 
 ### Unit Test
