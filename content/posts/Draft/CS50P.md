@@ -478,8 +478,143 @@ To test all tests in current and subdirectories, use `pytest` command without fo
 
 ### File I/O
 
-```python
+> Ref18: https://docs.python.org/3/tutorial/datastructures.html#more-on-lists
 
+```python
+names = []
+
+for _ in range(3):
+  names.append(input("What's your name? "))
+
+for name in sorted(names):
+  print(f"hello, {name}")
+```
+
+> Ref19: https://docs.python.org/3/library/functions.html#open
+
+The `open()` function in Python opens files and returns a file object. It takes two parameters: `filename`(string) and `mode`(string). Mode is optional, with `r`(read-only) as the default value. Other modes include `w`(write), `a`(append), `x`(exclusive creation), and `b`(binary mode).
+
+```python
+name = input("What's your name? ")
+
+file = open("name.txt", "a")
+file.write(f"{name}\n")
+file.close()
+```
+
+> Ref20: https://docs.python.org/3/reference/compound_stmts.html#the-with-statement
+
+The `with` statement in Python simplifies the management of system resources by setting up and tearing down a context. It is used with objects that support the context management protocol, ensuring that resources are acquired and released properly.
+
+```python
+name = input("What's your name? ")
+
+with open("name.txt", "a") as file:
+  file.write(f"{name}\n")
+```
+
+```python
+names = []
+
+with open("name.txt") as file:
+  for line in file:
+    names.append(line.rstrip())
+
+for name in sorted(names):
+  print(f"hello, {name}")
+```
+
+```python
+# pythonic!!!
+with open("name.txt") as file:
+  for line in sorted(file):
+    print("hello,", line.rstrip())
+```
+
+> Ref21: https://docs.python.org/3/library/csv.html  
+> https://docs.python.org/3/reference/expressions.html#lambda
+
+Lambda expression in Python is an anonymous function that can take multiple arguments but only has one expression. Syntax: `lambda arguments: expression`. Lambda functions are commonly used with `map()`, `filter()`, and `reduce()` in Python, and can be treated like any other object.
+
+```python
+# students.csv
+Harry,"Number Four, Privet Drive"
+Ron,the Burrow
+Draco,Malfoy Manor
+```
+
+```python
+import csv
+
+students = []
+
+with open("students.csv") as file:
+  reader = csv.reader(file)  # list
+  for name, home in reader:
+    students.append({"name": name, "home": home})
+
+for student in sorted(students, key=lambda item: item["name"]):
+  print(f"{student['name']} is in {student['house']}")
+```
+
+> Ref22: https://docs.python.org/3/library/stdtypes.html#dict
+
+```python
+import csv
+
+name = input("What's your name? ")
+home = input("What's your home? ")
+
+with open("students.csv", "a") as file:
+  write = csv.DictWriter(file, diednames=["name", "home"])
+  write.writerow({"name": name, "home": home})
+```
+
+```python
+# students.csv
+name,home
+Harry,"Number Four, Privet Drive"
+Ron,the Burrow
+Draco,Malfoy Manor
+```
+
+```python
+import csv
+
+students = []
+
+with open("students.csv") as file:
+  reader = csv.DictReader(file)  # dict
+  for row in reader:
+    #students.append({"name": row["name"], "home": row["home"]})
+    students.append(row)
+
+for student in sorted(students, key=lambda item: item["name"]):
+  print(f"{student['name']} is in {student['home']}")
+```
+
+> Ref22: https://pillow.readthedocs.io
+
+```python
+import sys
+from PIL import Image
+
+images = []
+
+# Loop through images and add them to the list.
+for arg in sys.argv[1:]:
+  image = Image.open(arg)
+  images.append(image)
+
+# Save GIF file with all frames, 200ms duration per frame, and loop count of 0.
+images[0].save(
+  "custumes.gif", save_all=True,
+  append_images=[images[1], duration=200, loop=0]
+)
+```
+
+```bash
+python custumes.py custume1.gif custume2.gif
 ```
 
 ### Regular Expressions
