@@ -372,9 +372,109 @@ hello, David
 
 ### Unit Test
 
-```python
+> Ref16: https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement
 
+The `assert` statement in Python checks if a condition is true and raises an `AssertionError` exception if it's false. It has the syntax: `assert condition[, message]`. The optional message argument provides additional information about the assertion failure.
+
+```python
+# calculator.py
+def main():
+  x = int(input("What's x? "))
+  print("x squared is", square(x))
+
+def square(n):
+  return n * n
+
+if __name__ == "__main__":
+  main()
 ```
+
+```python
+# test_calculator.py
+from calculator import square
+
+def main():
+  test_square()
+
+def test_square():
+  assert square(2) == 4, "2 squared was not 4"
+  assert square(3) == 9, "3 squared was not 9"
+
+if __name__ == "__main__":
+  main()
+```
+
+> Ref17: https://docs.pytest.org
+
+`pytest` is a third-party python library for writing and running unit and functional tests. It has rich features, uses decorators and assertions syntax, just like the built-in `unittest` module of Python. However, `pytest` stands out for its ease of use and support for `fixtures`, `parameterized tests`, `mock objects` in test cases, as well as executing unittest-style test cases.
+
+```python
+# pytest_calculator.py
+import pytest
+from calculator import square
+
+def main():
+  test_square()
+
+def test_positive():
+  assert square(2) == 4
+  assert square(3) == 9
+
+def test_negative():
+  assert square(-2) == 4
+  assert square(-3) == 9
+
+def test_zero():
+  assert square(0) == 0
+
+if __name__ == "__main__":
+  main()
+```
+
+```bash
+pytest pytest_calculator.py
+```
+
+To improve testing, it is recommended that functions have return values. Therefore, let's modify the `hello.py` code to enhance its testability.
+
+```python
+# hello.py
+def main():
+  name = input("What's your name? ")
+  print(hello(name))
+
+def hello(to="world"):
+  return f"hello, {to}"
+
+if __name__ == "__main__":
+  main()
+```
+
+```python
+# test_hello.py
+from hello import hello
+
+def test_default():
+  assert hello() == "hello, world"
+
+def test_argument():
+  for name in ["Herminor", "Harry", "Ron"]:
+    assert hello(name) == f"hello, {name}"
+```
+
+To run all test cases in the 'test' folder, simply use the `pytest` command followed by the folder name. The command is as follows:
+
+```bash
+pytest test/
+```
+
+To test all tests in current and subdirectories, use `pytest` command without folder name. Please note the following points:
+
+1. Test files should be named with `test_*.py` for pytest to automatically detect them.
+   - For example, use `test_example.py` instead of `example_test.py`.
+2. Test functions in test cases must start with `test_` for pytest to detect them automatically.
+   - For instance, use `test_example()` instead of `example_test()`.
+3. Importing pytest module at the top of a test file is necessary for using its syntax and functionality.
 
 ### File I/O
 
