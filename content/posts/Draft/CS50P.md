@@ -619,8 +619,18 @@ python custumes.py custume1.gif custume2.gif
 
 ### Regular Expressions
 
-```python
+> Ref22: https://docs.python.org/3/library/re.html
 
+The `re` module in Python is a library for pattern matching and text manipulation. It allows you to **search** for specific patterns within strings, **extract** information based on those patterns, and **manipulate** text in a variety of ways.
+
+```python
+email = input("What's your email? ").strip()
+
+# re.search(pattern, string, flags=0)
+if "@" in email:
+  print("Valid")
+else:
+  print("Invalid")
 ```
 
 ### Object-Oriented Programming

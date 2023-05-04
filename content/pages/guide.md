@@ -13,11 +13,10 @@ toc = false
 - 《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社
 - 《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社
 - 《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社
-- 《[财新周刊](https://weekly.caixin.com/)》2023 第 01 期 - 2023 第 50 期
-- 《[第一财经](https://www.cbnweek.com/#/read)》NO.584 - NO.595
-- 《[三联生活周刊](https://www.lifeweek.com.cn/)》
-- 《[Bloomberg](https://www.bloomberg.com)》
-- 《[The Economist](https://www.economist.com/)》
+- 《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司
+- 《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社
+- 《[财新周刊](https://weekly.caixin.com/)》、《[第一财经](https://www.cbnweek.com/#/read)》、《[三联生活周刊](https://www.lifeweek.com.cn/)》、《[小鸟文学](https://apps.apple.com/cn/app/%e5%b0%8f%e9%b8%9f%e6%96%87%e5%ad%a6/id1541992205?mt=8)》
+- 《[Bloomberg](https://www.bloomberg.com)》、《[The Economist](https://www.economist.com/)》
 
 </details>
 
@@ -39,6 +38,12 @@ toc = false
 - **《[MH370：消失的航班](https://movie.douban.com/subject/36247626/)》2023-03-08(美国)**
 - 《[黑暗荣耀](https://movie.douban.com/subject/35314632/)》2022-12-30(韩国)
 - 《[安眠书店 / 你 第一季](https://movie.douban.com/subject/26955946/)》2018-09-09(美国)
+- **《[暴裂无声](https://movie.douban.com/subject/26647117/)》2018-04-04(中国大陆)**
+- 《[继承之战 第 1-4 季](https://movie.douban.com/subject/35638422/)》2023-03-26(美国)
+- 《[灌篮高手：THE FIRST / Slam Dunk](https://movie.douban.com/subject/35315950/)》2023-04-20(中国大陆) / 2022-12-03(日本)
+- **《[漫长的季节](https://movie.douban.com/subject/35588177/)》2023-04-22(中国大陆)**
+- **《[我爱我家 (1993)](https://movie.douban.com/subject/3901388/)》1993-07-01(中国大陆)**
+- **《[武林外传 (2006)](https://movie.douban.com/subject/3882715/)》2006-01-02(中国大陆)**
 
 </details>
 
