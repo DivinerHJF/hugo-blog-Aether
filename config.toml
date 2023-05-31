@@ -13,32 +13,32 @@ title = "JianFeng Hao | 郝建锋"
 
 [menu]
 [[menu.main]]
+identifier = "series"
+name = "朝闻道"
+post = ""
+pre = "🌭"
+title = "学习、技术类文章"
+url = "/series/朝闻道/"
+weight = 1
+[[menu.main]]
 identifier = "posts"
 # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
 pre = "🗃️"
 # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-name = "归档"
+name = "夕拾花"
 post = ""
-url = "/posts/"
+url = "/series/夕拾花/"
 # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-title = "沿着时间河打捞回忆"
-weight = 1
-[[menu.main]]
-identifier = "categories"
-name = "分类"
-post = ""
-pre = "🍱"
-title = "打开任意门发现惊喜"
-url = "/categories/"
+title = "生活、月报类文章"
 weight = 2
-[[menu.main]]
-identifier = "series"
-name = "系列"
-post = ""
-pre = "🌭"
-title = "拘一捧珠玉编织成串"
-url = "/series/"
-weight = 3
+# [[menu.main]]
+# identifier = "categories"
+# name = "分类"
+# post = ""
+# pre = "🍱"
+# title = "打开任意门发现惊喜"
+# url = "/categories/"
+# weight = 3
 # [[menu.main]]
 # identifier = "tags"
 # name = "标签"
@@ -49,12 +49,20 @@ weight = 3
 # weight = 4
 [[menu.main]]
 identifier = ""
-name = "快照"
+name = "晨观影"
 post = ""
 pre = "🎡"
-title = "采点点星光络结为网"
+title = "作为一年的定格、快照"
 url = "/pages/guide/"
 weight = 5
+[[menu.main]]
+identifier = ""
+name = "暮立传"
+post = ""
+pre = "👨‍🔧"
+title = "关于我以及我的网站"
+url = "/pages/about/"
+weight = 6
 
 [params]
 #  DoIt 主题版本

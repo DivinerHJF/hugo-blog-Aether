@@ -80,8 +80,6 @@ toc = false
 
 # 2022
 
-![](https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/202212241226101.png)
-
 <details open>
   <summary><b>» 书籍</b></summary>
 
