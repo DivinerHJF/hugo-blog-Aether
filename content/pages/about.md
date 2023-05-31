@@ -10,9 +10,9 @@ comment = false
 
 # 你好，认识一下
 
-{{< showcase title="#夕拾花" summary="我的记忆有些糟糕，要写下来才安心" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903161218.png" link="../series/夕拾花/" column=2 >}}
+{{< showcase title="#夕拾花" summary="我的记忆有些糟糕，要写下来才安心" image="https://image.aetherhjf.com/images/20230316_xishihua.jpg" link="../../series/夕拾花/" column=2 >}}
 
-{{< showcase title="#在路上" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image-host-1255524710.cos.ap-beijing.myqcloud.com/img/20220903160739.png" link="https://run.aetherhjf.com" column=2 >}}
+{{< showcase title="#在路上" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image.aetherhjf.com/images/20221010_wallhaven.jpeg" link="https://run.aetherhjf.com" column=2 >}}
 
 ---
 
