@@ -4,10 +4,6 @@ date = "2014-04-09"
 comment = false
 +++
 
-<br />
-{{< music server="netease" type="playlist" id="7620729304" mutex="false" list-folded="true" >}}
-<br />
-
 # 你好，认识一下
 
 {{< showcase title="#夕拾花" summary="我的记忆有些糟糕，要写下来才安心" image="https://image.aetherhjf.com/images/20200101_xishihua.jpg" link="../../series/夕拾花/" column=2 >}}
