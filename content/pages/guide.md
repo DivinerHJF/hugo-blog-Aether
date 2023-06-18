@@ -47,7 +47,9 @@ toc = false
 - 《[目击者之追凶](https://movie.douban.com/subject/11600078/)》2017-03-31(中国台湾)
 - **《[沉默的羔羊](https://movie.douban.com/subject/1293544/)》1991-02-14(美国)**
 - 《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国)
+- 《憨豆先生的大灾难》
 - 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国)
+- 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》
 
 </details>
 
