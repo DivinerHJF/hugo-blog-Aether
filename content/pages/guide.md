@@ -15,8 +15,9 @@ toc = false
 - 《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社
 - 《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司
 - 《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社
-- 《[财新周刊](https://weekly.caixin.com/)》、《[第一财经](https://www.cbnweek.com/#/read)》、《[三联生活周刊](https://www.lifeweek.com.cn/)》、《[小鸟文学](https://apps.apple.com/cn/app/%e5%b0%8f%e9%b8%9f%e6%96%87%e5%ad%a6/id1541992205?mt=8)》
-- 《[Bloomberg](https://www.bloomberg.com)》、《[The Economist](https://www.economist.com/)》
+- 《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社
+- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社**
+- 《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社
 
 </details>
 
@@ -50,6 +51,10 @@ toc = false
 - 《憨豆先生的大灾难》
 - 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国)
 - 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》
+- 《[逃学威龙系列](https://movie.douban.com/subject/1302090/)》
+- 《[蜘蛛侠·平行宇宙](https://movie.douban.com/subject/26374197/)》2018-12-14(美国)
+- 《[武状元苏乞儿](https://movie.douban.com/subject/1297863/)》1992-12-17(中国香港)
+-
 
 </details>
 
@@ -75,6 +80,8 @@ toc = false
   <summary><b>» 其他</b></summary>
 
 - **Somebody：**[医痴](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、
+- 《[财新周刊](https://weekly.caixin.com/)》、《[第一财经](https://www.cbnweek.com/#/read)》、《[三联生活周刊](https://www.lifeweek.com.cn/)》、《[小鸟文学](https://apps.apple.com/cn/app/%e5%b0%8f%e9%b8%9f%e6%96%87%e5%ad%a6/id1541992205?mt=8)》
+- 《[Bloomberg](https://www.bloomberg.com)》、《[The Economist](https://www.economist.com/)》
 
 </details>
 
