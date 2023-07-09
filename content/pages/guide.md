@@ -16,8 +16,10 @@ toc = false
 - 《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司
 - 《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社
 - 《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社
-- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社**
+- 《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社
 - 《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社
+- 《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社
+- 《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社
 
 </details>
 
