@@ -10,16 +10,16 @@ toc = false
 <details open>
   <summary><b>» 书刊</b></summary>
 
-- 《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社
-- 《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社
-- 《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社
-- 《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司
-- 《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社
-- 《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社
-- 《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社
-- 《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社
-- 《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社
-- 《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社
+- **《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社**
+- **《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社**
+- **《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社**
+- **《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司**
+- **《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社**
+- **《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社**
+- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社**
+- **《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社**
+- **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社**
+- **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社**
 
 </details>
 
@@ -50,13 +50,11 @@ toc = false
 - 《[目击者之追凶](https://movie.douban.com/subject/11600078/)》2017-03-31(中国台湾)
 - 《[沉默的羔羊](https://movie.douban.com/subject/1293544/)》1991-02-14(美国)
 - **《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国)**
-- 《憨豆先生的大灾难》
 - 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国)
 - 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》
 - 《[逃学威龙系列](https://movie.douban.com/subject/1302090/)》
 - 《[蜘蛛侠·平行宇宙](https://movie.douban.com/subject/26374197/)》2018-12-14(美国)
 - 《[武状元苏乞儿](https://movie.douban.com/subject/1297863/)》1992-12-17(中国香港)
--
 
 </details>
 
