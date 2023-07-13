@@ -20,6 +20,7 @@ toc = false
 - **《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社**
 - **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社**
 - **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社**
+- **《[小镇喧嚣 : 一个乡镇政治运作的演绎与阐释](https://book.douban.com/subject/30122152/)》吴毅 / 生活·读书·新知三联书店**
 
 </details>
 
