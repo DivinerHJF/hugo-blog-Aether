@@ -21,6 +21,8 @@ toc = false
 - **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社**
 - **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社**
 - **《[小镇喧嚣 : 一个乡镇政治运作的演绎与阐释](https://book.douban.com/subject/30122152/)》吴毅 / 生活·读书·新知三联书店**
+- 《[人类灭绝](https://book.douban.com/subject/36136689/)》[日] 高野和明 / 百里 / 北京日报出版社
+- 《[城墙之上](https://weread.qq.com/web/bookDetail/f9e32370813ab7f2ag018bad)》徐翀 / 微信读书首发
 
 </details>
 
@@ -50,12 +52,11 @@ toc = false
 - **《[武林外传 (2006)](https://movie.douban.com/subject/3882715/)》2006-01-02(中国大陆)**
 - 《[目击者之追凶](https://movie.douban.com/subject/11600078/)》2017-03-31(中国台湾)
 - 《[沉默的羔羊](https://movie.douban.com/subject/1293544/)》1991-02-14(美国)
-- **《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国)**
+- 《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国)
 - 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国)
 - 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》
-- 《[逃学威龙系列](https://movie.douban.com/subject/1302090/)》
 - 《[蜘蛛侠·平行宇宙](https://movie.douban.com/subject/26374197/)》2018-12-14(美国)
-- 《[武状元苏乞儿](https://movie.douban.com/subject/1297863/)》1992-12-17(中国香港)
+- **《[芭比 Barbie](https://movie.douban.com/subject/4058939/)》2023-07-21(美国/中国大陆)**
 
 </details>
 
