@@ -10,53 +10,56 @@ toc = false
 <details open>
   <summary><b>» 书刊</b></summary>
 
-- **《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社**
-- **《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社**
-- **《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社**
-- **《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司**
-- **《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社**
-- **《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社**
-- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社**
-- **《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社**
-- **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社**
-- **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社**
-- **《[小镇喧嚣 : 一个乡镇政治运作的演绎与阐释](https://book.douban.com/subject/30122152/)》吴毅 / 生活·读书·新知三联书店**
-- 《[人类灭绝](https://book.douban.com/subject/36136689/)》[日] 高野和明 / 百里 / 北京日报出版社
-- 《[城墙之上](https://weread.qq.com/web/bookDetail/f9e32370813ab7f2ag018bad)》徐翀 / 微信读书首发
+- **《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社 $^{23-02}$**
+- **《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社 $^{23-03}$**
+- **《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社 $^{23-03}$**
+- **《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司 $^{23-03}$**
+- **《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社 $^{23-03}$**
+- **《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社 $^{23-06}$**
+- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社 $^{23-06}$**
+- **《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社 $^{23-06}$**
+- **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社 $^{23-07}$**
+- **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社 $^{23-07}$**
+- **《[小镇喧嚣 : 一个乡镇政治运作的演绎与阐释](https://book.douban.com/subject/30122152/)》吴毅 / 生活·读书·新知三联书店 $^{23-07}$**
+- 《[人类灭绝](https://book.douban.com/subject/36136689/)》[日] 高野和明 / 百里 / 北京日报出版社 $^{23-07}$
+- 《[城墙之上](https://weread.qq.com/web/bookDetail/f9e32370813ab7f2ag018bad)》徐翀 / 微信读书首发 $^{23-07}$
+- 《[金阁寺](https://book.douban.com/subject/35591091/)》[日] 三岛由纪夫 / 陈德文 / 人民文学出版社 $^{23-07}$
 
 </details>
 
 <details open>
   <summary><b>» 影剧</b></summary>
 
-- 《[弥留之国的爱丽丝 第二季](https://movie.douban.com/subject/35300122/)》2022-12-22(日本)
-- 《[珀尔 / Pearl](https://movie.douban.com/subject/35801819/)》2022-09-16(美国)
-- 《[星期三 第一季](https://movie.douban.com/subject/35364243/)》2022-11-23(美国)
-- **《[对不起，我们错过了你](https://movie.douban.com/subject/30209084/)》2019-11-01(英国)**
-- 《[风味人间 4·谷物星球](https://movie.douban.com/subject/35686327/)》2022-11-24(中国大陆)
-- **《[大侦探波洛 第一季](https://movie.douban.com/subject/2030879/)》1989-01-08(英国)**
-- 《[满江红](https://movie.douban.com/subject/35766491/)》2023-01-22(中国大陆)
-- 《[狂飙](https://movie.douban.com/subject/35465232/)》2023-01-14(中国大陆)
-- 《[三体](https://movie.douban.com/subject/26647087/)》2023-01-15(中国大陆)
-- **《[搏击俱乐部](https://movie.douban.com/subject/1292000/)》1999-10-15(美国)**
-- 《[王冠 第一季](https://movie.douban.com/subject/26427152/)》2016-11-04(美国)
-- 《[最后生还者 第一季](https://movie.douban.com/subject/25848328/)》2023-01-15(美国)
-- **《[MH370：消失的航班](https://movie.douban.com/subject/36247626/)》2023-03-08(美国)**
-- 《[黑暗荣耀](https://movie.douban.com/subject/35314632/)》2022-12-30(韩国)
-- 《[安眠书店 / 你 第一季](https://movie.douban.com/subject/26955946/)》2018-09-09(美国)
-- **《[暴裂无声](https://movie.douban.com/subject/26647117/)》2018-04-04(中国大陆)**
-- 《[继承之战 第 1-4 季](https://movie.douban.com/subject/35638422/)》2023-03-26(美国)
-- 《[灌篮高手：THE FIRST / Slam Dunk](https://movie.douban.com/subject/35315950/)》2023-04-20(中国大陆) / 2022-12-03(日本)
-- **《[漫长的季节](https://movie.douban.com/subject/35588177/)》2023-04-22(中国大陆)**
-- 《[我爱我家 (1993)](https://movie.douban.com/subject/3901388/)》1993-07-01(中国大陆)
-- **《[武林外传 (2006)](https://movie.douban.com/subject/3882715/)》2006-01-02(中国大陆)**
-- 《[目击者之追凶](https://movie.douban.com/subject/11600078/)》2017-03-31(中国台湾)
-- 《[沉默的羔羊](https://movie.douban.com/subject/1293544/)》1991-02-14(美国)
-- 《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国)
-- 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国)
-- 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》
-- 《[蜘蛛侠·平行宇宙](https://movie.douban.com/subject/26374197/)》2018-12-14(美国)
-- **《[芭比 Barbie](https://movie.douban.com/subject/4058939/)》2023-07-21(美国/中国大陆)**
+- 《[弥留之国的爱丽丝 第二季](https://movie.douban.com/subject/35300122/)》2022-12-22(日本) $^{23-01}$
+- 《[珀尔 / Pearl](https://movie.douban.com/subject/35801819/)》2022-09-16(美国) $^{23-01}$
+- 《[星期三 第一季](https://movie.douban.com/subject/35364243/)》2022-11-23(美国) $^{23-01}$
+- **《[对不起，我们错过了你](https://movie.douban.com/subject/30209084/)》2019-11-01(英国) $^{23-01}$**
+- **《[大侦探波洛 第一季](https://movie.douban.com/subject/2030879/)》1989-01-08(英国) $^{23-01}$**
+- 《[满江红](https://movie.douban.com/subject/35766491/)》2023-01-22(中国大陆) $^{23-01}$
+- 《[风味人间 4·谷物星球](https://movie.douban.com/subject/35686327/)》2022-11-24(中国大陆) $^{23-02}$
+- 《[狂飙](https://movie.douban.com/subject/35465232/)》2023-01-14(中国大陆) $^{23-02}$
+- 《[三体](https://movie.douban.com/subject/26647087/)》2023-01-15(中国大陆) $^{23-02}$
+- **《[搏击俱乐部](https://movie.douban.com/subject/1292000/)》1999-10-15(美国) $^{23-02}$**
+- 《[王冠 第一季](https://movie.douban.com/subject/26427152/)》2016-11-04(美国) $^{23-02}$
+- 《[最后生还者 第一季](https://movie.douban.com/subject/25848328/)》2023-01-15(美国) $^{23-03}$
+- **《[MH370：消失的航班](https://movie.douban.com/subject/36247626/)》2023-03-08(美国) $^{23-03}$**
+- 《[黑暗荣耀](https://movie.douban.com/subject/35314632/)》2022-12-30(韩国) $^{23-03}$
+- 《[安眠书店 / 你 第一季](https://movie.douban.com/subject/26955946/)》2018-09-09(美国) $^{23-03}$
+- **《[暴裂无声](https://movie.douban.com/subject/26647117/)》2018-04-04(中国大陆) $^{23-04}$**
+- 《[继承之战 第 1-4 季](https://movie.douban.com/subject/35638422/)》2023-03-26(美国) $^{23-04}$
+- 《[灌篮高手：THE FIRST / Slam Dunk](https://movie.douban.com/subject/35315950/)》2023-04-20(中国大陆) $^{23-04}$
+- **《[漫长的季节](https://movie.douban.com/subject/35588177/)》2023-04-22(中国大陆) $^{23-04}$**
+- 《[我爱我家 (1993)](https://movie.douban.com/subject/3901388/)》1993-07-01(中国大陆) $^{23-04}$
+- **《[武林外传 (2006)](https://movie.douban.com/subject/3882715/)》2006-01-02(中国大陆) $^{23-04}$**
+- 《[目击者之追凶](https://movie.douban.com/subject/11600078/)》2017-03-31(中国台湾) $^{23-05}$
+- 《[沉默的羔羊](https://movie.douban.com/subject/1293544/)》1991-02-14(美国) $^{23-05}$
+- 《[小岛惊魂 The Others](https://movie.douban.com/subject/1301459/)》2001-08-10(美国) $^{23-05}$
+- 《[憨豆的黄金周](https://movie.douban.com/subject/1301459/)》2007-03-30(英国) $^{23-05}$
+- 《[梅格雷侦探系列](https://www.douban.com/doulist/122864803/)》2016(英国) $^{23-05}$
+- 《[蜘蛛侠·平行宇宙](https://movie.douban.com/subject/26374197/)》2018-12-14(美国) $^{23-06}$
+- 《[芭比](https://movie.douban.com/subject/4058939/)》2023-07-21(美国/中国大陆) $^{23-07}$
+- 《[燃烧女子的肖像](https://movie.douban.com/subject/30257175/)》2019-09-18(法国) $^{23-08}$
+- **《[小妇人(2019)](https://movie.douban.com/subject/26348103/)》2019-12-25(美国) $^{23-08}$**
 
 </details>
 
