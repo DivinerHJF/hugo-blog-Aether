@@ -1,22 +1,22 @@
 +++
-title = "🎡 读看听"
-date = "2022-04-22"
-comment = true
+title = "走过的地方"
+date = "2018-01-01"
+comment = false
 toc = false
 +++
 
 # 2023
 
-<details open>
+<details>
   <summary><b>» 书刊</b></summary>
 
 - **《[如首无作祟之物](https://book.douban.com/subject/6249670/)》[日] 三津田信三 / 张舟 / 文化发展出版社 $^{23-02}$**
 - **《[希腊棺材之谜](https://book.douban.com/subject/26941500/)》[美] 埃勒里·奎因 / 王敬之 / 新星出版社 $^{23-03}$**
-- **《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社 $^{23-03}$**
-- **《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司 $^{23-03}$**
-- **《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社 $^{23-03}$**
+- 《[克莱因壶](https://book.douban.com/subject/33658616/)》[日]冈岛二人 / 张舟 / 化学工业出版社 $^{23-03}$
+- 《[金色梦乡](https://book.douban.com/subject/26864984/)》[日] 伊坂幸太郎 / 代珂 / 南海出版公司 $^{23-03}$
+- 《[奇想，天动](https://book.douban.com/subject/23780806/)》[日] 岛田庄司 / 林敏生 / 新星出版社 $^{23-03}$
 - **《[占星术杀人魔法](https://book.douban.com/subject/10740776/)》[日] 岛田庄司 / 王鹏帆 / 新星出版社 $^{23-06}$**
-- **《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社 $^{23-06}$**
+- 《[回忆爱玛侬](https://book.douban.com/subject/26916149/)》[日] 梶尾真治 / 王玮 / 新星出版社 $^{23-06}$
 - **《[亲密关系（第 6 版）](https://book.douban.com/subject/26585065/)》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社 $^{23-06}$**
 - **《[象棋的故事](https://book.douban.com/subject/24700640/)》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社 $^{23-07}$**
 - **《[形影不离](https://book.douban.com/subject/35713872/)》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社 $^{23-07}$**
@@ -27,7 +27,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 影剧</b></summary>
 
 - 《[弥留之国的爱丽丝 第二季](https://movie.douban.com/subject/35300122/)》2022-12-22(日本) $^{23-01}$
@@ -63,7 +63,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 文章</b></summary>
 
 - [淺談 Atomic CSS 的發展背景與 Tailwind CSS](https://blog.huli.tw/2022/05/23/atomic-css-and-tailwind-css/)
@@ -72,7 +72,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 视频</b></summary>
 
 - [Learn Tailwind CSS – Course for Beginners](https://www.youtube.com/watch?v=ft30zcMlFao)
@@ -81,7 +81,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 其他</b></summary>
 
 - **Somebody：**[医痴](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、
@@ -94,8 +94,8 @@ toc = false
 
 # 2022
 
-<details open>
-  <summary><b>» 书籍</b></summary>
+<details>
+  <summary><b>» 书刊</b></summary>
 
 - **《[挽救计划](https://book.douban.com/subject/35494160/)》[美] 安迪·威尔 / 耿辉 / 译林出版社**
 - 《[雕塑家](https://book.douban.com/subject/34978160/)》[美] 斯科特·麦克劳德 编绘 / 孙侃 / 湖南美术出版社
@@ -115,7 +115,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 影剧</b></summary>
 
 - **《[控方证人](https://movie.douban.com/subject/5294851/)》1982-12-04(美国)**
@@ -163,7 +163,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 文章</b></summary>
 
 - [财新 | 2021 年最具影响力的 21 件事](https://datanews.caixin.com/interactive/2021/2021final/)
@@ -180,13 +180,13 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 视频</b></summary>
 
 - [中岛美雪 · 2007 歌旅演唱会](https://www.bilibili.com/video/BV1uK411P7JE)
 - [中岛美雪 · 2016 一会演唱会](https://www.bilibili.com/video/BV144411i7mb)
 - [选投影仪：从入门到精通，3000 元 10 款横评](https://www.bilibili.com/video/BV13L4y1n7WQ/?share_source=copy_web&vd_source=dfeb89feb5ee367d116e92e86e0834fd "先看测评")
-- [Vercel 与 Next.js：开源全明星团队背后的商业逻辑｜ Monetizing Open Source](https://www.bilibili.com/video/BV1gR4y1u76v)
+- [Vercel 与 Next.js：开源全明星团队背后的商业逻辑｜ Monetizing  Source](https://www.bilibili.com/video/BV1gR4y1u76v)
 - [Git 基本原理介绍](https://youtube.com/playlist?list=PLfQqWeOCIH4BXVnYaPgjR9_f8YF3WNAz0 "麦兜搞 IT")
 - [Hugo - Static Site Generator | Tutorial](https://youtube.com/playlist?list=PLLAZ4kZ9dFpOnyRlyS-liKL5ReHDcj4G3 "Mike Dane")
 - [北大肖臻 - 区块链技术与应用](http://zhenxiao.com/blockchain/ "北京大学 - 肖臻")
@@ -194,7 +194,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 播客</b></summary>
 
 - **声音发掘：**[不在场](https://buzaichang.xyz/)
@@ -207,7 +207,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» 其他</b></summary>
 
 - **RSS/Newsletter：**[Yihui Xie | 谢益辉](https://yihui.org/)、[Pseudoyu | Yu Zhang](https://www.pseudoyu.com/zh/)、[文字森林 | 天仙子](https://tianxianzi.me/)、[好工具周刊](https://bestxtools.zhubai.love/)、[科技爱好者周刊](https://www.ruanyifeng.com/blog/)、[人民日报重要言论库](http://opinion.people.com.cn/GB/8213/49160/)、[CDT 周报](https://chinadigitaltimes.net/chinese/weekly-digest)、[有据 | 国际新闻事实核查](https://chinafactcheck.com/)、[知识分子](http://zhishifenzi.com/)、[Logseq Blog](https://blog.logseq.com)、[Medium weekly digest](https://medium.com/)、[R Weekly](https://rweekly.org/)

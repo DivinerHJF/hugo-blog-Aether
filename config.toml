@@ -13,32 +13,32 @@ title = "JianFeng Hao | 郝建锋"
 
 [menu]
 [[menu.main]]
-identifier = "series"
-name = "朝闻道"
-post = ""
-pre = "🌭"
-title = "学习、技术类文章"
-url = "/series/朝闻道/"
-weight = 1
-[[menu.main]]
 identifier = "posts"
-# 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
-pre = "🗃️"
-# 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
-name = "夕拾花"
+name = "归档"
 post = ""
-url = "/series/夕拾花/"
-# 当你将鼠标悬停在此菜单链接上时, 将显示的标题
-title = "生活、月报类文章"
-weight = 2
+pre = "🗃️"
+title = "所有文章"
+url = "/posts/"
+weight = 1
 # [[menu.main]]
-# identifier = "categories"
-# name = "分类"
+# identifier = ""
+# # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+# pre = "🗃️"
+# # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+# name = "夕拾花"
 # post = ""
-# pre = "🍱"
-# title = "打开任意门发现惊喜"
-# url = "/categories/"
-# weight = 3
+# url = "/series/夕拾花/"
+# # 当你将鼠标悬停在此菜单链接上时, 将显示的标题
+# title = "生活、月报类文章"
+# weight = 2
+[[menu.main]]
+identifier = "categories"
+name = "分类"
+post = ""
+pre = "🍱"
+title = "分类文章"
+url = "/categories/"
+weight = 2
 # [[menu.main]]
 # identifier = "tags"
 # name = "标签"
@@ -48,16 +48,16 @@ weight = 2
 # url = "/tags/"
 # weight = 4
 [[menu.main]]
-identifier = ""
-name = "晨观影"
+identifier = "series"
+name = "系列"
 post = ""
 pre = "🎡"
-title = "作为一年的定格、快照"
-url = "/pages/guide/"
+title = "系列文章"
+url = "/series/"
 weight = 5
 [[menu.main]]
 identifier = ""
-name = "暮立传"
+name = "关于"
 post = ""
 pre = "👨‍🔧"
 title = "关于我以及我的网站"
@@ -158,7 +158,7 @@ typeit = false
 [params.footer]
 enable = true
 #  自定义内容 (支持 HTML 格式)
-custom = ''
+custom = '<a href="/series/夕拾花/" target="_blank" rel="noreferrer">月念</a> · <a href="/pages/footprint/" target="_blank">足迹</a> · <a href="/pages/mentalfood/" target="_blank">阅览</a> · <a href="/pages/food/" target="_blank">食味</a> <hr width="20px" color="#D3D3D3">'
 #  是否显示 Hugo 和主题信息
 hugo = false
 #  是否显示版权信息
@@ -664,10 +664,10 @@ startLevel = 2
 
 # 作者配置
 [author]
-avatar = "https://blog-1255524710.cos.ap-beijing.myqcloud.com/master/2022031022004295160.svg"
+avatar = "https://www.aetherhjf.com/images/me/logo.svg"
 email = "haojianfeng1997@gmail.com"
 gravatarEmail = ""
-link = "https://aetherhjf.netlify.app/"
+link = "https://aetherhjf.com/"
 name = "Jianfeng.Hao"
 
 # 网站地图配置
