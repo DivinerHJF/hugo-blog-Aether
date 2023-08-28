@@ -1,13 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
-categories: [江湖百晓生]
-tags:
-    - shortcode
-    - 短代码
-    - Echart
+categories: [碎碎念, 爱折腾, 读看听， 万里路]
+series: [夕拾花]
+tags: []
+comment: true
+toc: false
 ---
-
-{{<echarts charts_id="210703-01" width="426px" height="501px">}}
-  
-{{</echarts>}}
