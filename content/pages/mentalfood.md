@@ -37,7 +37,7 @@ toc = false
 </details>
 
 <details>
-  <summary><b>» 影剧（36 部）</b></summary>
+  <summary><b>» 影剧（39 部）</b></summary>
 
 1. 《弥留之国的爱丽丝 第二季》2022-12-22(日本) $^{23-01}$
 1. 《珀尔 / Pearl》2022-09-16(美国) $^{23-01}$
@@ -69,14 +69,15 @@ toc = false
 1. 《芭比》2023-07-21(美国/中国大陆) $^{23-07}$
 1. 《燃烧女子的肖像》2019-09-18(法国) $^{23-08}$
 1. **《小妇人(2019)》2019-12-25(美国) $^{23-08}$**
-1. 《封神第一部：朝歌风云 (2023)》 2023-07-20(中国大陆) $^{23-08}$
-1. 《超异能族 무빙 (2023)》2023-08-09(韩国) $^{23-09}$
-1. 《有生之年 (2023)》2023-09-17(中国台湾) $^{23-10}$
+1. 《封神第一部：朝歌风云》 2023-07-20(中国大陆) $^{23-08}$
+1. 《超异能族 무빙》2023-08-09(韩国) $^{23-09}$
+1. 《我有一个朋友》2023-09-06(中国大陆) $^{23-09}$
+1. 《有生之年》2023-09-17(中国台湾) $^{23-10}$
 1. **《汉尼拔 第 1-3 季》2015-06-04(美国) $^{23-11}$**
 1. 《鬼吹灯之南海归墟》2023-11-27(中国大陆) $^{23-12}$
+1. **《坠楼死亡的剖析》2023-08-23(法国) $^{23-12}$**
+1. 《流人/下等马 第 1-3 季》2023-11-29(英国) $^{23-12}$
 1. **《葬送的芙莉莲》2023-09-29(日本) $^{23-12}$**
-
-
 
 </details>
 
@@ -84,8 +85,6 @@ toc = false
   <summary><b>» 文章</b></summary>
 
 - [淺談 Atomic CSS 的發展背景與 Tailwind CSS](https://blog.huli.tw/2022/05/23/atomic-css-and-tailwind-css/)
-- [史上最全 SSH 暗黑技巧详解](https://plantegg.github.io/2019/06/02/%E5%8F%B2%E4%B8%8A%E6%9C%80%E5%85%A8_SSH_%E6%9A%97%E9%BB%91%E6%8A%80%E5%B7%A7%E8%AF%A6%E8%A7%A3--%E6%94%B6%E8%97%8F%E4%BF%9D%E5%B9%B3%E5%AE%89/)
-- [Harvard CS197: AI Research Experiences](https://docs.google.com/document/d/1uvAbEhbgS_M-uDMTzmOWRlYxqCkogKRXdbKYYT98ooc)
 
 </details>
 
@@ -98,12 +97,12 @@ toc = false
 
 </details>
 
-<details>
-  <summary><b>» 其他</b></summary>
+<details open>
+  <summary><b>» RSS/Newsletter</b></summary>
 
-- **Somebody：**[医痴](https://www.youtube.com/channel/UCR2f5HSx_E06HK6LzSzQQ5g/videos)、
-- 《[财新周刊](https://weekly.caixin.com/)》、《[第一财经](https://www.cbnweek.com/#/read)》、《[三联生活周刊](https://www.lifeweek.com.cn/)》、《[小鸟文学](https://apps.apple.com/cn/app/%e5%b0%8f%e9%b8%9f%e6%96%87%e5%ad%a6/id1541992205?mt=8)》
-- 《[Bloomberg](https://www.bloomberg.com)》、《[The Economist](https://www.economist.com/)》
+- **Blog：**[Pseudoyu](https://www.pseudoyu.com/zh/category/ideas/)、[拾月/SKYue](https://www.skyue.com/archives.html)、[小球飞鱼](https://mantyke.icu/)、、、
+- **Bilibili：**
+- **Youtube：**
 
 </details>
 
