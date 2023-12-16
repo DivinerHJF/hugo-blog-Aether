@@ -37,7 +37,7 @@ toc = false
 </details>
 
 <details>
-  <summary><b>» 影剧（39 部）</b></summary>
+  <summary><b>» 影剧（40 部）</b></summary>
 
 1. 《弥留之国的爱丽丝 第二季》2022-12-22(日本) $^{23-01}$
 1. 《珀尔 / Pearl》2022-09-16(美国) $^{23-01}$
@@ -76,6 +76,7 @@ toc = false
 1. **《汉尼拔 第 1-3 季》2015-06-04(美国) $^{23-11}$**
 1. 《鬼吹灯之南海归墟》2023-11-27(中国大陆) $^{23-12}$
 1. **《坠楼死亡的剖析》2023-08-23(法国) $^{23-12}$**
+1. 《山河令》2021-02-22(中国大陆) $^{23-12}$
 1. 《流人/下等马 第 1-3 季》2023-11-29(英国) $^{23-12}$
 1. **《葬送的芙莉莲》2023-09-29(日本) $^{23-12}$**
 
@@ -97,7 +98,7 @@ toc = false
 
 </details>
 
-<details open>
+<details>
   <summary><b>» RSS/Newsletter</b></summary>
 
 - **Blog：**[Pseudoyu](https://www.pseudoyu.com/zh/category/ideas/)、[拾月/SKYue](https://www.skyue.com/archives.html)、[小球飞鱼](https://mantyke.icu/)、、、
