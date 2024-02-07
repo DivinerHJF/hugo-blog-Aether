@@ -5,8 +5,13 @@ comment = false
 toc = false
 +++
 
+## 2024 年
+
+- 2024-01：[香港 · 港岛再画龙](https://photos.app.goo.gl/6AkiZPY88iCUuour7)
+
 ## 2023 年
 
+- 2023-12：[香港 · 港岛画恐龙](https://photos.app.goo.gl/89YomMdFTiF49Tgs6)
 - 2023-11：[香港 · 梧桐寨瀑布](https://photos.app.goo.gl/pA1oKYfned4upBaS6)、[东莞 · 大屏障公园](https://photos.app.goo.gl/GJVtDSqDrA9nE7ii6)
 - 2023-10：[福州 · 超级侦探聚](https://photos.app.goo.gl/gD7e9TEDwrhcknb38)、[深圳 · 穿越东西冲](https://photos.app.goo.gl/FgPBcvgUUuXYFdjV9)、[珠海 · 长隆海洋国](https://photos.app.goo.gl/HhY5RXS29ogDPpVc7)
 - 2023-09：[香港 · 港岛两日游](https://photos.app.goo.gl/T96y9uGqzWCPpz4b7)
@@ -15,4 +20,4 @@ toc = false
 - 2023-04：[桂林 · 阳朔周末游、北京 · 环球影城](/2023/04/2023-04/#生活)
 - 2023-03：[广州 · 大夫山骑行](/2023/03/2023-03/#大夫山游记)
 - 2023-02：[广州 · 六片山徒步](/2023/02/2023-02/#六片山游记)
-- 2023-01：[深圳 · 展馆一日游、北海 · 同学烟花聚](/2023/01/2023-01#生活)
+- 2023-01：[深圳 · 展馆一日游、北海 · 同学烟花聚](/2023/01/2023-01#生活)·
