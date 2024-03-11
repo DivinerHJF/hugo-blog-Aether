@@ -7,20 +7,66 @@ toc = false
 
 ## 2024
 
+{{< admonition type=note title="书刊（1本）" open=true >}}
+  {{< mediacard 
+    coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" 
+    title="某霍格沃茨的魔文教授" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" 
+    starscore="★★★★" greystar="☆" 
+    intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+{{< /admonition >}}
 
+{{< admonition type=tip title="影剧（8部）" open=true >}}
+  {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" 
+    title="非诚勿扰3" link="" author="冯小刚/2023-12-30(中国大陆)" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="剧情很烂，配色吸睛" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" 
+    title="葬送的芙莉莲" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎/2023-09-29(日本)" type="24-01" 
+    starscore="★★★★" greystar="☆" 
+    intro="回忆是淡淡的，生活要慢慢的" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+    {{< mediacard 
+    coverurl="" 
+    title="" link="" author="" type="24-01" 
+    starscore="★" greystar="☆☆☆☆" 
+    intro="" >}}
+{{< /admonition >}}
 
-<details>
-  <summary><b>» 书刊（1 本）</b></summary>
-
-1. 《某霍格沃茨的魔文教授》韩游思 / 起点中文网 $^{24-01}$
-
-</details>
 
 <details>
   <summary><b>» 影剧（8 部）</b></summary>
 
-1. [《非诚勿扰3》]^(剧情很烂，配色吸睛)冯小刚 / 2023-12-30(中国大陆) $^{24-01}$
-1. 🚩[《葬送的芙莉莲》]^(回忆是淡淡的，生活要慢慢的)斋藤圭一郎 / 2023-09-29(日本) $^{24-01}$
 1. [《繁花》]^(捞到什么是什么，上岸最要紧)王家卫 / 2023-12-27(中国大陆) $^{24-01}$
 1. [《怪物》]^(每个人都拥有获得幸福的权利)是枝裕和 / 2023-06-02(日本) $^{24-01}$
 1. [《爱爱内含光》]^(表面大尺度的全龄都市感情故事)黄婕妤 / 2024-02-02(中国台湾) $^{24-02}$
