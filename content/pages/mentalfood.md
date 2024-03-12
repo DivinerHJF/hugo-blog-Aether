@@ -7,7 +7,7 @@ toc = false
 
 ## 2024
 
-{{< admonition type=note title="书刊（1本）" open=true >}}
+{{< admonition type=note title="书刊（1本）" open=false >}}
   {{< mediacard 
     coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" 
     title="某霍格沃茨的魔文教授" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" 
@@ -20,89 +20,67 @@ toc = false
     intro="" >}}
 {{< /admonition >}}
 
-{{< admonition type=tip title="影剧（8部）" open=true >}}
+{{< admonition type=tip title="影剧（9部）" open=false >}}
   {{< mediacard 
     coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" 
-    title="非诚勿扰3" link="" author="冯小刚/2023-12-30(中国大陆)" type="24-01" 
+    title="非诚勿扰3 (2023)" link="" author="冯小刚" type="24-01" 
     starscore="★" greystar="☆☆☆☆" 
     intro="剧情很烂，配色吸睛" >}}
     {{< mediacard 
     coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" 
-    title="葬送的芙莉莲" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎/2023-09-29(日本)" type="24-01" 
+    title="葬送的芙莉莲 (2023)" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" 
     starscore="★★★★" greystar="☆" 
     intro="回忆是淡淡的，生活要慢慢的" >}}
     {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
+    coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" 
+    title="繁花 (2023)" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" 
+    starscore="★★★" greystar="☆☆" 
+    intro="捞到什么是什么，上岸最要紧" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2023/05/14/a5134ab4-52b8-4b59-9ecb-2a0871a3502c.jpg" 
+    title="怪物 (2023)" link="https://neodb.social/movie/5V2GwTh1IkdM11QCUjH3JP" author="是枝裕和" type="24-01" 
+    starscore="★★★" greystar="☆☆" 
+    intro="每个人都拥有获得幸福的权利" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2024/02/08/a6ee5a86-12d5-44a1-8c46-c78d1d7c86dd.webp" 
+    title="爱爱内含光 (2024)" link="https://neodb.social/tv/season/3wTxcRhSCefePWEh53e9JA" author="黄婕妤" type="24-02" 
+    starscore="★★★" greystar="☆☆" 
+    intro="表面大尺度的全龄都市感情故事" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2023/12/24/7e245922-e856-43f2-9cce-a3fe429c5b30.webp" 
+    title="好久没做 (2024) " link="https://neodb.social/tv/season/234Um5nfoOCIuPIKDlmKEx" author="全高云/任大炯" type="24-02" 
+    starscore="★★" greystar="☆☆☆" 
+    intro="高压社会下的爱欲消存" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/movie/2021/09/15aa6c25ad-4b65-4aef-aa11-e02920fc7297.jpg" 
+    title="婚姻故事 (2019)" link="https://neodb.social/movie/3cH3bmEXyDm4f7o5krAJHK" author="诺亚·鲍姆巴赫" type="24-02" 
+    starscore="★★★" greystar="☆☆" 
+    intro="爱在离婚诉讼时" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/movie/2021/09/1499c49ec6-6897-4f5a-80ea-8a225bf36d1c.jpg" 
+    title="小偷家族 (2018)" link="https://neodb.social/movie/5TTX7VfN4GHX4HbwLILNpq" author="是枝裕和" type="24-03" 
+    starscore="★★★" greystar="☆☆" 
+    intro="此心安处是吾乡" >}}
+    {{< mediacard 
+    coverurl="https://neodb.social/m/item/doubanmovie/2024/02/29/78da985d-f9ff-41a5-9059-32285259010b.webp" 
+    title="周处除三害 (2023) [电影]" link="https://neodb.social/movie/61VXoCBbwZmEPMpek3dPv5" author="黄精甫" type="24-03" 
+    starscore="★★" greystar="☆☆☆" 
+    intro="预制菜时代的一碗街头杂碎" >}}
     {{< mediacard 
     coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
+    title="" link="" author="" type="24-03" 
     starscore="★" greystar="☆☆☆☆" 
     intro="" >}}
 {{< /admonition >}}
 
-
-<details>
-  <summary><b>» 影剧（8 部）</b></summary>
-
-1. [《繁花》]^(捞到什么是什么，上岸最要紧)王家卫 / 2023-12-27(中国大陆) $^{24-01}$
-1. [《怪物》]^(每个人都拥有获得幸福的权利)是枝裕和 / 2023-06-02(日本) $^{24-01}$
-1. [《爱爱内含光》]^(表面大尺度的全龄都市感情故事)黄婕妤 / 2024-02-02(中国台湾) $^{24-02}$
-1. [《好久没做》]^(高压社会下的爱欲消存)全高云 / 任大炯 / 2024-01-19(韩国) $^{24-02}$
-1. [《婚姻故事》]^(爱在离婚诉讼时)诺亚·鲍姆巴赫 / 2019-08-29(威尼斯电影节) $^{24-02}$
-1. [《小偷家族》]^(此心安处是吾乡)是枝裕和 / 2018-06-08(日本) $^{24-03}$
-1. [《周处除三害》]^(预制菜时代的一碗街头杂碎)黄精甫 / 2023-10-06(中国台湾) $^{24-03}$
-
-</details>
-
-<details>
-  <summary><b>» 文章</b></summary>
-
-- [无风险年化 360%？小白也能懂的 Crypto 套利](https://taresky.com/crypto-arbitrage) $^{24-03}$
-
-</details>
-
-<details>
-  <summary><b>» 视频</b></summary>
-
-- [关于东亚人适量饮酒与健康的误解](https://www.bilibili.com/video/BV1rg4y1273W/) $^{24-01}$
-- [35位医生投票：家中常备什么药？](https://www.bilibili.com/video/BV1cF4m1j7bj/) $^{24-02}$
-- [我在印度最大的贫民窟生活了三天，一路经历相当震撼](https://www.bilibili.com/video/BV1oj421D7YM/) $^{24-02}$
-- [玫瑰叔品金庸之天龙八部](https://space.bilibili.com/36726929/channel/seriesdetail?sid=304331) $^{24-03}$
-- [玫瑰叔品金庸之倚天屠龙记](https://space.bilibili.com/36726929/channel/collectiondetail?sid=1553370) $^{24-03}$
-
-</details>
-
-<details>
-  <summary><b>» 订阅</b></summary>
-
-- **Blog：**
-- **Bilibili：**
-- **Youtube：**
-
-</details>
+{{< admonition type=info title="自媒体摘录" open=true >}}
+  1. [关于东亚人适量饮酒与健康的误解](https://www.bilibili.com/video/BV1rg4y1273W/) $^{24-01}$
+  1. [35位医生投票：家中常备什么药？](https://www.bilibili.com/video/BV1cF4m1j7bj/) $^{24-02}$
+  1. [我在印度最大的贫民窟生活了三天，一路经历相当震撼](https://www.bilibili.com/video/BV1oj421D7YM/) $^{24-02}$
+  1. [玫瑰叔品金庸之天龙八部](https://space.bilibili.com/36726929/channel/seriesdetail?sid=304331) $^{24-03}$
+  1. [玫瑰叔品金庸之倚天屠龙记](https://space.bilibili.com/36726929/channel/collectiondetail?sid=1553370) $^{24-03}$
+  1. [无风险年化 360%？小白也能懂的 Crypto 套利](https://taresky.com/crypto-arbitrage) $^{24-03}$
+{{< /admonition >}}
 
 ## 2023
 
@@ -192,15 +170,6 @@ toc = false
 - [Learn Tailwind CSS – Course for Beginners](https://www.youtube.com/watch?v=ft30zcMlFao)
 - [南京大学 2022 操作系统 - 蒋炎岩](https://www.bilibili.com/video/BV1Cm4y1d7Ur)
 - [CSAPP - 深入理解计算机系统](https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0 "九曲阑干")
-
-</details>
-
-<details>
-  <summary><b>» RSS/Newsletter</b></summary>
-
-- **Blog：**[Pseudoyu](https://www.pseudoyu.com/zh/category/ideas/)、[拾月/SKYue](https://www.skyue.com/archives.html)、[小球飞鱼](https://mantyke.icu/)、、、
-- **Bilibili：**
-- **Youtube：**
 
 </details>
 
