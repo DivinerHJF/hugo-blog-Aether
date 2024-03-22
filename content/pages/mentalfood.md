@@ -7,73 +7,31 @@ toc = false
 
 ## 2024
 
+<!-- #region 书刊部分 -->
 {{< admonition type=note title="书刊（1本）" open=false >}}
-  {{< mediacard 
-    coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" 
-    title="某霍格沃茨的魔文教授" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" 
-    starscore="★★★★" greystar="☆" 
-    intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
+  {{< mediacard title="某霍格沃茨的魔文教授" coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" starscore="★★★★" greystar="☆" intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
+  {{< mediacard title="" coverurl="" link="" author="" type="24-01" starscore="★" greystar="☆☆☆☆" intro="" >}}
 {{< /admonition >}}
+<!-- #endregion -->
 
-{{< admonition type=tip title="影剧（9部）" open=false >}}
-  {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" 
-    title="非诚勿扰3 (2023)" link="" author="冯小刚" type="24-01" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="剧情很烂，配色吸睛" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" 
-    title="葬送的芙莉莲 (2023)" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" 
-    starscore="★★★★" greystar="☆" 
-    intro="回忆是淡淡的，生活要慢慢的" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" 
-    title="繁花 (2023)" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" 
-    starscore="★★★" greystar="☆☆" 
-    intro="捞到什么是什么，上岸最要紧" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2023/05/14/a5134ab4-52b8-4b59-9ecb-2a0871a3502c.jpg" 
-    title="怪物 (2023)" link="https://neodb.social/movie/5V2GwTh1IkdM11QCUjH3JP" author="是枝裕和" type="24-01" 
-    starscore="★★★" greystar="☆☆" 
-    intro="每个人都拥有获得幸福的权利" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2024/02/08/a6ee5a86-12d5-44a1-8c46-c78d1d7c86dd.webp" 
-    title="爱爱内含光 (2024)" link="https://neodb.social/tv/season/3wTxcRhSCefePWEh53e9JA" author="黄婕妤" type="24-02" 
-    starscore="★★★" greystar="☆☆" 
-    intro="表面大尺度的全龄都市感情故事" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2023/12/24/7e245922-e856-43f2-9cce-a3fe429c5b30.webp" 
-    title="好久没做 (2024) " link="https://neodb.social/tv/season/234Um5nfoOCIuPIKDlmKEx" author="全高云/任大炯" type="24-02" 
-    starscore="★★" greystar="☆☆☆" 
-    intro="高压社会下的爱欲消存" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/movie/2021/09/15aa6c25ad-4b65-4aef-aa11-e02920fc7297.jpg" 
-    title="婚姻故事 (2019)" link="https://neodb.social/movie/3cH3bmEXyDm4f7o5krAJHK" author="诺亚·鲍姆巴赫" type="24-02" 
-    starscore="★★★" greystar="☆☆" 
-    intro="爱在离婚诉讼时" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/movie/2021/09/1499c49ec6-6897-4f5a-80ea-8a225bf36d1c.jpg" 
-    title="小偷家族 (2018)" link="https://neodb.social/movie/5TTX7VfN4GHX4HbwLILNpq" author="是枝裕和" type="24-03" 
-    starscore="★★★" greystar="☆☆" 
-    intro="此心安处是吾乡" >}}
-    {{< mediacard 
-    coverurl="https://neodb.social/m/item/doubanmovie/2024/02/29/78da985d-f9ff-41a5-9059-32285259010b.webp" 
-    title="周处除三害 (2023) [电影]" link="https://neodb.social/movie/61VXoCBbwZmEPMpek3dPv5" author="黄精甫" type="24-03" 
-    starscore="★★" greystar="☆☆☆" 
-    intro="预制菜时代的一碗街头杂碎" >}}
-    {{< mediacard 
-    coverurl="" 
-    title="" link="" author="" type="24-03" 
-    starscore="★" greystar="☆☆☆☆" 
-    intro="" >}}
+<!-- #region 影剧部分 -->
+{{< admonition type=tip title="影剧（10部）" open=false >}}
+  {{< mediacard title="非诚勿扰3 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" link="" author="冯小刚" type="24-01" starscore="★" greystar="☆☆☆☆" intro="剧情很烂，配色吸睛" >}}
+  {{< mediacard title="葬送的芙莉莲 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" starscore="★★★★" greystar="☆" intro="回忆是淡淡的，生活要慢慢的" >}}
+  {{< mediacard title="繁花 (2023)" coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" starscore="★★★" greystar="☆☆" intro="捞到什么是什么，上岸最要紧" >}}
+  {{< mediacard title="怪物 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/05/14/a5134ab4-52b8-4b59-9ecb-2a0871a3502c.jpg" link="https://neodb.social/movie/5V2GwTh1IkdM11QCUjH3JP" author="是枝裕和" type="24-01" starscore="★★★" greystar="☆☆" intro="每个人都拥有获得幸福的权利" >}}
+  {{< mediacard title="爱爱内含光 (2024)" coverurl="https://neodb.social/m/item/doubanmovie/2024/02/08/a6ee5a86-12d5-44a1-8c46-c78d1d7c86dd.webp" link="https://neodb.social/tv/season/3wTxcRhSCefePWEh53e9JA" author="黄婕妤" type="24-02" starscore="★★★" greystar="☆☆" intro="表面大尺度的全龄都市感情故事" >}}
+  {{< mediacard title="好久没做 (2024) " coverurl="https://neodb.social/m/item/doubanmovie/2023/12/24/7e245922-e856-43f2-9cce-a3fe429c5b30.webp" link="https://neodb.social/tv/season/234Um5nfoOCIuPIKDlmKEx" author="全高云/任大炯" type="24-02" starscore="★★" greystar="☆☆☆" intro="高压社会下的爱欲消存" >}}
+  {{< mediacard title="婚姻故事 (2019)" coverurl="https://neodb.social/m/movie/2021/09/15aa6c25ad-4b65-4aef-aa11-e02920fc7297.jpg" link="https://neodb.social/movie/3cH3bmEXyDm4f7o5krAJHK" author="诺亚·鲍姆巴赫" type="24-02" starscore="★★★" greystar="☆☆" intro="爱在离婚诉讼时" >}}
+  {{< mediacard title="小偷家族 (2018)" coverurl="https://neodb.social/m/movie/2021/09/1499c49ec6-6897-4f5a-80ea-8a225bf36d1c.jpg" link="https://neodb.social/movie/5TTX7VfN4GHX4HbwLILNpq" author="是枝裕和" type="24-03" starscore="★★★" greystar="☆☆" intro="此心安处是吾乡" >}}
+  {{< mediacard title="周处除三害 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/02/29/78da985d-f9ff-41a5-9059-32285259010b.webp" link="https://neodb.social/movie/61VXoCBbwZmEPMpek3dPv5" author="黄精甫" type="24-03" starscore="★★" greystar="☆☆☆" intro="预制菜时代的一碗街头杂碎" >}}
+  {{< mediacard title="沙丘2 (2024)" coverurl="https://neodb.social/m/item/doubanmovie/2024/03/09/31bfde12-4660-40cd-865c-47964fcf1c48.webp" link="https://neodb.social/movie/2fEdnxYWozPayayizQmk5M" author="丹尼斯·维伦纽瓦" type="24-03" starscore="★★★" greystar="☆☆" intro="2比1好，3拍好了整个系列能一起升四星" >}}
+  {{< mediacard title="" coverurl="" link="" author="" type="24-03" starscore="★" greystar="☆☆☆☆" intro="" >}}
 {{< /admonition >}}
+<!-- #endregion -->
 
-{{< admonition type=info title="自媒体摘录" open=true >}}
+<!-- #region 自媒体摘录 -->
+{{< admonition type=info title="自媒体摘录" open=false >}}
   1. [关于东亚人适量饮酒与健康的误解](https://www.bilibili.com/video/BV1rg4y1273W/) $^{24-01}$
   1. [35位医生投票：家中常备什么药？](https://www.bilibili.com/video/BV1cF4m1j7bj/) $^{24-02}$
   1. [我在印度最大的贫民窟生活了三天，一路经历相当震撼](https://www.bilibili.com/video/BV1oj421D7YM/) $^{24-02}$
@@ -81,36 +39,35 @@ toc = false
   1. [玫瑰叔品金庸之倚天屠龙记](https://space.bilibili.com/36726929/channel/collectiondetail?sid=1553370) $^{24-03}$
   1. [无风险年化 360%？小白也能懂的 Crypto 套利](https://taresky.com/crypto-arbitrage) $^{24-03}$
 {{< /admonition >}}
+<!-- #endregion -->
 
 ## 2023
 
-<details>
-  <summary><b>» 书刊（22 本）</b></summary>
-
-1. 🚩《如首无作祟之物》[日] 三津田信三 / 张舟 / 文化发展出版社 $^{23-02}$
-1. 🚩《希腊棺材之谜》[美] 埃勒里·奎因 / 王敬之 / 新星出版社 $^{23-03}$
-1. 《克莱因壶》[日]冈岛二人 / 张舟 / 化学工业出版社 $^{23-03}$
-1. 《金色梦乡》[日] 伊坂幸太郎 / 代珂 / 南海出版公司 $^{23-03}$
-1. 《奇想，天动》[日] 岛田庄司 / 林敏生 / 新星出版社 $^{23-03}$
-1. 🚩《占星术杀人魔法》[日] 岛田庄司 / 王鹏帆 / 新星出版社 $^{23-06}$
-1. 《回忆爱玛侬》[日] 梶尾真治 / 王玮 / 新星出版社 $^{23-06}$
-1. 🚩《亲密关系（第 6 版）》[美] 罗兰·米勒 / 王伟平 译 / 人民邮电出版社 $^{23-06}$
-1. 🚩《象棋的故事》[奥]斯蒂芬•茨威格 / 韩耀成 / 陕西师范大学出版社 $^{23-07}$
-1. 🚩《形影不离》[法]西蒙娜·德·波伏瓦 / 曹冬雪 / 浙江教育出版社 $^{23-07}$
-1. 🚩《小镇喧嚣 : 一个乡镇政治运作的演绎与阐释》吴毅 / 生活·读书·新知三联书店 $^{23-07}$
-1. 《人类灭绝》[日] 高野和明 / 百里 / 北京日报出版社 $^{23-07}$
-1. 《城墙之上》徐翀 / 微信读书首发 $^{23-07}$
-1. 《金阁寺》[日] 三岛由纪夫 / 陈德文 / 人民文学出版社 $^{23-07}$
-1. 🚩《天之下》三弦 $^{23-08}$
-1. 🚩《奇迹的黄昏》袁剑 $^{23-09}$
-1. 🚩《涅朵奇卡: 一个女人的一生》陀思妥耶夫斯基 / 于大卫 / 山东文艺出版社 $^{23-10}$
-1. 《绿毛水怪》王小波 / 北京十月文艺出版社 $^{23-10}$
-1. 《太白金星有点烦》马伯庸 / 湖南文艺出版社 $^{23-10}$
-1. 《新摄影笔记》宁思潇潇 / 人民邮电出版社 $^{23-11}$
-1. 《间客》猫腻 / 起点出版社 $^{23-11}$
-1. 《财新周刊》2023年共31期 $^{23-12}$
-
-</details>
+<!-- #region 书刊部分 -->
+{{< admonition type=note title="书刊（21 本）" open=false >}}
+  {{< mediacard title="如首无作祟之物" coverurl="https://neodb.social/m/book/2021/12/106fd29eec-a952-4d03-aab2-8a8b3d3cd69d.jpg" link="https://neodb.social/book/0qXBfLiJe1zvenn2B0VnJO" author="[日] 三津田信三/张舟" type="23-02" starscore="★★★★" greystar="☆" intro="经典诡计和叙述诡计的双重变奏，太过沉迷于诡计和炫技反而给人一种设计感与错乱感。" >}}
+  {{< mediacard title="希腊棺材之谜" coverurl="https://neodb.social/m/book/2021/09/16eb2010e6-e781-42c3-8455-3c77a02837a1.jpg" link="https://neodb.social/book/6l34wM7XqK7nfvkGNDeZZT" author="[美] 埃勒里·奎因/王敬之" type="23-03" starscore="★★★★★" greystar="" intro="被愚弄得很开心！" >}}
+  {{< mediacard title="克莱因壶" coverurl="https://neodb.social/m/book/2021/09/16acc5f8c7-67e7-42f4-ad46-e237044a24ef.jpg" link="https://neodb.social/book/3oyDVjc23i000qX97kV3t0" author="[日]冈岛二人/张舟" type="23-03" starscore="★★★" greystar="☆☆" intro="什么时候你开始怀疑这个世界是假的？" >}}
+  {{< mediacard title="金色梦乡" coverurl="https://neodb.social/m/book/2021/09/15332f0e17-a510-4c6b-9bf5-d007ec3c15eb.jpg" link="https://neodb.social/book/5sKUwA1HSibNthFUNahjXW" author="[日] 伊坂幸太郎/代珂" type="23-03" starscore="★★★" greystar="☆☆" intro="人类有多不成熟、这世界有多艰辛，不用说也知道。如果读者读了《金色梦乡 》会感到‘虽然艰难，但明天也要努力’，我就满足了。——伊坂幸太郎" >}}
+  {{< mediacard title="奇想·天动" coverurl="https://neodb.social/m/book/2021/09/16a6df7d72-ed3d-4043-9758-df090b2232e7.jpg" link="https://neodb.social/book/1KUgV3PUhzqbgfxgbE9Hny" author="[日] 岛田庄司/林敏生" type="23-03" starscore="★★★" greystar="☆☆" intro="有时候就是想看本小说放松一下，可是岛田庄司这家伙总是要放一些沉重的话题在里面，抓住读者的不只是推理，是里面的家国历史与人性沉浮。" >}}
+  {{< mediacard title="占星术杀人魔法" coverurl="https://neodb.social/m/book/2021/09/16d7df28ee-a299-4d22-9cac-82c8261db94e.jpg" link="https://neodb.social/book/1cv2JLBnLjh4rDambV9UKr" author="[日] 岛田庄司/王鹏帆" type="23-06" starscore="★★★★★" greystar="" intro="梅泽平吉遗留的手记上写明他要依据“占星术”肢解重组六个女儿！难道他死而复活来完成幻异的艺术创作？当又没有证据与动机指向其他与本案相关的人——这可说是一桩找不到凶手的命案……" >}}
+  {{< mediacard title="回忆爱玛侬" coverurl="https://neodb.social/m/book/2021/09/1527139b77-3a13-4a3c-b276-5b550ef74bb7.jpg" link="https://neodb.social/book/0KeXMAPgqquM7dJAh0obLx" author="[日] 梶尾真治/王玮" type="23-06" starscore="★★★" greystar="☆☆" intro="无论在一起几小时还是几十年，喜欢你的回忆对我来说都一样。" >}}
+  {{< mediacard title="亲密关系（第 6 版）" coverurl="https://neodb.social/m/book/2021/09/151a795824-26bc-48cb-92f0-488181de1a5c.jpg" link="https://neodb.social/book/6V5Lj1ivLC6wRUlJlp3YdA" author="[美] 罗兰·米勒/王伟平" type="23-06" starscore="★★★★★" greystar="" intro="爱也有学问，本书尝试回答一些以前、现在以及未来都将恒久存在的问题。" >}}
+  {{< mediacard title="象棋的故事" coverurl="https://neodb.social/m/book/2021/09/155e68f7cd-11d5-4949-82da-8f0deed12f5c.jpg" link="https://neodb.social/book/7LNP0JHeS2WiC9u3yXCh9j" author="[奥]斯蒂芬•茨威格/张玉书" type="23-07" starscore="★★★★" greystar="☆" intro="把难以言状的细腻情绪用文字表达的淋漓尽致，把不可描状的丰富情感用文字表达的无微不至。" >}}
+  {{< mediacard title="形影不离" coverurl="https://neodb.social/m/book/2022/02/108fe46b8b-56fb-4065-a525-3be8cbaffb26.jpg" link="https://neodb.social/book/07lJaqLevMRtP6mNWOXZWK" author="[法]西蒙娜·德·波伏瓦/曹冬雪" type="23-07" starscore="★★★★★" greystar="" intro="在抗争中屈服，在犹豫中反抗。没有谁真正乖顺，也没有谁彻底叛逆。" >}}
+  {{< mediacard title="小镇喧嚣:乡镇政治运作的演绎与阐释" coverurl="https://neodb.social/m/book/2021/09/1569b4a2ee-5007-4cac-83df-a435b02aad6e.jpg" link="https://neodb.social/book/2OdlFSAvr2GacbjYrcIm2q" author="吴毅" type="23-07" starscore="★★★★★" greystar="" intro="基层故事千千万，对于这些“故事”背后种种复杂因素的颇有见地的理论探讨。" >}}
+  {{< mediacard title="人类灭绝" coverurl="https://neodb.social/m/book/2021/09/17b37a478b-4d8b-401a-a3e6-7737b5d508cb.jpg" link="https://neodb.social/book/4VfAH3fualJAbbUSAmAyMR" author="[日] 高野和明/百里" type="23-07" starscore="★★" greystar="☆☆☆" intro="我们是毁灭世界的人，也是守护世界的人。" >}}
+  {{< mediacard title="城墙之上" coverurl="https://cdn.weread.qq.com/weread/cover/15/cpplatform_gg5zu1kljxiwqsxqa38ctn/t6_cpplatform_gg5zu1kljxiwqsxqa38ctn1688370360.jpg" link="https://yd.qq.com/web/bookDetail/f9e32370813ab7f2ag018bad" author="徐翀" type="23-07" starscore="★★★" greystar="☆☆" intro="斑驳城墙见证企业改制时期的大杂院爱恨情仇。" >}}
+  {{< mediacard title="金阁寺" coverurl="https://neodb.social/m/book/2021/09/15d39384d6-e158-43b1-9adf-2f0c9cfec8c2.jpg" link="https://neodb.social/book/0oVuXAAEPfjWo08BKT7UMZ" author="[日] 三岛由纪夫/陈德文" type="23-07" starscore="★★★" greystar="☆☆" intro="我的全部潜伏的感情，所有的邪恶之心，都经过你语言的淘洗，变得更加鲜活起来。" >}}
+  {{< mediacard title="天之下" coverurl="https://neodb.social/m/item/doubanbook/2023/07/03/80103ac5-24bd-4b7d-888b-6cd636815990.jpg" link="https://neodb.social/book/0KyIg3bBSaoSDGaDHypaus" author="三弦" type="23-08" starscore="★★★★★" greystar="" intro="讲述“大江湖时代”纷繁人性的架空武侠群像史诗，武林不止在武林，而在天之下。" >}}
+  {{< mediacard title="奇迹的黄昏" coverurl="https://neodb.social/m/book/2021/12/096245220e-db9f-4a4c-9709-84afd92e472d.jpg" link="https://neodb.social/book/2hdQJOTBY0RKGXqn8UWkCH" author="袁剑" type="23-09" starscore="★★★★★" greystar="" intro="为对中国官僚经济的详细研究补充了难得的视角。" >}}
+  {{< mediacard title="涅朵奇卡: 一个女人的一生" coverurl="https://neodb.social/m/item/doubanbook/2023/09/15/33cde4fe-4a79-4833-9a2c-105795bc05a9.jpg" link="https://neodb.social/book/1gj0LVvpWh3JgaBoQwoV2o" author="陀思妥耶夫斯基/于大卫" type="23-10" starscore="★★★★★" greystar="" intro="读着读着，就想扇自己一巴掌！" >}}
+  {{< mediacard title="绿毛水怪" coverurl="https://neodb.social/m/book/2021/09/1553c7e659-2d64-458c-a4ac-83668196d013.jpg" link="https://neodb.social/book/6vTnT4U28UXPmspWUdKVPq" author="王小波" type="23-10" starscore="★★★★" greystar="☆" intro="你怎么知道我不愿意和你一起当水怪？我们好像在池塘的水底。从一个月亮走向另一个月亮。" >}}
+  {{< mediacard title="太白金星有点烦" coverurl="https://neodb.social/m/item/doubanbook/2023/05/29/cc933957-9ec9-4c69-a74d-23f7e3a52ef0.jpg" link="" author="马伯庸" type="23-10" starscore="★★★★" greystar="☆" intro="怪不得满天神佛个个清净无为、不昧诸缘。只有不主动做事，才不会沾染因果啊！奇幻背景包装下的讽刺社会职场官场小说。" >}}
+  {{< mediacard title="新摄影笔记" coverurl="https://neodb.social/m/item/book/2023/08/22/cbca8895-591f-4798-b7c5-4d73583fd3ee.jpg" link="https://neodb.social/book/7lUJUVo24QvVtWWUvDOAHM" author="宁思潇潇" type="23-11" starscore="★★★" greystar="☆☆" intro="通俗易懂，简明实用。" >}}
+  {{< mediacard title="间客" coverurl="https://neodb.social/m/book/2021/09/19fe7677f0-afba-42b4-8e3b-dca9036514c4.jpg" link="https://neodb.social/book/6uMu8bCA886NcGxZVd9lAz" author="猫腻" type="23-11" starscore="★★★" greystar="☆☆" intro="做这样一块快意恩仇的东林石头，或许是每个少年都曾经有过的最朴素的英雄梦吧。" >}}
+{{< /admonition >}}
+<!-- #endregion -->
 
 <details>
   <summary><b>» 影剧（39 部）</b></summary>
