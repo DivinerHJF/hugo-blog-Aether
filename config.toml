@@ -76,10 +76,14 @@ keywords = ["blog", "Hugo", "郝建锋", "博客"]
 #  网站默认主题样式 ("light", "dark", "black", "auto")
 defaultTheme = "auto"
 # 公共 git 仓库路径, 仅在 enableGitInfo 设为 true 时有效
+enableGitInfo = true
+[frontmatter]
+  lastmod = [":git", ":fileModTime", "lastmod", ":defalut"]
+
 gitRepo = ""
 #  哪种哈希函数用来 SRI, 为空时表示不使用 SRI
 # ("sha256", "sha384", "sha512", "md5")
-fingerprint = ""
+fingerprint = "md5"
 #  日期格式
 dateFormat = "2006-01-02"
 # 网站图片, 用于 Open Graph 和 Twitter Cards
