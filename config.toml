@@ -126,14 +126,15 @@ index = ""
 searchKey = ""
 [params.search.fuse]
 #  https://fusejs.io/api/options.html
-distance = 100
 findAllMatches = false
 ignoreFieldNorm = false
-ignoreLocation = false
 isCaseSensitive = false
-location = 0
+includeMatches = false
 minMatchCharLength = 2
+ignoreLocation = true
+location = 0
 threshold = 0.3
+distance = 100
 useExtendedSearch = false
 
 # 页面头部导航栏配置
