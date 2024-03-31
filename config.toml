@@ -664,10 +664,10 @@ startLevel = 2
 
 # 作者配置
 [author]
-avatar = "https://www.aetherhjf.com/images/me/logo.svg"
+avatar = "https://www.philohao.com/images/me/logo.svg"
 email = "haojianfeng1997@gmail.com"
 gravatarEmail = ""
-link = "https://aetherhjf.com/"
+link = "https://philohao.com/"
 name = "Jianfeng.Hao"
 
 # 网站地图配置
