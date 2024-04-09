@@ -2,20 +2,20 @@
 title = "看过的东西"
 date = "2018-01-01"
 comment = false
-toc = false
+toc = true
 +++
 
-## 2024
+## 贰零贰肆
 
 <!-- #region 书刊部分 -->
-{{< admonition type=note title="书刊（1本）" open=false >}}
+{{< admonition type=note title="书刊（1本）" open=true >}}
   {{< mediacard title="某霍格沃茨的魔文教授" coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" starscore="★★★★" greystar="☆" intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
   {{< mediacard title="" coverurl="" link="" author="" type="24-01" starscore="★" greystar="☆☆☆☆" intro="" >}}
 {{< /admonition >}}
 <!-- #endregion -->
 
 <!-- #region 影剧部分 -->
-{{< admonition type=tip title="影剧（10部）" open=false >}}
+{{< admonition type=tip title="影剧（10部）" open=true >}}
   {{< mediacard title="非诚勿扰3 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" link="" author="冯小刚" type="24-01" starscore="★" greystar="☆☆☆☆" intro="剧情很烂，配色吸睛" >}}
   {{< mediacard title="葬送的芙莉莲 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" starscore="★★★★" greystar="☆" intro="回忆是淡淡的，生活要慢慢的" >}}
   {{< mediacard title="繁花 (2023)" coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" starscore="★★★" greystar="☆☆" intro="捞到什么是什么，上岸最要紧" >}}
@@ -31,7 +31,7 @@ toc = false
 <!-- #endregion -->
 
 <!-- #region 自媒体摘录 -->
-{{< admonition type=info title="自媒体摘录" open=false >}}
+{{< admonition type=info title="自媒体摘录" open=true >}}
   1. [关于东亚人适量饮酒与健康的误解](https://www.bilibili.com/video/BV1rg4y1273W/) $^{24-01}$
   1. [35位医生投票：家中常备什么药？](https://www.bilibili.com/video/BV1cF4m1j7bj/) $^{24-02}$
   1. [我在印度最大的贫民窟生活了三天，一路经历相当震撼](https://www.bilibili.com/video/BV1oj421D7YM/) $^{24-02}$
