@@ -17,7 +17,7 @@ toc = true
 <!-- #region 影剧部分 -->
 {{< admonition type=tip title="影剧（10部）" open=true >}}
   {{< mediacard title="非诚勿扰3 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" link="" author="冯小刚" type="24-01" starscore="★" greystar="☆☆☆☆" intro="剧情很烂，配色吸睛" >}}
-  {{< mediacard title="葬送的芙莉莲 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" starscore="★★★★" greystar="☆" intro="回忆是淡淡的，生活要慢慢的" >}}
+  {{< mediacard title="葬送的芙莉莲 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" starscore="★★★★" greystar="☆" intro="回忆是淡淡的，生活要慢慢的，遥远又坚定的信任，平稳又柔和的公路旅行漫，细腻，给人平静感" >}}
   {{< mediacard title="繁花 (2023)" coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" starscore="★★★" greystar="☆☆" intro="捞到什么是什么，上岸最要紧" >}}
   {{< mediacard title="怪物 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/05/14/a5134ab4-52b8-4b59-9ecb-2a0871a3502c.jpg" link="https://neodb.social/movie/5V2GwTh1IkdM11QCUjH3JP" author="是枝裕和" type="24-01" starscore="★★★" greystar="☆☆" intro="每个人都拥有获得幸福的权利" >}}
   {{< mediacard title="爱爱内含光 (2024)" coverurl="https://neodb.social/m/item/doubanmovie/2024/02/08/a6ee5a86-12d5-44a1-8c46-c78d1d7c86dd.webp" link="https://neodb.social/tv/season/3wTxcRhSCefePWEh53e9JA" author="黄婕妤" type="24-02" starscore="★★★" greystar="☆☆" intro="表面大尺度的全龄都市感情故事" >}}
