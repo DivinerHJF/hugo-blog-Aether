@@ -7,6 +7,10 @@ toc = false
 
 ## 2024 年
 
+
+- 2024-04：[深圳 · 盐田区海港](https://photos.app.goo.gl/FFcLSaSHMNHugV539)
+- 2024-03：[广州 · 油麻山雨徒](https://photos.app.goo.gl/5EHCnMT7Gz32YbCY9)、[汕尾 · 海陆丰团建](https://photos.app.goo.gl/1d8GoTmigENYrtCJA)、[广佛 · 流花湖宜家](https://photos.app.goo.gl/fQyGAHJcwNxWkV2e6)
+- 2024-02：[东北 · 春节三人游](https://photos.app.goo.gl/gE5oHASVkXYPAdCF7)
 - 2024-01：[香港 · 港岛再画龙](https://photos.app.goo.gl/6AkiZPY88iCUuour7)
 
 ## 2023 年
