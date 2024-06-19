@@ -163,7 +163,7 @@ typeit = false
 [params.footer]
 enable = true
 #  自定义内容 (支持 HTML 格式)
-custom = '<a href="/pages/now/" target="_blank" rel="noreferrer">此刻</a> · <a href="/pages/footprint/" target="_blank">足迹</a> · <a href="/pages/mentalfood/" target="_blank">阅览</a> · <a href="/pages/album/" target="_blank">回忆</a> <hr width="20px" color="#D3D3D3">'
+custom = '<a href="/pages/now/" target="_blank" rel="noreferrer">此刻</a> · <a href="/pages/footprint/" target="_blank">足迹</a> · <a href="/pages/mentalfood/" target="_blank">阅览</a> · <a href="https://album.philohao.com" target="_blank">定格</a> <hr width="20px" color="#D3D3D3">'
 #  是否显示 Hugo 和主题信息
 hugo = false
 #  是否显示版权信息
