@@ -10,7 +10,7 @@ toc = true
 <!-- #region 书刊部分 -->
 {{< admonition type=note title="书刊（1本）" open=true >}}
   {{< mediacard title="某霍格沃茨的魔文教授" coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" starscore="★★★★" greystar="☆" intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
-  {{< mediacard title="" coverurl="" link="" author="" type="24-01" starscore="★" greystar="☆☆☆☆" intro="" >}}
+  {{< mediacard title="法师故事" coverurl="https://bookcover.yuewen.com/qdbimg/349573/57821/600.webp" link="https://www.qidian.com/book/57821/" author="索斯" type="24-07" starscore="★★★★" greystar="☆" intro="魔兽践踏，巨龙咆哮，巫师诅咒，魔法璀璨之光照耀知识灯塔！" >}}
 {{< /admonition >}}
 <!-- #endregion -->
 
@@ -26,7 +26,10 @@ toc = true
   {{< mediacard title="小偷家族 (2018)" coverurl="https://neodb.social/m/movie/2021/09/1499c49ec6-6897-4f5a-80ea-8a225bf36d1c.jpg" link="https://neodb.social/movie/5TTX7VfN4GHX4HbwLILNpq" author="是枝裕和" type="24-03" starscore="★★★" greystar="☆☆" intro="此心安处是吾乡" >}}
   {{< mediacard title="周处除三害 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/02/29/78da985d-f9ff-41a5-9059-32285259010b.webp" link="https://neodb.social/movie/61VXoCBbwZmEPMpek3dPv5" author="黄精甫" type="24-03" starscore="★★" greystar="☆☆☆" intro="预制菜时代的一碗街头杂碎" >}}
   {{< mediacard title="沙丘2 (2024)" coverurl="https://neodb.social/m/item/doubanmovie/2024/03/09/31bfde12-4660-40cd-865c-47964fcf1c48.webp" link="https://neodb.social/movie/2fEdnxYWozPayayizQmk5M" author="丹尼斯·维伦纽瓦" type="24-03" starscore="★★★" greystar="☆☆" intro="2比1好，3拍好了整个系列能一起升四星" >}}
-  {{< mediacard title="" coverurl="" link="" author="" type="24-03" starscore="★" greystar="☆☆☆☆" intro="" >}}
+  {{< mediacard title="电锯惊魂 (2004)" coverurl="https://neodb.social/m/movie/2021/09/15ba9242b2-9ce3-45ca-819f-53410c721b2d.jpg" link="https://neodb.social/movie/2BFKAdUOPWwFWfe51wDbK8" author="温子仁" type="24-05" starscore="★★★★" greystar="☆" intro="密室逃脱lol，原来电锯惊魂只有电和锯！是没有电锯的啊！！！" >}}
+  {{< mediacard title="头脑特工队2 (2024) " coverurl="https://neodb.social/m/item/tmdb_movie/2024/06/01/7c2832d4-c11c-4c5b-af5f-8aa23862b059.jpg" link="https://neodb.social/movie/0xZcGGJePwlBWatISaP2o2" author="Kelsey Mann" type="24-06" starscore="★★★★" greystar="☆" intro="不记得自己第一次出现 anxiety 是多大，不过以后再出现的时候希望有一个声音说 just let go" >}}
+  {{< mediacard title="驚夢" coverurl="https://img3.doubanio.com/pview/drama_subject_poster/median/public/3586f1693413c2f.jpg" link="https://www.douban.com/location/drama/35622194/" author="陈佩斯/毓钺" type="24-07" starscore="★★★★" greystar="☆" intro="把白毛女和昆曲放一起演，喜剧的错置感就来了，而更高级的地方在于这不是一部简单的爱国主义情怀剧，突出的是个人命运被时代变迁摆布而引发的荒诞感。" >}}
+  {{< mediacard title="" coverurl="" link="" author="" type="24-08" starscore="★" greystar="☆☆☆☆" intro="" >}}
 {{< /admonition >}}
 <!-- #endregion -->
 
