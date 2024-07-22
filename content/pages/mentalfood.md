@@ -8,14 +8,14 @@ toc = true
 ## 贰零贰肆
 
 <!-- #region 书刊部分 -->
-{{< admonition type=note title="书刊（1本）" open=true >}}
+{{< admonition type=note title="书刊（2本）" open=true >}}
   {{< mediacard title="某霍格沃茨的魔文教授" coverurl="https://bookcover.yuewen.com/qdbimg/349573/1027307054/180.webp" link="https://book.qidian.com/info/1027307054/" author="韩游思" type="24-01" starscore="★★★★" greystar="☆" intro="从霍格沃茨毕业三年后，菲利克斯再次走进这座魔法学校，只不过这一次，他是以教授的身份！麻瓜的智慧与魔法结合，会碰撞出什么样的火花？" >}}
-  {{< mediacard title="法师故事" coverurl="https://bookcover.yuewen.com/qdbimg/349573/57821/600.webp" link="https://www.qidian.com/book/57821/" author="索斯" type="24-07" starscore="★★★★" greystar="☆" intro="魔兽践踏，巨龙咆哮，巫师诅咒，魔法璀璨之光照耀知识灯塔！" >}}
+  {{< mediacard title="法师故事" coverurl="https://bookcover.yuewen.com/qdbimg/349573/57821/600.webp" link="https://www.qidian.com/book/57821/" author="索斯" type="24-08" starscore="★★★★" greystar="☆" intro="魔兽践踏，巨龙咆哮，巫师诅咒，魔法璀璨之光照耀知识灯塔！" >}}
 {{< /admonition >}}
 <!-- #endregion -->
 
 <!-- #region 影剧部分 -->
-{{< admonition type=tip title="影剧（10部）" open=true >}}
+{{< admonition type=tip title="影剧（15部）" open=true >}}
   {{< mediacard title="非诚勿扰3 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2024/01/23/59332769-2b31-4a75-a2b1-750be4a2cb68.webp" link="" author="冯小刚" type="24-01" starscore="★" greystar="☆☆☆☆" intro="剧情很烂，配色吸睛" >}}
   {{< mediacard title="葬送的芙莉莲 (2023)" coverurl="https://neodb.social/m/item/doubanmovie/2023/10/07/2a720bcc-96a3-47e3-a06b-a7e9ddbdba8d.jpg" link="https://neodb.social/tv/season/5pbd4BxJ5TYmRhqDaWMYoD" author="斋藤圭一郎" type="24-01" starscore="★★★★" greystar="☆" intro="回忆是淡淡的，生活要慢慢的，遥远又坚定的信任，平稳又柔和的公路旅行漫，细腻，给人平静感" >}}
   {{< mediacard title="繁花 (2023)" coverurl="https://neodb.social/m/item/tmdb_tvseason/2023/12/27/8d0be59a-ccb3-4ae6-ae8a-0532f5fbdc3f.jpg" link="https://neodb.social/tv/season/5cjeAQLx6O8QqfQR51kmWI" author=" 王家卫" type="24-01" starscore="★★★" greystar="☆☆" intro="捞到什么是什么，上岸最要紧" >}}
@@ -29,6 +29,8 @@ toc = true
   {{< mediacard title="电锯惊魂 (2004)" coverurl="https://neodb.social/m/movie/2021/09/15ba9242b2-9ce3-45ca-819f-53410c721b2d.jpg" link="https://neodb.social/movie/2BFKAdUOPWwFWfe51wDbK8" author="温子仁" type="24-05" starscore="★★★★" greystar="☆" intro="密室逃脱lol，原来电锯惊魂只有电和锯！是没有电锯的啊！！！" >}}
   {{< mediacard title="头脑特工队2 (2024) " coverurl="https://neodb.social/m/item/tmdb_movie/2024/06/01/7c2832d4-c11c-4c5b-af5f-8aa23862b059.jpg" link="https://neodb.social/movie/0xZcGGJePwlBWatISaP2o2" author="Kelsey Mann" type="24-06" starscore="★★★★" greystar="☆" intro="不记得自己第一次出现 anxiety 是多大，不过以后再出现的时候希望有一个声音说 just let go" >}}
   {{< mediacard title="驚夢" coverurl="https://img3.doubanio.com/pview/drama_subject_poster/median/public/3586f1693413c2f.jpg" link="https://www.douban.com/location/drama/35622194/" author="陈佩斯/毓钺" type="24-07" starscore="★★★★" greystar="☆" intro="把白毛女和昆曲放一起演，喜剧的错置感就来了，而更高级的地方在于这不是一部简单的爱国主义情怀剧，突出的是个人命运被时代变迁摆布而引发的荒诞感。" >}}
+  {{< mediacard title="走走停停 (2024)" coverurl="https://neodb.social/m/item/doubanmovie/2024/06/07/2780d068-b874-4cbf-8d74-fce591d7d886.webp" link="https://neodb.social/movie/6SypDUBDZDeKkHSHfWRILc" author="龙飞" type="24-07" starscore="★★★★★" greystar="" intro="“他这个人好像没有什么成功的，但我们都很怀念他。”——是枝裕和讲人生很长难免坎坷所以「步履不停」，这片子说人生很短总有意外不妨「走走停停」" >}}
+  {{< mediacard title="银翼杀手 (1982)" coverurl="https://neodb.social/m/movie/2021/09/13be8c59a7-d7ee-4440-b384-0de83ea31472.jpg" link="https://neodb.social/movie/07UjvDPvTdebqvHoCaVT43" author="雷德利·斯科特" type="24-07" starscore="★★★★★" greystar="" intro="我曾见过人类无法想象的美，我曾见太空战舰在猎户星座旁熊熊燃烧，注视万丈光芒在天国之门的黑暗里闪耀，而所有过往都将消失于时间，如同泪水消失在雨中……" >}}
   {{< mediacard title="" coverurl="" link="" author="" type="24-08" starscore="★" greystar="☆☆☆☆" intro="" >}}
 {{< /admonition >}}
 <!-- #endregion -->

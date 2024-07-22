@@ -14,4 +14,4 @@ toc:
 
 我的记忆有些糟糕，要写下来才安心；我的记录无关轻重，只是恰好发生了。
 
-![](https://photos.philohao.com/picimpact/weekly/preview/202407W2.svg)
+![](https://photos.philohao.com/picimpact/weekly/2024W29.svg)
