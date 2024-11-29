@@ -7,6 +7,20 @@ toc = false
 
 ## 2024 年
 
+- 2024-11：[梧州·小电动嗦粉](https://photos.app.goo.gl/2yJHd7kiPPfocEYK6)
+
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20241117_114024667.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_5215.JPG)
+    ![](https://photos.philohao.com/picimpact/preview/MVI_5331_exported.jpg)
+    ![](https://photos.philohao.com/picimpact/IMG_5471.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/mmexport1731926035916.jpg)
+- 2024-10：[河北·哥哥的婚礼](https://photos.app.goo.gl/D8KFzRdq2GkxZya5A)
+
+    ![](https://photos.philohao.com/picimpact/preview/IMG_20241002_093355.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_20241002_212308.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_20241003_002312.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_20241003_002527.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/wx_camera_1728020352239.jpg)
 - 2024-09：[江浙·中秋双城游](https://photos.app.goo.gl/PRJmaCMyGrGejKgF8)
 
     ![](https://photos.philohao.com/picimpact/preview/PXL_20240914_222843103.jpg)
