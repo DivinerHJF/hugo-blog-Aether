@@ -7,6 +7,20 @@ toc = false
 
 ## 2024 年
 
+- 2024-09：[江浙·中秋双城游](https://photos.app.goo.gl/PRJmaCMyGrGejKgF8)
+
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20240914_222843103.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/mmexport1726463287126.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_4943~2.JPG)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_4998~2.JPG)
+    ![](https://photos.philohao.com/picimpact/preview/retouch_2024091723015045.jpg)
+- 2024-08：[深圳·鲲鹏径徒步](https://photos.app.goo.gl/uyfFMqme4H82ZBRB7)
+
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20240810_124218125.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20240810_123641590.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/IMG_20240810_132806.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20240810_130626966.jpg)
+    ![](https://photos.philohao.com/picimpact/preview/PXL_20240810_151754476.jpg)
 - 2024-07：[珠海·桂山岛度假](https://photos.app.goo.gl/Re1SYKWBbBMqRQNU7)
 
     ![](https://photos.philohao.com/picimpact/preview/20240713110107_IMG_4163.jpg)
@@ -14,7 +28,7 @@ toc = false
     ![](https://photos.philohao.com/picimpact/preview/20240713175732_IMG_4512.jpg)
     ![](https://photos.philohao.com/picimpact/preview/20240713190317_IMG_4602.jpg)
     ![](https://photos.philohao.com/picimpact/preview/20240713193427_IMG_4624.jpg)
-- 2024-06：[广州·长隆度假区](https://photos.app.goo.gl/ccJFVfDVNk9FnbGw8)、[韶关·丹霞山徒步](https://photos.app.goo.gl/Jbyt8hRYRKrAUmC3A)
+- 2024-06：[广州·长隆舍友游](https://photos.app.goo.gl/ccJFVfDVNk9FnbGw8)、[韶关·丹霞山徒步](https://photos.app.goo.gl/Jbyt8hRYRKrAUmC3A)
 - 2024-05：[岳阳·岳阳洞庭水](https://photos.app.goo.gl/eU6YhVPXHDMQZqRTA)
 - 2024-04：[深圳·盐田区海港](https://photos.app.goo.gl/FFcLSaSHMNHugV539)
 - 2024-03：[广州·油麻山雨徒](https://photos.app.goo.gl/5EHCnMT7Gz32YbCY9)、[汕尾·海陆丰团建](https://photos.app.goo.gl/1d8GoTmigENYrtCJA)、[广佛·流花湖宜家](https://photos.app.goo.gl/fQyGAHJcwNxWkV2e6)
