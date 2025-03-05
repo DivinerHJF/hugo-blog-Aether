@@ -2,11 +2,49 @@
 title = "走过的地方"
 date = "2018-01-01"
 comment = false
-toc = false
+toc = true
 +++
+
+## 2025 年
+
+- 2025-04：[未完待续]()
+
+    ![]()
+    ![]()
+    ![]()
+    ![]()
+    ![]()
+- 2025-03：[广州·逛岭南花市](https://photos.app.goo.gl/NynrhpqFM8zo4QwYA)
+
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-i9zVKmuxLkyn3rnA.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-Zw2EYLVv5pzv4KhF.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-tkuWZsdPjO0vak6P.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-osGdW1kA3fuJOtGE.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-ebRwzjTtoJUARvOX.jpg&w=640&q=75)
+- 2025-02：[厦门·小队两日游](https://photos.app.goo.gl/BkhYz7Lu7pc51eue9)
+
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-lkK2yCvmt7jnm1yG.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-dqA84hw71VSINljX.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-aTbeHV1c4qB9D9Hl.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-cOf8cgcqLvq4JzgL.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-UQX6hx3nfVcQtzUP.jpg&w=640&q=75)
+- 2025-01：[香港·钓鱼翁徒步](https://photos.app.goo.gl/atQoKMFaLUj6BCfq6)
+
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-0SR7chbYwmPLXpuR.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-Rt4KbEZV0j5hM3cg.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-B0dI0b0kZLTRgdRP.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-YSiRzGmEdlFgWjxs.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-JFI01WGYwO4zHKfp.jpg&w=640&q=75)
 
 ## 2024 年
 
+- 2024-12：[长沙·浏阳烟花秀](https://photos.app.goo.gl/2uiwYjwzm6aB1HQy7)
+
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-v2FlRhyleTmTLwCb.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-5krcFYi9mbDvaQc0.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-n9eC8ELTdhlwS9rb.jpg&w=2048&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-8ep9p9Q1LmUnjn1I.jpg&w=640&q=75)
+    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-eGwHggrcSOELNAng.jpg&w=640&q=75)
 - 2024-11：[梧州·小电动嗦粉](https://photos.app.goo.gl/2yJHd7kiPPfocEYK6)
 
     ![](https://photos.philohao.com/picimpact/preview/PXL_20241117_114024667.jpg)
