@@ -12,6 +12,6 @@ toc:
 
 # 風吹過
 
-我的记忆有些糟糕，要写下来才安心；我的记录无关轻重，只是恰好发生了。
+{{< showcase title="#夕拾花" summary="我的记忆有些糟糕，要写下来才安心" image="https://image.philohao.com/images/20200101_xishihua.jpg" link="/posts/" column=3 >}}
 
-![](https://photos.philohao.com/picimpact/weekly/2024W29.svg)
+{{< showcase title="#在路上" summary="人类贴地奔跑，恰似鸟儿振翅飞翔" image="https://image.philohao.com/images/20200101_wallhaven.jpeg" link="https://run.philohao.com" column=3 >}}
