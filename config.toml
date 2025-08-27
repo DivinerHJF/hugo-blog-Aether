@@ -32,37 +32,29 @@ weight = 1
 # title = "生活、月报类文章"
 # weight = 2
 [[menu.main]]
-identifier = "categories"
-name = "分类"
+identifier = ""
+name = "足迹"
 post = ""
-pre = "🍱"
-title = "分类文章"
-url = "/categories/"
+pre = "🌏"
+title = "行万里路"
+url = "/pages/footprint/"
 weight = 2
-# [[menu.main]]
-# identifier = "tags"
-# name = "标签"
-# post = ""
-# pre = "🏷️"
-# title = "采点点星光络结为网"
-# url = "/tags/"
-# weight = 4
-[[menu.main]]
-identifier = "series"
-name = "系列"
-post = ""
-pre = "🎡"
-title = "系列文章"
-url = "/series/"
-weight = 5
 [[menu.main]]
 identifier = ""
-name = "关于"
+name = "阅览"
 post = ""
-pre = "👨‍🔧"
-title = "关于我以及我的网站"
-url = "/pages/about/"
-weight = 6
+pre = "🎡"
+title = "书影音游"
+url = "/pages/mentalfood/"
+weight = 3
+# [[menu.main]]
+# identifier = ""
+# name = "关于"
+# post = ""
+# pre = "👨‍🔧"
+# title = "关于我以及我的网站"
+# url = "/pages/about/"
+# weight = 4
 
 [params]
 #  DoIt 主题版本
@@ -163,7 +155,7 @@ typeit = false
 [params.footer]
 enable = true
 #  自定义内容 (支持 HTML 格式)
-custom = '<a href="/pages/now/" target="_blank" rel="noreferrer">此刻</a> · <a href="/pages/footprint/" target="_blank">足迹</a> · <a href="/pages/mentalfood/" target="_blank">阅览</a> · <a href="https://album.philohao.com" target="_blank">定格</a> <hr width="20px" color="#D3D3D3">'
+custom = '<a href="/categories/" target="_blank" rel="noreferrer">分类</a> · <a href="/tags/" target="_blank">标签</a> · <a href="/series/" target="_blank">系列</a> <hr width="20px" color="#D3D3D3">'
 #  是否显示 Hugo 和主题信息
 hugo = false
 #  是否显示版权信息
