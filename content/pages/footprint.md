@@ -7,17 +7,31 @@ toc = true
 
 ## 2025 年
 
-- 2025-04：[未完待续]()
+- 2025-06：[青甘·自驾大环线](https://photos.app.goo.gl/4Bdp5hdigcQrLTjr5)
 
-    ![]()
-    ![]()
-    ![]()
-    ![]()
-    ![]()
+    ![](https://photos.philohao.com/picimpact/20250828160946546.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946545.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946547.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828155840360.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828155840358.jpg)
+
+    ![](https://photos.philohao.com/picimpact/20250828160946548.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946549.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946544.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946551.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828160946550.jpg)
+- 2025-05：[香港·麦径一二段](https://photos.app.goo.gl/C94QnzjcrxCtEu8L8)
+
+    ![](https://photos.philohao.com/picimpact/20250828153008924.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828153355905.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828153355907.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828153355904.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828153355903.jpg)
 - 2025-03：[云南·昆明大理游](https://photos.app.goo.gl/WpKNMf7TWvHbukp48)
+
     ![](https://photos.philohao.com/picimpact/20250827223243333.jpg)
     ![](https://photos.philohao.com/picimpact/20250827223644556.jpg)
-    ![](https://photos.philohao.com/picimpact/20250828135632285.jpg)
+    ![](https://photos.philohao.com/picimpact/20250828143753606.jpg)
     ![](https://photos.philohao.com/picimpact/20250828133844756.jpg)
     ![](https://photos.philohao.com/picimpact/20250828135410116.jpg)
 - 2025-02：[厦门·小队两日游](https://photos.app.goo.gl/BkhYz7Lu7pc51eue9)
