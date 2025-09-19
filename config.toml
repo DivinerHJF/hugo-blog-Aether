@@ -520,7 +520,7 @@ dataReactionsEnabled = "1"
 dataEmitMetadata = "0"
 dataRepo = "DivinerHJF/hugo-blog-Aether"
 dataRepoId = "MDEwOlJlcG9zaXRvcnkzNDk5NTUwODc="
-dataTheme = "preferred_color_scheme"
+dataTheme = "gruvbox"
 #  第三方库配置
 [params.page.library]
 [params.page.library.css]
