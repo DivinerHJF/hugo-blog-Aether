@@ -444,7 +444,7 @@ emoji = ""
 # 
 commentCount = true
 emoji = ['https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo']
-enable = true
+enable = false
 highlight = true
 login = 'enable'
 mathTagSupport = true
@@ -511,16 +511,16 @@ simple_view = false
 site_id = ""
 #  giscus 评论系统设置
 [params.page.comment.giscus]
-enable = false
+enable = true
 # owner/repo
 darkTheme = "dark"
-dataCategory = ""
-dataCategoryId = ""
+dataCategory = "Comments"
+dataCategoryId = "DIC_kwDOFNvkD84Cvoxi"
 dataEmitMetadata = "0"
 dataMapping = "pathname"
 dataReactionsEnabled = "1"
-dataRepo = ""
-dataRepoId = ""
+dataRepo = "DivinerHJF/hugo-blog-Aether"
+dataRepoId = "MDEwOlJlcG9zaXRvcnkzNDk5NTUwODc="
 lightTheme = "light"
 #  第三方库配置
 [params.page.library]
