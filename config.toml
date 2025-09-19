@@ -513,15 +513,14 @@ site_id = ""
 [params.page.comment.giscus]
 enable = true
 # owner/repo
-darkTheme = "dark"
 dataCategory = "Comments"
 dataCategoryId = "DIC_kwDOFNvkD84Cvoxi"
-dataEmitMetadata = "0"
 dataMapping = "pathname"
 dataReactionsEnabled = "1"
+dataEmitMetadata = "0"
 dataRepo = "DivinerHJF/hugo-blog-Aether"
 dataRepoId = "MDEwOlJlcG9zaXRvcnkzNDk5NTUwODc="
-lightTheme = "light"
+dataTheme = "preferred_color_scheme"
 #  第三方库配置
 [params.page.library]
 [params.page.library.css]
