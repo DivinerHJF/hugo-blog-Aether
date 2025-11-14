@@ -1,0 +1,105 @@
+# =======================================================
+# Decap CMS (原 Netlify CMS) 配置文件
+# 适用于 Vercel + Hugo + GitHub
+# =======================================================
+
+# 后端配置: 连接到你的 GitHub 仓库
+backend:
+  name: github
+  repo: DivinerHJF/hugo-blog-Aether # 替换: 你的 GitHub 用户名/仓库名
+  branch: main # 替换: 你的默认分支 (可能是 main 或 master)
+
+# 媒体文件 (图片) 配置: 
+media_folder: "static/images/uploads" # 图片上传后会保存到 static/images/uploads 目录
+public_folder: "/images/uploads" # 在 Markdown 中引用图片时，路径会是 /images/uploads
+
+# 内容集合 (Collection) 配置:
+# 这里我们只定义 "文章"
+collections:
+  - name: "post" # 集合的内部ID
+    label: "文章" # 在后台管理界面上显示的名称
+    folder: "content/posts" # 替换: 你的文章 .md 文件存放的目录
+    create: true # 允许创建新文件
+
+    # -----------------------------------------------------
+    # 关键配置: 匹配你的模板
+    # -----------------------------------------------------
+
+    # 文件名配置:
+    # 
+    # slug: "{{fields.title}}" 
+    # 这会使 Decap CMS 使用 "标题" 字段的内容作为文件名。
+    # 根据你的模板 (title: "20251027")，你只需要在 "标题" 栏输入 "20251027"，
+    # CMS 就会自动创建 /content/posts/20251027.md 文件。
+    slug: "{{fields.title}}" # 文件名格式
+
+    # 格式配置:
+    #
+    # extension: "md"
+    # format: "toml-frontmatter"
+    # 这是最关键的一步！
+    # 告诉 CMS，Front Matter 使用 TOML 格式 (key = value)
+    extension: "md"
+    format: "toml-frontmatter"
+
+    # 字段配置 (Fields):
+    # 定义了后台编辑器中的所有输入框
+    # 顺序会和你在这里定义的顺序一致
+    fields:
+      # 标题 (Title)
+      # 为了匹配你的 "20251027" 格式，我特意在标签里加了提示
+      - label: "标题 (请使用 YYYYMMDD 格式)"
+        name: "title"
+        widget: "string"
+
+      # 发布日期 (Date)
+      - label: "发布日期"
+        name: "date"
+        widget: "datetime"
+        # default: "" 
+        # 设置为空字符串，CMS 会自动填入当前时间
+        default: ""
+        # 确保输出的格式和你的模板一致 (ISO 8601)
+        format: "YYYY-MM-DDTHH:mm:ssZ" 
+        time_format: "HH:mm:ss"
+
+      # 分类 (Categories)
+      # 使用 "select" 控件，提供一个预设的下拉多选框
+      - label: "分类"
+        name: "categories"
+        widget: "select"
+        multiple: true # 允许多选
+        # 你模板中提到的几个分类
+        options: ["碎碎念", "爱折腾", "读看听", "万里路"]
+        default: [] # 默认不选中
+
+      # 系列 (Series)
+      # 使用 "list" 控件，允许你自由添加一个或多个系列
+      - label: "系列"
+        name: "series"
+        widget: "list"
+        default: ["夕拾花"] # 默认填入 "夕拾花"
+
+      # 标签 (Tags)
+      - label: "标签"
+        name: "tags"
+        widget: "list"
+        default: [] # 默认空列表
+
+      # 开启评论 (Comment)
+      # 使用 "boolean" (布尔) 控件，显示一个开关
+      - label: "开启评论"
+        name: "comment"
+        widget: "boolean"
+        default: true # 默认开启
+
+      # 显示目录 (TOC)
+      - label: "显示目录"
+        name: "toc"
+        widget: "boolean"
+        default: false # 默认关闭
+
+      # 正文 (Body)
+      - label: "正文"
+        name: "body"
+        widget: "markdown"
