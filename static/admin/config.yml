@@ -9,6 +9,10 @@ backend:
   repo: DivinerHJF/hugo-blog-Aether # 替换: 你的 GitHub 用户名/仓库名
   branch: main # 替换: 你的默认分支 (可能是 main 或 master)
 
+  # 告诉 CMS 使用官方的登录网关，而不是 Netlify 的
+  base_url: https://gateway.decapcms.org
+  auth_endpoint: auth
+
 # 媒体文件 (图片) 配置: 
 media_folder: "static/images/uploads" # 图片上传后会保存到 static/images/uploads 目录
 public_folder: "/images/uploads" # 在 Markdown 中引用图片时，路径会是 /images/uploads
