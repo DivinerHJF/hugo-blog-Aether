@@ -208,6 +208,8 @@ Weibo = true
 
 [params.page.comment]
 enable = true
+# 当前仅维护 Giscus 评论。Gitalk / Valine / Waline / Twikoo / Vssue 的本地资源已删除；
+# 如需重新启用这些历史评论分支，需要先恢复 themes/aether/assets/lib/<provider>/ 或配置对应 CDN。
 
 [params.page.comment.giscus]
 # 当前实际使用的评论系统。仓库或 Discussions 分类变更时，同步更新以下 ID。

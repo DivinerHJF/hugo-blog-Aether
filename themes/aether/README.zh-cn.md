@@ -21,3 +21,4 @@ Aether 随主仓库 [DivinerHJF/hugo-blog-Aether](https://github.com/DivinerHJF/
 - `assets/lib/mapbox-gl/`。
 
 短代码模板和初始化逻辑仍保留，便于未来按需恢复；但重新使用 `{{< mermaid >}}`、`{{< echarts >}}`、`{{< mapbox >}}` 前，需要先配置 CDN 或恢复对应本地资源，并在主仓库根目录运行 `python3 scripts/audit-theme-libs.py` 与 Hugo 构建复核。
+评论功能当前随本站配置使用 Giscus。Gitalk、Valine、Waline、Twikoo、Vssue 的本地静态库不再随主题维护；若未来重新启用这些历史评论 provider，请先恢复对应 `themes/aether/assets/lib/<provider>/` 资源，或在配置中改用可用的 CDN 地址。

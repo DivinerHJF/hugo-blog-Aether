@@ -63,7 +63,7 @@ hugo new content/posts/2026/20260509.md
 | 顶部导航 | `[[menu.main]]` | 对应归档、足迹、阅览、关于 |
 | 首页头像与副标题 | `[params.home.profile]` | 头像资源位于 `static/images/me/` |
 | 社交链接 | `[params.social]` | 目前只保留 Email、GitHub、Mastodon、RSS、Telegram |
-| 评论系统 | `[params.page.comment.giscus]` | 当前使用 Giscus；仓库或 Discussions 分类变化时需同步 ID |
+| 评论系统 | `[params.page.comment]` 与 `[params.page.comment.giscus]` | 当前只启用 Giscus；Gitalk / Valine / Waline / Twikoo / Vssue 的本地资源已删除，重新启用前需恢复资源或配置 CDN |
 | 搜索 | `[params.search]` 与 `[params.search.fuse]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
 | TypeIt 打字动画 | `[params.typeit]` | 部分月报文章使用 `typeit` 短代码，因此保留全局动画默认值 |
 | CDN / 已裁剪短代码资源 | `[params.cdn]` | 默认使用仓库内保留的主题资源；Mermaid、ECharts、Mapbox GL 本地库已因当前内容未引用而移除，重新启用相关短代码前需配置 CDN 或恢复本地库 |
@@ -111,6 +111,7 @@ hugo --gc --minify
 - `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
 - 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
 - 只有修改主题 JS 源码时，才需要进入 `themes/aether/` 执行 npm 构建；`themes/aether/package.json` 中不再保留 `--source=exampleSite` 类独立示例站脚本。
+- 评论功能目前以 Giscus 为唯一启用方案；`themes/aether/assets/lib/gitalk/`、`valine/`、`waline/`、`twikoo/`、`vssue/` 已删除，除非同步恢复资源或改用 CDN，否则不要打开这些历史评论 provider。
 - `themes/aether/exampleSite/` 已删除；部署、预览与 README 均以仓库根目录站点为准，不依赖主题示例站。
 - 不再把 `themes/aether/` 作为独立 Hugo 主题发布，因此已移除主题商店展示用的 `themes/aether/images/screenshot.png` 与 `themes/aether/images/tn.png`，后续截图请使用本站实际页面。
 - 如果后续需要把主题重新发布为独立项目，再从 `themes/aether/` 拆分出去并补齐示例站、主题截图和贡献流程即可。
