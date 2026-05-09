@@ -1,14 +1,4 @@
-@media only screen and (max-width: 1440px) {
-  .page {
-    width: 56%;
-  }
-}
-
 @media only screen and (max-width: 1200px) {
-  .page {
-    width: 52%;
-  }
-
   #header-desktop .header-wrapper {
     padding-right: 1rem;
   }
@@ -28,9 +18,15 @@
   }
 
   .page {
-    width: 80% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+    max-width: 820px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .page.home,
+  .page.archive {
+    max-width: 900px;
   }
 
   #header-desktop .header-wrapper {
@@ -52,8 +48,10 @@
   }
 
   .page {
-    width: 100% !important;
-    margin-left: auto !important;
+    max-width: 100%;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 
     .single .content p {
       text-align: start;
