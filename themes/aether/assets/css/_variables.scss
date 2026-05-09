@@ -4,10 +4,10 @@
 
 // ========== Global ========== //
 // Font and Line Height
-$global-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Noto Sans CJK SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif !default;
+$global-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", "Source Han Sans SC", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif !default;
 $global-font-size: 1rem !default;
 $global-font-weight: normal !default;
-$global-line-height: 1.8rem !default;
+$global-line-height: 1.8 !default;
 
 // Color of the background
 $global-background-color: #f7f7f5 !default;
@@ -65,7 +65,7 @@ $header-background-color-dark: #292a2d !default;
 $header-background-color-black: #000000 !default;
 
 // Font style of the header title
-$decorative-title-font-family: "KingHwa_OldSong", "LxgwWenKai", $global-font-family !default;
+$decorative-title-font-family: "KingHwa_OldSong", "LXGW WenKai", "STSong", "Songti SC", "SimSun", "Noto Serif CJK SC", serif !default;
 $header-title-font-family: $decorative-title-font-family !default;
 $header-title-font-size: 1.5rem !default;
 
@@ -138,7 +138,7 @@ $code-info-color-black: #b1b0b0 !default;
 $code-font-size: .875rem !default;
 
 // Font family of the code
-$code-font-family: "JetBrains Mono", "Source Code Pro", Menlo, Consolas, Monaco, monospace !default;
+$code-font-family: ui-monospace, SFMono-Regular, "SF Mono", "Cascadia Code", "JetBrains Mono", "Source Code Pro", Menlo, Consolas, Monaco, monospace !default;
 
 // Code type map
 $code-type-map: (
