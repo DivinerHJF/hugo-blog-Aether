@@ -83,7 +83,19 @@ hugo new content/posts/2026/20260509.md
 - `params.page.lightgallery = false`：删除 `themes/aether/assets/lib/lightgallery/` 以及仅供 LightGallery 使用的 `themes/aether/static/lib/fonts/`；
 - `params.cookieconsent.enable = false`：删除 `themes/aether/assets/lib/cookieconsent/`。
 
-后续新增或恢复这些短代码、页面功能或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 `echarts` 目录。
+Simple Icons 也按当前配置裁剪：`[params.social]` 只启用 Email、GitHub、Mastodon、RSS、Telegram，`[params.page.share]` 只启用 Evernote、Pocket、Reddit、Twitter、Weibo，因此不会触发 `Line`、`Instapaper`、`Myspace`、`Baidu` 或任何 `icon.Simpleicons` 社交图标，完整 `themes/aether/assets/lib/simple-icons/` 不再提交。后续若重新启用依赖 Simple Icons 的分享/社交项，不要直接提交完整上游仓库；请先准备一个 simple-icons 的 `icons/` 来源目录，再运行：
+
+```bash
+python3 scripts/audit-theme-libs.py --sync-simple-icons --simple-icons-source /path/to/simple-icons/icons --check-simple-icons
+```
+
+日常审计或 CI 可运行以下命令，确保已提交的 Simple Icons 集合仍然等于 `config.toml` 实际需要的最小集合：
+
+```bash
+python3 scripts/audit-theme-libs.py --check-simple-icons
+```
+
+后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 `echarts` 目录。
 
 ## 本地预览
 
