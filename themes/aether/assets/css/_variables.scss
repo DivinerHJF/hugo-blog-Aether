@@ -10,7 +10,7 @@ $global-font-weight: normal !default;
 $global-line-height: 1.8rem !default;
 
 // Color of the background
-$global-background-color: #dfdfdf !default;
+$global-background-color: #f7f7f5 !default;
 $global-background-color-dark: #292a2d !default;
 $global-background-color-black: #000000 !default;
 
@@ -35,7 +35,7 @@ $global-link-hover-color-dark: #fff !default;
 $global-link-hover-color-black: #fff !default;
 
 // Color of the border
-$global-border-color: #b1b1b1 !default;
+$global-border-color: #d8d8d2 !default;
 $global-border-color-dark: #363636 !default;
 $global-border-color-black: #363636 !default;
 // ========== Global ========== //
@@ -60,7 +60,7 @@ $selection-color-black: rgba(50, 112, 194, 0.4) !default;
 $header-height: 3.5rem !default;
 
 // Color of the header background
-$header-background-color: #dcdcdc !default;
+$header-background-color: #ffffffcc !default;
 $header-background-color-dark: #292a2d !default;
 $header-background-color-black: #000000 !default;
 
@@ -74,7 +74,7 @@ $header-active-color-dark: #fff !default;
 $header-active-color-black: #fff !default;
 
 // Color of the search background
-$search-background-color: #e9e9e9 !default;
+$search-background-color: #ffffff !default;
 $search-background-color-dark: #363636 !default;
 $search-background-color-black: #363636 !default;
 // ========== Header ========== //
@@ -95,13 +95,13 @@ $single-link-hover-color-dark: #bdebfc !default;
 $single-link-hover-color-black: #bdebfc !default;
 
 // Color of the table background
-$table-background-color: #efefef !default; 
-$table-background-color-dark: #313236 !default; 
+$table-background-color: #fbfbf8 !default;
+$table-background-color-dark: #313236 !default;
 $table-background-color-black: #313236 !default;
 
 // Color of the table thead
-$table-thead-color: #e9e9e9 !default; 
-$table-thead-color-dark: #27282b !default; 
+$table-thead-color: #f1f2ed !default;
+$table-thead-color-dark: #27282b !default;
 $table-thead-color-black: #27282b !default;
 
 // ========== Single Content ========== //
@@ -125,7 +125,7 @@ $code-color-dark: #E5BF78 !default;
 $code-color-black: #E5BF78 !default;
 
 // Color of the code background
-$code-background-color: #dbdbdb !default;
+$code-background-color: #f1f3f5 !default;
 $code-background-color-dark: #272C34 !default;
 $code-background-color-black: #272C34 !default;
 
