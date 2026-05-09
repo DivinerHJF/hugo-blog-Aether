@@ -1,0 +1,21 @@
+{{- $dataFile := .Get 0 -}}
+{{- $year := .Get 1 -}}
+{{- if not $dataFile -}}{{ errorf "medialist shortcode in %s: 缺少第一个参数 (数据文件名)。" .Page.Path }}{{- end -}}
+{{- if not $year -}}{{ errorf "medialist shortcode in %s: 缺少第二个参数 (年份)。" .Page.Path }}{{- end -}}
+{{- $items := index .Site.Data $dataFile -}}
+{{- if not $items -}}{{ errorf "medialist shortcode in %s: 找不到 data/%s.yaml。" .Page.Path $dataFile }}{{- end -}}
+<div class="media-grid">
+{{- range $items -}}
+  {{- if and .title (hasPrefix .type $year) -}}
+  <article class="media-card">
+    {{- with .coverurl }}<img src="{{ . }}" alt="{{ $.Page.Title }}" loading="lazy">{{ end -}}
+    <div>
+      <h3>{{ with .link }}<a href="{{ . }}" target="_blank" rel="noreferrer">{{ end }}{{ .title }}{{ if .link }}</a>{{ end }}</h3>
+      {{ with .author }}<p class="media-author">{{ . }}</p>{{ end }}
+      <p class="media-stars"><span>{{ .starscore }}</span><span class="muted">{{ .greystar }}</span></p>
+      {{ with .intro }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </article>
+  {{- end -}}
+{{- end -}}
+</div>

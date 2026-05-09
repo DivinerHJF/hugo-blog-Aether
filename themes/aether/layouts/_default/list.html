@@ -1,0 +1,15 @@
+{{ define "main" }}
+<header class="page-header">
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="content">{{ . }}</div>{{ end }}
+</header>
+{{ $pages := .Pages }}
+{{ if eq .Section "posts" }}{{ $pages = .RegularPagesRecursive }}{{ end }}
+{{ if $pages }}
+  <section class="post-list">
+    {{ range $pages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ end }}
+  </section>
+{{ else }}
+  <p>暂无内容。</p>
+{{ end }}
+{{ end }}

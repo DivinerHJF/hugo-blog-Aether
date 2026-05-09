@@ -20,7 +20,7 @@
 │   ├── books.yaml           # 阅览页的书籍数据
 │   └── movies.yaml          # 阅览页的影剧数据
 ├── static/images/me/        # favicon、logo、头像、二维码等个人静态资源
-└── themes/aether/           # Aether 主题子模块
+└── themes/aether/           # Aether 主题源码，作为普通目录随主仓库维护
 ```
 
 ## 内容维护约定
@@ -70,11 +70,7 @@ hugo new content/posts/2026/20260509.md
 
 ## 本地预览
 
-首次拉取仓库后需要初始化主题子模块：
-
-```bash
-git submodule update --init --recursive
-```
+主题已经直接纳入主仓库，首次拉取后无需再执行 `git submodule update --init --recursive`。
 
 启动本地服务：
 
@@ -88,7 +84,11 @@ hugo server -D
 hugo --gc --minify
 ```
 
-> 如果主题子模块无法下载，Hugo 构建会失败；先确认网络或手动检查 `.gitmodules` 中的主题仓库地址。
+## 主题维护说明
+
+- `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
+- 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
+- 如果后续需要把主题重新发布为独立项目，再从 `themes/aether/` 拆分出去即可。
 
 ## 维护提醒
 

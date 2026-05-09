@@ -1,0 +1,9 @@
+{{ $url := .Get "url" }}{{ $auto := .Get "auto" }}
+<div class="music-card">
+  {{ with .Get "cover" }}<img src="{{ . }}" alt="" loading="lazy">{{ end }}
+  <div>
+    <strong>{{ .Get "name" | default "音乐" }}</strong>
+    {{ with .Get "artist" }}<p>{{ . }}</p>{{ end }}
+    {{ if $url }}<audio controls preload="none" src="{{ $url }}"></audio>{{ else with $auto }}<p><a href="{{ . }}" target="_blank" rel="noreferrer">打开音乐链接</a></p>{{ end }}
+  </div>
+</div>
