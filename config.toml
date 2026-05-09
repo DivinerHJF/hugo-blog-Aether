@@ -1,5 +1,6 @@
 baseURL = "https://philohao.com/"
 title = "灿若星河 | 郝建锋"
+# Aether 主题已作为普通目录纳入本仓库（themes/aether），不再依赖 Git submodule。
 theme = "aether"
 
 # 站点语言：中文内容为主，开启 CJK 支持可让摘要、字数统计等更准确。

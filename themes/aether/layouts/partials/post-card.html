@@ -1,0 +1,5 @@
+<article class="post-card">
+  <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <p class="post-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format (.Site.Params.dateFormat | default "2006-01-02") }}</time>{{ with .Params.categories }} · {{ delimit . " / " }}{{ end }}</p>
+  {{ with .Description }}<p>{{ . }}</p>{{ else with .Summary }}<p>{{ . | plainify | truncate 140 }}</p>{{ end }}
+</article>
