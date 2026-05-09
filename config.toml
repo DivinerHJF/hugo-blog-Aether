@@ -66,6 +66,8 @@ fingerprint = "md5"
 gitRepo = "https://github.com/DivinerHJF/hugo-blog-Aether"
 images = ["/images/me/favicon.svg"]
 enablePWA = true
+# 现代浏览器已原生支持 object-fit，未启用 [params.compatibility] objectFit。
+# 如需兼容 IE/旧版 Safari，请改用 CDN 配置 objectFitImagesJS，或恢复 themes/aether/assets/lib/object-fit-images/。
 
 [params.app]
 # PWA / 移动端添加到主屏幕时使用的名称与图标。
@@ -269,10 +271,10 @@ enable = false
 [params.cdn]
 # 默认继续使用仓库内保留的主题内置资源。
 # 说明：未被当前 content 触发的 Mermaid / ECharts / Mapbox GL 本地短代码库已移除；
-# 当前关闭的 Twemoji / LightGallery / CookieConsent 本地库也已移除。
+# 当前关闭的 Twemoji / LightGallery / CookieConsent 本地库也已移除；object-fit-images 本地 polyfill 也不再保留。
 # 如未来重新启用 {{< mermaid >}}、{{< echarts >}}、{{< mapbox >}}、params.page.twemoji、
-# params.page.lightgallery 或 params.cookieconsent.enable，需先配置 CDN 或恢复对应本地资源，
-# 并运行 scripts/audit-theme-libs.py 复核。
+# params.page.lightgallery、params.cookieconsent.enable 或 params.compatibility.objectFit，
+# 需先配置 CDN 或恢复对应本地资源，并运行 scripts/audit-theme-libs.py 复核。
 data = ""
 
 [markup]
