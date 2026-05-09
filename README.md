@@ -99,6 +99,7 @@ hugo --gc --minify
 
 - `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
 - 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
+- 只有修改主题 JS 源码时，才需要进入 `themes/aether/` 执行 npm 构建。
 - 如果后续需要把主题重新发布为独立项目，再从 `themes/aether/` 拆分出去即可。
 
 ## 维护提醒
