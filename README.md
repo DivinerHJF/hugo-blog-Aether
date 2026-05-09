@@ -66,7 +66,18 @@ hugo new content/posts/2026/20260509.md
 | 评论系统 | `[params.page.comment]` 与 `[params.page.comment.giscus]` | 当前只启用 Giscus；Gitalk / Valine / Waline / Twikoo / Vssue 的本地资源已删除，重新启用前需恢复资源或配置 CDN |
 | 搜索 | `[params.search]` 与 `[params.search.fuse]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
 | TypeIt 打字动画 | `[params.typeit]` | 部分月报文章使用 `typeit` 短代码，因此保留全局动画默认值 |
+| CDN / 已裁剪短代码资源 | `[params.cdn]` | 默认使用仓库内保留的主题资源；Mermaid、ECharts、Mapbox GL 本地库已因当前内容未引用而移除，重新启用相关短代码前需配置 CDN 或恢复本地库 |
 | Markdown 原文链接 | `[params.page]` 与 `[outputs]` | `linkToMarkdown = true` 依赖 `page = ["HTML", "MarkDown"]` |
+
+### 主题静态库裁剪
+
+当前 `content/` 中没有 `{{< mermaid >}}`、`{{< echarts >}}`、`{{< mapbox >}}`，因此已删除对应的本地重型库目录：
+
+- `themes/aether/assets/lib/mermaid/`；
+- `themes/aether/assets/lib/echarts/`；
+- `themes/aether/assets/lib/mapbox-gl/`。
+
+后续新增或恢复这些短代码前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 `echarts` 目录。
 
 ## 本地预览
 

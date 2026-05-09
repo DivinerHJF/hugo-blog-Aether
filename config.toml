@@ -266,7 +266,10 @@ enable = false
 enable = false
 
 [params.cdn]
-# 默认使用主题内置资源；如要切换 jsdelivr 等 CDN，再配置 data。
+# 默认继续使用仓库内保留的主题内置资源。
+# 说明：未被当前 content 触发的 Mermaid / ECharts / Mapbox GL 本地短代码库已移除；
+# 如未来重新启用 {{< mermaid >}}、{{< echarts >}} 或 {{< mapbox >}}，需先配置 CDN
+# 或恢复对应 themes/aether/assets/lib/ 下的本地资源，并运行 scripts/audit-theme-libs.py 复核。
 data = ""
 
 [markup]
