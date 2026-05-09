@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Generate a read-only Aether static-library dependency matrix.
 
-The script scans local Hugo content and config only, then prints a Markdown
-report to stdout. It never mutates repository files, so the output can be saved
-by CI as an artifact or pasted into a pull-request description before deleting
-vendored theme libraries.
+By default, the script scans local Hugo content and config only, then prints a
+Markdown report to stdout. The default report mode never mutates repository
+files, so the output can be saved by CI as an artifact or pasted into a
+pull-request description before deleting vendored theme libraries. The optional
+``--sync-simple-icons`` mode intentionally rewrites only the Simple Icons vendor
+directory to match the enabled site config.
 """
 
 from __future__ import annotations
@@ -12,6 +14,7 @@ from __future__ import annotations
 import argparse
 import os
 import re
+import shutil
 import sys
 from collections import Counter
 from dataclasses import dataclass
@@ -193,7 +196,7 @@ def enabled_keys(value: Any, exclude: set[str] | None = None) -> list[str]:
 
 
 SOCIAL_SIMPLE_ICON_KEYS = {"douban", "gitea", "googlescholar", "ko-fi", "liberapay", "matrix", "xmpp", "zhihu"}
-SHARE_SIMPLE_ICON_KEYS = {"Baidu", "Instapaper", "Line", "Myspace"}
+SHARE_SIMPLE_ICON_SLUGS = {"Baidu": "baidu", "Instapaper": "instapaper", "Line": "line", "Myspace": "myspace"}
 
 
 def social_uses_simple_icons(config: dict[str, Any]) -> bool:
@@ -214,7 +217,103 @@ def share_uses_simple_icons(config: dict[str, Any]) -> bool:
     share = nested_get(config, "params.page.share")
     if not isinstance(share, dict) or not is_enabled(share.get("enable")):
         return False
-    return any(is_enabled(share.get(key)) for key in SHARE_SIMPLE_ICON_KEYS)
+    return any(is_enabled(share.get(key)) for key in SHARE_SIMPLE_ICON_SLUGS)
+
+
+def required_simple_icon_slugs(config: dict[str, Any]) -> set[str]:
+    """Return simple-icons slugs required by enabled social/share config."""
+    slugs: set[str] = set()
+    social = nested_get(config, "params.social")
+    if isinstance(social, dict):
+        for key, value in social.items():
+            if not is_enabled(value):
+                continue
+            lower_key = key.lower()
+            if lower_key in SOCIAL_SIMPLE_ICON_KEYS:
+                slugs.add(lower_key)
+            if isinstance(value, dict):
+                custom_icon = nested_get(value, "icon.Simpleicons")
+                if custom_icon:
+                    slugs.add(str(custom_icon))
+
+    share = nested_get(config, "params.page.share")
+    if isinstance(share, dict) and is_enabled(share.get("enable")):
+        for key, slug in SHARE_SIMPLE_ICON_SLUGS.items():
+            if is_enabled(share.get(key)):
+                slugs.add(slug)
+    return slugs
+
+
+def simple_icon_files(root: Path) -> set[str]:
+    icons_dir = root / "themes/aether/assets/lib/simple-icons/icons"
+    if not icons_dir.exists():
+        return set()
+    return {path.stem for path in icons_dir.glob("*.svg") if path.is_file()}
+
+
+def sync_simple_icons(root: Path, config: dict[str, Any], source_dir: Path | None = None) -> list[str]:
+    """Prune vendored simple-icons to the exact set required by config.
+
+    When no configured feature requires Simple Icons, the local vendor directory is
+    removed. If icons are required, ``source_dir`` must point at an existing
+    simple-icons ``icons`` directory so the minimal set can be copied in.
+    """
+    target_root = root / "themes/aether/assets/lib/simple-icons"
+    target_icons = target_root / "icons"
+    required = required_simple_icon_slugs(config)
+
+    if not required:
+        if target_root.exists():
+            shutil.rmtree(target_root)
+            return ["removed themes/aether/assets/lib/simple-icons because no Simple Icons are enabled"]
+        return ["themes/aether/assets/lib/simple-icons already absent; no Simple Icons are enabled"]
+
+    if source_dir is None:
+        source_dir = target_icons
+    source_dir = source_dir.resolve()
+    if not source_dir.exists():
+        raise FileNotFoundError(
+            "Simple Icons are required by config, but no source icon directory exists. "
+            "Pass --simple-icons-source PATH pointing at a simple-icons/icons directory."
+        )
+
+    target_icons.mkdir(parents=True, exist_ok=True)
+    for path in list(target_icons.glob("*.svg")):
+        if path.stem not in required:
+            path.unlink()
+
+    missing: list[str] = []
+    for slug in sorted(required):
+        source = source_dir / f"{slug}.svg"
+        if not source.exists():
+            missing.append(slug)
+            continue
+        destination = target_icons / source.name
+        if source != destination:
+            shutil.copy2(source, destination)
+
+    if missing:
+        raise FileNotFoundError(f"Missing required Simple Icons SVGs: {', '.join(missing)}")
+    return [f"synced {len(required)} Simple Icons SVG(s): {', '.join(sorted(required))}"]
+
+
+def check_simple_icons(root: Path, config: dict[str, Any]) -> list[str]:
+    """Validate that the checked-in simple-icons set is minimal."""
+    required = required_simple_icon_slugs(config)
+    actual = simple_icon_files(root)
+    messages = [
+        "required Simple Icons: " + (", ".join(sorted(required)) if required else "none"),
+        "vendored Simple Icons: " + (", ".join(sorted(actual)) if actual else "none"),
+    ]
+    extra = actual - required
+    missing = required - actual
+    if extra or missing:
+        if extra:
+            messages.append("extra vendored Simple Icons: " + ", ".join(sorted(extra)))
+        if missing:
+            messages.append("missing required Simple Icons: " + ", ".join(sorted(missing)))
+        raise RuntimeError("\n".join(messages))
+    return messages
 
 
 def build_mappings() -> list[ResourceMapping]:
@@ -376,6 +475,21 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--root", type=Path, default=Path.cwd(), help="Repository root (default: current directory)")
     parser.add_argument("--config", type=Path, default=Path("config.toml"), help="Path to Hugo config TOML")
     parser.add_argument("--content", type=Path, default=Path("content"), help="Path to Hugo content directory")
+    parser.add_argument(
+        "--check-simple-icons",
+        action="store_true",
+        help="Fail unless themes/aether/assets/lib/simple-icons contains only SVGs required by config",
+    )
+    parser.add_argument(
+        "--sync-simple-icons",
+        action="store_true",
+        help="Rewrite themes/aether/assets/lib/simple-icons to the minimal SVG set required by config",
+    )
+    parser.add_argument(
+        "--simple-icons-source",
+        type=Path,
+        help="Source simple-icons/icons directory used by --sync-simple-icons when required icons are not already vendored",
+    )
     return parser.parse_args()
 
 
@@ -386,6 +500,30 @@ def main() -> int:
     content_dir = args.content if args.content.is_absolute() else root / args.content
 
     config = read_config(config_path)
+
+    if args.sync_simple_icons:
+        source_dir = None
+        if args.simple_icons_source:
+            source_dir = (
+                args.simple_icons_source
+                if args.simple_icons_source.is_absolute()
+                else root / args.simple_icons_source
+            )
+        try:
+            for message in sync_simple_icons(root, config, source_dir):
+                print(message)
+        except FileNotFoundError as error:
+            print(error, file=sys.stderr)
+            return 1
+
+    if args.check_simple_icons:
+        try:
+            for message in check_simple_icons(root, config):
+                print(message)
+        except RuntimeError as error:
+            print(error, file=sys.stderr)
+            return 1
+
     shortcodes = scan_shortcodes(content_dir)
     math_features = scan_math_features(content_dir)
     print(render_report(root, config, shortcodes, math_features))
