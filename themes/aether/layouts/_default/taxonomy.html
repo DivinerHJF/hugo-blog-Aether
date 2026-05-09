@@ -1,0 +1,6 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<section class="post-list">
+  {{ range .Pages.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ end }}
+</section>
+{{ end }}

@@ -20,7 +20,7 @@
 │   ├── books.yaml           # 阅览页的书籍数据
 │   └── movies.yaml          # 阅览页的影剧数据
 ├── static/images/me/        # favicon、logo、头像、二维码等个人静态资源
-└── themes/aether/           # Aether 主题子模块
+└── themes/aether/           # Aether 主题源码，作为普通目录随主仓库维护
 ```
 
 ## 内容维护约定
@@ -70,11 +70,7 @@ hugo new content/posts/2026/20260509.md
 
 ## 本地预览
 
-首次拉取仓库后需要初始化主题子模块：
-
-```bash
-git submodule update --init --recursive
-```
+主题已经直接纳入主仓库，首次拉取后无需再执行 `git submodule update --init --recursive`。
 
 启动本地服务：
 
@@ -88,7 +84,22 @@ hugo server -D
 hugo --gc --minify
 ```
 
-> 如果主题子模块无法下载，Hugo 构建会失败；先确认网络或手动检查 `.gitmodules` 中的主题仓库地址。
+## Vercel 部署说明
+
+仓库根目录的 `vercel.json` 会固定 Vercel 的 Hugo 构建设置：
+
+- Framework Preset：`hugo`；
+- Build Command：`hugo --gc --minify`；
+- Output Directory：`public`；
+- Hugo 版本：`HUGO_VERSION = 0.123.7`。
+
+如果 Vercel 项目后台手动开启了 Build Command / Output Directory 的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
+
+## 主题维护说明
+
+- `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
+- 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
+- 如果后续需要把主题重新发布为独立项目，再从 `themes/aether/` 拆分出去即可。
 
 ## 维护提醒
 
