@@ -1,7 +1,7 @@
 {
-  "name": "doit-src",
+  "name": "aether-theme-src",
   "version": "0.2.0",
-  "description": "DoIt theme source file",
+  "description": "Aether Hugo theme source files for philohao.com, adapted from DoIt.",
   "private": true,
   "devDependencies": {
     "@babel/cli": "^7.14.8",
@@ -38,18 +38,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HEIGE-PCloud/DoIt.git"
+    "url": "git+https://github.com/DivinerHJF/hugo-blog-Aether.git",
+    "directory": "themes/aether"
   },
   "keywords": [
     "hugo",
     "theme"
   ],
-  "author": "PCloud",
+  "author": "Jianfeng.Hao <haojianfeng1997@gmail.com> (https://philohao.com/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/HEIGE-PCloud/DoIt/issues"
+    "url": "https://github.com/DivinerHJF/hugo-blog-Aether/issues"
   },
-  "homepage": "https://github.com/HEIGE-PCloud/DoIt#readme",
+  "homepage": "https://github.com/DivinerHJF/hugo-blog-Aether/tree/main/themes/aether#readme",
   "dependencies": {
     "atomic-algolia": "^0.3.19"
   }

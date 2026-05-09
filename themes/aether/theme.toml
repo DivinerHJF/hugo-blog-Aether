@@ -1,12 +1,12 @@
 # theme.toml template for a Hugo theme
 # See https://github.com/gohugoio/hugoThemes#themetoml for an example
 
-name = "DoIt"
+name = "Aether"
 license = "MIT"
-licenselink = "https://github.com/HEIGE-PCloud/DoIt/blob/main/LICENSE"
-description = "A Clean, Elegant but Advanced Hugo Theme for Hugo."
-homepage = "https://github.com/HEIGE-PCloud/DoIt"
-demosite = "https://hugodoit.pages.dev"
+licenselink = "https://github.com/DivinerHJF/hugo-blog-Aether/blob/main/themes/aether/LICENSE"
+description = "A self-use Hugo theme for philohao.com, adapted from DoIt."
+homepage = "https://github.com/DivinerHJF/hugo-blog-Aether"
+demosite = "https://philohao.com/"
 tags = [
   "blog",
   "clean",
@@ -25,13 +25,21 @@ features = [
 ]
 
 [author]
-  name = "PCloud"
-  homepage = "https://github.com/HEIGE-PCloud/"
+  name = "Jianfeng.Hao"
+  homepage = "https://philohao.com/"
 
 [original]
-  name = "Dillon"
+  name = "DoIt"
+  homepage = "https://hugodoit.pages.dev/"
+  repo = "https://github.com/HEIGE-PCloud/DoIt"
+  author = "PCloud"
+  note = "Aether is adapted from DoIt; upstream copyright and license notices are preserved."
+
+[original.basedOn]
+  name = "LoveIt"
   homepage = "https://dillonzq.com/"
   repo = "https://github.com/dillonzq/LoveIt/"
+  author = "Dillon"
 
 [module]
   [module.hugoVersion]
