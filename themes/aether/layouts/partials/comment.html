@@ -225,28 +225,28 @@
             {{- end -}}
         {{- end -}}
         
-        {{- /* Vssue Comment System */ -}}
+        {{- /* Vssue Comment System: local Vssue/Vue assets are not bundled; defaults below use CDN URLs. */ -}}
         {{- $vssue := $comment.vssue | default dict -}}
         {{- if $vssue.enable -}}
             <div id="vssue"></div>
-                {{- $source := $cdn.vssueCSS | default "lib/vssue/vssue.min.css" -}}
+                {{- $source := $cdn.vssueCSS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.min.css" -}}
                 {{- dict "Source" $source "Minify" true "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxStyle.html" -}}
-                {{- $source := $cdn.vueRuntimeJS | default "lib/vue/vue.runtime.min.js" -}}
+                {{- $source := $cdn.vueRuntimeJS | default "https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.runtime.min.js" -}}
                 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- if eq $vssue.platform "bitbucket" -}}
-                    {{- $source := $cdn.vssueBitbucketJS | default "lib/vssue/vssue.bitbucket.min.js" -}}
+                    {{- $source := $cdn.vssueBitbucketJS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.bitbucket.min.js" -}}
                     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- else if eq $vssue.platform "gitea" -}}
-                    {{- $source := $cdn.vssueGiteaJS | default "lib/vssue/vssue.gitea.min.js" -}}
+                    {{- $source := $cdn.vssueGiteaJS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.gitea.min.js" -}}
                     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- else if eq $vssue.platform "gitee" -}}
-                    {{- $source := $cdn.vssueGiteeJS | default "lib/vssue/vssue.gitee.min.js" -}}
+                    {{- $source := $cdn.vssueGiteeJS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.gitee.min.js" -}}
                     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- else if eq $vssue.platform "github" -}}
-                    {{- $source := $cdn.vssueGithubJS | default "lib/vssue/vssue.github.min.js" -}}
+                    {{- $source := $cdn.vssueGithubJS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.github.min.js" -}}
                     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- else if eq $vssue.platform "gitlab" -}}
-                    {{- $source := $cdn.vssueGitlabJS | default "lib/vssue/vssue.gitlab.min.js" -}}
+                    {{- $source := $cdn.vssueGitlabJS | default "https://cdn.jsdelivr.net/npm/vssue@1.4.8/dist/vssue.gitlab.min.js" -}}
                     {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
                 {{- end -}}
                 {{- $commentConfig = dict "el" "#vssue" "title" .Title | dict "vssue" | merge $commentConfig -}}
