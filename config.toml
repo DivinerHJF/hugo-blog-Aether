@@ -191,7 +191,7 @@ copy = true
 maxShownLines = 15
 
 [params.page.math]
-enable = true
+enable = false
 blockLeftDelimiter = ""
 blockRightDelimiter = ""
 inlineLeftDelimiter = ""

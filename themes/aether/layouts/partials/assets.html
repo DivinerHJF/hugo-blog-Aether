@@ -87,11 +87,14 @@
 {{- end -}}
 
 {{- /* KaTeX */ -}}
+{{- $siteMath := .Site.Params.page.math | default dict -}}
 {{- $math := $params.math -}}
 {{- if eq $math true -}}
-    {{- $math = .Site.Params.page.math | default dict -}}
+    {{- $math = dict "enable" true | merge $siteMath -}}
 {{- else if eq $math false -}}
     {{- $math = dict "enable" false -}}
+{{- else -}}
+    {{- $math = $math | default dict | merge $siteMath -}}
 {{- end -}}
 {{- if $math.enable -}}
     {{- $source := $cdn.katexCSS | default "lib/katex/katex.min.css" -}}
