@@ -1,12 +1,30 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
+subtitle: ""
 date: {{ .Date }}
-categories: [碎碎念, 爱折腾, 读看听, 万里路]
-series: [夕拾花]
+lastmod: {{ .Date }}
+draft: true
+authors: []
+description: ""
+
 tags: []
-comment: true
-toc: false
+categories: []
+series: []
+
+hiddenFromHomePage: false
+hiddenFromSearch: false
+
+featuredImage: ""
+featuredImagePreview: ""
+
+toc:
+  enable: true
+math:
+  enable: false
+lightgallery: false
+license: ""
 ---
 
+<!--more-->
 
-（yyyy-mm-dd@xx）
+TODO
