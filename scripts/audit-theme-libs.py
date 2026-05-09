@@ -24,6 +24,13 @@ except ModuleNotFoundError:  # pragma: no cover - Python < 3.11 fallback message
     tomllib = None  # type: ignore[assignment]
 
 SHORTCODE_RE = re.compile(r"{{\s*[<%]\s*(/?)\s*([A-Za-z][A-Za-z0-9_-]*)\b")
+MATH_FEATURE_PATTERNS = {
+    "{{< math >}}": re.compile(r"{{\s*<\s*math\b"),
+    "$$": re.compile(r"\$\$"),
+    "\\[": re.compile(r"\\\["),
+    "\\(": re.compile(r"\\\("),
+}
+FRONT_MATTER_MATH_TRUE_RE = re.compile(r"(?m)^\s*math\s*:\s*true\s*$")
 
 
 @dataclass(frozen=True)
@@ -120,6 +127,36 @@ def scan_shortcodes(content_dir: Path) -> Counter[str]:
     return counts
 
 
+def scan_math_features(content_dir: Path) -> Counter[str]:
+    counts: Counter[str] = Counter()
+    if not content_dir.exists():
+        return counts
+    for path in sorted(content_dir.rglob("*.md")):
+        text = path.read_text(encoding="utf-8", errors="replace")
+        has_formula = False
+        for name, pattern in MATH_FEATURE_PATTERNS.items():
+            matches = pattern.findall(text)
+            if matches:
+                counts[name] += len(matches)
+                has_formula = True
+        if has_formula:
+            counts["__files_with_formula"] += 1
+        if FRONT_MATTER_MATH_TRUE_RE.search(text):
+            counts["__files_with_math_enabled"] += 1
+    return counts
+
+
+def math_feature_summary(math_features: Counter[str]) -> str:
+    visible = [
+        f"{name}={math_features.get(name, 0)}"
+        for name in MATH_FEATURE_PATTERNS
+        if math_features.get(name, 0)
+    ]
+    visible.append(f"公式文章={math_features.get('__files_with_formula', 0)}")
+    visible.append(f"front matter math=true={math_features.get('__files_with_math_enabled', 0)}")
+    return ", ".join(visible)
+
+
 def search_enabled(config: dict[str, Any], search_type: str) -> bool:
     return is_enabled(nested_get(config, "params.search.enable")) and nested_get(config, "params.search.type") == search_type
 
@@ -128,6 +165,12 @@ def comment_enabled(config: dict[str, Any], provider: str) -> bool:
     return is_enabled(nested_get(config, "params.page.comment.enable")) and is_enabled(
         nested_get(config, f"params.page.comment.{provider}.enable")
     )
+
+
+def katex_enabled(config: dict[str, Any], math_features: Counter[str]) -> bool:
+    return is_enabled(nested_get(config, "params.page.math.enable")) or math_features.get(
+        "__files_with_math_enabled", 0
+    ) > 0
 
 
 def shortcode_source(name: str) -> Callable[[dict[str, Any], Counter[str]], str]:
@@ -222,9 +265,10 @@ def build_mappings() -> list[ResourceMapping]:
         ResourceMapping(
             "math.katex",
             ("themes/aether/assets/lib/katex", "themes/aether/static/lib/katex"),
-            lambda config, _shortcodes: is_enabled(nested_get(config, "params.page.math.enable")),
-            lambda config, _shortcodes: "params.page.math.enable="
-            f"{format_value(nested_get(config, 'params.page.math.enable'))}",
+            lambda config, math_features: katex_enabled(config, math_features),
+            lambda config, math_features: "params.page.math.enable="
+            f"{format_value(nested_get(config, 'params.page.math.enable'))}; "
+            f"content math features: {math_feature_summary(math_features)}",
         ),
         ResourceMapping(
             "icons.fontawesome",
@@ -269,11 +313,12 @@ def build_mappings() -> list[ResourceMapping]:
     ]
 
 
-def render_report(root: Path, config: dict[str, Any], shortcodes: Counter[str]) -> str:
+def render_report(root: Path, config: dict[str, Any], shortcodes: Counter[str], math_features: Counter[str]) -> str:
     rows: list[tuple[str, str, str, str, str, str]] = []
     for mapping in build_mappings():
-        active = mapping.trigger(config, shortcodes)
-        source = mapping.source(config, shortcodes)
+        feature_counts = math_features if mapping.feature == "math.katex" else shortcodes
+        active = mapping.trigger(config, feature_counts)
+        source = mapping.source(config, feature_counts)
         for directory in mapping.directories:
             size = directory_size(root / directory)
             rows.append(
@@ -308,6 +353,7 @@ def render_report(root: Path, config: dict[str, Any], shortcodes: Counter[str]) 
         f"- `params.page.twemoji`：{format_value(nested_get(config, 'params.page.twemoji'))}",
         f"- `params.page.lightgallery`：{format_value(nested_get(config, 'params.page.lightgallery'))}",
         f"- `params.page.math.enable`：{format_value(nested_get(config, 'params.page.math.enable'))}",
+        f"- content 数学公式特征：{math_feature_summary(math_features)}",
         f"- `params.page.comment.*.enable`：{comment_summary}",
         f"- `params.cookieconsent.enable`：{format_value(nested_get(config, 'params.cookieconsent.enable'))}",
         f"- `params.social`：{format_value(nested_get(config, 'params.social'))}",
@@ -341,7 +387,8 @@ def main() -> int:
 
     config = read_config(config_path)
     shortcodes = scan_shortcodes(content_dir)
-    print(render_report(root, config, shortcodes))
+    math_features = scan_math_features(content_dir)
+    print(render_report(root, config, shortcodes, math_features))
     return 0
 
 
