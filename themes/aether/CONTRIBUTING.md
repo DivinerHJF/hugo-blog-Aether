@@ -1,31 +1,7 @@
-## How to contribute to this project
+# Contributing
 
-First, folk this repository by clicking the folk button.
+Aether is a self-use theme maintained together with the main site repository, [DivinerHJF/hugo-blog-Aether](https://github.com/DivinerHJF/hugo-blog-Aether).
 
-Next, clone your folked repo.
+This theme does not currently accept standalone theme contributions. Site and theme changes are handled in the main repository workflow.
 
-```
-git clone https://github.com/example/DoIt.git
-cd DoIt
-```
-
-Then, install the dev dependencies.
-
-```
-npm install
-```
-
-And now you are ready to go!
-
-Here are some useful commands.
-
-```
-npm run babel #build theme.js with babel
-npm run build #build theme.js and then build the static site
-npm run start #build theme.js and then run a local debugging server
-npm run start-production #build theme.js and then run a local debugging server in production environment
-npm run serve #run a local debugging server without building a new theme.js
-npm run serve-production #run a local debugging server in production environment without building a new theme.js
-```
-
-Finally, create a new pull request at https://github.com/HEIGE-PCloud/DoIt/pulls to submit your contribution🎉
+Aether is adapted from [DoIt](https://github.com/HEIGE-PCloud/DoIt); upstream copyright and license notices remain preserved.
