@@ -1,7 +1,0 @@
-{{ $type := .Get "type" | default "note" }}
-{{ $title := .Get "title" | default (title $type) }}
-{{ $open := .Get "open" | default "true" }}
-<details class="admonition admonition-{{ $type }}" {{ if eq $open "true" }}open{{ end }}>
-  <summary>{{ $title }}</summary>
-  <div>{{ .Inner | markdownify }}</div>
-</details>

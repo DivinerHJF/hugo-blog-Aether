@@ -1,0 +1,386 @@
+baseURL = "https://philohao.com/"
+title = "灿若星河 | 郝建锋"
+# Aether 主题已作为普通目录纳入本仓库（themes/aether），不再依赖 Git submodule。
+theme = "aether"
+
+# 站点语言：中文内容为主，开启 CJK 支持可让摘要、字数统计等更准确。
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+hasCJKLanguage = true
+
+# 生成 Git 修改时间，供文章 lastmod、最近更新列表等功能使用。
+enableGitInfo = true
+
+# 站点结构约定：
+# - content/posts/<year>/：按年份归档的博文与月报
+# - content/pages/：独立页面，例如足迹、阅览、关于
+# - data/books.yaml、data/movies.yaml：阅览页使用的数据源
+# - static/images/me/：站点头像、Logo、favicon 等个人素材
+
+[frontmatter]
+# 文章最后更新时间的读取顺序：优先 Git，其次文件修改时间，再读取 front matter。
+lastmod = [":git", ":fileModTime", "lastmod", ":default"]
+
+[menu]
+[[menu.main]]
+identifier = "posts"
+name = "归档"
+pre = "🗃️"
+title = "所有文章"
+url = "/posts/"
+weight = 1
+
+[[menu.main]]
+identifier = "footprint"
+name = "足迹"
+pre = "🌏"
+title = "行万里路"
+url = "/pages/footprint/"
+weight = 2
+
+[[menu.main]]
+identifier = "mentalfood"
+name = "阅览"
+pre = "🎡"
+title = "书影音游"
+url = "/pages/mentalfood/"
+weight = 3
+
+[[menu.main]]
+identifier = "about"
+name = "关于"
+pre = "👨‍🔧"
+title = "关于我以及这个网站"
+url = "/pages/about/"
+weight = 4
+
+[params]
+# Aether 主题继承/兼容 DoIt 系配置；这里只保留本站正在使用或后续常改的选项。
+version = "0.2.X"
+title = "灿若星河"
+description = "郝建锋的个人网站，记录生活、阅读、旅途与技术折腾。"
+keywords = ["郝建锋", "灿若星河", "Hugo", "个人博客", "阅读", "旅行", "技术折腾"]
+defaultTheme = "auto"
+dateFormat = "2006-01-02"
+fingerprint = "md5"
+gitRepo = "https://github.com/DivinerHJF/hugo-blog-Aether"
+images = ["/images/me/favicon.svg"]
+enablePWA = true
+
+[params.app]
+# PWA / 移动端添加到主屏幕时使用的名称与图标。
+title = "灿若星河"
+noFavicon = false
+svgFavicon = "/images/me/favicon.svg"
+iconColor = "#5bbad5"
+tileColor = "#da532c"
+
+[params.search]
+# 本地 Fuse 搜索。若改用 Algolia，再补充下方 algolia 密钥。
+enable = true
+type = "fuse"
+contentLength = 1000000
+placeholder = "搜索文章"
+maxResultLength = 10
+snippetLength = 50
+highlightTag = "em"
+absoluteURL = false
+
+[params.search.algolia]
+appID = ""
+index = ""
+searchKey = ""
+
+[params.search.fuse]
+findAllMatches = false
+ignoreFieldNorm = false
+isCaseSensitive = false
+includeMatches = false
+minMatchCharLength = 2
+ignoreLocation = true
+location = 0
+threshold = 0.3
+distance = 100
+useExtendedSearch = false
+
+[params.header]
+desktopMode = "auto"
+mobileMode = "auto"
+themeChangeMode = "select"
+
+[params.header.title]
+logo = "/images/me/logo.svg"
+name = "星河一方"
+pre = ""
+post = ""
+typeit = false
+
+[params.footer]
+enable = true
+custom = '<a href="/categories/" target="_blank" rel="noreferrer">分类</a> · <a href="/tags/" target="_blank" rel="noreferrer">标签</a> · <a href="/series/" target="_blank" rel="noreferrer">系列</a> <hr width="20px" color="#D3D3D3">'
+hugo = false
+copyright = true
+author = true
+since = 2017
+icp = ""
+
+[params.section]
+paginate = 10000
+dateFormat = "01-02"
+rss = 100
+
+[params.section.recentlyUpdated]
+enable = true
+days = 30
+maxCount = 5
+rss = true
+
+[params.list]
+paginate = 1000
+dateFormat = "01-02"
+rss = 100
+
+[params.home]
+rss = 100
+
+[params.home.profile]
+enable = true
+gravatarEmail = ""
+avatarURL = "/images/me/avatar.svg"
+title = "灿若星河"
+subtitle = "记录生活、阅读、旅途与技术折腾。"
+typeit = false
+social = true
+disclaimer = ""
+
+[params.home.posts]
+# 首页当前只展示个人信息；如需首页文章流，将 enable 改为 true。
+enable = false
+paginate = 6
+defaultHiddenFromHomePage = false
+
+[params.social]
+# 仅保留已使用的社交入口，避免大量空配置干扰后续维护。
+Email = "haojianfeng1997@gmail.com"
+GitHub = "DivinerHJF"
+Mastodon = "@PhiloHao"
+RSS = true
+Telegram = "Aether_Q"
+
+[params.page]
+hiddenFromHomePage = false
+hiddenFromSearch = false
+twemoji = false
+lightgallery = false
+ruby = true
+fraction = true
+fontawesome = true
+linkToMarkdown = true
+rssFullText = true
+pageStyle = "normal"
+
+[params.page.outdatedArticleReminder]
+# 旧文提醒会让长尾文章显得更审慎；若觉得干扰阅读，可关闭 enable。
+enable = true
+reminder = 90
+warning = 180
+
+[params.page.toc]
+enable = true
+keepStatic = false
+auto = false
+
+[params.page.code]
+copy = true
+maxShownLines = 15
+
+[params.page.math]
+enable = true
+blockLeftDelimiter = ""
+blockRightDelimiter = ""
+inlineLeftDelimiter = ""
+inlineRightDelimiter = ""
+copyTex = true
+mhchem = true
+
+[params.page.mapbox]
+# 目前没有启用地图；填写 accessToken 后再在文章中使用地图短代码。
+accessToken = ""
+lightStyle = "mapbox://styles/mapbox/light-v9"
+darkStyle = "mapbox://styles/mapbox/dark-v9"
+navigation = true
+geolocate = true
+scale = true
+fullscreen = true
+
+[params.page.share]
+enable = true
+Evernote = true
+Pocket = true
+Reddit = true
+Twitter = true
+Weibo = true
+
+[params.page.comment]
+enable = true
+
+[params.page.comment.giscus]
+# 当前实际使用的评论系统。仓库或 Discussions 分类变更时，同步更新以下 ID。
+enable = true
+dataRepo = "DivinerHJF/hugo-blog-Aether"
+dataRepoId = "MDEwOlJlcG9zaXRvcnkzNDk5NTUwODc="
+dataCategory = "Comments"
+dataCategoryId = "DIC_kwDOFNvkD84Cvoxi"
+dataMapping = "pathname"
+dataReactionsEnabled = "1"
+dataEmitMetadata = "0"
+dataTheme = "catppuccin_latte"
+
+[params.page.library]
+[params.page.library.css]
+# 自定义 CSS 示例：custom = "css/custom.css"，文件路径相对 assets/。
+[params.page.library.js]
+# 自定义 JS 示例：custom = "js/custom.js"，文件路径相对 assets/。
+
+[params.page.seo]
+images = []
+
+[params.page.seo.publisher]
+logoUrl = "/images/me/logo.svg"
+name = "灿若星河"
+
+[params.sponsor]
+enable = false
+bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
+custom = ""
+link = "https://www.buymeacoffee.com"
+
+[params.typeit]
+speed = 100
+cursorSpeed = 1000
+cursorChar = "|"
+duration = -1
+
+[params.verification]
+# 搜索引擎站长平台验证码；不用时保持空字符串即可。
+baidu = ""
+bing = ""
+google = ""
+pinterest = ""
+so = ""
+sogou = ""
+yandex = ""
+
+[params.seo]
+image = "https://www.philohao.com/images/me/favicon.svg"
+thumbnailUrl = "https://www.philohao.com/images/me/favicon.svg"
+
+[params.analytics]
+# 暂未配置统计 ID，默认关闭，避免加载无效脚本或误导维护者。
+enable = false
+
+[params.analytics.google]
+id = ""
+anonymizeIP = true
+
+[params.analytics.fathom]
+id = ""
+server = ""
+
+[params.analytics.baidu]
+id = ""
+
+[params.analytics.umami]
+data_domains = ""
+data_website_id = ""
+src = ""
+
+[params.analytics.plausible]
+data_domain = ""
+src = ""
+
+[params.cookieconsent]
+# 没有接入统计/广告前无需弹 Cookie 横幅；接入后再改为 true 并补正文案。
+enable = false
+
+[params.cookieconsent.content]
+dismiss = "知道了"
+link = ""
+message = "本站可能使用 Cookie 改善浏览体验。"
+
+[params.cdn]
+# 默认使用主题内置资源；如要切换 jsdelivr 等 CDN，再配置 data。
+data = ""
+
+[params.compatibility]
+polyfill = false
+objectFit = false
+
+[markup]
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+lineNumbersInTable = true
+noClasses = false
+
+[markup.goldmark]
+[markup.goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+strikethrough = true
+table = true
+taskList = true
+typographer = true
+
+[markup.goldmark.renderer]
+# 允许文章直接使用 iframe、HTML 片段等；例如 about 页的 ProcessOn 嵌入。
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 6
+
+[author]
+name = "Jianfeng.Hao"
+email = "haojianfeng1997@gmail.com"
+link = "https://philohao.com/"
+avatar = "https://www.philohao.com/images/me/logo.svg"
+gravatarEmail = ""
+
+[sitemap]
+changefreq = "weekly"
+filename = "sitemap.xml"
+priority = 0.5
+
+[permalinks]
+posts = ":year/:month/:filename"
+
+[privacy]
+[privacy.twitter]
+enableDNT = true
+[privacy.youtube]
+privacyEnhanced = true
+
+[mediaTypes]
+[mediaTypes."text/plain"]
+suffixes = ["md"]
+
+[outputFormats.MarkDown]
+isHTML = false
+isPlainText = true
+mediaType = "text/plain"
+
+[outputs]
+# JSON 用于本地搜索索引；MarkDown 用于文章页“查看原始 Markdown”。
+home = ["HTML", "RSS", "JSON"]
+page = ["HTML", "MarkDown"]
+section = ["HTML", "RSS"]
+taxonomy = ["HTML", "RSS"]
+
+[taxonomies]
+author = "authors"
+category = "categories"
+series = "series"
+tag = "tags"
