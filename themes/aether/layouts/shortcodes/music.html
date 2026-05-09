@@ -4,6 +4,6 @@
   <div>
     <strong>{{ .Get "name" | default "音乐" }}</strong>
     {{ with .Get "artist" }}<p>{{ . }}</p>{{ end }}
-    {{ if $url }}<audio controls preload="none" src="{{ $url }}"></audio>{{ else with $auto }}<p><a href="{{ . }}" target="_blank" rel="noreferrer">打开音乐链接</a></p>{{ end }}
+    {{ if $url }}<audio controls preload="none" src="{{ $url }}"></audio>{{ else }}{{ with $auto }}<p><a href="{{ . }}" target="_blank" rel="noreferrer">打开音乐链接</a></p>{{ end }}{{ end }}
   </div>
 </div>
