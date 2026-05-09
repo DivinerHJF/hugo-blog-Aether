@@ -84,6 +84,17 @@ hugo server -D
 hugo --gc --minify
 ```
 
+## Vercel 部署说明
+
+仓库根目录的 `vercel.json` 会固定 Vercel 的 Hugo 构建设置：
+
+- Framework Preset：`hugo`；
+- Build Command：`hugo --gc --minify`；
+- Output Directory：`public`；
+- Hugo 版本：`HUGO_VERSION = 0.123.7`。
+
+如果 Vercel 项目后台手动开启了 Build Command / Output Directory 的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
+
 ## 主题维护说明
 
 - `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
