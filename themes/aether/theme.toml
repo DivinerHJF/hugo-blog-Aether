@@ -1,0 +1,11 @@
+name = "Aether"
+license = "MIT"
+licenselink = "https://github.com/DivinerHJF/hugo-theme-aether/blob/main/LICENSE"
+description = "A site-specific Hugo theme vendored into hugo-blog-Aether."
+homepage = "https://philohao.com/"
+tags = ["blog", "personal", "responsive"]
+features = ["posts", "pages", "taxonomy", "shortcodes"]
+
+[author]
+  name = "Jianfeng.Hao"
+  homepage = "https://philohao.com/"
