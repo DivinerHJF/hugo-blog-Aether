@@ -150,7 +150,13 @@
 
     p {
       margin: .5rem 0;
-      text-align: justify;
+      text-align: start;
+    }
+
+    &.prose-justify {
+      p {
+        text-align: justify;
+      }
     }
 
     b, strong {
@@ -192,7 +198,7 @@
     ul, ol {
       margin: .5rem 0;
       padding-left: 2.5rem;
-      text-align: justify;
+      text-align: start;
     }
 
     ul {

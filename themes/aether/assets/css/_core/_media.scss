@@ -55,6 +55,10 @@
     width: 100% !important;
     margin-left: auto !important;
 
+    .single .content p {
+      text-align: start;
+    }
+
     [header-mobile] & {
       padding-top: $header-height;
     }
