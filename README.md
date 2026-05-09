@@ -67,6 +67,7 @@ hugo new content/posts/2026/20260509.md
 | 搜索 | `[params.search]` 与 `[params.search.fuse]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
 | TypeIt 打字动画 | `[params.typeit]` | 部分月报文章使用 `typeit` 短代码，因此保留全局动画默认值 |
 | CDN / 已裁剪可选资源 | `[params.cdn]` | 默认使用仓库内保留的主题资源；Mermaid、ECharts、Mapbox GL 短代码库以及 Twemoji、LightGallery、CookieConsent 本地库已按当前关闭配置移除，重新启用前需配置 CDN 或恢复本地库 |
+| 字体栈 | `themes/aether/assets/css/_variables.scss` | 正文字体、标题装饰字体和代码字体均使用系统字体栈；不再加载外部中文字体 CDN，也不提交字体二进制文件 |
 | Markdown 原文链接 | `[params.page]` 与 `[outputs]` | `linkToMarkdown = true` 依赖 `page = ["HTML", "MarkDown"]` |
 
 ### 主题静态库裁剪
