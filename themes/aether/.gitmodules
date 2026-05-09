@@ -1,0 +1,3 @@
+[submodule "themes/aether"]
+	path = themes/aether
+	url = https://github.com/DivinerHJF/hugo-theme-aether.git
