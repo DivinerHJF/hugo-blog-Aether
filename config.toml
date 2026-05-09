@@ -76,7 +76,7 @@ iconColor = "#5bbad5"
 tileColor = "#da532c"
 
 [params.search]
-# 本地 Fuse 搜索。若改用 Algolia，再补充下方 algolia 密钥。
+# 本地 Fuse 搜索；若改用 Algolia，需把 type 改为 "algolia" 并重新补充 algolia 配置。
 enable = true
 type = "fuse"
 contentLength = 1000000
@@ -85,11 +85,6 @@ maxResultLength = 10
 snippetLength = 50
 highlightTag = "em"
 absoluteURL = false
-
-[params.search.algolia]
-appID = ""
-index = ""
-searchKey = ""
 
 [params.search.fuse]
 findAllMatches = false
@@ -203,16 +198,6 @@ inlineRightDelimiter = ""
 copyTex = true
 mhchem = true
 
-[params.page.mapbox]
-# 目前没有启用地图；填写 accessToken 后再在文章中使用地图短代码。
-accessToken = ""
-lightStyle = "mapbox://styles/mapbox/light-v9"
-darkStyle = "mapbox://styles/mapbox/dark-v9"
-navigation = true
-geolocate = true
-scale = true
-fullscreen = true
-
 [params.page.share]
 enable = true
 Evernote = true
@@ -249,13 +234,8 @@ images = []
 logoUrl = "/images/me/logo.svg"
 name = "灿若星河"
 
-[params.sponsor]
-enable = false
-bio = "如果你觉得这篇文章对你有所帮助，欢迎赞赏~"
-custom = ""
-link = "https://www.buymeacoffee.com"
-
 [params.typeit]
+# 部分月报文章仍使用 typeit 短代码，这里保留全局动画默认值。
 speed = 100
 cursorSpeed = 1000
 cursorChar = "|"
@@ -279,42 +259,13 @@ thumbnailUrl = "https://www.philohao.com/images/me/favicon.svg"
 # 暂未配置统计 ID，默认关闭，避免加载无效脚本或误导维护者。
 enable = false
 
-[params.analytics.google]
-id = ""
-anonymizeIP = true
-
-[params.analytics.fathom]
-id = ""
-server = ""
-
-[params.analytics.baidu]
-id = ""
-
-[params.analytics.umami]
-data_domains = ""
-data_website_id = ""
-src = ""
-
-[params.analytics.plausible]
-data_domain = ""
-src = ""
-
 [params.cookieconsent]
 # 没有接入统计/广告前无需弹 Cookie 横幅；接入后再改为 true 并补正文案。
 enable = false
 
-[params.cookieconsent.content]
-dismiss = "知道了"
-link = ""
-message = "本站可能使用 Cookie 改善浏览体验。"
-
 [params.cdn]
 # 默认使用主题内置资源；如要切换 jsdelivr 等 CDN，再配置 data。
 data = ""
-
-[params.compatibility]
-polyfill = false
-objectFit = false
 
 [markup]
 [markup.highlight]

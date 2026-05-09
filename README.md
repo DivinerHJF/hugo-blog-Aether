@@ -64,9 +64,9 @@ hugo new content/posts/2026/20260509.md
 | 首页头像与副标题 | `[params.home.profile]` | 头像资源位于 `static/images/me/` |
 | 社交链接 | `[params.social]` | 目前只保留 Email、GitHub、Mastodon、RSS、Telegram |
 | 评论系统 | `[params.page.comment.giscus]` | 当前使用 Giscus；仓库或 Discussions 分类变化时需同步 ID |
-| 搜索 | `[params.search]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
+| 搜索 | `[params.search]` 与 `[params.search.fuse]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
+| TypeIt 打字动画 | `[params.typeit]` | 部分月报文章使用 `typeit` 短代码，因此保留全局动画默认值 |
 | Markdown 原文链接 | `[params.page]` 与 `[outputs]` | `linkToMarkdown = true` 依赖 `page = ["HTML", "MarkDown"]` |
-| Cookie/统计 | `[params.analytics]`、`[params.cookieconsent]` | 暂未配置统计 ID，默认关闭 |
 
 ## 本地预览
 
