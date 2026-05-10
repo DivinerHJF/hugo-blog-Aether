@@ -224,9 +224,13 @@ dataRepoId = "MDEwOlJlcG9zaXRvcnkzNDk5NTUwODc="
 dataCategory = "Comments"
 dataCategoryId = "DIC_kwDOFNvkD84Cvoxi"
 dataMapping = "pathname"
+dataStrict = "0"
 dataReactionsEnabled = "1"
 dataEmitMetadata = "0"
+dataInputPosition = "top"
 dataTheme = "catppuccin_latte"
+dataLang = "zh-CN"
+dataLoading = "lazy"
 
 [params.page.library]
 [params.page.library.css]
