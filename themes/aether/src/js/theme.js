@@ -862,12 +862,15 @@ function initTagExplorer() {
     const explorer = document.querySelector('.tag-explorer');
     if (!explorer) return;
 
+    const controls = explorer.querySelector('.tag-explorer-controls');
     const searchInput = explorer.querySelector('[data-tag-search]');
     const cards = Array.from(explorer.querySelectorAll('[data-tag-card]'));
     const filters = Array.from(explorer.querySelectorAll('[data-tag-filter]'));
     const resultCount = explorer.querySelector('[data-tag-result-count]');
     const empty = explorer.querySelector('[data-tag-empty]');
     let activeFilter = 'all';
+
+    if (!controls || !searchInput || filters.length === 0 || cards.length === 0) return;
 
     const normalize = value => (value || '').trim().toLocaleLowerCase();
     const matchesFilter = card => activeFilter === 'all' || card.dataset.tagCategory === activeFilter;
@@ -884,7 +887,7 @@ function initTagExplorer() {
         if (empty) empty.hidden = visibleCount !== 0;
     };
 
-    if (searchInput) searchInput.addEventListener('input', update, false);
+    searchInput.addEventListener('input', update, false);
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
             activeFilter = filter.dataset.tagFilter || 'all';
@@ -892,6 +895,14 @@ function initTagExplorer() {
             update();
         }, false);
     });
+
+    searchInput.disabled = false;
+    filters.forEach(filter => {
+        filter.disabled = false;
+    });
+    controls.dataset.enhanced = 'true';
+    controls.setAttribute('aria-disabled', 'false');
+    explorer.classList.add('tag-explorer--ready');
 
     update();
 }

@@ -148,16 +148,18 @@
                     </div>
                 </div>
 
-                <div class="tag-explorer-controls">
+                <p class="tag-explorer-status" data-tag-enhancement-status>筛选功能加载中，未启用时可直接浏览全部标签。</p>
+
+                <div class="tag-explorer-controls" data-enhanced="false" aria-disabled="true">
                     <label class="tag-search" for="tag-search-input">
                         <i class="fas fa-search fa-fw" aria-hidden="true"></i>
-                        <input id="tag-search-input" type="search" placeholder="搜索标签…" autocomplete="off" data-tag-search>
+                        <input id="tag-search-input" type="search" placeholder="搜索标签…" autocomplete="off" data-tag-search disabled>
                     </label>
                     <div class="tag-filter-group" role="group" aria-label="按文章数量筛选标签">
-                        <button type="button" class="tag-filter active" data-tag-filter="all">全部</button>
-                        <button type="button" class="tag-filter" data-tag-filter="popular">热门 ≥ 3</button>
-                        <button type="button" class="tag-filter" data-tag-filter="focused">精读 = 2</button>
-                        <button type="button" class="tag-filter" data-tag-filter="niche">小众 = 1</button>
+                        <button type="button" class="tag-filter active" data-tag-filter="all" disabled>全部</button>
+                        <button type="button" class="tag-filter" data-tag-filter="popular" disabled>热门 ≥ 3</button>
+                        <button type="button" class="tag-filter" data-tag-filter="focused" disabled>精读 = 2</button>
+                        <button type="button" class="tag-filter" data-tag-filter="niche" disabled>小众 = 1</button>
                     </div>
                 </div>
 
