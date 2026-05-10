@@ -206,11 +206,10 @@ mhchem = true
 
 [params.page.share]
 enable = true
-Evernote = true
-Pocket = true
-Reddit = true
 Twitter = true
 Weibo = true
+Wechat = true
+CopyLink = true
 
 [params.page.comment]
 enable = true

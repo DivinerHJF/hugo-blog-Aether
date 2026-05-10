@@ -112,6 +112,22 @@ other = "Learn more"
 other = "Share on"
 # === partials/plugin/share.html ===
 
+
+[shareWechat]
+other = "WeChat"
+
+[shareWechatTip]
+other = "Or copy the link and open it in WeChat"
+
+[copyArticleLink]
+other = "Copy article link"
+
+[articleLinkCopied]
+other = "Link copied"
+
+[copyLink]
+other = "Copy link"
+
 # === posts/single.html ===
 [contents]
 other = "Contents"
@@ -160,6 +176,7 @@ other = "Home"
 
 [readMore]
 other = "Read more..."
+
 # === posts/single.html ===
 
 # === 404.html ===

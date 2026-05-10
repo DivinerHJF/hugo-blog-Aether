@@ -3,8 +3,8 @@
 {{- if $share.enable -}}
     {{- /* 001: Twitter */ -}}
     {{- if $share.Twitter -}}
-        <a href="#" onclick="return false;" title="{{ T `shareOn` }} Twitter" data-sharer="twitter" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Site.Params.Social.Twitter }} data-via="{{ . }}"{{ end }}{{ with .Params.tags }} data-hashtags="{{ delimit . `,` }}"{{ end }}>
-            {{- dict "Class" "fab fa-twitter fa-fw" | partial "plugin/icon.html" -}}
+        <a class="share-link share-link-twitter" href="#" onclick="return false;" title="{{ T `shareOn` }} Twitter" aria-label="{{ T `shareOn` }} Twitter" data-sharer="twitter" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Site.Params.Social.Twitter }} data-via="{{ . }}"{{ end }}{{ with .Params.tags }} data-hashtags="{{ delimit . `,` }}"{{ end }}>
+            <span class="share-mark" aria-hidden="true">T</span>
         </a>
     {{- end -}}
 
@@ -129,8 +129,23 @@
 
     {{- /* 019: 微博 */ -}}
     {{- if $share.Weibo -}}
-        <a href="#" onclick="return false;" title="{{ T `shareOn` }} 微博" data-sharer="weibo" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}{{ with .Site.Params.Social.Weibo }} data-ralateuid="{{ . }}"{{ end }}>
-            {{- dict "Class" "fab fa-weibo fa-fw" | partial "plugin/icon.html" -}}
+        <a class="share-link share-link-weibo" href="#" onclick="return false;" title="{{ T `shareOn` }} 微博" aria-label="{{ T `shareOn` }} 微博" data-sharer="weibo" data-url="{{ .Permalink }}" data-title="{{ .Title }}"{{ with .Params.featuredImage }} data-image="{{ . }}"{{ end }}{{ with .Site.Params.Social.Weibo }} data-ralateuid="{{ . }}"{{ end }}>
+            <span class="share-mark" aria-hidden="true">微</span>
+        </a>
+    {{- end -}}
+
+
+    {{- /* 020: 微信 */ -}}
+    {{- if $share.Wechat -}}
+        <a class="share-link share-link-wechat" href="{{ .Permalink }}" title="{{ T `shareWechatTip` }}" aria-label="{{ T `shareWechatTip` }}" data-url="{{ .Permalink }}" data-copy-title="{{ T `shareWechatTip` }}" data-copy-success="{{ T `articleLinkCopied` }}" data-copy-mark="信" onclick="if (navigator.clipboard) { navigator.clipboard.writeText(this.dataset.url); this.title = this.dataset.copySuccess; this.setAttribute('aria-label', this.dataset.copySuccess); var mark = this.querySelector('.share-mark'); if (mark) { mark.textContent = '✓'; } window.setTimeout(() => { this.title = this.dataset.copyTitle; this.setAttribute('aria-label', this.dataset.copyTitle); if (mark) { mark.textContent = this.dataset.copyMark; } }, 2000); return false; }">
+            <span class="share-mark" aria-hidden="true">信</span>
+        </a>
+    {{- end -}}
+
+    {{- /* 021: 复制链接 */ -}}
+    {{- if $share.CopyLink -}}
+        <a class="share-link share-link-copy" href="{{ .Permalink }}" title="{{ T `copyArticleLink` }}" aria-label="{{ T `copyArticleLink` }}" data-url="{{ .Permalink }}" data-copy-title="{{ T `copyArticleLink` }}" data-copy-success="{{ T `articleLinkCopied` }}" data-copy-mark="链" onclick="if (navigator.clipboard) { navigator.clipboard.writeText(this.dataset.url); this.title = this.dataset.copySuccess; this.setAttribute('aria-label', this.dataset.copySuccess); var mark = this.querySelector('.share-mark'); if (mark) { mark.textContent = '✓'; } window.setTimeout(() => { this.title = this.dataset.copyTitle; this.setAttribute('aria-label', this.dataset.copyTitle); if (mark) { mark.textContent = this.dataset.copyMark; } }, 2000); return false; }">
+            <span class="share-mark" aria-hidden="true">链</span>
         </a>
     {{- end -}}
 
