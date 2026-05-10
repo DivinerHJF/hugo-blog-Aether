@@ -84,7 +84,7 @@ hugo new content/posts/2026/20260509.md
 - `params.page.lightgallery = false`：删除 `themes/aether/assets/lib/lightgallery/` 以及仅供 LightGallery 使用的 `themes/aether/static/lib/fonts/`；
 - `params.cookieconsent.enable = false`：删除 `themes/aether/assets/lib/cookieconsent/`。
 
-Simple Icons 也按当前配置裁剪：`[params.social]` 只启用 Email、GitHub、Mastodon、RSS、Telegram，`[params.page.share]` 只启用 Evernote、Pocket、Reddit、Twitter、Weibo，因此不会触发 `Line`、`Instapaper`、`Myspace`、`Baidu` 或任何 `icon.Simpleicons` 社交图标，完整 `themes/aether/assets/lib/simple-icons/` 不再提交。后续若重新启用依赖 Simple Icons 的分享/社交项，不要直接提交完整上游仓库；请先准备一个 simple-icons 的 `icons/` 来源目录，再运行：
+Simple Icons 也按当前配置裁剪：`[params.social]` 只启用 Email、GitHub、Mastodon、RSS、Telegram，`[params.page.share]` 只启用 Twitter、Weibo、Wechat、CopyLink，因此不会触发 `Line`、`Instapaper`、`Myspace`、`Baidu` 或任何 `icon.Simpleicons` 社交图标，完整 `themes/aether/assets/lib/simple-icons/` 不再提交。后续若重新启用依赖 Simple Icons 的分享/社交项，不要直接提交完整上游仓库；请先准备一个 simple-icons 的 `icons/` 来源目录，再运行：
 
 ```bash
 python3 scripts/audit-theme-libs.py --sync-simple-icons --simple-icons-source /path/to/simple-icons/icons --check-simple-icons
