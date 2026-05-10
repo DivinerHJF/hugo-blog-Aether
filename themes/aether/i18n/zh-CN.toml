@@ -123,6 +123,12 @@ other = "分享到"
 [shareWechat]
 other = "微信"
 
+[shareWechatTitle]
+other = "微信扫码分享"
+
+[shareWechatQrAlt]
+other = "微信分享二维码"
+
 [shareWechatTip]
 other = "或复制链接后在微信中打开"
 

@@ -54,58 +54,58 @@
       .post-info-share {
         > span {
           display: inline-flex;
-          gap: 0.4rem;
+          flex-wrap: wrap;
+          gap: 0.35rem;
           justify-content: flex-end;
           align-items: center;
-          white-space: nowrap;
         }
 
         a,
         .share-link {
+          position: relative;
           display: inline-flex;
           align-items: center;
-          justify-content: center;
-          width: 1.45rem;
-          height: 1.45rem;
-          padding: 0;
-          border: 1px solid rgba($global-border-color, 0.55);
-          border-radius: 50%;
-          background: rgba(#ffffff, 0.18);
+          gap: 0.25rem;
+          min-height: 1.8rem;
+          padding: 0.2rem 0.55rem;
+          border: 1px solid rgba($global-border-color, 0.9);
+          border-radius: 999px;
+          background: rgba(#ffffff, 0.45);
           color: $global-font-secondary-color;
-          line-height: 1;
+          line-height: 1.2;
           text-decoration: none;
-          opacity: 0.72;
           cursor: pointer;
-          transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+          transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
 
           [theme=dark] & {
-            border-color: rgba($global-border-color-dark, 0.8);
-            background: rgba(#ffffff, 0.03);
+            border-color: rgba($global-border-color-dark, 0.95);
+            background: rgba(#ffffff, 0.04);
             color: $global-font-secondary-color-dark;
           }
 
           [theme=black] & {
-            border-color: rgba($global-border-color-black, 0.8);
-            background: rgba(#ffffff, 0.04);
+            border-color: rgba($global-border-color-black, 0.95);
+            background: rgba(#ffffff, 0.06);
             color: $global-font-secondary-color-black;
           }
 
           &:hover,
           &:focus-visible {
             color: $global-link-hover-color;
-            border-color: rgba($global-link-hover-color, 0.35);
-            background: rgba($global-link-hover-color, 0.06);
-            opacity: 1;
+            border-color: rgba($global-link-hover-color, 0.55);
+            background: rgba($global-link-hover-color, 0.08);
+            transform: translateY(-1px);
 
             [theme=dark] &,
             [theme=black] & {
               color: $global-link-hover-color-dark;
-              background: rgba(#ffffff, 0.08);
+              border-color: rgba($global-link-hover-color-dark, 0.35);
+              background: rgba(#ffffff, 0.12);
             }
           }
 
           &:focus-visible {
-            outline: 1px solid currentColor;
+            outline: 2px solid rgba($global-link-hover-color, 0.45);
             outline-offset: 2px;
           }
         }
@@ -114,39 +114,72 @@
           vertical-align: text-bottom;
         }
 
-        .share-mark {
+        .share-link-label {
           font-size: 0.72rem;
-          font-weight: 600;
           line-height: 1;
         }
-      }
-    }
-  }
 
+        .share-link-wechat {
+          .share-wechat-panel {
+            position: absolute;
+            right: 0;
+            bottom: calc(100% + 0.6rem);
+            z-index: 10;
+            display: flex;
+            width: 12.5rem;
+            padding: 0.75rem;
+            border: 1px solid $global-border-color;
+            border-radius: 0.75rem;
+            background: $global-background-color;
+            box-shadow: 0 0.75rem 2rem rgba(#000000, 0.14);
+            color: $global-font-secondary-color;
+            text-align: center;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(0.3rem);
+            transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 
+            [theme=dark] & {
+              border-color: $global-border-color-dark;
+              background: $global-background-color-dark;
+              color: $global-font-secondary-color-dark;
+            }
 
-  @media only screen and (max-width: 680px) {
-    .post-info {
-      .post-info-line {
-        align-items: center;
-        gap: 0.75rem;
-      }
+            [theme=black] & {
+              border-color: $global-border-color-black;
+              background: $global-background-color-black;
+              color: $global-font-secondary-color-black;
+            }
+          }
 
-      .post-info-md {
-        width: auto;
-      }
+          .share-wechat-title {
+            font-size: 0.85rem;
+            font-weight: 600;
+          }
 
-      .post-info-share {
-        flex: 0 0 auto;
+          img {
+            width: 9rem;
+            height: 9rem;
+            padding: 0.35rem;
+            border-radius: 0.35rem;
+            background: #ffffff;
+          }
 
-        > span {
-          gap: 0.25rem;
-        }
+          .share-wechat-tip {
+            font-size: 0.72rem;
+          }
 
-        a,
-        .share-link {
-          width: 1.35rem;
-          height: 1.35rem;
+          &:hover,
+          &:focus,
+          &:focus-within {
+            .share-wechat-panel {
+              opacity: 1;
+              visibility: visible;
+              pointer-events: auto;
+              transform: translateY(0);
+            }
+          }
         }
       }
     }

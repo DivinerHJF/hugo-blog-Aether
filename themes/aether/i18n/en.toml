@@ -116,6 +116,12 @@ other = "Share on"
 [shareWechat]
 other = "WeChat"
 
+[shareWechatTitle]
+other = "Scan with WeChat"
+
+[shareWechatQrAlt]
+other = "WeChat sharing QR code"
+
 [shareWechatTip]
 other = "Or copy the link and open it in WeChat"
 
