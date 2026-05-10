@@ -125,6 +125,15 @@ hugo --gc --minify
 
 如果 Vercel 项目后台手动开启了 Build Command / Output Directory 的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
 
+### Vercel 后台预览 403 排查
+
+如果站点公网地址（例如 `https://www.philohao.com/`）可以正常打开，但 Vercel Dashboard 的 Deployment 缩略图或预览框显示 `403: Forbidden`，优先按下面顺序处理：
+
+1. 到 **Project Settings → Deployment Protection** 确认 Production/Preview 是否开启了 Vercel Authentication、Password Protection 或 Trusted IPs。后台缩略图会访问生成的 `*.vercel.app` Deployment URL；如果该 URL 被保护，缩略图可能 403，而绑定的自定义域名仍然正常。
+2. 到 **Firewall → Traffic/Events** 查看是否有 DDoS Mitigation、Bot Protection 或自定义规则拦截了 Vercel 的截图/缩略图服务请求。若是系统 DDoS 规则误拦且 Hobby 计划无法添加 System Bypass Rule，需带上 403 页面里的 Request ID 联系 Vercel Support/Abuse 处理。
+3. 本仓库在 `vercel.json` 中显式设置了 `Content-Security-Policy: frame-ancestors 'self' https://vercel.com https://*.vercel.com`，允许 Vercel Dashboard iframe 预览本站，同时仍限制其它第三方站点随意嵌入。
+4. 修改保护/防火墙设置后，重新部署一次；如果新部署能直接访问但 Dashboard 缩略图仍旧显示旧的 403，通常是缩略图缓存，需要等待刷新或联系 Vercel 重新生成预览图。
+
 ## 主题维护说明
 
 - `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
