@@ -10,6 +10,15 @@
     @include overflow-wrap(break-word);
     @include transition(all ease-out 0.3s);
 
+    &.tag-cloud-tag-medium {
+      font-size: 0.9em;
+    }
+
+    &.tag-cloud-tag-small {
+      font-size: 0.82em;
+      opacity: 0.82;
+    }
+
     &:active,
     &:focus,
     &:hover {
