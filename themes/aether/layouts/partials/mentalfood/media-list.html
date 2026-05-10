@@ -1,0 +1,45 @@
+{{- $items := .items | default slice -}}
+{{- $empty := .empty | default "本年度暂无记录。" -}}
+{{- $count := 0 -}}
+<div class="media-list">
+    {{- range $items -}}
+        {{- $title := .title | default "" -}}
+        {{- if $title -}}
+            {{- $count = add $count 1 -}}
+            {{- $cover := .coverurl | default "" -}}
+            {{- $link := .link | default "" -}}
+            {{- $author := .author | default "" -}}
+            {{- $type := printf "%v" (.type | default "") -}}
+            {{- $starscore := .starscore | default "" -}}
+            {{- $greystar := .greystar | default "" -}}
+            {{- $intro := .intro | default "" -}}
+            <article class="media">
+                {{- if $cover -}}
+                    <div class="media-cover" style="background-image:url({{ $cover }})" aria-hidden="true"></div>
+                {{- else -}}
+                    <div class="media-cover media-cover-placeholder" aria-hidden="true"><span>{{ substr $title 0 1 }}</span></div>
+                {{- end -}}
+                <div class="media-meta">
+                    <div class="media-meta-item title">
+                        {{- if $link -}}
+                            <a href="{{ $link }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>
+                        {{- else -}}
+                            <span>{{ $title }}</span>
+                        {{- end -}}
+                        {{- if $type -}}<span class="media-date">{{ $type }}</span>{{- end -}}
+                    </div>
+                    {{- if or $author $starscore $greystar -}}
+                        <div class="media-meta-item media-subtitle">
+                            {{- if $author -}}<span class="author">{{ $author }}</span>{{- end -}}
+                            {{- if or $starscore $greystar -}}<span class="star-score">{{ $starscore }}<span class="grey-star">{{ $greystar }}</span></span>{{- end -}}
+                        </div>
+                    {{- end -}}
+                    {{- if $intro -}}<div class="media-meta-item intro">{{ $intro | safeHTML }}</div>{{- end -}}
+                </div>
+            </article>
+        {{- end -}}
+    {{- end -}}
+</div>
+{{- if eq $count 0 -}}
+    <p class="mentalfood-empty">{{ $empty }}</p>
+{{- end -}}
