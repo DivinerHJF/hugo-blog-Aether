@@ -118,12 +118,37 @@
   }
 }
 
+.tag-explorer-status {
+  margin: 1rem 0 .85rem;
+  padding: .7rem .85rem;
+  border: 1px dashed var(--tag-card-border);
+  border-radius: .85rem;
+  background: var(--tag-accent-soft);
+  color: $global-font-secondary-color;
+  font-size: .88rem;
+
+  [theme=dark] & {
+    color: $global-font-secondary-color-dark;
+  }
+  [theme=black] & {
+    color: $global-font-secondary-color-black;
+  }
+}
+
+.tag-explorer--ready .tag-explorer-status {
+  display: none;
+}
+
 .tag-explorer-controls {
-  display: flex;
+  display: none;
   gap: .75rem;
   align-items: center;
   justify-content: space-between;
   margin: 1.1rem 0 .9rem;
+}
+
+.tag-explorer--ready .tag-explorer-controls {
+  display: flex;
 }
 
 .tag-search {
