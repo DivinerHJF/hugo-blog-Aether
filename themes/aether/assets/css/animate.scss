@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+// Minimal Animate.css subset used by the theme templates.
+// The site only references animate__animated, animate__faster,
+// animate__pulse, and animate__flipInX, so avoid loading the full
+// animate.css feature bundle on every page.
+.animate__animated {
+  animation-duration: var(--animate-duration, 1s);
+  animation-fill-mode: both;
+}
+
+.animate__faster {
+  animation-duration: calc(var(--animate-duration, 1s) / 2);
+}
+
+.animate__pulse {
+  animation-name: animate-pulse;
+  animation-timing-function: ease-in-out;
+}
+
+.animate__flipInX {
+  animation-name: animate-flip-in-x;
+  backface-visibility: visible !important;
+}
+
+@keyframes animate-pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes animate-flip-in-x {
+  from {
+    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
