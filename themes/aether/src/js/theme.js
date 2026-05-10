@@ -888,11 +888,7 @@ function initTagExplorer() {
     filters.forEach(filter => {
         filter.addEventListener('click', () => {
             activeFilter = filter.dataset.tagFilter || 'all';
-            filters.forEach(item => {
-                const isActive = item === filter;
-                item.classList.toggle('active', isActive);
-                item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
-            });
+            filters.forEach(item => item.classList.toggle('active', item === filter));
             update();
         }, false);
     });
