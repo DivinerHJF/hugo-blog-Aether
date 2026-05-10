@@ -127,7 +127,7 @@ hugo --gc --minify
 
 ### Vercel 后台预览 403 排查
 
-如果站点公网地址（例如 `https://www.philohao.com/`）可以正常打开，但 Vercel Dashboard 的 Deployment 缩略图或预览框显示 `403: Forbidden`，优先按下面顺序处理：
+如果站点公网地址（例如 `https://philohao.com/`）可以正常打开，但 Vercel Dashboard 的 Deployment 缩略图或预览框显示 `403: Forbidden`，优先按下面顺序处理：
 
 1. 到 **Project Settings → Deployment Protection** 确认 Production/Preview 是否开启了 Vercel Authentication、Password Protection 或 Trusted IPs。后台缩略图会访问生成的 `*.vercel.app` Deployment URL；如果该 URL 被保护，缩略图可能 403，而绑定的自定义域名仍然正常。
 2. 到 **Firewall → Traffic/Events** 查看是否有 DDoS Mitigation、Bot Protection 或自定义规则拦截了 Vercel 的截图/缩略图服务请求。若是系统 DDoS 规则误拦且 Hobby 计划无法添加 System Bypass Rule，需带上 403 页面里的 Request ID 联系 Vercel Support/Abuse 处理。
