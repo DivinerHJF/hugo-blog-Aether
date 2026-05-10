@@ -1,0 +1,33 @@
+{{- $items := .items | default slice -}}
+{{- $empty := .empty | default "本年度暂无摘录。" -}}
+{{- $count := 0 -}}
+{{- $currentCategory := "" -}}
+{{- if gt (len $items) 0 -}}
+    <div class="mentalfood-link-list">
+        {{- range $items -}}
+            {{- $title := .title | default "" -}}
+            {{- if $title -}}
+                {{- $count = add $count 1 -}}
+                {{- $category := .category | default "摘录" -}}
+                {{- if ne $category $currentCategory -}}
+                    {{- if ne $currentCategory "" -}}</ul>{{- end -}}
+                    <h4>{{ $category }}</h4>
+                    <ul>
+                    {{- $currentCategory = $category -}}
+                {{- end -}}
+                {{- $url := .url | default "" -}}
+                {{- $type := printf "%v" (.type | default "") -}}
+                {{- $source := .source | default "" -}}
+                <li>
+                    {{- if $url -}}<a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>{{- else -}}<span>{{ $title }}</span>{{- end -}}
+                    {{- if $source -}}<span class="mentalfood-source">-{{ $source }}</span>{{- end -}}
+                    {{- if $type -}}<sup>{{ $type }}</sup>{{- end -}}
+                </li>
+            {{- end -}}
+        {{- end -}}
+        {{- if ne $currentCategory "" -}}</ul>{{- end -}}
+    </div>
+{{- end -}}
+{{- if eq $count 0 -}}
+    <p class="mentalfood-empty">{{ $empty }}</p>
+{{- end -}}

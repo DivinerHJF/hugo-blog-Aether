@@ -1,6 +1,5 @@
 {{- /*
     使用方法: {{< medialist "数据文件名" "年份(两位数)" >}}
-    这是一个兼容性更好的版本
 */ -}}
 
 {{- $dataFile := .Get 0 -}}
@@ -14,29 +13,15 @@
 {{- end -}}
 
 {{- $mediaData := index site.Data $dataFile -}}
-
 {{- if $mediaData -}}
-    {{- $count := 0 -}}
+    {{- $items := slice -}}
     {{- range $mediaData -}}
-    {{- if (hasPrefix .type $yearPrefix) -}}
-        {{- $count = add $count 1 -}}
-        <div class="media">
-            <div class="media-cover" style="background-image:url({{ .coverurl }})"></div>
-            <div class="media-meta">
-                <div class="media-meta-item title"><a href="{{ .link }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a><span style="float:right;font-weight:400">{{ .type }}</span></div>
-                <div class="media-meta-item">
-                    <span class="author">{{ .author }}</span>
-                    <span class="star-score">{{ .starscore }}<span class="grey-star">{{ .greystar }}</span></span>
-                </div>
-                <div class="media-meta-item intro">{{ .intro | safeHTML }}</div>
-            </div>
-        </div>
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if hasPrefix $type $yearPrefix -}}
+            {{- $items = $items | append . -}}
         {{- end -}}
     {{- end -}}
-
-    {{- if eq $count 0 -}}
-        <p style="text-align: center; color: #888;">本年度暂无记录。</p>
-    {{- end -}}
+    {{- partial "mentalfood/media-list.html" (dict "items" $items) -}}
 {{- else -}}
-    <p>警告：找不到数据文件 data/{{ $dataFile }}.yaml (或 .json/.toml)</p>
+    <p class="mentalfood-empty">警告：找不到数据文件 data/{{ $dataFile }}.yaml (或 .json/.toml)</p>
 {{- end -}}
