@@ -116,14 +116,14 @@ hugo --gc --minify
 
 ## Vercel 部署说明
 
-仓库根目录的 `vercel.json` 会固定 Vercel 的 Hugo 构建设置：
+仓库根目录的 `vercel.json` 会固定 Vercel 的 Hugo 构建设置，并应与 Vercel 项目后台保持一致：
 
-- Framework Preset：`hugo`；
+- Framework Preset：`Hugo`（`vercel.json` 中对应 `"framework": "hugo"`）；
 - Build Command：`hugo --gc --minify`；
 - Output Directory：`public`；
-- Hugo 版本：`HUGO_VERSION = 0.123.7`。
+- Hugo 版本：`HUGO_VERSION = 0.123.7`，与本地 `hugo version` 显示的 `v0.123.7` 基线一致。
 
-如果 Vercel 项目后台手动开启了 Build Command / Output Directory 的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
+如果 Vercel 项目后台手动开启了 Framework Preset、Build Command、Output Directory 或环境变量的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。Vercel 环境变量中的 `HUGO_VERSION` 也应保持为 `0.123.7`，避免线上构建使用不同 Hugo 版本。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
 
 ### Vercel 后台预览 403 排查
 
