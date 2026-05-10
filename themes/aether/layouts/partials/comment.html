@@ -203,26 +203,25 @@
             </noscript>
         {{- end -}}
 
-        {{/* giscus Twikoo Comment System */}}
-        {{- with site.Params.page.comment.giscus -}}
-            {{- if .enable -}}
-                <script src="https://giscus.app/client.js"
-                        data-repo="{{ .dataRepo }}"
-                        data-repo-id="{{ .dataRepoId }}"
-                        data-category="{{ .dataCategory }}"
-                        data-category-id="{{ .dataCategoryId }}"
-                        data-mapping="{{ .dataMapping }}"
-                        data-strict="0"
-                        data-reactions-enabled="{{ .dataReactionsEnabled }}"
-                        data-emit-metadata="{{ .dataEmitMetadata }}"
-                        data-input-position="top"
-                        data-theme="{{ .dataTheme }}"
-                        data-lang="zh-CN"
-                        data-loading="lazy"
-                        crossorigin="anonymous"
-                        async>
-                </script>
-            {{- end -}}
+        {{- /* Giscus Comment System */ -}}
+        {{- $giscus := $comment.giscus | default dict -}}
+        {{- if $giscus.enable -}}
+            <script src="https://giscus.app/client.js"
+                    data-repo="{{ $giscus.dataRepo }}"
+                    data-repo-id="{{ $giscus.dataRepoId }}"
+                    data-category="{{ $giscus.dataCategory }}"
+                    data-category-id="{{ $giscus.dataCategoryId }}"
+                    data-mapping="{{ $giscus.dataMapping | default "pathname" }}"
+                    data-strict="{{ $giscus.dataStrict | default "0" }}"
+                    data-reactions-enabled="{{ $giscus.dataReactionsEnabled | default "1" }}"
+                    data-emit-metadata="{{ $giscus.dataEmitMetadata | default "0" }}"
+                    data-input-position="{{ $giscus.dataInputPosition | default "top" }}"
+                    data-theme="{{ $giscus.dataTheme | default "light" }}"
+                    data-lang="{{ $giscus.dataLang | default .Site.LanguageCode | default "zh-CN" }}"
+                    data-loading="{{ $giscus.dataLoading | default "lazy" }}"
+                    crossorigin="anonymous"
+                    async>
+            </script>
         {{- end -}}
         
         {{- /* Vssue Comment System: local Vssue/Vue assets are not bundled; defaults below use CDN URLs. */ -}}
