@@ -896,8 +896,16 @@ function initTagExplorer() {
     update();
 }
 
-function init() {
+function safeInit(name, fn) {
     try {
+        if (typeof fn === 'function') fn();
+    } catch (err) {
+        console.error(`Failed to initialize ${name}:`, err);
+    }
+}
+
+function init() {
+    safeInit('core state', () => {
         window.data = window.config.data;
         window.isDark = document.body.getAttribute('theme') !== 'light';
         window.newScrollTop = getScrollTop();
@@ -907,34 +915,34 @@ function init() {
         window.switchThemeEventSet = new Set();
         window.clickMaskEventSet = new Set();
         window.pjaxSendEventSet = new Set();
+    });
+    safeInit('tag explorer', initTagExplorer);
+    safeInit('object fit images', () => {
         if (window.objectFitImages) objectFitImages();
-        initSVGIcon();
-        initTwemoji();
-        initMenuMobile();
-        initSwitchTheme();
-        initSelectTheme();
-        initMeta();
-        initSearch();
-        initDetails();
-        initLightGallery();
-        initHighlight();
-        initTable();
-        initHeaderLink();
-        initMath();
-        initMermaid();
-        initEcharts();
-        initTypeit();
-        initMapbox();
-        initCookieconsent();
-        initToc();
-        initComment();
-        initTagExplorer();
-        onScroll();
-        onResize();
-        onClickMask();
-    } catch (err) {
-        console.error(err);
-    }
+    });
+    safeInit('SVG icons', initSVGIcon);
+    safeInit('Twemoji', initTwemoji);
+    safeInit('mobile menu', initMenuMobile);
+    safeInit('theme switcher', initSwitchTheme);
+    safeInit('theme selector', initSelectTheme);
+    safeInit('meta', initMeta);
+    safeInit('search', initSearch);
+    safeInit('details', initDetails);
+    safeInit('light gallery', initLightGallery);
+    safeInit('highlight', initHighlight);
+    safeInit('table', initTable);
+    safeInit('header links', initHeaderLink);
+    safeInit('math', initMath);
+    safeInit('Mermaid', initMermaid);
+    safeInit('ECharts', initEcharts);
+    safeInit('TypeIt', initTypeit);
+    safeInit('Mapbox', initMapbox);
+    safeInit('cookie consent', initCookieconsent);
+    safeInit('table of contents', initToc);
+    safeInit('comments', initComment);
+    safeInit('scroll handler', onScroll);
+    safeInit('resize handler', onResize);
+    safeInit('click mask', onClickMask);
 }
 
 const themeInit = () => {
