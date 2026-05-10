@@ -3,6 +3,7 @@
   "short_name": "灿若星河",
   "description": "郝建锋的个人网站，记录生活、阅读、旅途与技术折腾。",
   "lang": "zh-CN",
+  "id": "/",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",

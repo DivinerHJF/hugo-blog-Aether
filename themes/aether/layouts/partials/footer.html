@@ -53,9 +53,9 @@
                 <script>
                     if('serviceWorker' in navigator) {
                         navigator.serviceWorker
-                            .register('/sw.min.js', { scope: '/' })
+                            .register('/sw.min.js', { scope: '/', updateViaCache: 'none' })
                             .then(function(registration) {
-                                //console.log('Service Worker Registered');
+                                registration.update();
                             });
                 
                         navigator.serviceWorker
