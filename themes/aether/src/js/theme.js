@@ -122,8 +122,52 @@ function initSelectTheme() {
     });
 }
 
+
+function loadScriptAsset(asset) {
+    if (!asset || !asset.src) return Promise.resolve();
+    const existing = document.querySelector(`script[src="${asset.src}"]`);
+    if (existing) {
+        if (existing.dataset.loaded === 'true') return Promise.resolve();
+        return new Promise((resolve, reject) => {
+            existing.addEventListener('load', resolve, { once: true });
+            existing.addEventListener('error', reject, { once: true });
+        });
+    }
+    return new Promise((resolve, reject) => {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = asset.src;
+        script.async = false;
+        if (asset.integrity) {
+            script.integrity = asset.integrity;
+            script.crossOrigin = asset.crossorigin || 'anonymous';
+        } else if (asset.crossorigin) {
+            script.crossOrigin = asset.crossorigin;
+        }
+        script.onload = () => {
+            script.dataset.loaded = 'true';
+            resolve();
+        };
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
+
+function loadSearchAssets(searchConfig) {
+    const assets = window.config.searchAssets || {};
+    const chain = [assets.autocomplete];
+    if (searchConfig.type === 'lunr') {
+        chain.push(assets.lunr, assets.lunrStemmer, assets.lunrLanguage);
+    } else if (searchConfig.type === 'algolia') {
+        chain.push(assets.algolia);
+    } else if (searchConfig.type === 'fuse') {
+        chain.push(assets.fuse);
+    }
+    return chain.filter(Boolean).reduce((promise, asset) => promise.then(() => loadScriptAsset(asset)), Promise.resolve());
+}
+
 function initSearch() {
-    const searchConfig = window.config.search;
+    const searchConfig = (window.config || {}).search;
     const isMobile = isMobileWindow();
     if (!searchConfig) return;
 
@@ -145,6 +189,8 @@ function initSearch() {
     const $searchToggle = document.getElementById(`search-toggle-${suffix}`);
     const $searchLoading = document.getElementById(`search-loading-${suffix}`);
     const $searchClear = document.getElementById(`search-clear-${suffix}`);
+    if (!$searchInput || $searchInput.dataset.searchInit === 'true') return;
+    $searchInput.dataset.searchInit = 'true';
     if (isMobile) {
         $searchInput.addEventListener('focus', () => {
             document.body.classList.add('blur');
@@ -195,6 +241,7 @@ function initSearch() {
         else $searchClear.style.display = 'inline';
     }, false);
 
+    let autosearchPromise;
     const initAutosearch = () => {
         const autosearch = autocomplete(`#search-input-${suffix}`, {
             hint: false,
@@ -394,26 +441,39 @@ function initSearch() {
         if (isMobile) window._searchMobile = autosearch;
         else window._searchDesktop = autosearch;
     };
-    if (searchConfig.lunrSegmentitURL && !document.getElementById('lunr-segmentit')) {
-        const script = document.createElement('script');
-        script.id = 'lunr-segmentit';
-        script.type = 'text/javascript';
-        script.src = searchConfig.lunrSegmentitURL;
-        script.async = true;
-        if (script.readyState) {
-            script.onreadystatechange = () => {
-                if (script.readyState == 'loaded' || script.readyState == 'complete') {
-                    script.onreadystatechange = null;
-                    initAutosearch();
-                }
-            };
-        } else {
-            script.onload = () => {
+    const ensureAutosearch = () => {
+        const current = isMobile ? window._searchMobile : window._searchDesktop;
+        if (current) return Promise.resolve(current);
+        if (autosearchPromise) return autosearchPromise;
+        $searchLoading.style.display = 'inline';
+        autosearchPromise = loadSearchAssets(searchConfig)
+            .then(() => new Promise((resolve, reject) => {
+                if (searchConfig.lunrSegmentitURL && !document.getElementById('lunr-segmentit')) {
+                    const script = document.createElement('script');
+                    script.id = 'lunr-segmentit';
+                    script.type = 'text/javascript';
+                    script.src = searchConfig.lunrSegmentitURL;
+                    script.async = true;
+                    script.onload = resolve;
+                    script.onerror = reject;
+                    document.body.appendChild(script);
+                } else resolve();
+            }))
+            .then(() => {
                 initAutosearch();
-            };
-        }
-        document.body.appendChild(script);
-    } else initAutosearch();
+                $searchLoading.style.display = 'none';
+                return isMobile ? window._searchMobile : window._searchDesktop;
+            })
+            .catch(err => {
+                console.error(err);
+                $searchLoading.style.display = 'none';
+                autosearchPromise = null;
+            });
+        return autosearchPromise;
+    };
+    $searchInput.addEventListener('focus', ensureAutosearch, false);
+    $searchInput.addEventListener('input', ensureAutosearch, false);
+    if ($searchToggle) $searchToggle.addEventListener('click', ensureAutosearch, false);
 }
 
 function initDetails() {
