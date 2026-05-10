@@ -1,8 +1,10 @@
 User-agent: *
+Allow: /
 
-Disallow: /images/
-Disallow: /js/
-Disallow: /css/
+# Keep core static assets crawlable so search engines can render pages accurately.
+# Private or low-value paths should be blocked explicitly instead of hiding CSS/JS/images.
+Disallow: /index.json
+Disallow: /*.md$
 
 User-agent: MJ12bot
 Disallow: /
@@ -21,14 +23,6 @@ Disallow: /
 User-agent: 007ac9
 Disallow: /
 User-agent: 007ac9 Crawler
-Disallow: /
-
-# Block Uptime robot
-User-agent: UptimeRobot/2.0
-Disallow: /
-
-# Block Ezooms Robot
-User-agent: Ezooms Robot
 Disallow: /
 
 # Block Perl LWP
@@ -61,4 +55,4 @@ Disallow: /
 User-agent: ZoominfoBot
 Disallow: /
 
-Sitemap: {{ "/sitemap.xml" | absLangURL }}
+Sitemap: {{ "/sitemap.xml" | absURL }}

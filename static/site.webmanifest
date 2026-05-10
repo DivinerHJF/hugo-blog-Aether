@@ -1,0 +1,19 @@
+{
+  "name": "灿若星河 | 郝建锋",
+  "short_name": "灿若星河",
+  "description": "郝建锋的个人网站，记录生活、阅读、旅途与技术折腾。",
+  "lang": "zh-CN",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5bbad5",
+  "icons": [
+    {
+      "src": "/images/me/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
