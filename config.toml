@@ -263,8 +263,8 @@ sogou = ""
 yandex = ""
 
 [params.seo]
-image = "https://www.philohao.com/images/me/favicon.svg"
-thumbnailUrl = "https://www.philohao.com/images/me/favicon.svg"
+image = "https://philohao.com/images/me/favicon.svg"
+thumbnailUrl = "https://philohao.com/images/me/favicon.svg"
 
 [params.analytics]
 # 暂未配置统计 ID，默认关闭，避免加载无效脚本或误导维护者。
@@ -313,7 +313,7 @@ endLevel = 6
 name = "Jianfeng.Hao"
 email = "haojianfeng1997@gmail.com"
 link = "https://philohao.com/"
-avatar = "https://www.philohao.com/images/me/logo.svg"
+avatar = "https://philohao.com/images/me/logo.svg"
 gravatarEmail = ""
 
 [sitemap]
