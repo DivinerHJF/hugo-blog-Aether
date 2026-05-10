@@ -11,6 +11,9 @@ hasCJKLanguage = true
 # 生成 Git 修改时间，供文章 lastmod、最近更新列表等功能使用。
 enableGitInfo = true
 
+# 生成 robots.txt，配合主题模板声明 sitemap 与爬虫策略。
+enableRobotsTXT = true
+
 # 站点结构约定：
 # - content/posts/<year>/：按年份归档的博文与月报
 # - content/pages/：独立页面，例如足迹、阅览、关于
@@ -124,7 +127,7 @@ icp = ""
 [params.section]
 paginate = 10000
 dateFormat = "01-02"
-rss = 100
+rss = 30
 
 [params.section.recentlyUpdated]
 enable = true
@@ -135,10 +138,10 @@ rss = true
 [params.list]
 paginate = 1000
 dateFormat = "01-02"
-rss = 100
+rss = 30
 
 [params.home]
-rss = 100
+rss = 30
 
 [params.home.profile]
 enable = true

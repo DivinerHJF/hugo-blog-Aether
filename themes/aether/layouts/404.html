@@ -2,18 +2,35 @@
     {{- T "pageNotFound" | printf "404 %v" }} - {{ .Site.Title -}}
 {{- end -}}
 
+{{- define "robots" -}}
+    <meta name="robots" content="noindex, follow" />
+{{- end -}}
+
 {{- define "content" -}}
     <div class="page" id="content-404">
-        <h1 id="error-emoji"></h1>
+        <h1>
+            <span id="error-emoji" aria-hidden="true">(>_&lt;)</span>
+            <span>404 · {{ T "pageNotFound" }}</span>
+        </h1>
         <p class="error-text">
-            {{- T "pageNotFoundText" -}}&nbsp;
-            <a href="#" title="{{ T `back` }}" onclick="window.history.back();"><i class="far fa-hand-point-left fa-fw"></i></a>
+            {{- T "pageNotFoundText" -}}
         </p>
+        <p class="error-text">
+            你可以返回上一页，或从下面的入口继续浏览。
+        </p>
+        <nav class="error-actions" aria-label="404 页面导航">
+            <a href="{{ "/" | relLangURL }}" title="返回首页">返回首页</a>
+            <span aria-hidden="true"> · </span>
+            <a href="{{ "/posts/" | relLangURL }}" title="浏览归档">浏览归档</a>
+            <span aria-hidden="true"> · </span>
+            <a href="#" title="{{ T `back` }}" onclick="if (window.history.length > 1) { window.history.back(); return false; }" aria-label="返回上一页">返回上一页</a>
+        </nav>
     </div>
     <script type="text/javascript">
         (function() {
             var emojiArray = ['\\(o_o)/', '(˚Δ˚)b', '(^-^*)', '(≥o≤)', '(^_^)b', '(·_·)','(=\'X\'=)', '(>_<)', '(;-;)'];
-            document.getElementById('error-emoji').appendChild(document.createTextNode(emojiArray[Math.floor(Math.random() * emojiArray.length)]));
+            var target = document.getElementById('error-emoji');
+            if (target) target.textContent = emojiArray[Math.floor(Math.random() * emojiArray.length)];
         })();
     </script>
 {{- end -}}

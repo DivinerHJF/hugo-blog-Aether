@@ -1,26 +1,20 @@
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 
 const BASE_CACHE_FILES = [
-    '/css/style.min.css',
-    '/js/theme.min.js',
     '/site.webmanifest',
 ];
 
 const OFFLINE_CACHE_FILES = [
-    '/css/style.min.css',
-    '/js/theme.min.js',
-    '/site.webmanifest',
-    '/offline',
-];
-
-const NOT_FOUND_CACHE_FILES = [
-    '/css/style.min.css',
-    '/js/theme.min.js',
     '/site.webmanifest',
     '/404.html',
 ];
 
-const OFFLINE_PAGE = '/offline';
+const NOT_FOUND_CACHE_FILES = [
+    '/site.webmanifest',
+    '/404.html',
+];
+
+const OFFLINE_PAGE = '/404.html';
 const NOT_FOUND_PAGE = '/404.html';
 
 const CACHE_VERSIONS = {
