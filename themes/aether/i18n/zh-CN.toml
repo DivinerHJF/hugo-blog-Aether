@@ -119,6 +119,28 @@ other = "了解更多"
 other = "分享到"
 # === partials/plugin/share.html ===
 
+
+[shareWechat]
+other = "微信"
+
+[shareWechatTitle]
+other = "微信扫码分享"
+
+[shareWechatQrAlt]
+other = "微信分享二维码"
+
+[shareWechatTip]
+other = "或复制链接后在微信中打开"
+
+[copyArticleLink]
+other = "复制文章链接"
+
+[articleLinkCopied]
+other = "链接已复制"
+
+[copyLink]
+other = "复制链接"
+
 # === posts/single.html ===
 [contents]
 other = "目录"
@@ -164,6 +186,7 @@ other = "主页"
 
 [readMore]
 other = "阅读全文"
+
 # === posts/single.html ===
 
 # === 404.html ===
