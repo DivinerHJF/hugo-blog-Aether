@@ -1,5 +1,6 @@
 +++
 title = "👨‍🔧 关于"
+description = "关于作者经历、成长路径、个人状态与博客写作缘起的介绍。"
 date = "2014-04-09"
 comment = false
 +++

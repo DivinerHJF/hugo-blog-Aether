@@ -1,5 +1,6 @@
 +++
 title = "走过的地方"
+description = "按时间整理作者走过的城市、路线和旅行照片记录。"
 date = "2018-01-01"
 comment = false
 toc = true
