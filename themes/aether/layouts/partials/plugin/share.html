@@ -139,12 +139,13 @@
 
     {{- /* 020: 微信 */ -}}
     {{- if $share.Wechat -}}
-        <span class="share-link share-link-wechat" tabindex="0" role="button" aria-label="{{ T `shareOn` }} 微信" title="{{ T `shareOn` }} 微信">
+        {{- $wechatQR := printf "https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=10&data=%s" (.Permalink | urlquery) -}}
+        <span class="share-link share-link-wechat" tabindex="0" role="button" aria-label="{{ T `shareOn` }} 微信" title="{{ T `shareOn` }} 微信" onmouseenter="var img=this.querySelector('img[data-src]'); if (img &amp;&amp; !img.dataset.loaded) { img.src = img.dataset.src; img.dataset.loaded = 'true'; }" onfocus="var img=this.querySelector('img[data-src]'); if (img &amp;&amp; !img.dataset.loaded) { img.src = img.dataset.src; img.dataset.loaded = 'true'; }">
             {{- dict "Class" "fab fa-weixin fa-fw" | partial "plugin/icon.html" -}}
             <span class="share-link-label">{{ T `shareWechat` }}</span>
             <span class="share-wechat-panel" role="tooltip">
                 <span class="share-wechat-title">{{ T `shareWechatTitle` }}</span>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;margin=10&amp;data={{ .Permalink | urlquery }}" alt="{{ .Title }} {{ T `shareWechatQrAlt` }}" loading="lazy" width="180" height="180">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23fff'/%3E%3C/svg%3E" data-src="{{ $wechatQR | safeURL }}" alt="{{ .Title }} {{ T `shareWechatQrAlt` }}" loading="lazy" width="180" height="180">
                 <span class="share-wechat-tip">{{ T `shareWechatTip` }}</span>
             </span>
         </span>

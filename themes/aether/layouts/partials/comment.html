@@ -3,7 +3,7 @@
 {{- $comment := .Scratch.Get "comment" | default dict -}}
 {{- $commentConfig := dict -}}
 
-{{- if $comment.enable -}}
+{{- if and $comment.enable (not .Site.IsServer) -}}
     <div id="comments">
         {{- /* Disqus Comment System */ -}}
         {{- $disqus := $comment.disqus | default dict -}}
