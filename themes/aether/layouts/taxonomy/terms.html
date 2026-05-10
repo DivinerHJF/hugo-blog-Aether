@@ -111,19 +111,100 @@
                 {{- end -}}
             </div>
 
-        {{- /* Tag Cloud Page */ -}}
+        {{- /* Tag Explorer Page */ -}}
         {{- else if eq $taxonomies "tags" -}}
-            <div class="tag-cloud-tags">
-                {{- range $.Site.Taxonomies.tags.ByCount -}}
-                    {{- $class := "tag-cloud-tag" -}}
-                    {{- if eq .Count 1 -}}
-                        {{- $class = printf "%s %s" $class "tag-cloud-tag-small" -}}
-                    {{- else if eq .Count 2 -}}
-                        {{- $class = printf "%s %s" $class "tag-cloud-tag-medium" -}}
+            {{- $tags := $.Site.Taxonomies.tags.ByCount -}}
+            {{- $totalRefs := 0 -}}
+            {{- range $tags -}}
+                {{- $totalRefs = add $totalRefs .Count -}}
+            {{- end -}}
+            {{- $maxCount := 1 -}}
+            {{- with index $tags 0 -}}
+                {{- $maxCount = .Count -}}
+            {{- end -}}
+
+            <section class="tag-explorer" aria-labelledby="tag-explorer-title">
+                <div class="tag-explorer-hero">
+                    <div>
+                        <p class="tag-explorer-eyebrow">Tag Explorer</p>
+                        <h3 id="tag-explorer-title">按主题发现文章</h3>
+                        <p class="tag-explorer-description">
+                            输入关键词快速筛选标签，或按热度分组浏览；每张卡片展示最近文章，减少跳转成本。
+                        </p>
+                    </div>
+                    <div class="tag-explorer-stats" aria-label="标签统计">
+                        <div class="tag-stat">
+                            <strong>{{ len $tags }}</strong>
+                            <span>标签</span>
+                        </div>
+                        <div class="tag-stat">
+                            <strong>{{ $totalRefs }}</strong>
+                            <span>引用</span>
+                        </div>
+                        <div class="tag-stat">
+                            <strong>{{ $maxCount }}</strong>
+                            <span>最高热度</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tag-explorer-controls">
+                    <label class="tag-search" for="tag-search-input">
+                        <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        <input id="tag-search-input" type="search" placeholder="搜索标签…" autocomplete="off" data-tag-search>
+                    </label>
+                    <div class="tag-filter-group" role="group" aria-label="按文章数量筛选标签">
+                        <button type="button" class="tag-filter active" data-tag-filter="all">全部</button>
+                        <button type="button" class="tag-filter" data-tag-filter="popular">热门 ≥ 3</button>
+                        <button type="button" class="tag-filter" data-tag-filter="focused">精读 = 2</button>
+                        <button type="button" class="tag-filter" data-tag-filter="niche">小众 = 1</button>
+                    </div>
+                </div>
+
+                <div class="tag-explorer-popular" aria-label="热门标签快捷入口">
+                    {{- range first 8 $tags -}}
+                        <a href="{{ .Page.RelPermalink }}" style="--tag-weight: {{ div (mul .Count 100) $maxCount }}%;">
+                            <span># {{ .Page.Title }}</span>
+                            <strong>{{ .Count }}</strong>
+                        </a>
                     {{- end -}}
-                    <a class="{{ $class }}" href="{{ .Page.RelPermalink }}">{{ .Page.Title }} <sup>{{ .Count }}</sup></a>
-                {{- end -}}
-            </div>
+                </div>
+
+                <div class="tag-results-meta" aria-live="polite">
+                    <span data-tag-result-count>{{ len $tags }}</span> 个标签
+                </div>
+
+                <div class="tag-grid">
+                    {{- range $tags -}}
+                        {{- $count := .Count -}}
+                        {{- $category := "niche" -}}
+                        {{- if ge $count 3 -}}
+                            {{- $category = "popular" -}}
+                        {{- else if eq $count 2 -}}
+                            {{- $category = "focused" -}}
+                        {{- end -}}
+                        <article class="tag-card" data-tag-card data-tag-name="{{ .Page.Title | lower }}" data-tag-count="{{ $count }}" data-tag-category="{{ $category }}">
+                            <a class="tag-card-main" href="{{ .Page.RelPermalink }}">
+                                <span class="tag-card-name"># {{ .Page.Title }}</span>
+                                <span class="tag-card-count">{{ $count }} 篇</span>
+                            </a>
+                            <div class="tag-card-bar" aria-hidden="true">
+                                <span style="width: {{ div (mul $count 100) $maxCount }}%;"></span>
+                            </div>
+                            <ul class="tag-card-posts">
+                                {{- range first 3 (sort .Pages "Date" "desc") -}}
+                                    <li>
+                                        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                                        {{- with .Date -}}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "2006.01" }}</time>{{- end -}}
+                                    </li>
+                                {{- end -}}
+                            </ul>
+                        </article>
+                    {{- end -}}
+                </div>
+
+                <p class="tag-empty" data-tag-empty hidden>没有匹配的标签，换个关键词试试。</p>
+            </section>
         {{- end -}}
     </div>
 {{- end -}}
