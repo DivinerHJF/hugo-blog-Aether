@@ -1,8 +1,9 @@
 ---
 title: "我的 2022：平凡的一年，但似大战的前夜"
 date: 2022-12-31T22:22:22+08:00
-categories: [碎碎念]
+categories: [生活札记]
 series: [夕拾花]
+tags: [年终总结, 生活, 自我观察]
 ---
 
 <style>iframe{ aspect-ratio: 16/9 }</style>
