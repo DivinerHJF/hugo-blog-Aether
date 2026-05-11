@@ -339,9 +339,24 @@ isHTML = false
 isPlainText = true
 mediaType = "text/plain"
 
+
+[outputFormats.RSSXML]
+# 保留 Hugo 默认的 /index.xml，同时额外发布 /rss.xml，兼容不会完整执行 HTML 自动发现的阅读器。
+mediaType = "application/rss+xml"
+baseName = "rss"
+isPlainText = false
+notAlternative = true
+
+[outputFormats.FEEDXML]
+# /feed.xml 是另一种常见的阅读器兜底订阅地址。
+mediaType = "application/rss+xml"
+baseName = "feed"
+isPlainText = false
+notAlternative = true
+
 [outputs]
 # JSON 用于本地搜索索引；MarkDown 用于文章页“查看原始 Markdown”。
-home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS", "RSSXML", "FEEDXML", "JSON"]
 page = ["HTML", "MarkDown"]
 section = ["HTML", "RSS"]
 taxonomy = ["HTML", "RSS"]
