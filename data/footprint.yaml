@@ -1,0 +1,200 @@
+travel:
+  "2025":
+    title: "2025 出游"
+    rows:
+      - month: "Jan."
+        events:
+          - city: "香港"
+            activity: "钓鱼翁徒步"
+      - month: "Feb."
+        events:
+          - city: "厦门"
+            activity: "小队两日游"
+      - month: "Mar."
+        events:
+          - city: "云南"
+            activity: "昆明大理游"
+      - month: "Apr."
+        events: []
+      - month: "May."
+        events:
+          - city: "香港"
+            activity: "麦径一二段"
+      - month: "Jun."
+        events:
+          - city: "青甘"
+            activity: "自驾大环线"
+      - month: "Jul."
+        events: []
+      - month: "Aug."
+        events: []
+      - month: "Sep."
+        events: []
+      - month: "Oct."
+        events: []
+      - month: "Nov."
+        events: []
+      - month: "Dec."
+        events: []
+  "2024":
+    title: "2024 出游"
+    rows:
+      - month: "Jan."
+        events:
+          - city: "香港"
+            activity: "港岛再画龙"
+      - month: "Feb."
+        events:
+          - city: "东北"
+            activity: "春节三人游"
+      - month: "Mar."
+        events:
+          - city: "广州"
+            activity: "油麻山雨徒"
+          - city: "汕尾"
+            activity: "海陆丰团建"
+          - city: "广佛"
+            activity: "流花湖宜家"
+      - month: "Apr."
+        events:
+          - city: "深圳"
+            activity: "盐田区海港"
+      - month: "May."
+        events:
+          - city: "岳阳"
+            activity: "岳阳洞庭水"
+      - month: "Jun."
+        events:
+          - city: "广州"
+            activity: "长隆舍友游"
+          - city: "韶关"
+            activity: "丹霞山徒步"
+      - month: "Jul."
+        events:
+          - city: "珠海"
+            activity: "桂山岛度假"
+      - month: "Aug."
+        events:
+          - city: "深圳"
+            activity: "鲲鹏径徒步"
+      - month: "Sep."
+        events:
+          - city: "江浙"
+            activity: "中秋双城游"
+      - month: "Oct."
+        events:
+          - city: "河北"
+            activity: "哥哥的婚礼"
+      - month: "Nov."
+        events:
+          - city: "梧州"
+            activity: "小电动嗦粉"
+      - month: "Dec."
+        events:
+          - city: "长沙"
+            activity: "浏阳烟花秀"
+  "2023":
+    title: "2023 出游"
+    rows:
+      - month: "Jan."
+        events:
+          - city: "深圳"
+            activity: "展馆一日游"
+          - city: "北海"
+            activity: "同学烟花聚"
+      - month: "Feb."
+        events:
+          - city: "广州"
+            activity: "六片山徒步"
+      - month: "Mar."
+        events:
+          - city: "广州"
+            activity: "大夫山骑行"
+      - month: "Apr."
+        events:
+          - city: "桂林"
+            activity: "阳朔周末游"
+          - city: "北京"
+            activity: "环球影城"
+      - month: "May."
+        events: []
+      - month: "Jun."
+        events:
+          - city: "广州"
+            activity: "龙渔线徒步"
+          - city: "深圳"
+            activity: "夜爬梧桐山"
+          - city: "香港"
+            activity: "香港一日游"
+      - month: "Jul."
+        events:
+          - city: "广州"
+            activity: "牛木线徒步"
+      - month: "Aug."
+        events: []
+      - month: "Sep."
+        events:
+          - city: "香港"
+            activity: "港岛两日游"
+      - month: "Oct."
+        events:
+          - city: "福州"
+            activity: "超级侦探聚"
+          - city: "深圳"
+            activity: "穿越东西冲"
+          - city: "珠海"
+            activity: "长隆海洋国"
+      - month: "Nov."
+        events:
+          - city: "香港"
+            activity: "梧桐寨瀑布"
+          - city: "东莞"
+            activity: "大屏障公园"
+      - month: "Dec."
+        events:
+          - city: "香港"
+            activity: "港岛画恐龙"
+reading:
+  "2025":
+    title: "2025 书影游"
+    rows: &empty_2025
+      - month: "Jan."
+        events: []
+      - month: "Feb."
+        events: []
+      - month: "Mar."
+        events: []
+      - month: "Apr."
+        events: []
+      - month: "May."
+        events: []
+      - month: "Jun."
+        events: []
+      - month: "Jul."
+        events: []
+      - month: "Aug."
+        events: []
+      - month: "Sep."
+        events: []
+      - month: "Oct."
+        events: []
+      - month: "Nov."
+        events: []
+      - month: "Dec."
+        events: []
+  "2024":
+    title: "2024 书影游"
+    rows: *empty_2025
+  "2023":
+    title: "2023 书影游"
+    rows: *empty_2025
+poster:
+  "2025":
+    title: "2025 海报墙"
+    rows: *empty_2025
+  "2024":
+    title: "2024 海报墙"
+    rows: *empty_2025
+  "2023":
+    title: "2023 海报墙"
+    rows: *empty_2025

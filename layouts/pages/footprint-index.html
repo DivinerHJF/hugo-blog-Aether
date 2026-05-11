@@ -1,0 +1,40 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    {{- $category := "travel" -}}
+    {{- $categoryData := index site.Data.footprint $category | default dict -}}
+    {{- $years := slice -}}
+    {{- range $key, $_ := $categoryData -}}
+        {{- $years = $years | append $key -}}
+    {{- end -}}
+    {{- $years = sort $years "value" "desc" -}}
+    {{- $latestYear := index $years 0 | default "2025" -}}
+    {{- $categories := slice (dict "key" "travel" "label" "出游") (dict "key" "reading" "label" "书影游") (dict "key" "poster" "label" "海报墙") -}}
+
+    <div class="page single special footprint-page">
+        <h1 class="single-title animate__animated animate__pulse animate__faster">{{ .Title }}</h1>
+        <div class="content" id="content">
+            <div class="footprint-topbar">
+                <nav class="footprint-categories" aria-label="足迹分类">
+                    {{- range $categories -}}
+                        {{- $href := printf "/pages/footprint/%s/%s/" $latestYear .key | relLangURL -}}
+                        <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
+                    {{- end -}}
+                </nav>
+
+                <nav class="footprint-years" aria-label="足迹年份">
+                    {{- range $years -}}
+                        {{- $href := printf "/pages/footprint/%s/travel/" . | relLangURL -}}
+                        <a class="{{ if eq $latestYear . }}active{{ end }}" href="{{ $href }}">{{ . }}</a>
+                    {{- end -}}
+                </nav>
+            </div>
+
+            <section class="footprint-index-card" aria-label="足迹入口">
+                {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+            </section>
+        </div>
+        {{- partial "comment.html" . -}}
+    </div>
+{{- end -}}
