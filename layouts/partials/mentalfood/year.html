@@ -21,12 +21,6 @@
 {{- end -}}
 
 <section class="mentalfood-year footprint-reading-year" id="mentalfood-{{ $year }}">
-    <div class="footprint-year-heading">
-        <span class="footprint-kicker">Reading · Watching · Playing</span>
-        <h2>{{ $year }} 书影游</h2>
-        <p>把这一年读过的书、看过的影剧和收藏过的内容摘录，归入同一份年度清单。</p>
-    </div>
-
     {{- if or (gt (len $books) 0) (gt (len $movies) 0) (gt (len $links) 0) -}}
         <div class="details admonition note open">
             <div class="details-summary admonition-title">
