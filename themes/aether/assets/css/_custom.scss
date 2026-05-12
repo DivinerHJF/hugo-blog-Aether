@@ -344,6 +344,10 @@
   text-transform: uppercase;
 }
 
+.footprint-year-table-wrapper {
+  margin: 0;
+}
+
 .footprint-year-table {
   width: 100%;
   min-width: 640px;
@@ -356,7 +360,7 @@
 
 .footprint-year-table th,
 .footprint-year-table td {
-  border: 1px solid currentColor;
+  border: 1px solid darken($table-thead-color, 2%);
   padding: .32rem .58rem;
   vertical-align: top;
 }
@@ -395,6 +399,11 @@ body[theme='dark'] {
     background: rgba(49, 50, 54, .28);
   }
 
+  .footprint-year-table th,
+  .footprint-year-table td {
+    border-color: darken($table-thead-color-dark, 2%);
+  }
+
   .footprint-year-table th {
     background: rgba(255, 255, 255, .05);
   }
@@ -411,6 +420,11 @@ body[theme='black'] {
 
   .footprint-year-table {
     background: rgba(49, 50, 54, .28);
+  }
+
+  .footprint-year-table th,
+  .footprint-year-table td {
+    border-color: darken($table-thead-color-black, 2%);
   }
 
   .footprint-year-table th {
