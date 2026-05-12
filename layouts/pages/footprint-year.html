@@ -1,0 +1,87 @@
+{{- define "title" }}{{ .Title }} - {{ .Site.Title }}{{ end -}}
+
+{{- define "content" -}}
+    {{- $params := .Scratch.Get "params" -}}
+    {{- $year := printf "%v" (.Params.year | default "2025") -}}
+    {{- $category := .Params.category | default "travel" -}}
+    {{- $categoryData := index site.Data.footprint $category | default dict -}}
+    {{- $data := index $categoryData $year | default dict -}}
+    {{- $categories := slice (dict "key" "travel" "label" "出游") (dict "key" "reading" "label" "书影游") (dict "key" "poster" "label" "海报墙") -}}
+    {{- $years := slice -}}
+    {{- range $key, $_ := $categoryData -}}
+        {{- $years = $years | append $key -}}
+    {{- end -}}
+    {{- $years = sort $years "value" "desc" -}}
+
+    <div class="page single special footprint-page">
+        <h1 class="single-title animate__animated animate__pulse animate__faster">{{ .Title }}</h1>
+
+        <div class="content" id="content">
+            <div class="footprint-topbar">
+                <nav class="footprint-categories" aria-label="足迹分类">
+                    {{- range $categories -}}
+                        {{- $href := printf "/pages/footprint/%s/%s/" $year .key | relLangURL -}}
+                        <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
+                    {{- end -}}
+                </nav>
+
+                <nav class="footprint-years" aria-label="足迹年份">
+                    {{- range $years -}}
+                        {{- $href := printf "/pages/footprint/%s/%s/" . $category | relLangURL -}}
+                        <a class="{{ if eq $year . }}active{{ end }}" href="{{ $href }}">{{ . }}</a>
+                    {{- end -}}
+                </nav>
+            </div>
+
+            <section class="footprint-year-card" aria-label="年度概览">
+                <div class="footprint-year-heading">
+                    <span class="footprint-kicker">Annual dossier</span>
+                    <h2>{{ $data.title | default .Title }}</h2>
+                </div>
+
+                <table class="footprint-year-table">
+                    <thead>
+                        <tr>
+                            <th>月份</th>
+                            <th>城市</th>
+                            <th>活动</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{- range $row := $data.rows -}}
+                            {{- $events := $row.events | default slice -}}
+                            {{- if gt (len $events) 0 -}}
+                                {{- range $index, $event := $events -}}
+                                    <tr>
+                                        {{- if eq $index 0 -}}
+                                            <td class="footprint-month" rowspan="{{ len $events }}">{{ $row.month }}</td>
+                                        {{- end -}}
+                                        <td class="footprint-city">{{ $event.city }}</td>
+                                        <td>{{ $event.activity }}</td>
+                                    </tr>
+                                {{- end -}}
+                            {{- else -}}
+                                <tr class="footprint-empty-month">
+                                    <td class="footprint-month">{{ $row.month }}</td>
+                                    <td class="footprint-city"></td>
+                                    <td></td>
+                                </tr>
+                            {{- end -}}
+                        {{- else -}}
+                            <tr>
+                                <td colspan="3">这个年度卷宗还在整理中。</td>
+                            </tr>
+                        {{- end -}}
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="footprint-detail-flow" aria-label="逐月记录">
+                <h2 class="footprint-flow-title">逐月记录</h2>
+                {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+            </section>
+        </div>
+
+        {{- partial "comment.html" . -}}
+    </div>
+{{- end -}}
