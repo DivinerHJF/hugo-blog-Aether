@@ -2,52 +2,52 @@ travel:
   "2025":
     title: "2025 出游"
     rows:
-      - month: "Jan."
+      - month: "一月"
         events:
           - city: "香港"
             activity: "钓鱼翁徒步"
-      - month: "Feb."
+      - month: "二月"
         events:
           - city: "厦门"
             activity: "小队两日游"
-      - month: "Mar."
+      - month: "三月"
         events:
           - city: "云南"
             activity: "昆明大理游"
-      - month: "Apr."
+      - month: "四月"
         events: []
-      - month: "May."
+      - month: "五月"
         events:
           - city: "香港"
             activity: "麦径一二段"
-      - month: "Jun."
+      - month: "六月"
         events:
           - city: "青甘"
             activity: "自驾大环线"
-      - month: "Jul."
+      - month: "七月"
         events: []
-      - month: "Aug."
+      - month: "八月"
         events: []
-      - month: "Sep."
+      - month: "九月"
         events: []
-      - month: "Oct."
+      - month: "十月"
         events: []
-      - month: "Nov."
+      - month: "十一月"
         events: []
-      - month: "Dec."
+      - month: "十二月"
         events: []
   "2024":
     title: "2024 出游"
     rows:
-      - month: "Jan."
+      - month: "一月"
         events:
           - city: "香港"
             activity: "港岛再画龙"
-      - month: "Feb."
+      - month: "二月"
         events:
           - city: "东北"
             activity: "春节三人游"
-      - month: "Mar."
+      - month: "三月"
         events:
           - city: "广州"
             activity: "油麻山雨徒"
@@ -55,70 +55,70 @@ travel:
             activity: "海陆丰团建"
           - city: "广佛"
             activity: "流花湖宜家"
-      - month: "Apr."
+      - month: "四月"
         events:
           - city: "深圳"
             activity: "盐田区海港"
-      - month: "May."
+      - month: "五月"
         events:
           - city: "岳阳"
             activity: "岳阳洞庭水"
-      - month: "Jun."
+      - month: "六月"
         events:
           - city: "广州"
             activity: "长隆舍友游"
           - city: "韶关"
             activity: "丹霞山徒步"
-      - month: "Jul."
+      - month: "七月"
         events:
           - city: "珠海"
             activity: "桂山岛度假"
-      - month: "Aug."
+      - month: "八月"
         events:
           - city: "深圳"
             activity: "鲲鹏径徒步"
-      - month: "Sep."
+      - month: "九月"
         events:
           - city: "江浙"
             activity: "中秋双城游"
-      - month: "Oct."
+      - month: "十月"
         events:
           - city: "河北"
             activity: "哥哥的婚礼"
-      - month: "Nov."
+      - month: "十一月"
         events:
           - city: "梧州"
             activity: "小电动嗦粉"
-      - month: "Dec."
+      - month: "十二月"
         events:
           - city: "长沙"
             activity: "浏阳烟花秀"
   "2023":
     title: "2023 出游"
     rows:
-      - month: "Jan."
+      - month: "一月"
         events:
           - city: "深圳"
             activity: "展馆一日游"
           - city: "北海"
             activity: "同学烟花聚"
-      - month: "Feb."
+      - month: "二月"
         events:
           - city: "广州"
             activity: "六片山徒步"
-      - month: "Mar."
+      - month: "三月"
         events:
           - city: "广州"
             activity: "大夫山骑行"
-      - month: "Apr."
+      - month: "四月"
         events:
           - city: "桂林"
             activity: "阳朔周末游"
           - city: "北京"
             activity: "环球影城"
-      - month: "May."
+      - month: "五月"
         events: []
-      - month: "Jun."
+      - month: "六月"
         events:
           - city: "广州"
             activity: "龙渔线徒步"
@@ -126,17 +126,17 @@ travel:
             activity: "夜爬梧桐山"
           - city: "香港"
             activity: "香港一日游"
-      - month: "Jul."
+      - month: "七月"
         events:
           - city: "广州"
             activity: "牛木线徒步"
-      - month: "Aug."
+      - month: "八月"
         events: []
-      - month: "Sep."
+      - month: "九月"
         events:
           - city: "香港"
             activity: "港岛两日游"
-      - month: "Oct."
+      - month: "十月"
         events:
           - city: "福州"
             activity: "超级侦探聚"
@@ -144,13 +144,13 @@ travel:
             activity: "穿越东西冲"
           - city: "珠海"
             activity: "长隆海洋国"
-      - month: "Nov."
+      - month: "十一月"
         events:
           - city: "香港"
             activity: "梧桐寨瀑布"
           - city: "东莞"
             activity: "大屏障公园"
-      - month: "Dec."
+      - month: "十二月"
         events:
           - city: "香港"
             activity: "港岛画恐龙"
@@ -158,29 +158,29 @@ reading:
   "2025":
     title: "2025 书影游"
     rows: &empty_2025
-      - month: "Jan."
+      - month: "一月"
         events: []
-      - month: "Feb."
+      - month: "二月"
         events: []
-      - month: "Mar."
+      - month: "三月"
         events: []
-      - month: "Apr."
+      - month: "四月"
         events: []
-      - month: "May."
+      - month: "五月"
         events: []
-      - month: "Jun."
+      - month: "六月"
         events: []
-      - month: "Jul."
+      - month: "七月"
         events: []
-      - month: "Aug."
+      - month: "八月"
         events: []
-      - month: "Sep."
+      - month: "九月"
         events: []
-      - month: "Oct."
+      - month: "十月"
         events: []
-      - month: "Nov."
+      - month: "十一月"
         events: []
-      - month: "Dec."
+      - month: "十二月"
         events: []
   "2024":
     title: "2024 书影游"

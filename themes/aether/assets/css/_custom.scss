@@ -285,9 +285,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  margin: 1.5rem 0 1rem;
-  padding-bottom: .65rem;
+  gap: 1.25rem;
+  margin: 1.25rem 0 .75rem;
+  padding-bottom: .55rem;
   border-bottom: 1px solid $global-border-color;
 }
 
@@ -315,12 +315,12 @@
 
 .footprint-year-card,
 .footprint-index-card {
-  margin: 1rem 0 2rem;
+  margin: .75rem 0 1.55rem;
 }
 
 .footprint-year-card {
   overflow-x: auto;
-  padding-bottom: .35rem;
+  padding-bottom: .25rem;
 }
 
 .footprint-year-heading {
@@ -328,35 +328,36 @@
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  min-width: 720px;
-  margin-bottom: .75rem;
+  min-width: 640px;
+  margin-bottom: .45rem;
 
   h2 {
     margin: 0;
-    font-size: 1.25rem;
+    font-size: 1.08rem;
   }
 }
 
 .footprint-kicker {
   color: $global-font-secondary-color;
-  font-size: .72rem;
-  letter-spacing: .12em;
+  font-size: .68rem;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
 .footprint-year-table {
   width: 100%;
-  min-width: 720px;
+  min-width: 640px;
   border-collapse: collapse;
-  border: 2px solid currentColor;
+  border: 1.5px solid currentColor;
   background: rgba(255, 255, 255, .24);
-  font-size: .95rem;
+  font-size: .82rem;
+  line-height: 1.45;
 }
 
 .footprint-year-table th,
 .footprint-year-table td {
   border: 1px solid currentColor;
-  padding: .55rem .8rem;
+  padding: .32rem .58rem;
   vertical-align: top;
 }
 
@@ -367,22 +368,22 @@
 }
 
 .footprint-year-table .footprint-month {
-  width: 5.5rem;
+  width: 4.4rem;
   text-align: center;
   font-weight: 700;
 }
 
 .footprint-year-table .footprint-city {
-  width: 6rem;
+  width: 5.1rem;
   text-align: center;
 }
 
 .footprint-empty-month td {
-  height: 2.3rem;
+  height: 1.65rem;
 }
 
 .footprint-flow-title {
-  margin-top: 2rem;
+  margin-top: 1.65rem;
 }
 
 body[theme='dark'] {
