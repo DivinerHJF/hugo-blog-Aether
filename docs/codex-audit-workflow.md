@@ -17,8 +17,9 @@
 
 - Hugo 站点根配置位于 `config.toml`，主题作为普通目录放在 `themes/aether/`，不依赖 Git submodule。
 - Vercel 使用仓库根目录的 `vercel.json` 固定 Hugo 构建命令、输出目录和 Hugo 版本。
-- 内容主要位于 `content/posts/<year>/` 与 `content/pages/`，书影音数据位于 `data/`。
+- 内容主要位于 `content/posts/<year>/` 与 `content/pages/`；足迹页位于 `content/pages/footprint/`，按 `travel` / `reading` / `poster` 分类拆成年份静态页面。
 - 主题源码、布局、短代码、静态库分别位于 `themes/aether/layouts/`、`themes/aether/assets/`、`themes/aether/static/`。
+- 书影游数据位于 `data/books.yaml`、`data/movies.yaml`、`data/mental_links.yaml`，由足迹 `reading` 分类页面按年份渲染；足迹年度表格与年份导航数据位于 `data/footprint.yaml`。
 - 当前维护脚本 `scripts/audit-theme-libs.py` 可用于审计主题静态库依赖。
 
 ## 2. 每一步通用检查清单
@@ -46,6 +47,8 @@ hugo server -D --disableFastRender --bind 127.0.0.1 --port 1313
 
 - 首页：`/`
 - 归档页：`/posts/`
+- 足迹入口页：`/pages/footprint/`
+- 足迹年度页：如 `/pages/footprint/2025/travel/` 与 `/pages/footprint/2025/reading/`
 - 任意一篇普通文章
 - 任意一篇包含短代码或数学公式的文章（如本次改动相关）
 - 分类页：`/categories/`
