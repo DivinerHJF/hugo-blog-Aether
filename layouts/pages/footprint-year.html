@@ -20,7 +20,14 @@
             <div class="footprint-topbar">
                 <nav class="footprint-categories" aria-label="足迹分类">
                     {{- range $categories -}}
-                        {{- $href := printf "/pages/footprint/%s/%s/" $year .key | relLangURL -}}
+                        {{- $targetCategoryData := index site.Data.footprint .key | default dict -}}
+                        {{- $targetYears := slice -}}
+                        {{- range $targetYear, $_ := $targetCategoryData -}}
+                            {{- $targetYears = $targetYears | append $targetYear -}}
+                        {{- end -}}
+                        {{- $targetYears = sort $targetYears "value" "desc" -}}
+                        {{- $targetYear := cond (in $targetYears $year) $year (index $targetYears 0 | default $year) -}}
+                        {{- $href := printf "/pages/footprint/%s/%s/" $targetYear .key | relLangURL -}}
                         <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
                     {{- end -}}
                 </nav>
@@ -33,53 +40,60 @@
                 </nav>
             </div>
 
-            <section class="footprint-year-card" aria-label="年度概览">
-                <div class="footprint-year-heading">
-                    <span class="footprint-kicker">Annual dossier</span>
-                    <h2>{{ $data.title | default .Title }}</h2>
-                </div>
+            {{- if eq $category "reading" -}}
+                <section class="footprint-detail-flow" aria-label="书影游记录">
+                    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                    {{- partial "mentalfood/year.html" (dict "year" $year) -}}
+                </section>
+            {{- else -}}
+                <section class="footprint-year-card" aria-label="年度概览">
+                    <div class="footprint-year-heading">
+                        <span class="footprint-kicker">Annual dossier</span>
+                        <h2>{{ $data.title | default .Title }}</h2>
+                    </div>
 
-                <table class="footprint-year-table">
-                    <thead>
-                        <tr>
-                            <th>月份</th>
-                            <th>城市</th>
-                            <th>活动</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {{- range $row := $data.rows -}}
-                            {{- $events := $row.events | default slice -}}
-                            {{- if gt (len $events) 0 -}}
-                                {{- range $index, $event := $events -}}
-                                    <tr>
-                                        {{- if eq $index 0 -}}
-                                            <td class="footprint-month" rowspan="{{ len $events }}">{{ $row.month }}</td>
-                                        {{- end -}}
-                                        <td class="footprint-city">{{ $event.city }}</td>
-                                        <td>{{ $event.activity }}</td>
+                    <table class="footprint-year-table">
+                        <thead>
+                            <tr>
+                                <th>月份</th>
+                                <th>城市</th>
+                                <th>活动</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {{- range $row := $data.rows -}}
+                                {{- $events := $row.events | default slice -}}
+                                {{- if gt (len $events) 0 -}}
+                                    {{- range $index, $event := $events -}}
+                                        <tr>
+                                            {{- if eq $index 0 -}}
+                                                <td class="footprint-month" rowspan="{{ len $events }}">{{ $row.month }}</td>
+                                            {{- end -}}
+                                            <td class="footprint-city">{{ $event.city }}</td>
+                                            <td>{{ $event.activity }}</td>
+                                        </tr>
+                                    {{- end -}}
+                                {{- else -}}
+                                    <tr class="footprint-empty-month">
+                                        <td class="footprint-month">{{ $row.month }}</td>
+                                        <td class="footprint-city"></td>
+                                        <td></td>
                                     </tr>
                                 {{- end -}}
                             {{- else -}}
-                                <tr class="footprint-empty-month">
-                                    <td class="footprint-month">{{ $row.month }}</td>
-                                    <td class="footprint-city"></td>
-                                    <td></td>
+                                <tr>
+                                    <td colspan="3">这个年度卷宗还在整理中。</td>
                                 </tr>
                             {{- end -}}
-                        {{- else -}}
-                            <tr>
-                                <td colspan="3">这个年度卷宗还在整理中。</td>
-                            </tr>
-                        {{- end -}}
-                    </tbody>
-                </table>
-            </section>
+                        </tbody>
+                    </table>
+                </section>
 
-            <section class="footprint-detail-flow" aria-label="逐月记录">
-                <h2 class="footprint-flow-title">逐月记录</h2>
-                {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
-            </section>
+                <section class="footprint-detail-flow" aria-label="逐月记录">
+                    <h2 class="footprint-flow-title">逐月记录</h2>
+                    {{- dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" | safeHTML -}}
+                </section>
+            {{- end -}}
         </div>
 
         {{- partial "comment.html" . -}}

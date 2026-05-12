@@ -1,11 +1,33 @@
 # Codex 任务文档：重构 Footprint 足迹页为「年度表格 + 原图文流」
 
+## 当前实现状态（2026-05-12）
+
+本任务已经落地，本文前半部分保留为历史设计说明；后续维护请优先参考本节与 `README.md`、`docs/mentalfood-data.md`。
+
+当前结构：
+
+- 足迹入口：`content/pages/footprint/_index.md` → `/pages/footprint/`，页面标题为「行旅与回声」。
+- 出游页面：`content/pages/footprint/<year>/travel.md` → `/pages/footprint/<year>/travel/`，Markdown 保留原逐月图文流；上方年度表格来自 `data/footprint.yaml`。
+- 书影游页面：`content/pages/footprint/<year>/reading.md` → `/pages/footprint/<year>/reading/`，页面由 Markdown 引言 + `layouts/partials/mentalfood/year.html` 渲染的数据清单组成；数据源是 `data/books.yaml`、`data/movies.yaml`、`data/mental_links.yaml`。
+- 海报墙页面：`content/pages/footprint/<year>/poster.md` → `/pages/footprint/<year>/poster/`。
+- 年度页模板：`layouts/pages/footprint-year.html`；入口页模板：`layouts/pages/footprint-index.html`。
+- 足迹分类和年份导航均依赖 `data/footprint.yaml` 中各分类已有的年份。新增年份时必须同步新增对应 Markdown 页面与 `data/footprint.yaml` 年份节点。
+- 独立 `content/pages/mentalfood.md` 已移除；旧 `/pages/mentalfood/` 通过 `content/pages/footprint/2025/reading.md` 的 alias 兼容。
+
+
 ## 任务背景
 
-当前网站的足迹页位于：
+历史上足迹页曾位于：
 
 ```text
 content/pages/footprint.md
+```
+
+当前已拆分为：
+
+```text
+content/pages/footprint/_index.md
+content/pages/footprint/<year>/<category>.md
 ```
 
 现有内容以 Markdown 形式维护，结构大致为：
@@ -648,7 +670,7 @@ CSS 方向：
 
 如果当前内容已有 2026，可一起加入；如果没有 2026 内容，可创建 2026 占位页面和数据。
 
-`书影游` 与 `海报墙` 可以只建立导航和空占位，不强制迁移内容。
+`书影游` 现在已接入 `data/books.yaml`、`data/movies.yaml`、`data/mental_links.yaml`，不再只是占位；`海报墙` 可继续按当前内容进度维护。
 
 ---
 
@@ -695,68 +717,45 @@ Codex 完成后，应满足以下标准：
 
 ---
 
-## 建议 Codex 执行步骤
+## 后续维护步骤
 
-1. 检查仓库结构：
-   - `content/pages/footprint.md`
-   - `config.toml`
-   - `layouts/`
-   - `themes/aether/layouts/`
-   - `themes/aether/assets/`
-   - 是否已有自定义 CSS/SCSS 注入方式
+### 新增出游年份
 
-2. 确认当前 `footprint.md` 的内容结构。
+1. 新建 `content/pages/footprint/<year>/travel.md`。
+2. 在 front matter 中设置 `layout = "footprint-year"`、`year = <year>`、`category = "travel"`。
+3. 在 `data/footprint.yaml` 的 `travel:` 下新增同一年份的 `title` 与月份 `rows`。
+4. 将逐月文字、图片和相册链接写在该年度 Markdown 页面正文中。
+5. 运行 `hugo --gc --minify`，抽查 `/pages/footprint/<year>/travel/`。
 
-3. 新建 `data/footprint.yaml`。
+### 新增书影游年份
 
-4. 将原 `footprint.md` 中各年份内容拆分到：
-   - `content/pages/footprint/2025/travel.md`
-   - `content/pages/footprint/2024/travel.md`
-   - `content/pages/footprint/2023/travel.md`
+1. 新建 `content/pages/footprint/<year>/reading.md`。
+2. 在 front matter 中设置 `layout = "footprint-year"`、`year = <year>`、`category = "reading"`。
+3. 在 `data/footprint.yaml` 的 `reading:` 下新增同一年份，使年份导航可以发现它。
+4. 在 `data/books.yaml`、`data/movies.yaml`、`data/mental_links.yaml` 中新增对应两位年份前缀的条目，例如 2026 年用 `26-01`。
+5. 运行 `hugo --gc --minify`，抽查 `/pages/footprint/<year>/reading/`。
 
-5. 为每个新页面补充 front matter：
-   - `layout = "footprint-year"`
-   - `year = 2025`
-   - `category = "travel"`
-   - `comment = false`
-   - `toc = false`
+### 新增海报墙年份
 
-6. 实现 `footprint-year.html` 模板。
-
-7. 实现 CSS/SCSS。
-
-8. 处理 `/pages/footprint/` 默认入口。
-
-9. 本地运行：
-
-```bash
-hugo
-```
-
-10. 如有可用环境，运行本地预览：
-
-```bash
-hugo server -D
-```
-
-11. 检查移动端表格横向滚动与图片流展示。
-
-12. 最后提交改动。
+1. 新建 `content/pages/footprint/<year>/poster.md`。
+2. 在 front matter 中设置 `layout = "footprint-year"`、`year = <year>`、`category = "poster"`。
+3. 在 `data/footprint.yaml` 的 `poster:` 下新增同一年份。
+4. 按当前内容方式维护页面正文。
 
 ---
 
-## 可直接复制给 Codex 的任务 Prompt
+## 历史任务 Prompt（仅供追溯）
 
 ```text
 请重构我的 Hugo 博客足迹页，实现“年度表格 + 原图文流”的新结构。
 
 背景：
-当前足迹页在 content/pages/footprint.md 中，以 Markdown 形式按年份展示旅行记录和图片。现有图文流的展示效果我希望保留，但希望在每个年份的图文流上方新增一个类似年度索引的表格，并在顶部增加“出游 / 书影游 / 海报墙”和年份切换导航。
+当前足迹页已拆分到 content/pages/footprint/<year>/<category>.md；历史上原始足迹页曾在 content/pages/footprint.md 中，以 Markdown 形式按年份展示旅行记录和图片。现有图文流的展示效果我希望保留，但希望在每个年份的图文流上方新增一个类似年度索引的表格，并在顶部增加“出游 / 书影游 / 海报墙”和年份切换导航。
 
 目标效果：
 访问 /pages/footprint/2025/travel/ 时，页面顶部显示分类导航和年份导航；主体上方显示 2025 出游年度表格，表格列为“月份 / 城市 / 活动”；表格下方继续显示原本 2025 年的逐月文字 + 图片流。
 
-请优先实现 travel（出游）分类。书影游和海报墙可以先作为导航和占位，不要求迁移完整内容。
+历史任务曾优先实现 travel（出游）分类；当前书影游已迁移到足迹 reading 分类，维护方式见上文。
 
 重要要求：
 1. 不要删除原有图文流。

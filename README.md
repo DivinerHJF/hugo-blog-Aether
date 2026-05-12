@@ -4,7 +4,7 @@
 
 - **生活与月报**：碎碎念、阶段复盘、个人观察；
 - **技术折腾**：Hugo 建站、样式改造、工具实践；
-- **读看听**：书籍、电影/剧集、自媒体摘录与年度记录；
+- **书影游**：书刊、电影/剧集、自媒体摘录与年度精神食粮记录；
 - **万里路**：旅行、徒步、城市与照片记录。
 
 ## 目录结构
@@ -14,11 +14,20 @@
 ├── archetypes/              # hugo new 生成文章时使用的模板
 ├── config.toml              # Hugo 与主题主配置，已按当前站点用途写中文注释
 ├── content/
-│   ├── pages/               # 独立页面：足迹、阅览、关于
+│   ├── pages/
+│   │   ├── about.md         # 关于页
+│   │   └── footprint/       # 足迹页：出游、书影游、海报墙的年度页面
+│   │       ├── _index.md    # /pages/footprint/ 入口页
+│   │       └── <year>/      # 每年按分类拆分为 travel / reading / poster
 │   └── posts/<year>/        # 按年份存放的文章与月报
 ├── data/
-│   ├── books.yaml           # 阅览页的书籍数据
-│   └── movies.yaml          # 阅览页的影剧数据
+│   ├── books.yaml           # 足迹「书影游」分类的书刊数据
+│   ├── movies.yaml          # 足迹「书影游」分类的影剧数据
+│   ├── mental_links.yaml    # 足迹「书影游」分类的文章/视频/播客摘录
+│   └── footprint.yaml       # 足迹年度索引表数据与各分类年份清单
+├── layouts/
+│   ├── pages/               # 足迹入口页与年度页的项目级覆盖模板
+│   └── partials/mentalfood/ # 足迹「书影游」年度数据渲染 partial
 ├── static/images/me/        # favicon、logo、头像、二维码等个人静态资源
 └── themes/aether/           # Aether 主题源码，作为普通目录随主仓库维护
 ```
@@ -38,20 +47,69 @@ hugo new content/posts/2026/20260509.md
 - `title`：文章标题；
 - `date`：发布时间；
 - `description`：用于 SEO、分享卡片和搜索摘要；
-- `categories`：建议从 `碎碎念`、`爱折腾`、`读看听`、`万里路` 中选择；
+- `categories`：建议沿用现有分类，如 `生活札记`、`博客折腾`、`技术笔记`、`书影音`、`行旅`；
 - `series`：同主题合集，不需要时保持 `[]`；
 - `tags`：建议 2-5 个；
 - `comment`、`toc`、`math`：按单篇文章需要覆盖全站默认值。
 
-### 独立页面
+### 独立页面与足迹结构
 
-- `content/pages/footprint.md`：足迹和旅行照片；
-- `content/pages/mentalfood.md`：书影音游入口，正文通过短代码读取 `data/` 数据；
-- `content/pages/about.md`：个人介绍与站点说明。
+- `content/pages/about.md`：个人介绍与站点说明；
+- `content/pages/footprint/_index.md`：足迹入口页，当前标题为「行旅与回声」；
+- `content/pages/footprint/<year>/travel.md`：某一年的出游图文流；
+- `content/pages/footprint/<year>/reading.md`：某一年的书影游清单入口，页面正文由 Markdown 引言 + 数据 partial 组成；
+- `content/pages/footprint/<year>/poster.md`：某一年的海报墙页面。
 
-### 书影音数据
+足迹页采用“每个年份 + 分类一个静态页面”的方式，例如：
 
-`data/books.yaml` 与 `data/movies.yaml` 是“阅览”页的数据源。新增条目时建议保持同一年份分组和既有字段风格，避免把大量数据重新写回 Markdown 页面。
+- `/pages/footprint/2025/travel/`
+- `/pages/footprint/2025/reading/`
+- `/pages/footprint/2025/poster/`
+
+不要再新增独立的 `content/pages/mentalfood.md`；旧地址 `/pages/mentalfood/` 由 `content/pages/footprint/2025/reading.md` 的 alias 兼容。
+
+### 书影游数据
+
+`data/books.yaml`、`data/movies.yaml` 与 `data/mental_links.yaml` 是足迹页「书影游」分类的数据源。新增条目时只需要维护数据文件，年度页面会由 `layouts/partials/mentalfood/year.html` 按 `type` 的年份前缀自动筛选。
+
+书刊或影剧条目推荐字段：
+
+```yaml
+- title: "作品名"
+  coverurl: "https://example.com/cover.jpg"
+  link: "https://example.com/item"
+  author: "作者 / 导演"
+  type: "25-09"          # 两位年份-月份，用于归档到 2025 年 9 月
+  starscore: "★★★★"
+  greystar: "☆"
+  intro: "一句短评"
+```
+
+摘录链接推荐字段：
+
+```yaml
+- type: "25-09"
+  category: "自媒体摘录"
+  title: "标题"
+  url: "https://example.com"
+  source: "来源或作者"
+```
+
+新增一个书影游年份时，需要同时：
+
+1. 新建 `content/pages/footprint/<year>/reading.md`，设置 `layout = "footprint-year"`、`year = <year>`、`category = "reading"`；
+2. 在 `data/footprint.yaml` 的 `reading:` 下增加对应年份，使足迹年份导航能发现该年份；
+3. 将数据条目的 `type` 写成对应两位年份前缀，例如 2026 年使用 `26-01`。
+
+### 出游与海报墙数据
+
+`data/footprint.yaml` 为足迹年度页上方的索引表提供数据，也决定各分类可用年份。出游图文和相册链接继续写在对应 Markdown 页面中，年度表格只放结构化摘要，不要把完整图文流搬入 YAML。
+
+新增出游年份时，通常需要：
+
+1. 新建 `content/pages/footprint/<year>/travel.md`；
+2. 在 `data/footprint.yaml` 的 `travel:` 下增加该年份的 `title` 与每月 `rows`；
+3. 如需海报墙或书影游，也分别补充 `poster:` / `reading:` 下的年份和对应 Markdown 页面。
 
 ## 配置维护说明
 
@@ -60,7 +118,9 @@ hugo new content/posts/2026/20260509.md
 | 修改目标 | 配置位置 | 说明 |
 | --- | --- | --- |
 | 站点标题、描述、关键词 | `[params]` | 影响首页、SEO 和分享摘要 |
-| 顶部导航 | `[[menu.main]]` | 对应归档、足迹、阅览、关于 |
+| 顶部导航 | `[[menu.main]]` | 当前对应归档、足迹、关于；书影游位于足迹页内，不再作为独立导航项 |
+| 足迹分类与年份 | `content/pages/footprint/`、`data/footprint.yaml`、`layouts/pages/footprint-year.html` | 年份导航来自当前分类在 `data/footprint.yaml` 中的年份；分类导航会跳转到目标分类可用的同年或最新年份 |
+| 书影游清单 | `data/books.yaml`、`data/movies.yaml`、`data/mental_links.yaml`、`layouts/partials/mentalfood/year.html` | 通过 `type` 前缀按年度筛选并渲染到 `/pages/footprint/<year>/reading/` |
 | 首页头像与副标题 | `[params.home.profile]` | 头像资源位于 `static/images/me/` |
 | 社交链接 | `[params.social]` | 目前只保留 Email、GitHub、Mastodon、RSS、Telegram |
 | 评论系统 | `[params.page.comment]` 与 `[params.page.comment.giscus]` | 当前只启用 Giscus；Gitalk / Valine / Waline / Twikoo / Vssue 的本地资源已删除，重新启用前需恢复资源或配置 CDN |
@@ -96,7 +156,16 @@ python3 scripts/audit-theme-libs.py --sync-simple-icons --simple-icons-source /p
 python3 scripts/audit-theme-libs.py --check-simple-icons
 ```
 
-后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 `echarts` 目录。
+后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 ECharts 目录。
+
+## 本地构建与检查
+
+```bash
+hugo --gc --minify
+python3 scripts/audit-theme-libs.py --check-simple-icons
+```
+
+构建产物输出到 `public/`。提交前建议至少运行 `hugo --gc --minify`；如果改动足迹模板、导航或样式，建议再检查生成后的 `public/pages/footprint/` 页面。
 
 ## 本地预览
 
