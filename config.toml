@@ -16,8 +16,8 @@ enableRobotsTXT = true
 
 # 站点结构约定：
 # - content/posts/<year>/：按年份归档的博文与月报
-# - content/pages/：独立页面，例如足迹、阅览、关于
-# - data/books.yaml、data/movies.yaml：阅览页使用的数据源
+# - content/pages/：独立页面，例如足迹、关于
+# - data/books.yaml、data/movies.yaml、data/mental_links.yaml：足迹页「书影游」分类使用的数据源
 # - static/images/me/：站点头像、Logo、favicon 等个人素材
 
 [frontmatter]
@@ -42,20 +42,12 @@ url = "/pages/footprint/"
 weight = 2
 
 [[menu.main]]
-identifier = "mentalfood"
-name = "阅览"
-pre = "🎡"
-title = "书影音游"
-url = "/pages/mentalfood/"
-weight = 3
-
-[[menu.main]]
 identifier = "about"
 name = "关于"
 pre = "👨‍🔧"
 title = "关于我以及这个网站"
 url = "/pages/about/"
-weight = 4
+weight = 3
 
 [params]
 # Aether 主题继承/兼容 DoIt 系配置；这里只保留本站正在使用或后续常改的选项。
