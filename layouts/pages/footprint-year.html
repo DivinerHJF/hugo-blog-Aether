@@ -52,41 +52,43 @@
                         <h2>{{ $data.title | default .Title }}</h2>
                     </div>
 
-                    <table class="footprint-year-table">
-                        <thead>
-                            <tr>
-                                <th>月份</th>
-                                <th>城市</th>
-                                <th>活动</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {{- range $row := $data.rows -}}
-                                {{- $events := $row.events | default slice -}}
-                                {{- if gt (len $events) 0 -}}
-                                    {{- range $index, $event := $events -}}
-                                        <tr>
-                                            {{- if eq $index 0 -}}
-                                                <td class="footprint-month" rowspan="{{ len $events }}">{{ $row.month }}</td>
-                                            {{- end -}}
-                                            <td class="footprint-city">{{ $event.city }}</td>
-                                            <td>{{ $event.activity }}</td>
+                    <div class="table-wrapper footprint-year-table-wrapper">
+                        <table class="footprint-year-table">
+                            <thead>
+                                <tr>
+                                    <th>月份</th>
+                                    <th>城市</th>
+                                    <th>活动</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{- range $row := $data.rows -}}
+                                    {{- $events := $row.events | default slice -}}
+                                    {{- if gt (len $events) 0 -}}
+                                        {{- range $index, $event := $events -}}
+                                            <tr>
+                                                {{- if eq $index 0 -}}
+                                                    <td class="footprint-month" rowspan="{{ len $events }}">{{ $row.month }}</td>
+                                                {{- end -}}
+                                                <td class="footprint-city">{{ $event.city }}</td>
+                                                <td>{{ $event.activity }}</td>
+                                            </tr>
+                                        {{- end -}}
+                                    {{- else -}}
+                                        <tr class="footprint-empty-month">
+                                            <td class="footprint-month">{{ $row.month }}</td>
+                                            <td class="footprint-city"></td>
+                                            <td></td>
                                         </tr>
                                     {{- end -}}
                                 {{- else -}}
-                                    <tr class="footprint-empty-month">
-                                        <td class="footprint-month">{{ $row.month }}</td>
-                                        <td class="footprint-city"></td>
-                                        <td></td>
+                                    <tr>
+                                        <td colspan="3">这个年度卷宗还在整理中。</td>
                                     </tr>
                                 {{- end -}}
-                            {{- else -}}
-                                <tr>
-                                    <td colspan="3">这个年度卷宗还在整理中。</td>
-                                </tr>
-                            {{- end -}}
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
 
                 <section class="footprint-detail-flow" aria-label="逐月记录">

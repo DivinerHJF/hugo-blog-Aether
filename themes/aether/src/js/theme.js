@@ -551,6 +551,8 @@ function initHighlight() {
 
 function initTable() {
     forEach(document.querySelectorAll('.content table'), $table => {
+        if ($table.parentElement && $table.parentElement.classList.contains('table-wrapper')) return;
+
         const $wrapper = document.createElement('div');
         $wrapper.className = 'table-wrapper';
         $table.parentElement.replaceChild($wrapper, $table);
