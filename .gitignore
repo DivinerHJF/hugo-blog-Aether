@@ -2,6 +2,10 @@
 /public/
 /resources/
 .hugo_build.lock
+R2-update/
+r2-upload/
+R2-update/**
+r2-upload/**
 
 # IDE/Editor specific files
 .vscode/
