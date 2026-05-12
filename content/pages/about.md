@@ -26,9 +26,3 @@ comment = false
 1. 表述明白，把想说的说清楚；
 2. 内容有趣，理性的文章应富有逻辑，感性的文章该满沛情感；
 3. 形式优美一些是极好的。
-
-## 我的人生版本号[^1]
-
-[^1]: PC 端浏览更佳
-
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:-webkit-fill-available; height:900px;" src="https://www.processon.com/embed/624fd9c30791290727b88c26"></iframe>
