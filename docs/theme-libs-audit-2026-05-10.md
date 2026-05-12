@@ -35,7 +35,7 @@ vendored Simple Icons: none
 
 ## 审计脚本扫描摘要
 
-- Markdown 短代码统计：`music=9`、`typeit=8`、`ref=5`、`mentalfood=1`、`relref=1`。
+- Markdown 短代码统计（2026-05-12 复核）：`music=9`、`typeit=8`、`ref=5`、`relref=1`；独立 `mentalfood` 页面已移除，当前内容不再调用 `{{< mentalfood >}}`。
 - 搜索配置：`params.search.enable=true`，`params.search.type=fuse`。
 - 页面开关：`params.page.twemoji=false`，`params.page.lightgallery=false`，`params.page.math.enable=false`。
 - 数学公式特征：`$$=68`，公式文章 3 篇，`front matter math=true` 3 篇。

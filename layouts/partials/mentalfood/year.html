@@ -1,0 +1,54 @@
+{{- $year := printf "%v" (.year | default "") -}}
+{{- $shortYear := $year -}}
+{{- if eq (len $year) 4 -}}{{- $shortYear = substr $year 2 2 -}}{{- end -}}
+{{- $booksData := site.Data.books | default slice -}}
+{{- $moviesData := site.Data.movies | default slice -}}
+{{- $linksData := site.Data.mental_links | default slice -}}
+{{- $books := slice -}}
+{{- $movies := slice -}}
+{{- $links := slice -}}
+{{- range $booksData -}}
+    {{- $type := printf "%v" (.type | default "") -}}
+    {{- if hasPrefix $type $shortYear -}}{{- $books = $books | append . -}}{{- end -}}
+{{- end -}}
+{{- range $moviesData -}}
+    {{- $type := printf "%v" (.type | default "") -}}
+    {{- if hasPrefix $type $shortYear -}}{{- $movies = $movies | append . -}}{{- end -}}
+{{- end -}}
+{{- range $linksData -}}
+    {{- $type := printf "%v" (.type | default "") -}}
+    {{- if hasPrefix $type $shortYear -}}{{- $links = $links | append . -}}{{- end -}}
+{{- end -}}
+
+<section class="mentalfood-year footprint-reading-year" id="mentalfood-{{ $year }}">
+    {{- if or (gt (len $books) 0) (gt (len $movies) 0) (gt (len $links) 0) -}}
+        <div class="details admonition note open">
+            <div class="details-summary admonition-title">
+                <i class="icon fas fa-pencil-alt fa-fw"></i>书刊（{{ len $books }} 本）<i class="details-icon fas fa-angle-right fa-fw"></i>
+            </div>
+            <div class="details-content"><div class="admonition-content">
+                {{- partial "mentalfood/media-list.html" (dict "items" $books "empty" "本年度暂无书刊记录。") -}}
+            </div></div>
+        </div>
+        <div class="details admonition tip open">
+            <div class="details-summary admonition-title">
+                <i class="icon fas fa-lightbulb fa-fw"></i>影剧（{{ len $movies }} 部）<i class="details-icon fas fa-angle-right fa-fw"></i>
+            </div>
+            <div class="details-content"><div class="admonition-content">
+                {{- partial "mentalfood/media-list.html" (dict "items" $movies "empty" "本年度暂无影剧记录。") -}}
+            </div></div>
+        </div>
+        {{- if gt (len $links) 0 -}}
+            <div class="details admonition info open">
+                <div class="details-summary admonition-title">
+                    <i class="icon fas fa-info-circle fa-fw"></i>摘录（{{ len $links }} 条）<i class="details-icon fas fa-angle-right fa-fw"></i>
+                </div>
+                <div class="details-content"><div class="admonition-content">
+                    {{- partial "mentalfood/link-list.html" (dict "items" $links "empty" "本年度暂无摘录。") -}}
+                </div></div>
+            </div>
+        {{- end -}}
+    {{- else -}}
+        <p class="mentalfood-empty">这一年的书影游记录还在整理中。</p>
+    {{- end -}}
+</section>

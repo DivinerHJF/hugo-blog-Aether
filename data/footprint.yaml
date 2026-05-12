@@ -188,6 +188,9 @@ reading:
   "2023":
     title: "2023 书影游"
     rows: *empty_2025
+  "2022":
+    title: "2022 书影游"
+    rows: *empty_2025
 poster:
   "2025":
     title: "2025 海报墙"
