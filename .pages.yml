@@ -3,6 +3,92 @@ media:
   output: /images
 
 content:
+  - name: posts
+    label: Posts 文章
+    type: collection
+    path: content/posts
+    format: yaml-frontmatter
+    subfolders: true
+    filename:
+      template: "{year}/{year}{month}{day}.md"
+      field: create
+    view:
+      fields: [title, date, categories, series, draft]
+      primary: title
+      sort: [date, title, categories]
+      search: [title, description, categories, series, tags, body]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+        description: 文章标题；会作为后台列表主标题，也可用于生成文件名。
+      - name: description
+        label: 摘要 / SEO 描述
+        type: text
+        required: true
+        description: 首页、列表页和搜索结果中显示的简短摘要，建议 40–120 字。
+      - name: date
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          time: true
+          format: "yyyy-MM-dd'T'HH:mm:ssxxx"
+          step: 60
+        description: 输出为 Hugo 可识别的带时区时间，例如 2025-09-15T21:53:53+08:00。
+      - name: categories
+        label: 分类
+        type: select
+        required: true
+        options:
+          multiple: true
+          min: 1
+          max: 1
+          values:
+            - 生活札记
+            - 技术笔记
+            - 博客折腾
+            - 书影音
+            - 行旅
+        description: 当前主题文章通常只放 1 个分类；如需新增分类，可先在这里补充选项。
+      - name: series
+        label: 系列
+        type: string
+        list: true
+        description: 可留空；常用如「夕拾花」「Hugo 博客折腾」「SQL 数据库笔记」「R 数据分析」「回归分析」。
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+        required: true
+        description: 支持多个自由标签，例如：月记、生活、Hugo、SQL、R。
+      - name: toc
+        label: 显示目录
+        type: boolean
+        description: 长文、技术笔记建议开启；短札记或图文记录可关闭。
+      - name: comment
+        label: 开启评论
+        type: boolean
+        description: "旧文常用字段；开启后 front matter 写入 comment: true。"
+      - name: math
+        label: 启用数学公式
+        type: boolean
+        description: 只有包含 LaTeX / 数学公式的文章需要开启。
+      - name: draft
+        label: 草稿
+        type: boolean
+        description: 开启后 Hugo 默认不会发布，适合先在 CMS 中存草稿。
+      - name: body
+        label: 正文
+        type: code
+        options:
+          format: markdown
+        description: 使用 Markdown 源码编辑，能更稳妥保留 Hugo 短代码、HTML、代码块和已有文章格式。
+
   - name: data
     label: Data 数据
     type: group
@@ -312,3 +398,7 @@ components:
                 label: 活动
                 type: string
                 required: true
+
+settings:
+  content:
+    merge: true
