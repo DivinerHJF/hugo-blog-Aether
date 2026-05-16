@@ -1,23 +1,35 @@
 {{- $year := printf "%v" (.year | default "") -}}
 {{- $shortYear := $year -}}
 {{- if eq (len $year) 4 -}}{{- $shortYear = substr $year 2 2 -}}{{- end -}}
-{{- $booksData := site.Data.books | default slice -}}
-{{- $moviesData := site.Data.movies | default slice -}}
-{{- $linksData := site.Data.mental_links | default slice -}}
+{{- $booksData := site.Data.books | default dict -}}
+{{- $moviesData := site.Data.movies | default dict -}}
+{{- $linksData := site.Data.mental_links | default dict -}}
 {{- $books := slice -}}
 {{- $movies := slice -}}
 {{- $links := slice -}}
-{{- range $booksData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if hasPrefix $type $shortYear -}}{{- $books = $books | append . -}}{{- end -}}
+{{- if reflect.IsMap $booksData -}}
+    {{- $books = index $booksData $year | default slice -}}
+{{- else -}}
+    {{- range $booksData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if hasPrefix $type $shortYear -}}{{- $books = $books | append . -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
-{{- range $moviesData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if hasPrefix $type $shortYear -}}{{- $movies = $movies | append . -}}{{- end -}}
+{{- if reflect.IsMap $moviesData -}}
+    {{- $movies = index $moviesData $year | default slice -}}
+{{- else -}}
+    {{- range $moviesData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if hasPrefix $type $shortYear -}}{{- $movies = $movies | append . -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
-{{- range $linksData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if hasPrefix $type $shortYear -}}{{- $links = $links | append . -}}{{- end -}}
+{{- if reflect.IsMap $linksData -}}
+    {{- $links = index $linksData $year | default slice -}}
+{{- else -}}
+    {{- range $linksData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if hasPrefix $type $shortYear -}}{{- $links = $links | append . -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
 
 <section class="mentalfood-year footprint-reading-year" id="mentalfood-{{ $year }}">
