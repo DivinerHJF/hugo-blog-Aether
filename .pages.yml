@@ -87,7 +87,7 @@ content:
         type: code
         options:
           format: markdown
-        description: 使用 Markdown 源码编辑，能更稳妥保留 Hugo 短代码、HTML、代码块和已有文章格式。
+        description: 使用 Markdown 源码编辑，能更稳妥保留 Hugo 短代码、HTML、代码块和已有文章格式；正文配图建议先用 R2 Image Uploader 处理后复制 Markdown 图片语法粘贴到这里。
 
   - name: data
     label: Data 数据

@@ -111,6 +111,35 @@ hugo new content/posts/2026/20260509.md
 2. 在 `data/footprint.yaml` 的 `travel:` 下增加该年份的 `title` 与每月 `rows`；
 3. 如需海报墙或书影游，也分别补充 `poster:` / `reading:` 下的年份和对应 Markdown 页面。
 
+## 网站创作模式
+
+当前站点维护目标是把日常写作尽量搬到浏览器里完成：内容仓库继续作为 Hugo 的唯一事实来源，图片则由独立的 [r2-image-uploader](https://github.com/DivinerHJF/r2-image-uploader) 写入 Cloudflare R2 图床，Pages CMS 负责在浏览器中编辑本文仓库的 Markdown 与 YAML 数据。
+
+![全程浏览器创作流程](https://img.philohao.com/blog/2026/05/20260516-01.webp)
+
+### 在线写作主流程
+
+1. 打开 Pages CMS，按 `.pages.yml` 中的 `content/posts` 集合新建或编辑文章；文章文件会按 `content/posts/{year}/{year}{month}{day}.md` 的规则落到对应年份目录。
+2. 在图片上传器里拖拽图片，按需要排序、裁剪、压缩并转换为 WebP；上传器会通过 Cloudflare Pages Function 写入 R2，并返回可公开访问的图片 URL。
+3. 从上传器复制 Markdown 图片语法，例如 `![说明](https://img.philohao.com/blog/2026/05/example-01.webp)`，再粘贴回 Pages CMS 的正文编辑框。
+4. 在 Pages CMS 中保存文章或数据文件后，由 Git 提交触发 Vercel 按 `hugo --gc --minify` 构建并发布到线上站点。
+
+### 角色分工
+
+| 环节 | 工具 / 仓库 | 负责内容 |
+| --- | --- | --- |
+| 文章与数据编辑 | Pages CMS + 本仓库 `.pages.yml` | 文章 front matter、Markdown 正文，以及书刊、影剧、足迹等 YAML 数据 |
+| 图片处理 | `DivinerHJF/r2-image-uploader` | 图片排序、裁剪、浏览器端压缩转 WebP、R2 对象路径生成、Markdown/HTML/Hugo figure 复制 |
+| 图片存储与访问 | Cloudflare R2 + `img.philohao.com` | 保存最终图片文件，并提供稳定的公开图床链接 |
+| 网站构建与发布 | Vercel + Hugo | 拉取内容仓库，生成静态站点并发布 |
+
+### 图片使用约定
+
+- 博文正文图片优先走 R2 图床，并直接使用 Markdown 图片语法写入正文，便于 Pages CMS、Hugo 原文和 Git diff 同时阅读。
+- 图片命名建议沿用 `blog/YYYY/MM/slug-序号.webp`，旅行、书影音封面或临时截图可按上传器里的分类与命名规则拆分。
+- 站点长期固定资源（favicon、logo、头像、二维码等）继续放在 `static/images/me/`，不要和正文图床图片混在一起。
+- 多图文章先在上传器中排序，再批量复制 Markdown，减少后续在正文里反复调整图片顺序。
+
 ## 配置维护说明
 
 主要配置都在 `config.toml`，已按“当前实际使用 + 后续常改”整理。常见修改位置如下：
