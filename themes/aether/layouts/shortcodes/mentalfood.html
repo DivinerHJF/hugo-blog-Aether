@@ -1,48 +1,74 @@
-{{- $booksData := site.Data.books | default slice -}}
-{{- $moviesData := site.Data.movies | default slice -}}
-{{- $linksData := site.Data.mental_links | default slice -}}
+{{- $booksData := site.Data.books | default dict -}}
+{{- $moviesData := site.Data.movies | default dict -}}
+{{- $linksData := site.Data.mental_links | default dict -}}
 {{- $years := slice -}}
-{{- range $booksData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if ge (len $type) 2 -}}{{- $years = $years | append (substr $type 0 2) -}}{{- end -}}
+{{- if reflect.IsMap $booksData -}}
+    {{- range $year, $_ := $booksData -}}{{- $years = $years | append (printf "%v" $year) -}}{{- end -}}
+{{- else -}}
+    {{- range $booksData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if ge (len $type) 2 -}}{{- $years = $years | append (printf "20%s" (substr $type 0 2)) -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
-{{- range $moviesData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if ge (len $type) 2 -}}{{- $years = $years | append (substr $type 0 2) -}}{{- end -}}
+{{- if reflect.IsMap $moviesData -}}
+    {{- range $year, $_ := $moviesData -}}{{- $years = $years | append (printf "%v" $year) -}}{{- end -}}
+{{- else -}}
+    {{- range $moviesData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if ge (len $type) 2 -}}{{- $years = $years | append (printf "20%s" (substr $type 0 2)) -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
-{{- range $linksData -}}
-    {{- $type := printf "%v" (.type | default "") -}}
-    {{- if ge (len $type) 2 -}}{{- $years = $years | append (substr $type 0 2) -}}{{- end -}}
+{{- if reflect.IsMap $linksData -}}
+    {{- range $year, $_ := $linksData -}}{{- $years = $years | append (printf "%v" $year) -}}{{- end -}}
+{{- else -}}
+    {{- range $linksData -}}
+        {{- $type := printf "%v" (.type | default "") -}}
+        {{- if ge (len $type) 2 -}}{{- $years = $years | append (printf "20%s" (substr $type 0 2)) -}}{{- end -}}
+    {{- end -}}
 {{- end -}}
 {{- $years = sort ($years | uniq) "value" "desc" -}}
 
 <nav class="mentalfood-nav" aria-label="读看听年份导航">
     <span>年份：</span>
     {{- range $years -}}
-        <a href="#mentalfood-20{{ . }}">20{{ . }}</a>
+        <a href="#mentalfood-{{ . }}">{{ . }}</a>
     {{- end -}}
 </nav>
 
 {{- range $index, $year := $years -}}
+    {{- $shortYear := $year -}}
+    {{- if eq (len $year) 4 -}}{{- $shortYear = substr $year 2 2 -}}{{- end -}}
     {{- $books := slice -}}
     {{- $movies := slice -}}
     {{- $links := slice -}}
-    {{- range $booksData -}}
-        {{- $type := printf "%v" (.type | default "") -}}
-        {{- if hasPrefix $type $year -}}{{- $books = $books | append . -}}{{- end -}}
+    {{- if reflect.IsMap $booksData -}}
+        {{- $books = index $booksData $year | default slice -}}
+    {{- else -}}
+        {{- range $booksData -}}
+            {{- $type := printf "%v" (.type | default "") -}}
+            {{- if hasPrefix $type $shortYear -}}{{- $books = $books | append . -}}{{- end -}}
+        {{- end -}}
     {{- end -}}
-    {{- range $moviesData -}}
-        {{- $type := printf "%v" (.type | default "") -}}
-        {{- if hasPrefix $type $year -}}{{- $movies = $movies | append . -}}{{- end -}}
+    {{- if reflect.IsMap $moviesData -}}
+        {{- $movies = index $moviesData $year | default slice -}}
+    {{- else -}}
+        {{- range $moviesData -}}
+            {{- $type := printf "%v" (.type | default "") -}}
+            {{- if hasPrefix $type $shortYear -}}{{- $movies = $movies | append . -}}{{- end -}}
+        {{- end -}}
     {{- end -}}
-    {{- range $linksData -}}
-        {{- $type := printf "%v" (.type | default "") -}}
-        {{- if hasPrefix $type $year -}}{{- $links = $links | append . -}}{{- end -}}
+    {{- if reflect.IsMap $linksData -}}
+        {{- $links = index $linksData $year | default slice -}}
+    {{- else -}}
+        {{- range $linksData -}}
+            {{- $type := printf "%v" (.type | default "") -}}
+            {{- if hasPrefix $type $shortYear -}}{{- $links = $links | append . -}}{{- end -}}
+        {{- end -}}
     {{- end -}}
     {{- $open := eq $index 0 -}}
     {{- if or (gt (len $books) 0) (gt (len $movies) 0) (gt (len $links) 0) -}}
-        <section class="mentalfood-year" id="mentalfood-20{{ $year }}">
-            <h2>20{{ $year }}</h2>
+        <section class="mentalfood-year" id="mentalfood-{{ $year }}">
+            <h2>{{ $year }}</h2>
             <div class="details admonition note{{ if $open }} open{{ end }}">
                 <div class="details-summary admonition-title">
                     <i class="icon fas fa-pencil-alt fa-fw"></i>书刊（{{ len $books }} 本）<i class="details-icon fas fa-angle-right fa-fw"></i>

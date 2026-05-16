@@ -1,4 +1,5 @@
 ---
+'2025':
 - type: 25-01
   category: 自媒体摘录
   title: "《是，大臣》全片+小说精讲"
@@ -9,6 +10,7 @@
   title: 花5天时间把广州玩了个遍，总结了这份保姆级旅行攻略！
   url: https://www.bilibili.com/video/BV1yzAhetEcs/
   source: 大橘小狸环游记
+'2024':
 - type: 24-01
   category: 自媒体摘录
   title: 关于东亚人适量饮酒与健康的误解
@@ -64,6 +66,7 @@
   title: 全国医院活地图｜各地生病去哪看？值得收藏！
   url: https://www.bilibili.com/video/BV1zRByYbEqd/
   source: 整形医生肖一丁
+'2023':
 - type: 23-00
   category: 文章
   title: 淺談 Atomic CSS 的發展背景與 Tailwind CSS
@@ -84,6 +87,7 @@
   title: CSAPP - 深入理解计算机系统
   url: https://space.bilibili.com/354767108/channel/collectiondetail?sid=373847&ctype=0
   source: ''
+'2022':
 - type: 22-00
   category: 文章
   title: 财新 | 2021 年最具影响力的 21 件事

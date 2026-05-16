@@ -1,4 +1,31 @@
 travel:
+  "2026":
+    title: "2026 出游"
+    rows: &empty_2026
+      - month: "一月"
+        events: []
+      - month: "二月"
+        events: []
+      - month: "三月"
+        events: []
+      - month: "四月"
+        events: []
+      - month: "五月"
+        events: []
+      - month: "六月"
+        events: []
+      - month: "七月"
+        events: []
+      - month: "八月"
+        events: []
+      - month: "九月"
+        events: []
+      - month: "十月"
+        events: []
+      - month: "十一月"
+        events: []
+      - month: "十二月"
+        events: []
   "2025":
     title: "2025 出游"
     rows:
@@ -155,6 +182,9 @@ travel:
           - city: "香港"
             activity: "港岛画恐龙"
 reading:
+  "2026":
+    title: "2026 书影游"
+    rows: *empty_2026
   "2025":
     title: "2025 书影游"
     rows: &empty_2025
@@ -192,6 +222,9 @@ reading:
     title: "2022 书影游"
     rows: *empty_2025
 poster:
+  "2026":
+    title: "2026 海报墙"
+    rows: *empty_2026
   "2025":
     title: "2025 海报墙"
     rows: *empty_2025

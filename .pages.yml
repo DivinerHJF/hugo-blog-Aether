@@ -1,0 +1,314 @@
+media:
+  input: static/images
+  output: /images
+
+content:
+  - name: data
+    label: Data 数据
+    type: group
+    items:
+      - name: books
+        label: 书刊清单
+        type: file
+        path: data/books.yaml
+        format: yaml
+        fields:
+          - name: "2026"
+            label: 2026 书刊
+            component: book_records
+          - name: "2025"
+            label: 2025 书刊
+            component: book_records
+          - name: "2024"
+            label: 2024 书刊
+            component: book_records
+          - name: "2023"
+            label: 2023 书刊
+            component: book_records
+          - name: "2022"
+            label: 2022 书刊
+            component: book_records
+
+      - name: movies
+        label: 影剧清单
+        type: file
+        path: data/movies.yaml
+        format: yaml
+        fields:
+          - name: "2026"
+            label: 2026 影剧
+            component: movie_records
+          - name: "2025"
+            label: 2025 影剧
+            component: movie_records
+          - name: "2024"
+            label: 2024 影剧
+            component: movie_records
+          - name: "2023"
+            label: 2023 影剧
+            component: movie_records
+          - name: "2022"
+            label: 2022 影剧
+            component: movie_records
+
+      - name: mental_links
+        label: 精神食粮链接
+        type: file
+        path: data/mental_links.yaml
+        format: yaml
+        fields:
+          - name: "2026"
+            label: 2026 链接
+            component: mental_link_records
+          - name: "2025"
+            label: 2025 链接
+            component: mental_link_records
+          - name: "2024"
+            label: 2024 链接
+            component: mental_link_records
+          - name: "2023"
+            label: 2023 链接
+            component: mental_link_records
+          - name: "2022"
+            label: 2022 链接
+            component: mental_link_records
+
+      - name: footprint
+        label: 足迹表格
+        type: file
+        path: data/footprint.yaml
+        format: yaml
+        fields:
+          - name: travel
+            label: 出游
+            type: object
+            fields:
+              - name: "2026"
+                label: 2026 出游
+                component: footprint_year
+              - name: "2025"
+                label: 2025 出游
+                component: footprint_year
+              - name: "2024"
+                label: 2024 出游
+                component: footprint_year
+              - name: "2023"
+                label: 2023 出游
+                component: footprint_year
+          - name: reading
+            label: 书影游
+            type: object
+            fields:
+              - name: "2026"
+                label: 2026 书影游
+                component: footprint_year
+              - name: "2025"
+                label: 2025 书影游
+                component: footprint_year
+              - name: "2024"
+                label: 2024 书影游
+                component: footprint_year
+              - name: "2023"
+                label: 2023 书影游
+                component: footprint_year
+              - name: "2022"
+                label: 2022 书影游
+                component: footprint_year
+          - name: poster
+            label: 海报墙
+            type: object
+            fields:
+              - name: "2026"
+                label: 2026 海报墙
+                component: footprint_year
+              - name: "2025"
+                label: 2025 海报墙
+                component: footprint_year
+              - name: "2024"
+                label: 2024 海报墙
+                component: footprint_year
+              - name: "2023"
+                label: 2023 海报墙
+                component: footprint_year
+
+components:
+  book_records:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title} · {type}"
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: coverurl
+        label: 封面 URL
+        type: string
+        description: 可填写 NeoDB、豆瓣、起点或站内图片等完整图片地址。
+      - name: link
+        label: 条目链接
+        type: string
+        description: 作品详情页链接，可留空。
+      - name: author
+        label: 作者
+        type: string
+      - name: type
+        label: 归档月份
+        type: string
+        required: true
+        pattern:
+          regex: "^[0-9]{2}-[0-9]{2}$"
+          message: "请使用 YY-MM 格式，例如 25-09。"
+        description: 页面按此前缀归入年份和月份，格式为 YY-MM。
+      - name: starscore
+        label: 评分星级
+        type: string
+        description: 已点亮星星，例如 ★★★★。
+      - name: greystar
+        label: 灰色星级
+        type: string
+        description: 未点亮星星，可留空，例如 ☆ 或 ☆☆。
+      - name: intro
+        label: 简评
+        type: text
+
+  movie_records:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title} · {type}"
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: coverurl
+        label: 封面 URL
+        type: string
+        description: 可填写 NeoDB、豆瓣、TMDB 或站内图片等完整图片地址。
+      - name: link
+        label: 条目链接
+        type: string
+        description: 作品详情页链接，可留空。
+      - name: author
+        label: 导演 / 主创
+        type: string
+      - name: type
+        label: 归档月份
+        type: string
+        required: true
+        pattern:
+          regex: "^[0-9]{2}-[0-9]{2}$"
+          message: "请使用 YY-MM 格式，例如 25-09。"
+        description: 页面按此前缀归入年份和月份，格式为 YY-MM。
+      - name: starscore
+        label: 评分星级
+        type: string
+        description: 已点亮星星，例如 ★★★★。
+      - name: greystar
+        label: 灰色星级
+        type: string
+        description: 未点亮星星，可留空，例如 ☆ 或 ☆☆。
+      - name: intro
+        label: 简评
+        type: text
+
+  mental_link_records:
+    type: object
+    list:
+      collapsible:
+        collapsed: true
+        summary: "{title} · {type}"
+    fields:
+      - name: type
+        label: 归档月份
+        type: string
+        required: true
+        pattern:
+          regex: "^[0-9]{2}-[0-9]{2}$"
+          message: "请使用 YY-MM 格式，例如 25-09。"
+        description: 页面按此前缀归入年份和月份，格式为 YY-MM。
+      - name: category
+        label: 分类
+        type: select
+        required: true
+        options:
+          values:
+            - 自媒体摘录
+            - 文章
+            - 视频
+            - 播客 · 声音发掘
+            - 播客 · 读书分享
+            - 播客 · 技术编程
+            - 播客 · 泛文讲谈
+            - 播客 · 社论观察
+            - 播客 · 商业分析
+            - 播客 · 闲聊讨论
+            - 其他 · RSS/Newsletter
+            - 其他 · Bilibili
+            - 其他 · Youtube
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: url
+        label: 链接
+        type: string
+        required: true
+      - name: source
+        label: 来源 / 作者
+        type: string
+        description: 可留空。
+
+  footprint_year:
+    type: object
+    fields:
+      - name: title
+        label: 标题
+        type: string
+        required: true
+      - name: rows
+        label: 月份行
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{month}"
+        fields:
+          - name: month
+            label: 月份
+            type: select
+            required: true
+            options:
+              values:
+                - 一月
+                - 二月
+                - 三月
+                - 四月
+                - 五月
+                - 六月
+                - 七月
+                - 八月
+                - 九月
+                - 十月
+                - 十一月
+                - 十二月
+          - name: events
+            label: 事件
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{city}：{activity}"
+            fields:
+              - name: city
+                label: 城市 / 地点
+                type: string
+                required: true
+              - name: activity
+                label: 活动
+                type: string
+                required: true
