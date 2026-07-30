@@ -42,11 +42,11 @@ hiddenFromSearch = false
     ![](https://img.philohao.com/travel/2025/travel-20.webp)
 - 2025-02：[厦门·小队两日游](https://photos.app.goo.gl/BkhYz7Lu7pc51eue9)
 
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-lkK2yCvmt7jnm1yG.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-dqA84hw71VSINljX.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-aTbeHV1c4qB9D9Hl.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-cOf8cgcqLvq4JzgL.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-UQX6hx3nfVcQtzUP.jpg&w=640&q=75)
+    ![img-20250222-132316 01](https://img.philohao.com/blog/2026/07/img-20250222-132316-01.webp)
+    ![img-20250222-132316 02](https://img.philohao.com/blog/2026/07/img-20250222-132316-02.webp)
+    ![img-20250222-132316 03](https://img.philohao.com/blog/2026/07/img-20250222-132316-03.webp)
+    ![img-20250222-132316 04](https://img.philohao.com/blog/2026/07/img-20250222-132316-04.webp)
+    ![img-20250222-132316 05](https://img.philohao.com/blog/2026/07/img-20250222-132316-05.webp)
 - 2025-01：[香港·钓鱼翁徒步](https://photos.app.goo.gl/atQoKMFaLUj6BCfq6)
 
     ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-0SR7chbYwmPLXpuR.jpg&w=640&q=75)
