@@ -15,11 +15,11 @@ hiddenFromSearch = false
 
 - 2024-12：[长沙·浏阳烟花秀](https://photos.app.goo.gl/2uiwYjwzm6aB1HQy7)
 
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-v2FlRhyleTmTLwCb.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-5krcFYi9mbDvaQc0.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-n9eC8ELTdhlwS9rb.jpg&w=2048&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-8ep9p9Q1LmUnjn1I.jpg&w=640&q=75)
-    ![](https://album.philohao.com/_next/image?url=https%3A%2F%2Fcycfgqqhnbqr2ozt.public.blob.vercel-storage.com%2Fphoto-eGwHggrcSOELNAng.jpg&w=640&q=75)
+    ![img-5549 01](https://img.philohao.com/blog/2026/07/img-5549-01.webp)
+    ![img-5549 02](https://img.philohao.com/blog/2026/07/img-5549-02.webp)
+    ![img-5549 03](https://img.philohao.com/blog/2026/07/img-5549-03.webp)
+    ![img-5549 04](https://img.philohao.com/blog/2026/07/img-5549-04.webp)
+    ![img-5549 05](https://img.philohao.com/blog/2026/07/img-5549-05.webp)
 - 2024-11：[梧州·小电动嗦粉](https://photos.app.goo.gl/2yJHd7kiPPfocEYK6)
 
     ![](https://img.philohao.com/travel/2024/travel-01.webp)
