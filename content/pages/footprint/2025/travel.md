@@ -13,6 +13,13 @@ hiddenFromSearch = false
 
 ## 2025 年
 
+- 2025-10：[深圳·港珠澳游轮](https://photos.app.goo.gl/gHXSYFS1XgKwRSzb7)、[香港·浅水湾徒步](https://photos.app.goo.gl/gisW3mJJLJqtqrqx9)、[香港·三人游港迪](https://photos.app.goo.gl/yBNtY4tL9T2KDsra7)
+
+    ![img-20251017-175558-2 01](https://img.philohao.com/blog/2026/07/img-20251017-175558-2-01.webp)
+    ![img-20251017-175558-2 02](https://img.philohao.com/blog/2026/07/img-20251017-175558-2-02.webp)
+    ![img-20251017-175558-2 05](https://img.philohao.com/blog/2026/07/img-20251017-175558-2-05.webp)
+    ![img-20251017-175558-2 06](https://img.philohao.com/blog/2026/07/img-20251017-175558-2-06.webp)
+    ![img-20251017-175558-2 07](https://img.philohao.com/blog/2026/07/img-20251017-175558-2-07.webp)
 - 2025-06：[青甘·自驾大环线](https://photos.app.goo.gl/4Bdp5hdigcQrLTjr5)
 
     ![](https://img.philohao.com/travel/2025/travel-01.webp)
