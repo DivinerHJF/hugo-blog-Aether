@@ -161,6 +161,9 @@ travel:
       - month: 四月
       - month: 五月
       - month: 六月
+        events:
+          - city: 成都
+            activity: 成都舍友游
       - month: 七月
       - month: 八月
       - month: 九月
