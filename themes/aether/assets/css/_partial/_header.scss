@@ -515,14 +515,7 @@ header {
       padding: .5rem 1rem;
       float: right;
       font-size: .8rem;
-      color: $global-font-secondary-color;
-
-      [theme=dark] {
-        color: $global-font-secondary-color-dark;
-      }
-      [theme=black] {
-        color: $global-font-secondary-color-black;
-      }
+      color: var(--color-muted);
 
       @include link(false, false);
 

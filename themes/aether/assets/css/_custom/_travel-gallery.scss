@@ -1,0 +1,165 @@
+// 足迹出游页图片胶卷：桌面保留缩略图概览，手机切换为居中吸附。
+
+.footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
+  .footprint-detail-flow {
+    min-width: 0;
+  }
+
+  .footprint-gallery {
+    --gallery-gap: var(--space-2);
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: .65rem 0 1.1rem;
+  }
+
+  .footprint-gallery__track {
+    display: grid;
+    grid-template-columns: repeat(var(--gallery-columns, 1), minmax(0, 1fr));
+    gap: var(--gallery-gap);
+    min-width: 0;
+  }
+
+  .footprint-gallery__slide {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border-bottom: none;
+    border-radius: var(--radius-lg);
+    background: var(--color-image-wash);
+    outline: none;
+    transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-low);
+    }
+
+    &:focus-visible {
+      box-shadow: var(--focus-ring);
+    }
+  }
+
+  .footprint-gallery--single {
+    .footprint-gallery__slide {
+      max-width: 100%;
+
+      img {
+        object-fit: contain;
+        background: var(--color-surface-soft);
+      }
+    }
+  }
+
+  .footprint-gallery__counter {
+    display: none;
+  }
+
+  @media only screen and (max-width: 680px) {
+    .footprint-gallery {
+      --gallery-gap: var(--space-3);
+    }
+
+    .footprint-gallery__track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 84%;
+      grid-template-columns: none;
+      gap: var(--gallery-gap);
+      overflow-x: auto;
+      padding-inline: 8%;
+      scroll-padding-inline: 8%;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .footprint-gallery__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .footprint-gallery__slide {
+      scroll-snap-align: center;
+      transform: scale(.94);
+      opacity: .76;
+      transition: transform var(--motion-normal) var(--motion-ease), opacity var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
+
+      &:hover {
+        transform: scale(.94);
+        box-shadow: none;
+      }
+
+      &.is-active {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      &:focus-visible {
+        box-shadow: var(--focus-ring);
+      }
+    }
+
+    .footprint-gallery__counter {
+      display: inline-flex;
+      position: absolute;
+      right: 8%;
+      bottom: .65rem;
+      z-index: 2;
+      align-items: center;
+      min-height: 1.35rem;
+      padding: .16rem .5rem;
+      border-radius: var(--radius-pill);
+      background: var(--color-overlay);
+      color: var(--color-on-overlay);
+      font-size: .72rem;
+      line-height: 1.4;
+      pointer-events: none;
+    }
+
+    .footprint-gallery--single {
+      .footprint-gallery__track {
+        display: block;
+        overflow: visible;
+        padding-inline: 0;
+        scroll-snap-type: none;
+      }
+
+      .footprint-gallery__slide,
+      .footprint-gallery__slide:hover {
+        transform: none;
+        opacity: 1;
+      }
+
+      .footprint-gallery__slide img {
+        aspect-ratio: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
+    .footprint-gallery__track {
+      scroll-behavior: auto;
+    }
+
+    .footprint-gallery__slide,
+    .footprint-gallery__slide:hover {
+      transition: none;
+      transform: none;
+    }
+
+    .footprint-gallery__slide {
+      opacity: 1;
+    }
+  }
+}
