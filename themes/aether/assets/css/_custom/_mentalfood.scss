@@ -47,6 +47,19 @@
   box-sizing: border-box;
   overflow: hidden;
   border-radius: var(--radius-md);
+  transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
+
+  &:hover:not(:focus-within) {
+    box-shadow: var(--shadow-low);
+    transform: translateY(-2px);
+  }
+
+  &:focus-within {
+    outline: none;
+    border-radius: var(--radius-md);
+    box-shadow: var(--focus-ring);
+    transform: none;
+  }
 }
 
 .media-cover {

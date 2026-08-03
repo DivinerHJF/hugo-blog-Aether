@@ -255,23 +255,31 @@
     & a.next {
       font-size: 1rem;
       font-weight: 600;
-      @include transition(all 0.3s ease-out);
+      @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
     }
 
     & a.prev {
       float: left;
     }
 
-    & a.prev:hover {
-      @include transform(translateX(-4px));
+    & a.prev:hover:not(:focus-visible) {
+      @include transform(translateX(-2px));
     }
 
     & a.next {
       float: right;
     }
 
-    & a.next:hover {
-      @include transform(translateX(4px));
+    & a.next:hover:not(:focus-visible) {
+      @include transform(translateX(2px));
+    }
+
+    & a.prev:focus-visible,
+    & a.next:focus-visible {
+      outline: none;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--focus-ring);
+      @include transform(none);
     }
   }
 }

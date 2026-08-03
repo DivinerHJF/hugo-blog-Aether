@@ -153,7 +153,7 @@
   color: var(--color-ink);
   cursor: pointer;
   font: inherit;
-  @include transition(all var(--motion-normal) var(--motion-ease));
+  @include transition(border-color var(--motion-normal) var(--motion-ease), background var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
   &:hover,
   &:focus-visible,
@@ -189,9 +189,9 @@
     background: linear-gradient(90deg, var(--color-accent-soft) var(--tag-weight), var(--color-surface-translucent) var(--tag-weight));
     box-shadow: var(--shadow-low);
     color: var(--color-ink);
-    @include transition(all var(--motion-normal) var(--motion-ease));
+    @include transition(transform var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease), background var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
-    &:hover {
+    &:hover:not(:focus-visible) {
       border-color: var(--color-interactive);
       background: var(--color-interactive-soft);
       @include transform(translateY(-2px));
@@ -199,8 +199,10 @@
 
     &:focus-visible {
       outline: none;
+      border-radius: var(--radius-md);
       border-color: var(--color-interactive);
       box-shadow: var(--focus-ring);
+      @include transform(none);
     }
   }
 
@@ -244,10 +246,18 @@
     display: none;
   }
 
-  &:hover {
+  &:hover:not(:focus-within) {
     border-color: var(--color-interactive);
     box-shadow: var(--shadow-mid);
     @include transform(translateY(-2px));
+  }
+
+  &:focus-within {
+    outline: none;
+    border-radius: var(--radius-md);
+    border-color: var(--color-interactive);
+    box-shadow: var(--focus-ring);
+    @include transform(none);
   }
 }
 

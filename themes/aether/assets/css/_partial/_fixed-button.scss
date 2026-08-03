@@ -1,5 +1,17 @@
 #fixed-buttons {
-  display: none;
+  display: block;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  @include transform(translateY(4px));
+  @include transition(opacity var(--motion-normal) var(--motion-ease), visibility var(--motion-normal) var(--motion-ease), transform var(--motion-normal) var(--motion-ease));
+}
+
+#fixed-buttons.is-visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  @include transform(none);
 }
 
 .fixed-button {
@@ -13,7 +25,7 @@
   color: $global-font-secondary-color;
   background: $global-border-color;
   @include border-radius(2rem);
-  @include transition(color 0.4s ease);
+  @include transition(color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease));
 
   @include blur;
 
@@ -24,6 +36,11 @@
 
   &:active, &:focus, &:hover {
     outline: none;
+  }
+
+  &:focus-visible {
+    outline: none;
+    @include box-shadow(var(--focus-ring));
   }
 
   [theme=dark] & {

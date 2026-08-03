@@ -43,12 +43,24 @@ $friend-link-hover-color-black: #ffffff;
     [theme=black] & {
         background: $friend-link-background-color-black;
     }
-    -webkit-transition: transform 0.4s ease;
-    -moz-transition: transform 0.4s ease;
-    -o-transition: transform 0.4s ease;
-    transition: transform 0.4s ease;
-    &:hover {
-        @include transform(scale(1.01));
+    border-radius: var(--radius-sm);
+    @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
+}
+
+.friend-link {
+    &:hover:not(:focus-within) .friend-link-div {
+        @include transform(translateY(-2px));
+    }
+
+    &:focus-visible {
+        outline: none;
+    }
+
+    &:focus-visible .friend-link-div,
+    &:focus-within .friend-link-div {
+        border-radius: var(--radius-sm);
+        box-shadow: var(--focus-ring);
+        @include transform(none);
     }
 }
 
