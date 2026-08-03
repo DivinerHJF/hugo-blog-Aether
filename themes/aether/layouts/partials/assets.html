@@ -216,9 +216,6 @@
     {{- dict "Content" $content "Path" (printf "%v.scss" $path) "ToCSS" $options | dict "Scratch" $.Scratch "Data" | partial "scratch/style.html" -}}
 {{- end -}}
 
-{{- /* Config script */ -}}
-{{- $config | jsonify | printf "window.config=%s;" | dict "Content" | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
-
 {{- /* topbar */ -}}
 {{- $source := $cdn.topbarJS | default "lib/topbar/topbar.min.js" -}}
 {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/script.html" -}}
@@ -255,4 +252,6 @@
     {{- range (.Scratch.Get "this").pjaxStyle -}}
         {{- partial "plugin/style.html" . -}}
     {{- end -}}
+    {{- /* Page configuration is replaced together with the PJAX assets. */ -}}
+    <script type="application/json" id="page-config">{{ $config | jsonify | safeJS }}</script>
 </div>
