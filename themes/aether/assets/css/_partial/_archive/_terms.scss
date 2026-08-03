@@ -18,6 +18,21 @@
     min-height: 10rem;
     padding: 0 2%;
     position: relative;
+    border-radius: var(--radius-md);
+    transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease);
+
+    &:hover:not(:focus-within) {
+      border-color: var(--color-border-subtle);
+      box-shadow: var(--shadow-low);
+      transform: translateY(-2px);
+    }
+
+    &:focus-within {
+      outline: none;
+      border-radius: var(--radius-md);
+      box-shadow: var(--focus-ring);
+      transform: none;
+    }
 
     .card-item-wrapper {
       width: 100%;
@@ -90,11 +105,19 @@
     line-height: 1.5;      /* 增加行高改善垂直居中感 */
     color: #fff !important;/* 文字颜色 */
     text-decoration: none;
-    transition: transform 0.2s ease;
+    border-radius: var(--radius-pill);
+    transition: transform var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease);
 }
 
-.archive-item-tags a:hover {
-    transform: scale(1.05); /* 鼠标悬停时轻微放大 */
+.archive-item-tags a:hover:not(:focus-visible) {
+    transform: translateY(-1px);
+}
+
+.archive-item-tags a:focus-visible {
+    outline: none;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--focus-ring);
+    transform: none;
 }
 
 /* 颜色部分保持不变 */

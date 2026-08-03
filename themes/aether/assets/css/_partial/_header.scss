@@ -2,7 +2,7 @@ header {
   width: 100%;
   z-index: 150;
   background-color: $header-background-color;
-  @include transition(box-shadow 0.3s ease);
+  @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
   [theme=dark] & {
     background-color: $header-background-color-dark;
@@ -28,6 +28,25 @@ header {
 
   &:hover {
     @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
+  }
+
+  &.is-hidden {
+    @include transform(translateY(-100%));
+  }
+
+  &:focus-within {
+    @include transform(none);
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  .menu-toggle:focus-visible {
+    outline: none;
+    @include border-radius(var(--radius-sm));
+    @include box-shadow(var(--focus-ring));
+    @include transform(none);
   }
 }
 
@@ -93,7 +112,7 @@ header {
     outline: none;
     background-color: $header-background-color;
     vertical-align: baseline !important;
-    @include transition(width 0.3s ease);
+    @include transition(width var(--motion-normal) var(--motion-ease));
 
     [theme=dark] & {
       background-color: $header-background-color-dark;
@@ -265,7 +284,7 @@ header {
     .header-wrapper {
       padding: 0 1rem;
       font-size: 1.125rem;
-      @include transition(margin-top 0.3s ease);
+      @include transition(margin-top var(--motion-normal) var(--motion-ease));
 
       .header-title {
         font-size: $header-title-font-size;
@@ -275,7 +294,7 @@ header {
       .menu-toggle {
         line-height: 4rem;
         cursor: pointer;
-        @include transition(width 0.3s ease);
+        @include transition(width var(--motion-normal) var(--motion-ease));
 
         span {
           display: block;
@@ -283,7 +302,7 @@ header {
           width: 1.5rem;
           height: 2px;
           @include border-radius(3px);
-          @include transition(all 0.3s ease-in-out);
+          @include transition(transform var(--motion-normal) var(--motion-ease), opacity var(--motion-normal) var(--motion-ease), background-color var(--motion-normal) var(--motion-ease));
 
           [theme=dark] & {
             background: $global-font-color-dark;

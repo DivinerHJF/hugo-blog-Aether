@@ -1,0 +1,71 @@
+// Shared motion language and reduced-motion coverage.
+
+main > .page,
+main > .container > .page {
+  animation: page-enter var(--motion-slow) var(--motion-ease) both;
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  main > .page,
+  main > .container > .page {
+    animation: none !important;
+  }
+
+  .home-avatar a:hover img,
+  .home-avatar a:focus-visible img,
+  .home[posts] .summary .featured-image-preview:hover,
+  .home[posts] .summary .featured-image-preview:focus-within,
+  .tag-explorer-popular a:hover,
+  .tag-explorer-popular a:focus-visible,
+  .tag-card:hover,
+  .tag-card:focus-within,
+  .categories-card .card-item:hover,
+  .categories-card .card-item:focus-within,
+  .author-card .card-item:hover,
+  .author-card .card-item:focus-within,
+  .series-card .card-item:hover,
+  .series-card .card-item:focus-within,
+  .archive-item-tags a:hover,
+  .archive-item-tags a:focus-visible,
+  .media:hover,
+  .media:focus-within,
+  .footprint-gallery__slide:hover,
+  .footprint-gallery__slide:focus-visible,
+  .post-nav a.prev:hover,
+  .post-nav a.prev:focus-visible,
+  .post-nav a.next:hover,
+  .post-nav a.next:focus-visible,
+  .friend-link:hover .friend-link-div,
+  .friend-link:focus-visible .friend-link-div,
+  .showcase-image:hover,
+  .showcase-image:focus-within,
+  #fixed-buttons,
+  header.is-hidden {
+    transform: none !important;
+  }
+}

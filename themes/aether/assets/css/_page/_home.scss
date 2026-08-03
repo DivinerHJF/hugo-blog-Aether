@@ -14,11 +14,22 @@
         margin: 0 auto;
         @include border-radius(100%);
         @include box-shadow(0 0 0 .3618em rgba(0, 0, 0, .05));
-        @include transition(all 0.4s ease);
+        @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
-        &:hover {
-          position: relative;
-          @include transform(translateY(-.75rem));
+      }
+
+      a:hover:not(:focus-visible) {
+        img {
+          @include transform(translateY(-2px));
+        }
+      }
+
+      a:focus-visible {
+        outline: none;
+
+        img {
+          @include box-shadow(var(--focus-ring));
+          @include transform(none);
         }
       }
     }
@@ -99,7 +110,7 @@
       padding: 30% 0 0;
       position: relative;
       margin: 0.6rem auto;
-      @include transition(transform 0.4s ease);
+      @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
       img {
         position: absolute;
@@ -114,8 +125,14 @@
         @include object-fit(cover);
       }
 
-      &:hover {
-        @include transform(scale(1.01));
+      &:hover:not(:focus-within) {
+        @include transform(translateY(-2px));
+      }
+
+      &:focus-within {
+        outline: none;
+        box-shadow: var(--focus-ring);
+        @include transform(none);
       }
     }
 

@@ -14,7 +14,7 @@
     {{- $years = sort $years "value" "desc" -}}
 
     <div class="page single special footprint-page" data-footprint-layout="footprint-year" data-footprint-category="{{ $category }}" data-footprint-year="{{ $year }}">
-        <h1 class="single-title animate__animated animate__pulse animate__faster">{{ .Title }}</h1>
+        <h1 class="single-title">{{ .Title }}</h1>
 
         <div class="content" id="content" data-footprint-layout="footprint-year" data-footprint-category="{{ $category }}">
             <div class="footprint-topbar">

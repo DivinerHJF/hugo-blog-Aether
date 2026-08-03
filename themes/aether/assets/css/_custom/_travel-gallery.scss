@@ -37,13 +37,16 @@
       object-fit: cover;
     }
 
-    &:hover {
+    &:hover:not(:focus-visible) {
       transform: translateY(-2px);
       box-shadow: var(--shadow-low);
     }
 
     &:focus-visible {
+      outline: none;
+      border-radius: var(--radius-lg);
       box-shadow: var(--focus-ring);
+      transform: none;
     }
   }
 
@@ -92,7 +95,7 @@
       opacity: .76;
       transition: transform var(--motion-normal) var(--motion-ease), opacity var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
 
-      &:hover {
+      &:hover:not(:focus-visible) {
         transform: scale(.94);
         box-shadow: none;
       }
@@ -103,7 +106,10 @@
       }
 
       &:focus-visible {
+        outline: none;
+        border-radius: var(--radius-lg);
         box-shadow: var(--focus-ring);
+        transform: none;
       }
     }
 

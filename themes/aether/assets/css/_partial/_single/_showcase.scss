@@ -38,7 +38,8 @@ $showcase-hover-color-black: #ffffff;
 }
 
 .showcase-image {
-    @include transition(transform 0.4s ease);
+    border-radius: var(--radius-sm);
+    @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
 
     img {
         width: 98%;
@@ -53,8 +54,19 @@ $showcase-hover-color-black: #ffffff;
         @include object-fit(cover);
     }
 
-    &:hover {
-        @include transform(scale(1.01));
+    &:hover:not(:focus-within) {
+        @include transform(translateY(-2px));
+    }
+
+    &:focus-within {
+        outline: none;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--focus-ring);
+        @include transform(none);
+    }
+
+    a:focus-visible {
+        outline: none;
     }
 }
 
@@ -86,6 +98,13 @@ $showcase-hover-color-black: #ffffff;
         &:hover {
             color: $showcase-hover-color-black;
         }
+    }
+
+    &:focus-visible {
+        outline: none;
+        border-radius: var(--radius-sm);
+        box-shadow: var(--focus-ring);
+        @include transform(none);
     }
 }
 

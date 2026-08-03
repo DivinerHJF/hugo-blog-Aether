@@ -15,18 +15,6 @@ function isTocStatic() {
     return window.matchMedia('only screen and (max-width: 1000px)').matches;
 }
 
-function animateCSS(element, animation, reserved, callback) {
-    if (!Array.isArray(animation)) animation = [animation];
-    element.classList.add('animate__animated', ...animation);
-    const handler = () => {
-        element.classList.remove('animate__animated', ...animation);
-        element.removeEventListener('animationend', handler);
-        if (typeof callback === 'function') callback();
-    };
-    if (!reserved) element.addEventListener('animationend', handler, false);
-}
-
-
 function initSVGIcon() {
     forEach(document.querySelectorAll('[data-svg-src]'), $icon => {
         fetch($icon.getAttribute('data-svg-src'))
@@ -1076,7 +1064,6 @@ function initHighlight() {
                 $copy.title = window.config.code.copyTitle;
                 const clipboard = new ClipboardJS($copy);
                 clipboard.on('success', _e => {
-                    animateCSS($code, 'animate__flash');
                     $copy.firstElementChild.className = "fas fa-check fa-fw";
                     setTimeout(() => {
                         $copy.firstElementChild.className = "far fa-copy fa-fw";
@@ -1400,34 +1387,27 @@ function onScroll() {
     }
     const $fixedButtons = document.getElementById('fixed-buttons');
     const ACCURACY = 20, MINIMUM = 100;
+    forEach($headers, $header => $header.classList.remove('is-hidden'));
+    $fixedButtons.classList.remove('is-visible');
     function handleScrollEvent() {
         window.newScrollTop = getScrollTop();
         const scroll = window.newScrollTop - window.oldScrollTop;
         const isMobile = isMobileWindow();
         forEach($headers, $header => {
             if (scroll > ACCURACY) {
-                $header.classList.remove('animate__fadeInDown');
-                animateCSS($header, ['animate__fadeOutUp', 'animate__faster'], true);
+                $header.classList.add('is-hidden');
             } else if (scroll < - ACCURACY || window.newScrollTop <= 20) {
-                $header.classList.remove('animate__fadeOutUp');
-                animateCSS($header, ['animate__fadeInDown', 'animate__faster'], true);
+                $header.classList.remove('is-hidden');
             }
         });
         if (window.newScrollTop > MINIMUM) {
             if (isMobile && scroll > ACCURACY) {
-                $fixedButtons.classList.remove('animate__fadeIn');
-                animateCSS($fixedButtons, ['animate__fadeOut', 'animate__faster'], true);
+                $fixedButtons.classList.remove('is-visible');
             } else if (!isMobile || scroll < - ACCURACY) {
-                $fixedButtons.style.display = 'block';
-                $fixedButtons.classList.remove('animate__fadeOut');
-                animateCSS($fixedButtons, ['animate__fadeIn', 'animate__faster'], true);
+                $fixedButtons.classList.add('is-visible');
             }
         } else {
-            if (!isMobile) {
-                $fixedButtons.classList.remove('animate__fadeIn');
-                animateCSS($fixedButtons, ['animate__fadeOut', 'animate__faster'], true);
-            }
-            $fixedButtons.style.display = 'none';
+            $fixedButtons.classList.remove('is-visible');
         }
         for (let event of window.scrollEventSet) event();
         window.oldScrollTop = window.newScrollTop;
