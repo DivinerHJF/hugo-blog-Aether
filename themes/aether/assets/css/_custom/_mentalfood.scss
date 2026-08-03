@@ -1,0 +1,188 @@
+// 读看听页面
+
+.mentalfood-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .45rem;
+  margin: .5rem 0 1.25rem;
+  color: var(--color-muted);
+  font-size: .9rem;
+}
+
+.mentalfood-nav a {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
+  padding: .14rem .62rem;
+  background: var(--color-surface-soft);
+  color: inherit;
+  text-decoration: none;
+}
+
+.mentalfood-nav a:hover {
+  border-color: var(--color-interactive);
+  color: var(--color-interactive);
+}
+
+.mentalfood-year {
+  scroll-margin-top: 5rem;
+}
+
+.media-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1rem 1.1rem;
+  align-items: stretch;
+}
+
+.media {
+  display: flex;
+  gap: .75rem;
+  min-width: 0;
+  height: 150px;
+  margin: 0;
+  padding: .25rem;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.media-cover {
+  flex: 0 0 80px;
+  width: 80px;
+  height: 120px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-low);
+}
+
+.media-cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-annotation-soft), var(--color-surface-soft));
+  color: var(--color-muted);
+  font-weight: 700;
+  font-size: 1.65rem;
+}
+
+.media-cover-placeholder span {
+  transform: translateY(-1px);
+}
+
+.media-meta {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+}
+
+.media-meta-item {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 0;
+  font-size: .8em;
+  line-height: 1.6em;
+}
+
+.media-meta-item.title {
+  display: flex;
+  gap: .45rem;
+  align-items: baseline;
+  font-weight: 700;
+  font-size: .85em;
+}
+
+.media-meta-item.title a,
+.media-meta-item.title span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.media-date {
+  flex: 0 0 auto;
+  margin-left: auto;
+  color: var(--color-muted);
+  font-weight: 400;
+}
+
+.media-subtitle {
+  display: flex;
+  gap: .4rem;
+  align-items: baseline;
+}
+
+.media-meta-item .author {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  opacity: .65;
+}
+
+.media-meta-item .star-score {
+  color: var(--color-annotation);
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.media-meta-item .grey-star {
+  color: var(--color-border);
+}
+
+.media-meta-item.intro {
+  margin-top: .2rem;
+  text-align: justify;
+  display: -webkit-box;
+  overflow: hidden;
+  white-space: normal !important;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  line-height: .9rem;
+  border-top: .1px solid var(--color-border-subtle);
+  padding-top: .35rem;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.mentalfood-link-list h4 {
+  margin: .75rem 0 .25rem;
+  color: var(--color-muted);
+  font-size: .92rem;
+}
+
+.mentalfood-link-list ul {
+  margin: .25rem 0 .5rem 1.15rem;
+}
+
+.mentalfood-link-list li {
+  margin: .18rem 0;
+  line-height: 1.65;
+}
+
+.mentalfood-source {
+  margin-left: .18rem;
+  color: var(--color-muted);
+}
+
+.mentalfood-empty {
+  margin: .75rem 0;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+@media only screen and (max-width: 680px) {
+  .media-list {
+    grid-template-columns: 1fr;
+  }
+
+  .media {
+    height: auto;
+    min-height: 138px;
+  }
+}

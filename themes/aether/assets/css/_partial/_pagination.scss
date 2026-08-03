@@ -65,11 +65,6 @@
       background: $pagination-link-hover-color-black;
     }
 
-    &:before .active,
-    &:after .active {
-      width: 100%;
-    }
-
     &:before {
       left: 50%;
     }
