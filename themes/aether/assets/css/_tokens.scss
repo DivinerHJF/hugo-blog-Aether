@@ -3,44 +3,87 @@
 // 共享设计 Token
 // ==============================
 
-// Existing SCSS variables remain the compatibility source while components
-// move to semantic CSS custom properties. Theme variants only override values.
-:root {
-  --color-paper: #{$global-background-color};
-  --color-surface: #{$table-background-color};
-  --color-surface-raised: #{$search-background-color};
-  --color-surface-soft: rgba(0, 0, 0, .025);
-  --color-surface-wash: rgba(255, 255, 255, .24);
-  --color-surface-panel: rgba(255, 255, 255, .48);
-  --color-surface-translucent: rgba(255, 255, 255, .78);
-  --color-ink: #{$global-font-color};
-  --color-muted: #{$global-font-secondary-color};
-  --color-border-subtle: #{darken($table-thead-color, 2%)};
-  --color-border: #{$global-border-color};
-  --color-border-strong: var(--color-ink);
+// Keep theme decisions in one place. Components should consume these semantic
+// tokens instead of repeating separate dark/black Sass branches.
+body {
+  color-scheme: light;
 
-  --color-accent: #866b2f;
-  --color-accent-soft: rgba(134, 107, 47, .16);
-  --color-on-accent: #fff;
-  --color-interactive: #1f7898;
-  --color-interactive-soft: rgba(31, 120, 152, .14);
-  --color-interactive-border: rgba(31, 120, 152, .18);
-  --color-on-interactive: #fff;
-  --color-annotation: #b64a70;
-  --color-annotation-soft: rgba(182, 74, 112, .14);
+  // Surfaces
+  --surface-page: #{$global-background-color};
+  --surface-card: rgba(255, 255, 255, .62);
+  --surface-card-raised: #{$search-background-color};
+  --surface-panel: rgba(255, 255, 255, .84);
+  --surface-soft: rgba(0, 0, 0, .025);
+  --surface-wash: rgba(255, 255, 255, .24);
+  --surface-translucent: rgba(255, 255, 255, .78);
+  --surface-header: #{$header-background-color};
+  --surface-search: #{$search-background-color};
+  --surface-code: #{$code-background-color};
+  --surface-code-header: #{darken($code-background-color, 8%)};
+  --surface-code-highlight: #{darken($code-background-color, 10%)};
+  --surface-image: rgba(0, 0, 0, .045);
 
-  --color-image-wash: rgba(0, 0, 0, .045);
-  --color-overlay: rgba(0, 0, 0, .58);
-  --color-on-overlay: #fff;
+  // Content and controls
+  --ink: #{$global-font-color};
+  --muted: #66645f;
+  --border: #{$global-border-color};
+  --border-subtle: #{darken($table-thead-color, 2%)};
+  --border-strong: #b8b8b0;
+  --selection: #{$selection-color};
+  --accent: #866b2f;
+  --accent-soft: rgba(134, 107, 47, .16);
+  --on-accent: #fff;
+  --on-tag: #161209;
+  --interactive: #1f7898;
+  --interactive-soft: rgba(31, 120, 152, .14);
+  --interactive-border: rgba(31, 120, 152, .18);
+  --on-interactive: #fff;
+  --annotation: #b64a70;
+  --annotation-soft: rgba(182, 74, 112, .14);
+  --overlay: rgba(0, 0, 0, .58);
+  --on-overlay: #fff;
+
+  // Depth: Dark can use these gently; Black turns them off below.
+  --shadow-image: 0 0 5px rgba(0, 0, 0, .18);
+  --shadow-card: 0 6px 18px rgba(0, 0, 0, .08);
+  --shadow-card-hover: 0 18px 45px rgba(33, 47, 63, .08);
+  --shadow-header: 0 0 1.5rem rgba(0, 0, 0, .1);
+  --shadow-inset: inset 0 -1px 0 var(--border);
+
+  // Compatibility aliases for the existing theme styles.
+  --color-paper: var(--surface-page);
+  --color-surface: var(--surface-card-raised);
+  --color-surface-raised: var(--surface-search);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-wash: var(--surface-wash);
+  --color-surface-panel: var(--surface-panel);
+  --color-surface-translucent: var(--surface-translucent);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-border-subtle: var(--border-subtle);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-interactive: var(--interactive);
+  --color-interactive-soft: var(--interactive-soft);
+  --color-interactive-border: var(--interactive-border);
+  --color-on-interactive: var(--on-interactive);
+  --color-annotation: var(--annotation);
+  --color-annotation-soft: var(--annotation-soft);
+  --color-image-wash: var(--surface-image);
+  --color-overlay: var(--overlay);
+  --color-on-overlay: var(--on-overlay);
+
+  --shadow-low: var(--shadow-card);
+  --shadow-mid: var(--shadow-card-hover);
+  --focus-ring: 0 0 0 3px rgba(31, 120, 152, .38);
 
   --radius-sm: 5px;
   --radius-md: 10px;
   --radius-lg: 16px;
   --radius-pill: 999px;
-
-  --shadow-low: 0 6px 18px rgba(0, 0, 0, .08);
-  --shadow-mid: 0 18px 45px rgba(33, 47, 63, .08);
-  --focus-ring: 0 0 0 3px rgba(31, 120, 152, .38);
 
   --space-1: .25rem;
   --space-2: .5rem;
@@ -56,61 +99,88 @@
 }
 
 body[theme='dark'] {
-  --color-paper: #{$global-background-color-dark};
-  --color-surface: #{$table-background-color-dark};
-  --color-surface-raised: #{$search-background-color-dark};
-  --color-surface-soft: rgba(255, 255, 255, .05);
-  --color-surface-wash: rgba(49, 50, 54, .28);
-  --color-surface-panel: rgba(255, 255, 255, .05);
-  --color-surface-translucent: rgba(42, 43, 47, .72);
-  --color-ink: #{$global-font-color-dark};
-  --color-muted: #{$global-font-secondary-color-dark};
-  --color-border-subtle: #{darken($table-thead-color-dark, 2%)};
-  --color-border: #{$global-border-color-dark};
-  --color-border-strong: var(--color-ink);
+  color-scheme: dark;
 
-  --color-accent: #d8c28e;
-  --color-accent-soft: rgba(216, 194, 142, .16);
-  --color-on-accent: #161209;
-  --color-interactive: #8fd8f2;
-  --color-interactive-soft: rgba(143, 216, 242, .12);
-  --color-interactive-border: rgba(143, 216, 242, .16);
-  --color-on-interactive: #161209;
-  --color-annotation: #e38bae;
-  --color-annotation-soft: rgba(227, 139, 174, .14);
+  // Night study: a charcoal room with visible but quiet layers.
+  --surface-page: #292a2d;
+  --surface-card: rgba(255, 255, 255, .045);
+  --surface-card-raised: rgba(255, 255, 255, .075);
+  --surface-panel: rgba(255, 255, 255, .055);
+  --surface-soft: rgba(255, 255, 255, .04);
+  --surface-wash: rgba(255, 255, 255, .05);
+  --surface-translucent: rgba(255, 255, 255, .07);
+  --surface-header: #292a2d;
+  --surface-search: #36373b;
+  --surface-code: #272c34;
+  --surface-code-header: #20242b;
+  --surface-code-highlight: #303641;
+  --surface-image: rgba(255, 255, 255, .04);
 
-  --color-image-wash: rgba(255, 255, 255, .08);
-  --shadow-low: 0 6px 18px rgba(0, 0, 0, .22);
-  --shadow-mid: 0 18px 45px rgba(0, 0, 0, .28);
+  --ink: #e2e0da;
+  --muted: #aaa8a2;
+  --border: #414247;
+  --border-subtle: #37383c;
+  --border-strong: #62646b;
+  --selection: rgba(50, 112, 194, .4);
+  --accent: #d8c28e;
+  --accent-soft: rgba(216, 194, 142, .16);
+  --on-accent: #161209;
+  --on-tag: #161209;
+  --interactive: #8fd8f2;
+  --interactive-soft: rgba(143, 216, 242, .12);
+  --interactive-border: rgba(143, 216, 242, .16);
+  --on-interactive: #161209;
+  --annotation: #e38bae;
+  --annotation-soft: rgba(227, 139, 174, .14);
+  --overlay: rgba(0, 0, 0, .68);
+
+  --shadow-image: 0 0 5px rgba(0, 0, 0, .22);
+  --shadow-card: 0 6px 18px rgba(0, 0, 0, .22);
+  --shadow-card-hover: 0 18px 45px rgba(0, 0, 0, .28);
+  --shadow-header: 0 0 1.5rem rgba(0, 0, 0, .24);
   --focus-ring: 0 0 0 3px rgba(143, 216, 242, .38);
 }
 
 body[theme='black'] {
-  --color-paper: #{$global-background-color-black};
-  --color-surface: #{$table-background-color-black};
-  --color-surface-raised: #{$search-background-color-black};
-  --color-surface-soft: rgba(255, 255, 255, .04);
-  --color-surface-wash: rgba(49, 50, 54, .28);
-  --color-surface-panel: rgba(255, 255, 255, .04);
-  --color-surface-translucent: rgba(18, 18, 18, .84);
-  --color-ink: #{$global-font-color-black};
-  --color-muted: #{$global-font-secondary-color-black};
-  --color-border-subtle: #{darken($table-thead-color-black, 2%)};
-  --color-border: #{$global-border-color-black};
-  --color-border-strong: var(--color-ink);
+  color-scheme: dark;
 
-  --color-accent: #e1cb97;
-  --color-accent-soft: rgba(225, 203, 151, .18);
-  --color-on-accent: #000;
-  --color-interactive: #9adff5;
-  --color-interactive-soft: rgba(154, 223, 245, .12);
-  --color-interactive-border: rgba(154, 223, 245, .18);
-  --color-on-interactive: #000;
-  --color-annotation: #ef9cbb;
-  --color-annotation-soft: rgba(239, 156, 187, .14);
+  // Photo room: near-black surfaces, crisp edges, and no decorative depth.
+  --surface-page: #000;
+  --surface-card: #090909;
+  --surface-card-raised: #111;
+  --surface-panel: #0d0d0d;
+  --surface-soft: #101010;
+  --surface-wash: #0a0a0a;
+  --surface-translucent: #0b0b0b;
+  --surface-header: #000;
+  --surface-search: #0f0f0f;
+  --surface-code: #090909;
+  --surface-code-header: #0f1012;
+  --surface-code-highlight: #171717;
+  --surface-image: #000;
 
-  --color-image-wash: rgba(255, 255, 255, .06);
-  --shadow-low: none;
-  --shadow-mid: none;
+  --ink: #e6e6e6;
+  --muted: #9b9b9b;
+  --border: #262626;
+  --border-subtle: #1a1a1a;
+  --border-strong: #3d3d3d;
+  --selection: rgba(50, 112, 194, .4);
+  --accent: #e1cb97;
+  --accent-soft: rgba(225, 203, 151, .18);
+  --on-accent: #000;
+  --on-tag: #000;
+  --interactive: #9adff5;
+  --interactive-soft: rgba(154, 223, 245, .12);
+  --interactive-border: rgba(154, 223, 245, .18);
+  --on-interactive: #000;
+  --annotation: #ef9cbb;
+  --annotation-soft: rgba(239, 156, 187, .14);
+  --overlay: rgba(0, 0, 0, .78);
+
+  --shadow-image: none;
+  --shadow-card: none;
+  --shadow-card-hover: none;
+  --shadow-header: none;
+  --shadow-inset: inset 0 -1px 0 var(--border);
   --focus-ring: 0 0 0 3px rgba(154, 223, 245, .42);
 }

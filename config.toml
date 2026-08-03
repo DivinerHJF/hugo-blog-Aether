@@ -220,7 +220,7 @@ dataStrict = "0"
 dataReactionsEnabled = "1"
 dataEmitMetadata = "0"
 dataInputPosition = "top"
-dataTheme = "catppuccin_latte"
+dataTheme = "preferred_color_scheme"
 dataLang = "zh-CN"
 dataLoading = "lazy"
 

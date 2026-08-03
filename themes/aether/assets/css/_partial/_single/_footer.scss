@@ -2,15 +2,8 @@
   margin-top: 3rem;
 
   .post-info {
-    border-bottom: 1px solid $global-border-color;
+    border-bottom: 1px solid var(--border);
     padding: 1rem 0 0.3rem;
-
-    [theme=dark] & {
-      border-bottom: 1px solid $global-border-color-dark;
-    }
-    [theme=black] & {
-      border-bottom: 1px solid $global-border-color-black;
-    }
 
     .post-info-line {
       display: flex;
@@ -18,28 +11,14 @@
 
       .post-info-mod {
         font-size: 0.8em;
-        color: $global-font-secondary-color;
-
-        [theme=dark] & {
-          color: $global-font-secondary-color-dark;
-        }
-        [theme=black] & {
-          color: $global-font-secondary-color-black;
-        }
+        color: var(--muted);
 
         @include link(false, false);
       }
 
       .post-info-license {
         font-size: 0.8em;
-        color: $global-font-secondary-color;
-
-        [theme=dark] & {
-          color: $global-font-secondary-color-dark;
-        }
-        [theme=black] & {
-          color: $global-font-secondary-color-black;
-        }
+        color: var(--muted);
 
         @include link(false, false);
       }
@@ -72,30 +51,16 @@
           width: 1.8rem;
           height: 1.8rem;
           border-radius: 50%;
-          color: $global-font-secondary-color;
+          color: var(--muted);
           line-height: 1;
           text-decoration: none;
           cursor: pointer;
           transition: color 0.2s ease, background 0.2s ease;
 
-          [theme=dark] & {
-            color: $global-font-secondary-color-dark;
-          }
-
-          [theme=black] & {
-            color: $global-font-secondary-color-black;
-          }
-
           &:hover,
           &:focus-visible {
-            background: rgba($global-link-hover-color, 0.08);
-            color: $global-link-hover-color;
-
-            [theme=dark] &,
-            [theme=black] & {
-              background: rgba(#ffffff, 0.08);
-              color: $global-link-hover-color-dark;
-            }
+            background: var(--interactive-soft);
+            color: var(--interactive);
           }
 
           &:focus-visible {
@@ -128,11 +93,11 @@
             display: flex;
             width: 11rem;
             padding: 0.65rem;
-            border: 1px solid $global-border-color;
+            border: 1px solid var(--border);
             border-radius: 0.6rem;
-            background: $global-background-color;
-            box-shadow: 0 0.5rem 1.25rem rgba(#000000, 0.08);
-            color: $global-font-secondary-color;
+            background: var(--surface-card-raised);
+            box-shadow: var(--shadow-card);
+            color: var(--muted);
             text-align: center;
             opacity: 0;
             visibility: hidden;
@@ -140,17 +105,6 @@
             transform: translateY(0.2rem);
             transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
 
-            [theme=dark] & {
-              border-color: $global-border-color-dark;
-              background: $global-background-color-dark;
-              color: $global-font-secondary-color-dark;
-            }
-
-            [theme=black] & {
-              border-color: $global-border-color-black;
-              background: $global-background-color-black;
-              color: $global-font-secondary-color-black;
-            }
           }
 
           .share-wechat-title {
