@@ -33,18 +33,9 @@
 
         // --- 新增: 鼠标悬停效果 ---
         &:hover {
-          color: $single-link-hover-color;
-          background-color: rgba($global-border-color, 0.5); // 添加一个淡淡的背景色
+          color: var(--interactive);
+          background-color: var(--interactive-soft); // 添加一个淡淡的背景色
           border-radius: 4px;
-
-          [theme=dark] & {
-            color: $single-link-hover-color-dark;
-            background-color: rgba($global-border-color-dark, 0.2);
-          }
-          [theme=black] & {
-            color: $single-link-hover-color-black;
-            background-color: rgba($global-border-color-black, 0.2);
-          }
         }
       }
 
@@ -57,9 +48,7 @@
         left: 0;
         top: 50%;
         transform: translateY(-50%);
-        color: $single-link-color;
-        [theme=dark] & { color: $single-link-color-dark; }
-        [theme=black] & { color: $single-link-color-black; }
+        color: var(--ink);
       }
 
       ul {
@@ -77,9 +66,7 @@
           top: 0.5rem;
           bottom: 0.5rem;
           width: 1px;
-          background-color: $global-border-color;
-          [theme=dark] & { background-color: $global-border-color-dark; }
-          [theme=black] & { background-color: $global-border-color-black; }
+          background-color: var(--border);
         }
 
         // Level 2
@@ -97,25 +84,10 @@
 
   // --- ruby 样式 ---
   ruby {
-    background: $code-background-color;
+    background: var(--surface-code);
 
     rt {
-      color: $global-font-secondary-color;
-    }
-
-    [theme=dark] & {
-      background: $code-background-color-dark;
-
-      rt {
-        color: $global-font-secondary-color-dark;
-      }
-    }
-    [theme=black] & {
-      background: $code-background-color-black;
-
-      rt {
-        color: $global-font-secondary-color-black;
-      }
+      color: var(--muted);
     }
   }
 }
@@ -128,8 +100,10 @@
   max-width: 0;
   // --- 优化: 增加内边距, 让内容有呼吸空间 ---
   padding: 0 1rem;
-  border: 1px solid #b1b1b1;
-  border-left: 3px solid $global-border-color; // 边框稍微细一点
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--border-strong); // 边框稍微细一点
+  background: var(--surface-card);
+  box-shadow: var(--shadow-card);
   @include overflow-wrap(break-word);
   box-sizing: border-box;
   top: 10rem;
@@ -139,13 +113,6 @@
   // --- 新增: 半透明背景, 提升可读性 ---
   border-radius: 0 8px 8px 0; // 右侧添加圆角
   @include blur;
-
-  [theme=dark] & {
-    border-left-color: $global-border-color-dark;
-  }
-  [theme=black] & {
-    border-left-color: $global-border-color-black;
-  }
 
   [header-desktop=normal] & {
     top: 5rem;
@@ -160,14 +127,10 @@
       // --- 优化: 为 active 状态的伪元素也应用高亮颜色 ---
       a.active {
         font-weight: bold;
-        color: $single-link-hover-color; // 使用 hover 颜色以示强调
-        [theme=dark] & { color: $single-link-hover-color-dark; }
-        [theme=black] & { color: $single-link-hover-color-black; }
+        color: var(--interactive); // 使用 hover 颜色以示强调
 
         &::before {
-          color: $single-link-hover-color;
-          [theme=dark] & { color: $single-link-hover-color-dark; }
-          [theme=black] & { color: $single-link-hover-color-black; }
+          color: var(--interactive);
         }
       }
 
@@ -194,12 +157,9 @@
 #toc-static {
   display: none;
   margin: 1.5rem 0; // 增加上下边距
-  border: 1px solid $global-border-color; // --- 优化: 使用边框代替背景色, 更简洁
+  border: 1px solid var(--border); // --- 优化: 使用边框代替背景色, 更简洁
   border-radius: 8px;
   overflow: hidden; // 配合圆角
-
-  [theme=dark] & { border-color: $global-border-color-dark; }
-  [theme=black] & { border-color: $global-border-color-black; }
 
   &[kept=true] {
     display: block;
@@ -210,11 +170,8 @@
     justify-content: space-between;
     line-height: 2em;
     padding: 0.5rem 1rem;
-    background: $code-background-color;
+    background: var(--surface-code);
     cursor: pointer; // --- 新增: 表明标题可点击
-
-    [theme=dark] & { background: $code-background-color-dark; }
-    [theme=black] & { background: $code-background-color-black; }
   }
 
   .toc-content {

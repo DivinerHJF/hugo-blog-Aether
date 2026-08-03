@@ -1,24 +1,9 @@
 .cc-window.cc-banner {
   .cc-btn {
-    color: $global-font-color;
+    color: var(--ink);
 
     &:hover, &:focus {
-      background-color: #ccc;
-    }
-
-    [theme=dark] & {
-      color: $global-font-color;
-
-      &:hover, &:focus {
-        background-color: #fff;
-      }
-    }
-    [theme=black] & {
-      color: $global-font-color;
-
-      &:hover, &:focus {
-        background-color: #fff;
-      }
+      background-color: var(--surface-card-raised);
     }
   }
 }

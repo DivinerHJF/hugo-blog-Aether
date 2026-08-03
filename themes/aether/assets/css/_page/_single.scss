@@ -19,17 +19,10 @@
 
   .post-meta {
     font-size: .875rem;
-    color: $global-font-secondary-color;
+    color: var(--muted);
 
     span {
       display: inline-block;
-    }
-
-    [theme=dark] & {
-      color: $global-font-secondary-color-dark;
-    }
-    [theme=black] & {
-      color: $global-font-secondary-color-black;
     }
 
     @include link(false, true);
@@ -99,13 +92,6 @@
     h6 {
       font-weight: bold;
       margin: 1.2rem 0;
-
-      [theme=dark] & {
-        font-weight: bolder;
-      }
-      [theme=black] & {
-        font-weight: bolder;
-      }
     }
 
     > h2,
@@ -116,14 +102,7 @@
       > .header-mark::before {
         content: "·";
         margin-right: .3125rem;
-        color: $single-link-color;
-
-        [theme=dark] & {
-          color: $single-link-color-dark;
-        }
-        [theme=black] & {
-          color: $single-link-color-black;
-        }
+        color: var(--interactive);
       }
     }
 
@@ -162,12 +141,7 @@
     b, strong {
       font-weight: bold;
 
-      [theme=dark] & {
-        color: #ddd;
-      }
-      [theme=black] & {
-        color: #ddd;
-      }
+      color: var(--ink);
     }
 
     @include link(false, false);
@@ -176,19 +150,14 @@
       @include overflow-wrap(break-word);
       border-bottom: 1px dashed;
 
-      [theme=dark] & b, [theme=dark] & strong {
-        color: $single-link-color-dark;
-      }
-      [theme=black] & b, [theme=black] & strong {
-        color: $single-link-color-black;
+      b, strong {
+        color: var(--interactive);
       }
     }
 
-    [theme=dark] a:hover b, [theme=dark] a:hover strong {
-      color: $single-link-hover-color-dark;
-    }
-    [theme=black] a:hover b, [theme=black] a:hover strong {
-      color: $single-link-hover-color-black;
+    a:hover b,
+    a:hover strong {
+      color: var(--accent);
     }
 
     .header-mark {
@@ -206,25 +175,10 @@
     }
 
     ruby {
-      background: $code-background-color;
+      background: var(--surface-code);
 
       rt {
-        color: $global-font-secondary-color;
-      }
-
-      [theme=dark] & {
-        background: $code-background-color-dark;
-
-        rt {
-          color: $global-font-secondary-color-dark;
-        }
-      }
-      [theme=black] & {
-        background: $code-background-color-black;
-
-        rt {
-          color: $global-font-secondary-color-black;
-        }
+        color: var(--muted);
       }
     }
 
@@ -232,14 +186,7 @@
       overflow-x: auto;
 
       &::-webkit-scrollbar {
-        background-color: $table-background-color;
-
-        [theme=dark] & {
-          background-color: $table-background-color-dark;
-        }
-        [theme=black] & {
-          background-color: $table-background-color-black;
-        }
+        background-color: var(--surface-card);
       }
 
       > table {
@@ -247,36 +194,15 @@
         max-width: 100%;
         margin: .625rem 0;
         border-spacing: 0;
-        background: $table-background-color;
+        background: var(--surface-card);
         border-collapse: collapse;
 
-        [theme=dark] & {
-          background: $table-background-color-dark;
-        }
-        [theme=black] & {
-          background: $table-background-color-dark;
-        }
-
         thead {
-          background: $table-thead-color;
-
-          [theme=dark] & {
-            background-color: $table-thead-color-dark;
-          }
-          [theme=black] & {
-            background-color: $table-thead-color-black;
-          }
+          background: var(--surface-card-raised);
         }
 
         th, td {
-          border: 1px solid darken($table-thead-color, 2%);
-
-          [theme=dark] & {
-            border-color: darken($table-thead-color-dark, 2%);
-          }
-          [theme=black] & {
-            border-color: darken($table-thead-color-black, 2%);
-          }
+          border: 1px solid var(--border-subtle);
         }
       }
     }
@@ -299,7 +225,7 @@
         padding: .5rem;
         margin: 0 auto;
         font-size: .875rem;
-        color: #969696;
+        color: var(--muted);
       }
 
       img {
@@ -322,19 +248,12 @@
       margin: 1em 0;
       padding: 0 2em;
       font-style: italic;
-      border-left: 3px solid #ddd;
+       border-left: 3px solid var(--border-strong);
       font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, 'STKaiti', 'KaiTi', '楷体', 'SimKai', 'DFKai-SB', 'NSimSun', serif;
     }
 
     .footnotes {
-      color: $global-font-secondary-color;
-
-      [theme=dark] & {
-        color: $global-font-secondary-color-dark;
-      }
-      [theme=black] & {
-        color: $global-font-secondary-color-black;
-      }
+      color: var(--muted);
 
       p {
         margin: .25rem 0;
@@ -354,43 +273,21 @@
     hr {
       margin: 2rem 0;
       position: relative;
-      border-top: 3px dashed $global-border-color;
+      border-top: 3px dashed var(--border);
       border-bottom: none;
-
-      [theme=dark] & {
-        border-top: 3px dashed $global-border-color-dark;
-      }
-      [theme=black] & {
-        border-top: 3px dashed $global-border-color-black;
-      }
     }
 
     kbd {
       display: inline-block;
       padding: .25rem;
-      background-color: $global-background-color;
-      border: 1px solid $global-border-color;
-      border-bottom-color: $global-border-color;
+      background-color: var(--surface-card-raised);
+      border: 1px solid var(--border);
+      border-bottom-color: var(--border);
       @include border-radius(3px);
-      @include box-shadow(inset 0 -1px 0 $global-border-color);
+      @include box-shadow(var(--shadow-inset));
       font-size: .8rem;
       font-family: $code-font-family;
-      color: $code-color;
-
-      [theme=dark] & {
-        background-color: $global-background-color-dark;
-        border: 1px solid $global-border-color-dark;
-        border-bottom-color: $global-border-color-dark;
-        @include box-shadow(inset 0 -1px 0 $global-border-color-dark);
-        color: $code-color-dark;
-      }
-      [theme=black] & {
-        background-color: $global-background-color-black;
-        border: 1px solid $global-border-color-black;
-        border-bottom-color: $global-border-color-black;
-        @include box-shadow(inset 0 -1px 0 $global-border-color-black);
-        color: $code-color-black;
-      }
+      color: var(--accent);
     }
 
     .typeit {

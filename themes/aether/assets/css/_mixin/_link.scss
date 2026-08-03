@@ -4,11 +4,11 @@
   }
   a, a::before, a::after {
     text-decoration: none;
-    color: var(--color-ink);
+    color: var(--ink);
   }
 
   a:active,
   a:hover {
-    color: var(--color-interactive);
+    color: var(--interactive);
   }
 }

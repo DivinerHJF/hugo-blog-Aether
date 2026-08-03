@@ -18,12 +18,15 @@
     min-height: 10rem;
     padding: 0 2%;
     position: relative;
+    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-md);
+    background: var(--surface-card);
+    box-shadow: var(--shadow-card);
     transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease);
 
     &:hover:not(:focus-within) {
-      border-color: var(--color-border-subtle);
-      box-shadow: var(--shadow-low);
+      border-color: var(--interactive);
+      box-shadow: var(--shadow-card-hover);
       transform: translateY(-2px);
     }
 
@@ -69,24 +72,10 @@
   text-overflow: ellipsis;
 
   &:hover {
-    color: $global-link-hover-color;
+    color: var(--interactive);
     background-color: transparent;
   }
-
-  [theme=dark] & {
-    color: $global-link-color-dark;
-
-    &:hover {
-      color: $global-link-hover-color-dark;
-    }
-  }
-  [theme=black] & {
-    color: $global-link-color-black;
-
-    &:hover {
-      color: $global-link-hover-color-black;
-    }
-  }
+  color: var(--ink);
 }
 
 /* --- 标签美化 CSS 代码 (紧凑版) --- */
@@ -103,7 +92,7 @@
     border-radius: 10px;   /* 稍微减小圆角以匹配新的尺寸 */
     font-size: 0.7em;     /* 字体大小 */
     line-height: 1.5;      /* 增加行高改善垂直居中感 */
-    color: #fff !important;/* 文字颜色 */
+    color: var(--on-tag) !important;/* 文字颜色 */
     text-decoration: none;
     border-radius: var(--radius-pill);
     transition: transform var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease);
@@ -130,14 +119,7 @@
 .archive-item-date {
   width: 6em;
   text-align: right;
-  color: $global-font-secondary-color;
-
-  [theme=dark] & {
-    color: $global-font-secondary-color-dark;
-  }
-  [theme=black] & {
-    color: $global-font-secondary-color-black;
-  }
+  color: var(--muted);
 }
 
 /* --- 移动端响应式调整 --- */

@@ -6,15 +6,8 @@
   }
 
   i.details-icon {
-    color: $global-font-secondary-color;
+    color: var(--muted);
     @include transition(transform 0.2s ease);
-
-    [theme=dark] & {
-      color: $global-font-secondary-color-dark;
-    }
-    [theme=black] & {
-      color: $global-font-secondary-color-black;
-    }
   }
 
   .details-content {

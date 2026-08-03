@@ -22,15 +22,16 @@
   font-size: 1rem;
   line-height: 1.3rem;
   padding: .6rem .6rem;
-  color: $global-font-secondary-color;
-  background: $global-border-color;
+  color: var(--muted);
+  background: var(--surface-card-raised);
+  border: 1px solid var(--border);
   @include border-radius(2rem);
   @include transition(color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease));
 
   @include blur;
 
   &:hover, &:active {
-    color: $global-font-color;
+    color: var(--ink);
     cursor: pointer;
   }
 
@@ -43,22 +44,6 @@
     @include box-shadow(var(--focus-ring));
   }
 
-  [theme=dark] & {
-    color: $global-font-secondary-color-dark;
-    background: $header-background-color-dark;
-
-    &:hover, &:active {
-      color: $global-font-color-dark;
-    }
-  }
-  [theme=black] & {
-    color: $global-font-secondary-color-black;
-    background: $header-background-color-black;
-
-    &:hover, &:active {
-      color: $global-font-color-black;
-    }
-  }
 }
 
 #back-to-top-button {

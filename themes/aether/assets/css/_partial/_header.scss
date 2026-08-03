@@ -1,15 +1,8 @@
 header {
   width: 100%;
   z-index: 150;
-  background-color: $header-background-color;
+  background-color: var(--surface-header);
   @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
-
-  [theme=dark] & {
-    background-color: $header-background-color-dark;
-  }
-  [theme=black] & {
-    background-color: $header-background-color-black;
-  }
 
   .logo {
     min-height: 1.5em;
@@ -27,7 +20,7 @@ header {
   }
 
   &:hover {
-    @include box-shadow(0 0 1.5rem 0 rgba(0, 0, 0, .1));
+    @include box-shadow(var(--shadow-header));
   }
 
   &.is-hidden {
@@ -110,16 +103,9 @@ header {
     @include border-radius(.5rem);
     border: none;
     outline: none;
-    background-color: $header-background-color;
+    background-color: var(--surface-header);
     vertical-align: baseline !important;
     @include transition(width var(--motion-normal) var(--motion-ease));
-
-    [theme=dark] & {
-      background-color: $header-background-color-dark;
-    }
-    [theme=black] & {
-      background-color: $header-background-color-black;
-    }
   }
 
   @include placeholder(transparent);
@@ -146,39 +132,15 @@ header {
 
   .open &, &.mobile {
     input {
-      color: $global-font-color;
-      background-color: $search-background-color;
+      color: var(--ink);
+      background-color: var(--surface-search);
       padding: 0 2rem 0 2rem;
     }
 
-    [theme=dark] & {
-      input {
-        color: $global-font-color-dark;
-        background-color: $search-background-color-dark;
-      }
-
-      @include placeholder($global-font-secondary-color-dark);
-    }
-    [theme=black] & {
-      input {
-        color: $global-font-color-black;
-        background-color: $search-background-color-black;
-      }
-
-      @include placeholder($global-font-secondary-color-black);
-    }
-
-    @include placeholder($global-font-secondary-color);
+    @include placeholder(var(--muted));
 
     .search-button {
-      color: $global-font-secondary-color;
-
-      [theme=dark] & {
-        color: $global-font-secondary-color-dark;
-      }
-      [theme=black] & {
-        color: $global-font-secondary-color-black;
-      }
+      color: var(--muted);
     }
 
     .search-clear:hover {
@@ -228,14 +190,7 @@ header {
         margin: 0 .5rem;
 
         &.delimiter {
-          border-left: 1.5px solid $global-font-color;
-
-          [theme=dark] & {
-            border-left-color: $global-border-color-dark;
-          }
-          [theme=black] & {
-            border-left-color: $global-border-color-black;
-          }
+          border-left: 1.5px solid var(--border-strong);
         }
 
         &.language {
@@ -298,18 +253,12 @@ header {
 
         span {
           display: block;
-          background: $global-font-color;
+          background: var(--ink);
           width: 1.5rem;
           height: 2px;
           @include border-radius(3px);
           @include transition(transform var(--motion-normal) var(--motion-ease), opacity var(--motion-normal) var(--motion-ease), background-color var(--motion-normal) var(--motion-ease));
 
-          [theme=dark] & {
-            background: $global-font-color-dark;
-          }
-          [theme=black] & {
-            background: $global-font-color-black;
-          }
         }
 
         span:nth-child(1) {
@@ -338,11 +287,11 @@ header {
 
     .menu {
       text-align: center;
-      background: $header-background-color;
-      border-top: 2px solid $global-border-color;
+      background: var(--surface-header);
+      border-top: 2px solid var(--border);
       display: none;
       padding-top: .5rem;
-      @include box-shadow(0 .125rem .25rem rgba(0, 0, 0, .1));
+      @include box-shadow(var(--shadow-header));
 
       .search-wrapper {
         display: flex;
@@ -379,14 +328,6 @@ header {
         display: block;
       }
 
-      [theme=dark] & {
-        background: $header-background-color-dark;
-        border-top-color: $global-border-color-dark;
-      }
-      [theme=black] & {
-        background: $header-background-color-black;
-        border-top-color: $global-border-color-black;
-      }
     }
   }
 
@@ -414,7 +355,7 @@ header {
   position: fixed;
   z-index: 200;
   top: $header-height;
-  @include box-shadow(0 .125rem .25rem rgba(0, 0, 0, .1));
+  @include box-shadow(var(--shadow-header));
 
   &.desktop {
     right: 2rem;
@@ -428,14 +369,7 @@ header {
 
   .dropdown-menu {
     right: 0 !important;
-    background-color: $global-background-color;
-
-    [theme=dark] & {
-      background-color: $global-background-color-dark;
-    }
-    [theme=black] & {
-      background-color: $global-background-color-black;
-    }
+    background-color: var(--surface-card-raised);
 
     .suggestions {
       overflow-y: auto;
@@ -458,14 +392,7 @@ header {
           font-size: .875rem;
           float: right;
           text-align: right;
-          color: $global-font-secondary-color;
-
-          [theme=dark] & {
-            color: $global-font-secondary-color-dark;
-          }
-          [theme=black] & {
-            color: $global-font-secondary-color-black;
-          }
+          color: var(--muted);
         }
 
         .suggestion-context {
@@ -475,37 +402,16 @@ header {
           overflow: hidden;
           text-overflow: ellipsis;
           @include overflow-wrap(break-word);
-          color: $global-font-secondary-color;
-
-          [theme=dark] & {
-            color: $global-font-secondary-color-dark;
-          }
-          [theme=black] & {
-            color: $global-font-secondary-color-black;
-          }
+          color: var(--muted);
         }
 
         em {
           font-style: normal;
-          background-color: $selection-color;
-
-          [theme=dark] & {
-            background-color: $selection-color-dark;
-          }
-          [theme=black] & {
-            background-color: $selection-color-black;
-          }
+          background-color: var(--selection);
         }
 
         &.cursor {
-          background: darken($code-background-color, 5%);
-
-          [theme=dark] & {
-            background: lighten($code-background-color-dark, 5%);
-          }
-          [theme=black] & {
-            background: lighten($code-background-color-black, 5%);
-          }
+          background: var(--surface-code);
         }
 
         &:hover {
@@ -518,15 +424,9 @@ header {
       padding: 1rem;
       text-align: center;
 
-      .search-query {
-        font-weight: bold;
-
-        [theme=dark] & {
-          color: #ddd;
-        }
-        [theme=black] & {
-          color: #ddd;
-        }
+        .search-query {
+          font-weight: bold;
+          color: var(--ink);
       }
     }
 

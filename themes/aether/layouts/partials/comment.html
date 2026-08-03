@@ -216,11 +216,57 @@
                     data-reactions-enabled="{{ $giscus.dataReactionsEnabled | default "1" }}"
                     data-emit-metadata="{{ $giscus.dataEmitMetadata | default "0" }}"
                     data-input-position="{{ $giscus.dataInputPosition | default "top" }}"
-                    data-theme="{{ $giscus.dataTheme | default "light" }}"
+                    data-theme="{{ $giscus.dataTheme | default "preferred_color_scheme" }}"
                     data-lang="{{ $giscus.dataLang | default .Site.LanguageCode | default "zh-CN" }}"
                     data-loading="{{ $giscus.dataLoading | default "lazy" }}"
                     crossorigin="anonymous"
                     async>
+            </script>
+            <script>
+                (function () {
+                    const themeMap = {
+                        light: "catppuccin_latte",
+                        dark: "catppuccin_frappe",
+                        black: "transparent_dark"
+                    };
+                    const getGiscusTheme = function () {
+                        const pageTheme = document.body && document.body.getAttribute("theme");
+                        return themeMap[pageTheme] || themeMap.light;
+                    };
+                    const syncGiscusTheme = function () {
+                        const frame = document.querySelector("iframe.giscus-frame");
+                        if (!frame || !frame.contentWindow) return false;
+                        frame.contentWindow.postMessage({
+                            giscus: {
+                                setConfig: { theme: getGiscusTheme() }
+                            }
+                        }, "https://giscus.app");
+                        return true;
+                    };
+
+                    if (window.giscusThemeSync) {
+                        window.giscusThemeSync();
+                        return;
+                    }
+
+                    window.giscusThemeSync = syncGiscusTheme;
+                    let observedFrame = null;
+                    const observeGiscusFrame = function () {
+                        const frame = document.querySelector("iframe.giscus-frame");
+                        if (!frame) return;
+                        if (frame !== observedFrame) {
+                            observedFrame = frame;
+                            frame.addEventListener("load", syncGiscusTheme, { once: true });
+                        }
+                        syncGiscusTheme();
+                    };
+                    new MutationObserver(syncGiscusTheme).observe(document.body, {
+                        attributes: true,
+                        attributeFilter: ["theme"]
+                    });
+                    new MutationObserver(observeGiscusFrame).observe(document.body, { childList: true, subtree: true });
+                    observeGiscusFrame();
+                })();
             </script>
         {{- end -}}
         

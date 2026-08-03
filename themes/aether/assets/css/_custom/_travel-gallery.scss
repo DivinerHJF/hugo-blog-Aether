@@ -26,7 +26,7 @@
     overflow: hidden;
     border-bottom: none;
     border-radius: var(--radius-lg);
-    background: var(--color-image-wash);
+    background: var(--surface-image);
     outline: none;
     transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
 
@@ -39,7 +39,7 @@
 
     &:hover:not(:focus-visible) {
       transform: translateY(-2px);
-      box-shadow: var(--shadow-low);
+      box-shadow: var(--shadow-card);
     }
 
     &:focus-visible {
@@ -56,7 +56,7 @@
 
       img {
         object-fit: contain;
-        background: var(--color-surface-soft);
+        background: var(--surface-soft);
       }
     }
   }
