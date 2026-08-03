@@ -11,7 +11,7 @@
     "core-js": "^3.16.0"
   },
   "scripts": {
-    "babel": "npx babel src/js/theme.js --out-file assets/js/theme.min.js --source-maps --no-comments && npx babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments"
+    "babel": "node scripts/build-theme.js && npx babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments"
   },
   "repository": {
     "type": "git",
