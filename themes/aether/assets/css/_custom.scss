@@ -3,27 +3,27 @@
 // 自定义样式
 // ==============================
 
-.content p:has(> img:nth-child(2)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)) {
   column-count: 2;
   column-gap: 8px;
   margin: 6px 0;
 }
-.content p:has(> img:nth-child(3)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(3)) {
   column-count: 3;
 }
-.content p:has(> img:nth-child(4)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(4)) {
   column-count: 4;
 }
-.content p:has(> img:nth-child(5)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(5)) {
   column-count: 5;
 }
-.content p:has(> img:nth-child(6)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)) {
   column-count: 4;
 }
-.content p:has(> img:nth-child(2)) img {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)) img {
   display: inherit;
 }
-.content p:has(> img:nth-child(6)) img {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)) img {
   margin-bottom: 8px;
 }
 
@@ -388,6 +388,183 @@
 
 .footprint-flow-title {
   margin-top: 1.65rem;
+}
+
+// 足迹出游页图片胶卷：桌面保留缩略图概览，手机切换为居中吸附。
+.footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
+  .footprint-detail-flow {
+    min-width: 0;
+  }
+
+  .footprint-gallery {
+    --gallery-gap: 8px;
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: .65rem 0 1.1rem;
+  }
+
+  .footprint-gallery__track {
+    display: grid;
+    grid-template-columns: repeat(var(--gallery-columns, 1), minmax(0, 1fr));
+    gap: var(--gallery-gap);
+    min-width: 0;
+  }
+
+  .footprint-gallery__slide {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 14px;
+    background: rgba(0, 0, 0, .045);
+    outline: none;
+    transition: transform 180ms ease, box-shadow 180ms ease;
+
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+    }
+
+    &:focus-visible {
+      box-shadow: 0 0 0 3px rgba(185, 108, 104, .42);
+    }
+  }
+
+  .footprint-gallery--single {
+    .footprint-gallery__slide {
+      max-width: 100%;
+
+      img {
+        object-fit: contain;
+        background: rgba(0, 0, 0, .025);
+      }
+    }
+  }
+
+  .footprint-gallery__counter {
+    display: none;
+  }
+
+  @media only screen and (max-width: 680px) {
+    .footprint-gallery {
+      --gallery-gap: .75rem;
+    }
+
+    .footprint-gallery__track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 84%;
+      grid-template-columns: none;
+      gap: var(--gallery-gap);
+      overflow-x: auto;
+      padding-inline: 8%;
+      scroll-padding-inline: 8%;
+      scroll-snap-type: x mandatory;
+      overscroll-behavior-inline: contain;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .footprint-gallery__track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .footprint-gallery__slide {
+      scroll-snap-align: center;
+      transform: scale(.94);
+      opacity: .76;
+      transition: transform 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+
+      &:hover {
+        transform: scale(.94);
+        box-shadow: none;
+      }
+
+      &.is-active {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      &:focus-visible {
+        box-shadow: 0 0 0 3px rgba(185, 108, 104, .48);
+      }
+    }
+
+    .footprint-gallery__counter {
+      display: inline-flex;
+      position: absolute;
+      right: 8%;
+      bottom: .65rem;
+      z-index: 2;
+      align-items: center;
+      min-height: 1.35rem;
+      padding: .16rem .5rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, .58);
+      color: #fff;
+      font-size: .72rem;
+      line-height: 1.4;
+      pointer-events: none;
+    }
+
+    .footprint-gallery--single {
+      .footprint-gallery__track {
+        display: block;
+        overflow: visible;
+        padding-inline: 0;
+        scroll-snap-type: none;
+      }
+
+      .footprint-gallery__slide,
+      .footprint-gallery__slide:hover {
+        transform: none;
+        opacity: 1;
+      }
+
+      .footprint-gallery__slide img {
+        aspect-ratio: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+body[theme='dark'],
+body[theme='black'] {
+  .footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
+    .footprint-gallery__slide {
+      background: rgba(255, 255, 255, .08);
+    }
+
+    .footprint-gallery--single .footprint-gallery__slide img {
+      background: rgba(255, 255, 255, .04);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
+    .footprint-gallery__track {
+      scroll-behavior: auto;
+    }
+
+    .footprint-gallery__slide,
+    .footprint-gallery__slide:hover {
+      transition: none;
+      transform: none;
+    }
+
+    .footprint-gallery__slide {
+      opacity: 1;
+    }
+  }
 }
 
 body[theme='dark'] {
