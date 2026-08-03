@@ -234,14 +234,7 @@ header {
 
       a.active {
         font-weight: 900;
-        color: $header-active-color;
-
-        [theme=dark] & {
-          color: $header-active-color-dark;
-        }
-        [theme=black] & {
-          color: $header-active-color-black;
-        }
+        color: var(--color-accent);
       }
     }
   }
