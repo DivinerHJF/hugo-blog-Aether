@@ -36,7 +36,7 @@
   margin: 10px 2% 10px;
   box-sizing: border-box;
   overflow:hidden;
-  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0), 0 0px 0px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: none;
 }
 
 @media only screen and (max-width: 680px) {
@@ -71,7 +71,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   float:left;
-  border-radius: 10px;
+  border-radius: var(--radius-md);
 }
 
 .media-meta-item.intro {
@@ -82,7 +82,7 @@
   text-overflow: ellipsis;
   overflow-wrap: break-word;
   line-height: .9rem;
-  border-top: .1px solid #dddddd;
+  border-top: .1px solid var(--color-border-subtle);
   padding-top: .2rem;
   -webkit-line-clamp: 6;
   -webkit-box-orient:vertical
@@ -92,7 +92,7 @@
 }
 
 .media-meta-item .star-score {
-  color: #b96c68;
+  color: var(--color-annotation);
   height: 0;
   display: inline;
   float: right;
@@ -100,7 +100,7 @@
 }
 
 .media-meta-item .grey-star {
-  color:#d3d3d3
+  color: var(--color-border)
 }
 // 读看听页面
 
@@ -110,24 +110,24 @@
   align-items: center;
   gap: .45rem;
   margin: .5rem 0 1.25rem;
-  color: rgba(0, 0, 0, .58);
+  color: var(--color-muted);
   font-size: .9rem;
 }
 
 .mentalfood-nav a {
   display: inline-flex;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, .08);
-  border-radius: 999px;
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-pill);
   padding: .14rem .62rem;
-  background: rgba(0, 0, 0, .025);
+  background: var(--color-surface-soft);
   color: inherit;
   text-decoration: none;
 }
 
 .mentalfood-nav a:hover {
-  border-color: rgba(185, 108, 104, .35);
-  color: #b96c68;
+  border-color: var(--color-interactive);
+  color: var(--color-interactive);
 }
 
 .mentalfood-year {
@@ -150,7 +150,7 @@
   float: none;
   margin: 0;
   padding: .25rem;
-  border-radius: 12px;
+  border-radius: var(--radius-md);
 }
 
 .media-cover {
@@ -158,15 +158,15 @@
   width: 80px;
   height: 120px;
   float: none;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, .08);
+  box-shadow: var(--shadow-low);
 }
 
 .media-cover-placeholder {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(185, 108, 104, .16), rgba(0, 0, 0, .05));
-  color: rgba(0, 0, 0, .48);
+  background: linear-gradient(135deg, var(--color-annotation-soft), var(--color-surface-soft));
+  color: var(--color-muted);
   font-weight: 700;
   font-size: 1.65rem;
 }
@@ -203,7 +203,7 @@
 .media-date {
   flex: 0 0 auto;
   margin-left: auto;
-  color: rgba(0, 0, 0, .46);
+  color: var(--color-muted);
   font-weight: 400;
 }
 
@@ -235,7 +235,7 @@
 
 .mentalfood-link-list h4 {
   margin: .75rem 0 .25rem;
-  color: rgba(0, 0, 0, .64);
+  color: var(--color-muted);
   font-size: .92rem;
 }
 
@@ -250,12 +250,12 @@
 
 .mentalfood-source {
   margin-left: .18rem;
-  color: rgba(0, 0, 0, .55);
+  color: var(--color-muted);
 }
 
 .mentalfood-empty {
   margin: .75rem 0;
-  color: #888;
+  color: var(--color-muted);
   text-align: center;
 }
 
@@ -288,7 +288,7 @@
   gap: 1.25rem;
   margin: 1.25rem 0 .75rem;
   padding-bottom: .55rem;
-  border-bottom: 1px solid $global-border-color;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .footprint-categories,
@@ -309,7 +309,8 @@
 
 .footprint-categories a.active,
 .footprint-years a.active {
-  border-bottom-color: currentColor;
+  border-bottom-color: var(--color-accent);
+  color: var(--color-accent);
   font-weight: 700;
 }
 
@@ -338,7 +339,7 @@
 }
 
 .footprint-kicker {
-  color: $global-font-secondary-color;
+  color: var(--color-muted);
   font-size: .68rem;
   letter-spacing: .1em;
   text-transform: uppercase;
@@ -352,15 +353,15 @@
   width: 100%;
   min-width: 640px;
   border-collapse: collapse;
-  border: 1.5px solid currentColor;
-  background: rgba(255, 255, 255, .24);
+  border: 1.5px solid var(--color-border-strong);
+  background: var(--color-surface-wash);
   font-size: .82rem;
   line-height: 1.45;
 }
 
 .footprint-year-table th,
 .footprint-year-table td {
-  border: 1px solid darken($table-thead-color, 2%);
+  border: 1px solid var(--color-border-subtle);
   padding: .32rem .58rem;
   vertical-align: top;
 }
@@ -368,7 +369,7 @@
 .footprint-year-table th {
   font-weight: 700;
   text-align: center;
-  background: rgba(201, 175, 114, .08);
+  background: var(--color-accent-soft);
 }
 
 .footprint-year-table .footprint-month {
@@ -397,7 +398,7 @@
   }
 
   .footprint-gallery {
-    --gallery-gap: 8px;
+    --gallery-gap: var(--space-2);
     position: relative;
     width: 100%;
     min-width: 0;
@@ -416,10 +417,10 @@
     min-width: 0;
     overflow: hidden;
     border-bottom: none;
-    border-radius: 14px;
-    background: rgba(0, 0, 0, .045);
+    border-radius: var(--radius-lg);
+    background: var(--color-image-wash);
     outline: none;
-    transition: transform 180ms ease, box-shadow 180ms ease;
+    transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
 
     img {
       display: block;
@@ -430,11 +431,11 @@
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0, 0, 0, .12);
+      box-shadow: var(--shadow-low);
     }
 
     &:focus-visible {
-      box-shadow: 0 0 0 3px rgba(185, 108, 104, .42);
+      box-shadow: var(--focus-ring);
     }
   }
 
@@ -444,7 +445,7 @@
 
       img {
         object-fit: contain;
-        background: rgba(0, 0, 0, .025);
+        background: var(--color-surface-soft);
       }
     }
   }
@@ -455,7 +456,7 @@
 
   @media only screen and (max-width: 680px) {
     .footprint-gallery {
-      --gallery-gap: .75rem;
+      --gallery-gap: var(--space-3);
     }
 
     .footprint-gallery__track {
@@ -481,7 +482,7 @@
       scroll-snap-align: center;
       transform: scale(.94);
       opacity: .76;
-      transition: transform 180ms ease, opacity 180ms ease, box-shadow 180ms ease;
+      transition: transform var(--motion-normal) var(--motion-ease), opacity var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
 
       &:hover {
         transform: scale(.94);
@@ -494,7 +495,7 @@
       }
 
       &:focus-visible {
-        box-shadow: 0 0 0 3px rgba(185, 108, 104, .48);
+        box-shadow: var(--focus-ring);
       }
     }
 
@@ -507,9 +508,9 @@
       align-items: center;
       min-height: 1.35rem;
       padding: .16rem .5rem;
-      border-radius: 999px;
-      background: rgba(0, 0, 0, .58);
-      color: #fff;
+      border-radius: var(--radius-pill);
+      background: var(--color-overlay);
+      color: var(--color-on-overlay);
       font-size: .72rem;
       line-height: 1.4;
       pointer-events: none;
@@ -537,19 +538,6 @@
   }
 }
 
-body[theme='dark'],
-body[theme='black'] {
-  .footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
-    .footprint-gallery__slide {
-      background: rgba(255, 255, 255, .08);
-    }
-
-    .footprint-gallery--single .footprint-gallery__slide img {
-      background: rgba(255, 255, 255, .04);
-    }
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   .footprint-page[data-footprint-layout="footprint-year"][data-footprint-category="travel"] {
     .footprint-gallery__track {
@@ -565,52 +553,6 @@ body[theme='black'] {
     .footprint-gallery__slide {
       opacity: 1;
     }
-  }
-}
-
-body[theme='dark'] {
-  .footprint-topbar {
-    border-bottom-color: $global-border-color-dark;
-  }
-
-  .footprint-year-table {
-    background: rgba(49, 50, 54, .28);
-  }
-
-  .footprint-year-table th,
-  .footprint-year-table td {
-    border-color: darken($table-thead-color-dark, 2%);
-  }
-
-  .footprint-year-table th {
-    background: rgba(255, 255, 255, .05);
-  }
-
-  .footprint-kicker {
-    color: $global-font-secondary-color-dark;
-  }
-}
-
-body[theme='black'] {
-  .footprint-topbar {
-    border-bottom-color: $global-border-color-black;
-  }
-
-  .footprint-year-table {
-    background: rgba(49, 50, 54, .28);
-  }
-
-  .footprint-year-table th,
-  .footprint-year-table td {
-    border-color: darken($table-thead-color-black, 2%);
-  }
-
-  .footprint-year-table th {
-    background: rgba(255, 255, 255, .05);
-  }
-
-  .footprint-kicker {
-    color: $global-font-secondary-color-black;
   }
 }
 

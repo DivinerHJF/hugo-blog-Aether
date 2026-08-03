@@ -44,19 +44,10 @@ html {
 }
 
 body {
-  background-color: $global-background-color;
-  color: $global-font-color;
+  background-color: var(--color-paper);
+  color: var(--color-ink);
   @include overflow-wrap(break-word);
   scrollbar-color: auto;
-
-  &[theme=dark] {
-    color: $global-font-color-dark;
-    background-color: $global-background-color-dark;
-  }
-  &[theme=black] {
-    color: $global-font-color-black;
-    background-color: $global-background-color-black;
-  }
 }
 
 @include ms;
@@ -70,7 +61,7 @@ body {
 
 img {
   @include object-fit(contain);
-  border-radius: 5px;
+  border-radius: var(--radius-sm);
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
 }
 
