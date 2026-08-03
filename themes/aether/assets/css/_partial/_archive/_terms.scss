@@ -1,4 +1,220 @@
-.categories-card, .author-card, .series-card {
+.categories-card,
+.series-card {
+  margin: var(--space-5) 0 0;
+  line-height: 1.6;
+}
+
+.categories-card,
+.series-card {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  align-items: start;
+
+  .card-item {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: var(--space-4);
+    border: 1px solid var(--color-border-subtle);
+    border-radius: var(--radius-md);
+    background: var(--color-surface-translucent);
+    transition: transform var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease), background var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease);
+
+    &:hover:not(:focus-within) {
+      border-color: var(--color-interactive);
+      background: var(--color-surface-panel);
+      transform: translateY(-2px);
+    }
+
+    &:focus-within {
+      outline: none;
+      border-color: var(--color-interactive);
+      box-shadow: var(--focus-ring);
+      transform: none;
+    }
+  }
+
+  .card-item-wrapper {
+    min-width: 0;
+  }
+}
+
+.taxonomy-card-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+  color: var(--color-muted);
+  font-size: .74rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.taxonomy-card-count {
+  flex: 0 0 auto;
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+
+.series-card-volume {
+  color: var(--color-accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.categories-card .card-item-title,
+.series-card .card-item-title {
+  margin: var(--space-2) 0 var(--space-3);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.35;
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-width: 0;
+    color: var(--color-ink);
+
+    &:hover {
+      background: transparent;
+      color: var(--color-interactive);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-radius: var(--radius-sm);
+      color: var(--color-interactive);
+    }
+  }
+
+  span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+}
+
+.category-recent-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.category-recent-item {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: var(--space-2);
+  align-items: baseline;
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.category-recent-link {
+  min-width: 0;
+  overflow: hidden;
+  color: var(--color-ink);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  &:hover {
+    background: transparent;
+    color: var(--color-interactive);
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-radius: var(--radius-sm);
+    color: var(--color-interactive);
+  }
+}
+
+.category-recent-item time,
+.series-reading-item time {
+  flex: 0 0 auto;
+  color: var(--color-muted);
+  font-size: .74rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.categories-card .more-post {
+  margin: var(--space-3) 0 0;
+  text-align: right;
+}
+
+.categories-card .more-single-link {
+  color: var(--color-interactive);
+  font-size: .82rem;
+
+  &:hover {
+    background: transparent;
+  }
+
+  &:focus-visible {
+    outline: none;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--focus-ring);
+  }
+}
+
+.series-reading-list {
+  display: grid;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.series-reading-item {
+  display: grid;
+  grid-template-columns: 2rem minmax(0, 1fr);
+  gap: var(--space-2);
+  align-items: baseline;
+  min-width: 0;
+  padding-top: var(--space-2);
+  border-top: 1px solid var(--color-border-subtle);
+
+  > a {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-2);
+    min-width: 0;
+    color: var(--color-ink);
+
+    &:hover {
+      background: transparent;
+      color: var(--color-interactive);
+    }
+
+    &:focus-visible {
+      outline: none;
+      border-radius: var(--radius-sm);
+      color: var(--color-interactive);
+    }
+  }
+}
+
+.series-reading-number {
+  color: var(--color-accent);
+  font-size: .78rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.series-reading-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.author-card {
   margin: 0 auto;
   margin-top: 3rem;
   display: flex;
@@ -9,15 +225,15 @@
   line-height: 1.6rem;
 
   .card-item {
-    font-size: .875rem;
-    text-align: left;
-    width: 45%;
     display: flex;
     align-items: flex-start;
-    margin-top: 2rem;
+    width: 45%;
     min-height: 10rem;
+    margin-top: 2rem;
     padding: 0 2%;
     position: relative;
+    font-size: .875rem;
+    text-align: left;
     border-radius: var(--radius-md);
     transition: transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease);
 
@@ -33,24 +249,28 @@
       box-shadow: var(--focus-ring);
       transform: none;
     }
+  }
 
-    .card-item-wrapper {
-      width: 100%;
-      overflow: hidden;
+  .card-item-wrapper {
+    width: 100%;
+    overflow: hidden;
 
-      .card-item-title {
-        font-size: 1.2rem;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 1rem;
-        margin-bottom: .75rem;
-      }
-
-      span {
-        float: right;
-        padding-right: 1rem;
-      }
+    > span {
+      float: right;
+      padding-right: 1rem;
     }
+  }
+
+  .card-item-title {
+    display: inline-block;
+    margin-top: 1rem;
+    margin-bottom: .75rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+
+  .more-post {
+    text-align: right;
   }
 }
 
@@ -80,6 +300,7 @@
       color: $global-link-hover-color-dark;
     }
   }
+
   [theme=black] & {
     color: $global-link-color-black;
 
@@ -89,38 +310,33 @@
   }
 }
 
-/* --- 标签美化 CSS 代码 (紧凑版) --- */
-
 .archive-item-tags {
-    margin-left: 0.8em; /* 您可以调整这个数值来改变距离 */
+  margin-left: .8em;
 }
 
-/* 标签徽章的基础样式 */
 .archive-item-tags a {
-    display: inline-block;
-    padding: 1px 5px;      /* 减小了内边距，让背景块更紧凑 */
-    margin: 0 1px 1px 0;   /* 徽章之间的间距 */
-    border-radius: 10px;   /* 稍微减小圆角以匹配新的尺寸 */
-    font-size: 0.7em;     /* 字体大小 */
-    line-height: 1.5;      /* 增加行高改善垂直居中感 */
-    color: #fff !important;/* 文字颜色 */
-    text-decoration: none;
-    border-radius: var(--radius-pill);
-    transition: transform var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease);
+  display: inline-block;
+  padding: 1px 5px;
+  margin: 0 1px 1px 0;
+  border-radius: var(--radius-pill);
+  font-size: .7em;
+  line-height: 1.5;
+  color: #fff !important;
+  text-decoration: none;
+  transition: transform var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease);
 }
 
 .archive-item-tags a:hover:not(:focus-visible) {
-    transform: translateY(-1px);
+  transform: translateY(-1px);
 }
 
 .archive-item-tags a:focus-visible {
-    outline: none;
-    border-radius: var(--radius-pill);
-    box-shadow: var(--focus-ring);
-    transform: none;
+  outline: none;
+  border-radius: var(--radius-pill);
+  box-shadow: var(--focus-ring);
+  transform: none;
 }
 
-/* 颜色部分保持不变 */
 .archive-item-tags a:nth-child(5n + 1) { background-color: #7ab5d8; }
 .archive-item-tags a:nth-child(5n + 2) { background-color: #82c9a1; }
 .archive-item-tags a:nth-child(5n + 3) { background-color: #f2a063; }
@@ -135,20 +351,22 @@
   [theme=dark] & {
     color: $global-font-secondary-color-dark;
   }
+
   [theme=black] & {
     color: $global-font-secondary-color-black;
   }
 }
 
-/* --- 移动端响应式调整 --- */
 @media (max-width: 768px) {
-    /* 选中标签和日期这两个元素 */
-    .archive-item-tags,
-    .archive-item-date {
-        display: none; /* 将它们彻底隐藏 */
-    }
+  .archive-item-tags,
+  .archive-item-date {
+    display: none;
+  }
 }
 
-.more-post {
-  text-align: right;
+@media (max-width: 680px) {
+  .categories-card,
+  .series-card {
+    grid-template-columns: 1fr;
+  }
 }

@@ -6,38 +6,92 @@
     {{- $category := .Params.category | default "travel" -}}
     {{- $categoryData := index site.Data.footprint $category | default dict -}}
     {{- $data := index $categoryData $year | default dict -}}
+    {{- $rows := $data.rows | default slice -}}
     {{- $categories := slice (dict "key" "travel" "label" "出游") (dict "key" "reading" "label" "书影游") (dict "key" "poster" "label" "海报墙") -}}
+    {{- $categoryLabel := "出游" -}}
+    {{- if eq $category "reading" -}}
+        {{- $categoryLabel = "书影游" -}}
+    {{- else if eq $category "poster" -}}
+        {{- $categoryLabel = "海报墙" -}}
+    {{- end -}}
     {{- $years := slice -}}
     {{- range $key, $_ := $categoryData -}}
         {{- $years = $years | append $key -}}
     {{- end -}}
     {{- $years = sort $years "value" "desc" -}}
 
+    {{- $recordCount := 0 -}}
+    {{- if eq $category "reading" -}}
+        {{- $shortYear := $year -}}
+        {{- if eq (len $year) 4 -}}{{- $shortYear = substr $year 2 2 -}}{{- end -}}
+        {{- $readingSources := slice (site.Data.books | default dict) (site.Data.movies | default dict) (site.Data.mental_links | default dict) -}}
+        {{- range $source := $readingSources -}}
+            {{- if reflect.IsMap $source -}}
+                {{- $entries := index $source $year | default slice -}}
+                {{- $recordCount = add $recordCount (len $entries) -}}
+            {{- else -}}
+                {{- range $entry := $source -}}
+                    {{- $type := printf "%v" ($entry.type | default "") -}}
+                    {{- if hasPrefix $type $shortYear -}}
+                        {{- $recordCount = add $recordCount 1 -}}
+                    {{- end -}}
+                {{- end -}}
+            {{- end -}}
+        {{- end -}}
+    {{- else -}}
+        {{- range $row := $rows -}}
+            {{- range ($row.events | default slice) -}}
+                {{- $recordCount = add $recordCount 1 -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $summary := slice
+        (dict "Label" "当前" "Value" $year)
+        (dict "Label" "分类" "Value" $categoryLabel)
+        (dict "Label" "收录" "Value" (printf "%d 项" $recordCount))
+    -}}
+    {{- if eq $category "reading" -}}
+        {{- $summary = $summary | append (dict "Label" "年卷" "Value" (printf "%d 年" (len $years))) -}}
+    {{- else -}}
+        {{- $summary = $summary | append (dict "Label" "月份" "Value" (printf "%d 个月" (len $rows))) -}}
+    {{- end -}}
+
     <div class="page single special footprint-page" data-footprint-layout="footprint-year" data-footprint-category="{{ $category }}" data-footprint-year="{{ $year }}">
-        <h1 class="single-title">{{ .Title }}</h1>
+        {{- partial "archive/index-header.html" (dict
+            "Eyebrow" "FIELD NOTES / FOOTPRINT"
+            "Title" .Title
+            "Description" .Description
+            "Summary" $summary
+        ) -}}
 
         <div class="content" id="content" data-footprint-layout="footprint-year" data-footprint-category="{{ $category }}">
             <div class="footprint-topbar">
-                <nav class="footprint-categories" aria-label="足迹分类">
-                    {{- range $categories -}}
-                        {{- $targetCategoryData := index site.Data.footprint .key | default dict -}}
-                        {{- $targetYears := slice -}}
-                        {{- range $targetYear, $_ := $targetCategoryData -}}
-                            {{- $targetYears = $targetYears | append $targetYear -}}
+                <div class="footprint-nav-group">
+                    <span class="footprint-nav-label">分类</span>
+                    <nav class="footprint-categories" aria-label="足迹分类">
+                        {{- range $categories -}}
+                            {{- $targetCategoryData := index site.Data.footprint .key | default dict -}}
+                            {{- $targetYears := slice -}}
+                            {{- range $targetYear, $_ := $targetCategoryData -}}
+                                {{- $targetYears = $targetYears | append $targetYear -}}
+                            {{- end -}}
+                            {{- $targetYears = sort $targetYears "value" "desc" -}}
+                            {{- $targetYear := cond (in $targetYears $year) $year (index $targetYears 0 | default $year) -}}
+                            {{- $href := printf "/pages/footprint/%s/%s/" $targetYear .key | relLangURL -}}
+                            <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}"{{ if eq $category .key }} aria-current="page"{{ end }}>{{ .label }}</a>
                         {{- end -}}
-                        {{- $targetYears = sort $targetYears "value" "desc" -}}
-                        {{- $targetYear := cond (in $targetYears $year) $year (index $targetYears 0 | default $year) -}}
-                        {{- $href := printf "/pages/footprint/%s/%s/" $targetYear .key | relLangURL -}}
-                        <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
-                    {{- end -}}
-                </nav>
+                    </nav>
+                </div>
 
-                <nav class="footprint-years" aria-label="足迹年份">
-                    {{- range $years -}}
-                        {{- $href := printf "/pages/footprint/%s/%s/" . $category | relLangURL -}}
-                        <a class="{{ if eq $year . }}active{{ end }}" href="{{ $href }}">{{ . }}</a>
-                    {{- end -}}
-                </nav>
+                <div class="footprint-nav-group">
+                    <span class="footprint-nav-label">年份</span>
+                    <nav class="footprint-years" aria-label="足迹年份">
+                        {{- range $years -}}
+                            {{- $href := printf "/pages/footprint/%s/%s/" . $category | relLangURL -}}
+                            <a class="{{ if eq $year . }}active{{ end }}" href="{{ $href }}"{{ if eq $year . }} aria-current="page"{{ end }}>{{ . }}</a>
+                        {{- end -}}
+                    </nav>
+                </div>
             </div>
 
             {{- if eq $category "reading" -}}
@@ -54,6 +108,7 @@
 
                     <div class="table-wrapper footprint-year-table-wrapper">
                         <table class="footprint-year-table">
+                            <caption class="footprint-table-caption">{{ $data.title | default .Title }}</caption>
                             <thead>
                                 <tr>
                                     <th>月份</th>
@@ -62,7 +117,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{- range $row := $data.rows -}}
+                                {{- range $row := $rows -}}
                                     {{- $events := $row.events | default slice -}}
                                     {{- if gt (len $events) 0 -}}
                                         {{- range $index, $event := $events -}}

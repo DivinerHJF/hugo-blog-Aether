@@ -1,0 +1,22 @@
+{{- $eyebrow := .Eyebrow | default "Index" -}}
+{{- $title := .Title -}}
+{{- $description := .Description -}}
+{{- $summary := .Summary | default slice -}}
+
+<header class="index-page-header">
+    <p class="index-page-eyebrow">{{ $eyebrow }}</p>
+    <h1 class="index-page-title">{{ $title }}</h1>
+    {{- with $description -}}
+        <p class="index-page-description">{{ . }}</p>
+    {{- end -}}
+    {{- with $summary -}}
+        <dl class="index-page-summary">
+            {{- range . -}}
+                <div class="index-page-summary-item">
+                    <dt>{{ .Label }}</dt>
+                    <dd>{{ .Value }}</dd>
+                </div>
+            {{- end -}}
+        </dl>
+    {{- end -}}
+</header>

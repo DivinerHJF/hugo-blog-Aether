@@ -11,24 +11,41 @@
     {{- $years = sort $years "value" "desc" -}}
     {{- $latestYear := index $years 0 | default "2025" -}}
     {{- $categories := slice (dict "key" "travel" "label" "出游") (dict "key" "reading" "label" "书影游") (dict "key" "poster" "label" "海报墙") -}}
+    {{- $summary := slice
+        (dict "Label" "出游年卷" "Value" (printf "%d 年" (len $years)))
+        (dict "Label" "最新" "Value" $latestYear)
+        (dict "Label" "分类" "Value" (printf "%d 类" (len $categories)))
+    -}}
 
-    <div class="page single special footprint-page">
-        <h1 class="single-title">{{ .Title }}</h1>
+    <div class="page single special footprint-page footprint-index">
+        {{- partial "archive/index-header.html" (dict
+            "Eyebrow" "FIELD NOTES / FOOTPRINT"
+            "Title" .Title
+            "Description" .Description
+            "Summary" $summary
+        ) -}}
+
         <div class="content" id="content">
             <div class="footprint-topbar">
-                <nav class="footprint-categories" aria-label="足迹分类">
-                    {{- range $categories -}}
-                        {{- $href := printf "/pages/footprint/%s/%s/" $latestYear .key | relLangURL -}}
-                        <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
-                    {{- end -}}
-                </nav>
+                <div class="footprint-nav-group">
+                    <span class="footprint-nav-label">分类</span>
+                    <nav class="footprint-categories" aria-label="足迹分类">
+                        {{- range $categories -}}
+                            {{- $href := printf "/pages/footprint/%s/%s/" $latestYear .key | relLangURL -}}
+                            <a class="{{ if eq $category .key }}active{{ end }}" href="{{ $href }}">{{ .label }}</a>
+                        {{- end -}}
+                    </nav>
+                </div>
 
-                <nav class="footprint-years" aria-label="足迹年份">
-                    {{- range $years -}}
-                        {{- $href := printf "/pages/footprint/%s/travel/" . | relLangURL -}}
-                        <a class="{{ if eq $latestYear . }}active{{ end }}" href="{{ $href }}">{{ . }}</a>
-                    {{- end -}}
-                </nav>
+                <div class="footprint-nav-group">
+                    <span class="footprint-nav-label">年份</span>
+                    <nav class="footprint-years" aria-label="足迹年份">
+                        {{- range $years -}}
+                            {{- $href := printf "/pages/footprint/%s/travel/" . | relLangURL -}}
+                            <a class="{{ if eq $latestYear . }}active{{ end }}" href="{{ $href }}">{{ . }}</a>
+                        {{- end -}}
+                    </nav>
+                </div>
             </div>
 
             <section class="footprint-index-card" aria-label="足迹入口">

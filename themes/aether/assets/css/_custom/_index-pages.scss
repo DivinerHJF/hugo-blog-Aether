@@ -1,0 +1,74 @@
+// Shared index-page heading: one quiet editorial hierarchy across archives.
+
+.index-page-header {
+  margin: 0 0 var(--space-5);
+  padding: var(--space-2) 0 var(--space-5);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+
+.index-page-eyebrow {
+  margin: 0 0 var(--space-2);
+  color: var(--color-accent);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.index-page-title {
+  margin: 0;
+  color: var(--color-ink);
+  font-size: clamp(1.85rem, 4vw, 2.7rem);
+  font-weight: 650;
+  letter-spacing: -.025em;
+  line-height: 1.18;
+}
+
+.index-page-description {
+  max-width: 42rem;
+  margin: var(--space-3) 0 0;
+  color: var(--color-muted);
+  font-size: .96rem;
+  line-height: 1.75;
+}
+
+.index-page-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin: var(--space-4) 0 0;
+  padding: var(--space-3) 0 0;
+  border-top: 1px solid var(--color-border-subtle);
+}
+
+.index-page-summary-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  min-width: 6.5rem;
+
+  dt {
+    color: var(--color-muted);
+    font-size: .74rem;
+    letter-spacing: .06em;
+  }
+
+  dd {
+    margin: 0;
+    color: var(--color-ink);
+    font-size: .9rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 560px) {
+  .index-page-header {
+    padding-top: 0;
+  }
+
+  .index-page-summary {
+    gap: var(--space-2) var(--space-4);
+  }
+}
