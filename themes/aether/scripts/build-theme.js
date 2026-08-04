@@ -31,5 +31,6 @@ const result = babel.transformSync(source, {
     comments: false,
 });
 
+fs.mkdirSync(path.dirname(outputFile), { recursive: true });
 fs.writeFileSync(outputFile, result.code);
 fs.writeFileSync(sourceMapFile, JSON.stringify(result.map));
