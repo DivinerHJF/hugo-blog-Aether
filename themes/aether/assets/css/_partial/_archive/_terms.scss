@@ -57,6 +57,22 @@
   }
 }
 
+// Categories and series keep their original quiet archive treatment. The
+// shared theme-token card surface is intentionally reserved for author cards.
+.categories-card,
+.series-card {
+  .card-item {
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+
+    &:hover:not(:focus-within) {
+      border-color: var(--color-border-subtle);
+      box-shadow: var(--shadow-low);
+    }
+  }
+}
+
 .archive-item {
   display: flex;
   justify-content: space-between;
