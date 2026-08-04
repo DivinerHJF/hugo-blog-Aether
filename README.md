@@ -122,7 +122,7 @@ hugo new content/posts/2026/20260509.md
 1. 打开 Pages CMS，按 `.pages.yml` 中的 `content/posts` 集合新建或编辑文章；文章文件会按 `content/posts/{year}/{year}{month}{day}.md` 的规则落到对应年份目录。
 2. 在图片上传器里拖拽图片，按需要排序、裁剪、压缩并转换为 WebP；上传器会通过 Cloudflare Pages Function 写入 R2，并返回可公开访问的图片 URL。
 3. 从上传器复制 Markdown 图片语法，例如 `![说明](https://img.philohao.com/blog/2026/05/example-01.webp)`，再粘贴回 Pages CMS 的正文编辑框。
-4. 在 Pages CMS 中保存文章或数据文件后，由 Git 提交触发 Vercel 按 `hugo --gc --minify` 构建并发布到线上站点。
+4. 在 Pages CMS 中保存文章或数据文件后，由 Git 提交触发 Vercel 按“安装锁定依赖 → 编译主题 JS → `hugo --gc --minify`”构建并发布到线上站点。
 
 ### 角色分工
 
@@ -187,28 +187,58 @@ python3 scripts/audit-theme-libs.py --check-simple-icons
 
 后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 ECharts 目录。
 
+## 构建与版本策略
+
+仓库只提交主题 JS 源码和构建描述，不提交 Babel 生成物。`themes/aether/assets/js/theme.min.js`、source map、`assets/sw.min.js` 及其 source map 都由构建流程生成，并由主题 `.gitignore` 忽略；这样本地和 Vercel 都从同一份源码与锁文件得到生成结果。
+
+当前工具链固定为：
+
+- Node：本地由根目录 `.nvmrc` 固定为 `22.18.0`；Vercel 由主题 `package.json` 的 `engines.node = "22.x"` 固定主版本。Vercel 目前按主版本提供 Node，因此补丁版本以平台实际可用版本为准；
+- npm：`themes/aether/package.json` 的 `packageManager` 固定为 `npm@10.9.3`，依赖版本与完整依赖树由 `themes/aether/package-lock.json` 锁定；
+- Hugo：`.hugo-version` 与 `vercel.json` 的 `HUGO_VERSION` 都是 `0.123.7`；
+- PhotoSwipe：`themes/aether/assets/lib/VERSION` 固定为 `5.4.4`，`npm run build` 会在编译前校验该版本没有漂移。
+
+完整构建顺序如下，Vercel 的 `vercel.json` 使用同一顺序：
+
+```bash
+npm ci --prefix themes/aether --include=dev --ignore-scripts --no-audit --no-fund
+npm run build --prefix themes/aether
+node scripts/check-hugo-version.js
+hugo --gc --minify
+```
+
+`npm ci` 只按 lockfile 安装，`npm run build` 生成主题 JS 和 Service Worker，版本检查通过后 Hugo 才读取这些生成文件。日常只修改 Markdown、模板或 SCSS 时，也建议使用这套顺序检查，避免把“本地残留生成物”误认为源码的一部分。
+
 ## 本地构建与检查
 
 ```bash
+npm ci --prefix themes/aether --include=dev --ignore-scripts --no-audit --no-fund
+npm run build --prefix themes/aether
+node scripts/check-hugo-version.js
 hugo --gc --minify
 python3 scripts/audit-theme-libs.py --check-simple-icons
 ```
 
-构建产物输出到 `public/`。提交前建议至少运行 `hugo --gc --minify`；如果改动足迹模板、导航或样式，建议再检查生成后的 `public/pages/footprint/` 页面。
+构建产物输出到 `public/`；主题 JS 生成物只存在于本地构建目录，不应加入 Git。提交前建议至少运行完整构建顺序；如果改动足迹模板、导航或样式，建议再检查生成后的 `public/pages/footprint/` 页面。
 
 ## 本地预览
 
 主题已经直接纳入主仓库，首次拉取后无需再执行 `git submodule update --init --recursive`。
 
-启动本地服务：
+启动本地服务前先生成主题 JS：
 
 ```bash
+npm run build --prefix themes/aether
+node scripts/check-hugo-version.js
 hugo server -D
 ```
 
-生成静态文件：
+生成完整静态文件：
 
 ```bash
+npm ci --prefix themes/aether --include=dev --ignore-scripts --no-audit --no-fund
+npm run build --prefix themes/aether
+node scripts/check-hugo-version.js
 hugo --gc --minify
 ```
 
@@ -217,11 +247,13 @@ hugo --gc --minify
 仓库根目录的 `vercel.json` 会固定 Vercel 的 Hugo 构建设置，并应与 Vercel 项目后台保持一致：
 
 - Framework Preset：`Hugo`（`vercel.json` 中对应 `"framework": "hugo"`）；
-- Build Command：`hugo --gc --minify`；
+- Build Command：`npm --prefix themes/aether ci --include=dev --ignore-scripts --no-audit --no-fund && npm --prefix themes/aether run build && node scripts/check-hugo-version.js && hugo --gc --minify`；
 - Output Directory：`public`；
-- Hugo 版本：`HUGO_VERSION = 0.123.7`，与本地 `hugo version` 显示的 `v0.123.7` 基线一致。
+- Node 版本：`22.x`，由 `themes/aether/package.json` 的 `engines.node` 约束；
+- Hugo 版本：`HUGO_VERSION = 0.123.7`，与根目录 `.hugo-version` 一致；
+- npm 依赖：只从 `themes/aether/package-lock.json` 安装，安装后运行主题 `build` 脚本。
 
-如果 Vercel 项目后台手动开启了 Framework Preset、Build Command、Output Directory 或环境变量的 Override，建议改回与 `vercel.json` 一致，或直接关闭 Override 让仓库配置生效。Vercel 环境变量中的 `HUGO_VERSION` 也应保持为 `0.123.7`，避免线上构建使用不同 Hugo 版本。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
+如果 Vercel 项目后台手动开启了 Framework Preset、Build Command、Output Directory、Node 版本或环境变量的 Override，建议改回与 `vercel.json` 和本 README 一致，或关闭 Override 让仓库配置生效。截图里的 `Command "hugo --gc" exited with 1` 只说明 Hugo 构建失败；真正原因需要展开 Vercel Build Logs 查看具体错误。迁移主题为普通目录后，不需要再在 Vercel 命令里加 `git submodule update --init --recursive`。
 
 ### Vercel 后台预览 403 排查
 
@@ -236,7 +268,7 @@ hugo --gc --minify
 
 - `themes/aether/` 是本站自用主题源码，已经从 Git submodule 迁移为普通目录；主题、内容与配置可以在同一个提交里一起修改和回滚。
 - 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
-- 只有修改主题 JS 源码时，才需要进入 `themes/aether/` 执行 npm 构建；`themes/aether/package.json` 中不再保留 `--source=exampleSite` 类独立示例站脚本。
+- 主题 JS 源码位于 `themes/aether/src/js/`；修改后先执行 `npm ci --prefix themes/aether --include=dev`，再执行 `npm run build --prefix themes/aether`。`assets/js/theme.min.js`、source map、`assets/sw.min.js` 及 source map 均为临时生成物，不要手动提交；`themes/aether/package.json` 中不再保留 `--source=exampleSite` 类独立示例站脚本。
 - 评论功能目前以 Giscus 为唯一启用方案；`themes/aether/assets/lib/gitalk/`、`valine/`、`waline/`、`twikoo/`、`vssue/` 已删除，除非同步恢复资源或改用 CDN，否则不要打开这些历史评论 provider。
 - Twemoji、LightGallery 与 CookieConsent 当前均为关闭状态；对应本地库已删除，重新打开 `params.page.twemoji`、`params.page.lightgallery` 或 `params.cookieconsent.enable` 前需先恢复本地资源或配置 CDN。
 - `themes/aether/exampleSite/` 已删除；部署、预览与 README 均以仓库根目录站点为准，不依赖主题示例站。

@@ -3,15 +3,22 @@
   "version": "0.2.0",
   "description": "Aether Hugo theme source files for philohao.com, adapted from DoIt.",
   "private": true,
+  "engines": {
+    "node": "22.x",
+    "npm": "10.9.3"
+  },
+  "packageManager": "npm@10.9.3",
+  "config": {
+    "photoswipeVersion": "5.4.4"
+  },
   "devDependencies": {
-    "@babel/cli": "^7.14.8",
-    "@babel/core": "^7.14.8",
-    "@babel/preset-env": "^7.14.9",
-    "babel-preset-minify": "^0.5.1",
-    "core-js": "^3.16.0"
+    "@babel/cli": "7.14.8",
+    "@babel/core": "7.14.8",
+    "@babel/preset-env": "7.14.9",
+    "babel-preset-minify": "0.5.1"
   },
   "scripts": {
-    "babel": "node scripts/build-theme.js && npx babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments"
+    "build": "node scripts/check-build-inputs.js && node scripts/build-theme.js && babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments"
   },
   "repository": {
     "type": "git",
