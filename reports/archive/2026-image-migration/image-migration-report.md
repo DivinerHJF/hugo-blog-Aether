@@ -231,7 +231,7 @@
 
 ## Remote 404 Manual Actions
 
-See `reports/manual-image-actions.md` for deleted or reviewed 404 references.
+See `manual-image-actions.md` for deleted or reviewed 404 references.
 
 ## Retry Resolved Images
 

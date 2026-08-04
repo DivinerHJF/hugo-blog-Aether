@@ -4,7 +4,7 @@ Date: 2026-05-10
 
 ## Scope
 
-This baseline records module 1 of `docs/codex-audit-workflow.md`: local Hugo build status and core generated outputs. No theme structure, resources, or content files were changed.
+This baseline records module 1 of `../codex-tasks/codex-audit-workflow.md`: local Hugo build status and core generated outputs. No theme structure, resources, or content files were changed.
 
 ## Environment
 

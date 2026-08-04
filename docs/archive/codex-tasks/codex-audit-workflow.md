@@ -521,7 +521,7 @@ git commit -m "docs: document Hugo content maintenance workflow"
 后续每次给 Codex 下发任务时，可复制以下模板：
 
 ```markdown
-请只执行《docs/codex-audit-workflow.md》中的模块 X：<模块名>。
+请只执行《docs/archive/codex-tasks/codex-audit-workflow.md》中的模块 X：<模块名>。
 
 要求：
 - 先检查并列出问题清单。

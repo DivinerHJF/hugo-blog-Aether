@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Retry retryable image downloads from reports/image-migration-report.md."""
+"""Retry retryable image downloads from the archived image migration report."""
 
 from __future__ import annotations
 
@@ -325,7 +325,7 @@ def write_retry_report(path: Path, rows: list[ManualRow], results: list[RetryRes
 def run(args: argparse.Namespace) -> int:
     root = Path(args.root).resolve()
     migration = load_migration_module(root)
-    report_path = root / "reports" / "image-migration-report.md"
+    report_path = root / "reports" / "archive" / "2026-image-migration" / "image-migration-report.md"
     rows = parse_needs_rows(report_path)
     retry_rows = [row for row in rows if row.category == "remote-retryable"]
     image_map_path = root / "data" / "image-map.json"
@@ -354,7 +354,7 @@ def run(args: argparse.Namespace) -> int:
             results.append(RetryResult(row, "success", f"{detail}; {action}", new_url, str(output_path.relative_to(root)), original_size, output_size))
 
     image_map_path.write_text(json.dumps(image_map, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    write_retry_report(root / "reports" / "retry-image-download-report.md", rows, results)
+    write_retry_report(root / "reports" / "archive" / "2026-image-migration" / "retry-image-download-report.md", rows, results)
     update_main_report(report_path, rows, results)
     print(f"Retryable candidates: {len(retry_rows)}")
     print(f"Retry succeeded: {len([result for result in results if result.status == 'success'])}")

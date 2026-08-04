@@ -92,8 +92,9 @@ def iter_report_records(report_path: Path) -> list[ImageRecord]:
 
 def load_records(root: Path) -> dict[str, ImageRecord]:
     records: dict[str, ImageRecord] = {}
+    report_root = root / "reports" / "archive" / "2026-image-migration"
     for report_name in ("image-migration-report.md", "retry-image-download-report.md"):
-        report_path = root / "reports" / report_name
+        report_path = report_root / report_name
         if not report_path.exists():
             continue
         for record in iter_report_records(report_path):
@@ -246,7 +247,7 @@ def build_plan(root: Path) -> list[MovePlan]:
 
 
 def write_report(root: Path, plans: list[MovePlan], mode: str) -> None:
-    report_path = root / "reports" / "r2-layout-reorganize-report.md"
+    report_path = root / "reports" / "archive" / "2026-image-migration" / "r2-layout-reorganize-report.md"
     report_path.parent.mkdir(parents=True, exist_ok=True)
     moving = [plan for plan in plans if plan.status == "move"]
     kept = [plan for plan in plans if plan.status == "keep"]
@@ -278,7 +279,8 @@ def write_report(root: Path, plans: list[MovePlan], mode: str) -> None:
 
 
 def update_text_files(root: Path, replacements: dict[str, str]) -> None:
-    targets = [root / "reports" / name for name in ("image-migration-report.md", "retry-image-download-report.md", "manual-image-actions.md")]
+    report_root = root / "reports" / "archive" / "2026-image-migration"
+    targets = [report_root / name for name in ("image-migration-report.md", "retry-image-download-report.md", "manual-image-actions.md")]
     for target in targets:
         if not target.exists():
             continue
