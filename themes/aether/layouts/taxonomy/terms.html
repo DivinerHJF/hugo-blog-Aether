@@ -111,7 +111,7 @@
                 {{- end -}}
             </div>
 
-        {{- /* Tag Explorer Page */ -}}
+        {{- /* 标签索引页 */ -}}
         {{- else if eq $taxonomies "tags" -}}
             {{- $tags := $.Site.Taxonomies.tags.ByCount -}}
             {{- $totalRefs := 0 -}}
@@ -126,25 +126,15 @@
             <section class="tag-explorer" aria-labelledby="tag-explorer-title">
                 <div class="tag-explorer-hero">
                     <div>
-                        <p class="tag-explorer-eyebrow">Tag Explorer</p>
                         <h3 id="tag-explorer-title">按主题发现文章</h3>
                         <p class="tag-explorer-description">
                             输入关键词快速筛选标签，或按热度分组浏览；每张卡片展示最近文章，减少跳转成本。
                         </p>
-                    </div>
-                    <div class="tag-explorer-stats" aria-label="标签统计">
-                        <div class="tag-stat">
-                            <strong>{{ len $tags }}</strong>
-                            <span>标签</span>
-                        </div>
-                        <div class="tag-stat">
-                            <strong>{{ $totalRefs }}</strong>
-                            <span>引用</span>
-                        </div>
-                        <div class="tag-stat">
-                            <strong>{{ $maxCount }}</strong>
-                            <span>最高热度</span>
-                        </div>
+                        <p class="tag-explorer-summary" aria-label="标签统计">
+                            <strong>{{ len $tags }}</strong> 个标签 ·
+                            <strong>{{ $totalRefs }}</strong> 次引用 ·
+                            最高热度 <strong>{{ $maxCount }}</strong>
+                        </p>
                     </div>
                 </div>
 
