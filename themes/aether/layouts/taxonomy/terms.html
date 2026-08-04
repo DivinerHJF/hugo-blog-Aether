@@ -123,20 +123,17 @@
                 {{- $maxCount = .Count -}}
             {{- end -}}
 
-            <section class="tag-explorer" aria-labelledby="tag-explorer-title">
-                <div class="tag-explorer-hero">
-                    <div>
-                        <h3 id="tag-explorer-title">按主题发现文章</h3>
-                        <p class="tag-explorer-description">
-                            输入关键词快速筛选标签，或按热度分组浏览；每张卡片展示最近文章，减少跳转成本。
-                        </p>
-                        <p class="tag-explorer-summary" aria-label="标签统计">
-                            <strong>{{ len $tags }}</strong> 个标签 ·
-                            <strong>{{ $totalRefs }}</strong> 次引用 ·
-                            最高热度 <strong>{{ $maxCount }}</strong>
-                        </p>
-                    </div>
-                </div>
+            <section class="tag-explorer" aria-label="标签索引">
+                <header class="tag-index-heading">
+                    <p class="tag-explorer-description">
+                        输入关键词筛选标签，或按文章数量浏览；每个条目列出最近文章。
+                    </p>
+                    <p class="tag-explorer-summary" aria-label="标签统计">
+                        <strong>{{ len $tags }}</strong> 个标签 ·
+                        <strong>{{ $totalRefs }}</strong> 次引用 ·
+                        最高热度 <strong>{{ $maxCount }}</strong>
+                    </p>
+                </header>
 
                 <p class="tag-explorer-status" data-tag-enhancement-status>筛选功能加载中，未启用时可直接浏览全部标签。</p>
 
@@ -153,14 +150,14 @@
                     </div>
                 </div>
 
-                <div class="tag-explorer-popular" aria-label="热门标签快捷入口">
+                <nav class="tag-explorer-popular" aria-label="热门标签快捷入口">
                     {{- range first 8 $tags -}}
-                        <a href="{{ .Page.RelPermalink }}" style="--tag-weight: {{ div (mul .Count 100) $maxCount }}%;">
+                        <a href="{{ .Page.RelPermalink }}">
                             <span># {{ .Page.Title }}</span>
                             <strong>{{ .Count }}</strong>
                         </a>
                     {{- end -}}
-                </div>
+                </nav>
 
                 <div class="tag-results-meta" aria-live="polite">
                     <span data-tag-result-count>{{ len $tags }}</span> 个标签

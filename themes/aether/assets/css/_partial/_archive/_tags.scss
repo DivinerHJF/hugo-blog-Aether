@@ -1,62 +1,35 @@
 .tag-explorer {
-  margin-top: var(--space-5);
+  margin-top: 1.25rem;
 }
 
-.tag-explorer-hero {
-  position: relative;
-  padding: var(--space-5);
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-wash);
-  box-shadow: var(--shadow-low);
-
-  &::after {
-    content: "";
-    position: absolute;
-    right: var(--space-5);
-    bottom: 0;
-    left: var(--space-5);
-    height: 1px;
-    background: var(--color-accent);
-    opacity: .85;
-    pointer-events: none;
-  }
-
-  h3 {
-    margin: .1rem 0 .45rem;
-    font-size: 1.45rem;
-    line-height: 1.3;
-  }
+.tag-index-heading {
+  margin: 1.25rem 0 .75rem;
+  padding-bottom: .6rem;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .tag-explorer-description {
-  max-width: 34rem;
   margin: 0;
   color: var(--color-muted);
   line-height: 1.7;
 }
 
 .tag-explorer-summary {
-  margin: var(--space-3) 0 0;
+  margin: .45rem 0 0;
   color: var(--color-muted);
-  font-size: .88rem;
-  line-height: 1.6;
+  font-size: .82rem;
+  line-height: 1.5;
 
   strong {
-    color: var(--color-accent);
+    color: var(--color-ink);
     font-weight: 700;
   }
 }
 
 .tag-explorer-status {
-  margin: var(--space-4) 0 var(--space-3);
-  padding: var(--space-2) var(--space-3);
-  border: 1px dashed var(--color-border-subtle);
-  border-radius: var(--radius-md);
-  background: var(--color-accent-soft);
+  margin: .75rem 0;
   color: var(--color-muted);
-  font-size: .88rem;
+  font-size: .82rem;
 }
 
 .tag-explorer--ready .tag-explorer-status {
@@ -65,10 +38,14 @@
 
 .tag-explorer-controls {
   display: none;
-  gap: var(--space-3);
-  align-items: center;
+  flex-wrap: wrap;
+  gap: .7rem 1.25rem;
+  align-items: flex-end;
   justify-content: space-between;
-  margin: var(--space-4) 0 var(--space-3);
+  margin: .75rem 0 0;
+  padding: .7rem 0;
+  border-top: 1px solid var(--color-border-subtle);
+  border-bottom: 1px solid var(--color-border-subtle);
 }
 
 .tag-explorer--ready .tag-explorer-controls {
@@ -79,17 +56,18 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
-  flex: 1 1 15rem;
-  min-width: 13rem;
-  padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-md);
-  background: var(--color-surface-wash);
+  flex: 1 1 16rem;
+  min-width: 14rem;
+  padding: .25rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: 0;
+  background: transparent;
   color: var(--color-ink);
 
   &:focus-within {
-    border-color: var(--color-interactive);
-    box-shadow: var(--focus-ring);
+    border-bottom-color: var(--color-interactive);
+    box-shadow: none;
   }
 
   input {
@@ -105,26 +83,27 @@
 .tag-filter-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: .25rem .65rem;
   justify-content: flex-end;
 }
 
 .tag-filter {
-  border: 1px solid var(--color-border-subtle);
-  border-radius: var(--radius-sm);
-  padding: var(--space-2) var(--space-3);
-  background: var(--color-surface-wash);
-  color: var(--color-ink);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: .25rem 0;
+  background: transparent;
+  color: var(--color-muted);
   cursor: pointer;
   font: inherit;
-  @include transition(border-color var(--motion-normal) var(--motion-ease), background var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
+  @include transition(border-color var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease));
 
   &:hover,
   &:focus-visible,
   &.active {
-    border-color: var(--color-interactive);
-    background: var(--color-interactive);
-    color: var(--color-on-interactive);
+    border-bottom-color: var(--color-accent);
+    background: transparent;
+    color: var(--color-ink);
   }
 
   &:focus-visible {
@@ -134,93 +113,92 @@
 }
 
 .tag-explorer-popular {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-2);
-  margin-bottom: var(--space-4);
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem 1rem;
+  align-items: baseline;
+  margin: .75rem 0 0;
+  padding: .7rem 0;
+  border-bottom: 1px solid var(--color-border-subtle);
 
   @include link(false, true);
 
   a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
-    min-width: 0;
-    padding: var(--space-2) var(--space-3);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-sm);
-    background: linear-gradient(90deg, var(--color-accent), var(--color-interactive)) 0 0 / var(--tag-weight) 100% no-repeat, var(--color-surface-wash);
+    display: inline-flex;
+    align-items: baseline;
+    gap: .3rem;
+    padding: .15rem 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+    border-radius: 0;
+    background: transparent;
     box-shadow: none;
     color: var(--color-ink);
-    @include transition(transform var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease), background var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease));
+    @include transition(border-color var(--motion-normal) var(--motion-ease), color var(--motion-normal) var(--motion-ease));
 
-    &:hover:not(:focus-visible) {
-      border-color: var(--color-interactive);
-      @include transform(translateY(-2px));
+    &:hover,
+    &:focus-visible {
+      border-bottom-color: var(--color-accent);
+      background: transparent;
+      color: var(--color-interactive);
+      transform: none;
     }
 
     &:focus-visible {
       outline: none;
-      border-radius: var(--radius-sm);
-      border-color: var(--color-interactive);
       box-shadow: var(--focus-ring);
-      @include transform(none);
     }
   }
 
   span {
-    overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap;
   }
 
   strong {
-    color: var(--color-accent);
+    color: var(--color-muted);
+    font-size: .78rem;
+    font-weight: 400;
   }
 }
 
 .tag-results-meta {
-  margin: var(--space-2) 0;
+  margin: .8rem 0 .25rem;
   color: var(--color-muted);
-  font-size: .86rem;
-  text-align: right;
+  font-size: .82rem;
+  text-align: left;
 }
 
 .tag-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 2rem;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .tag-card {
   display: flex;
   flex-direction: column;
   min-width: 0;
-  min-height: 10.25rem;
-  padding: var(--space-4);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  background: var(--color-surface-translucent);
+  min-height: 0;
+  padding: .85rem 0 1rem;
+  border: 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+  border-radius: 0;
+  background: transparent;
   box-shadow: none;
-  @include transition(transform var(--motion-normal) var(--motion-ease), box-shadow var(--motion-normal) var(--motion-ease), border-color var(--motion-normal) var(--motion-ease));
+  @include transition(border-color var(--motion-normal) var(--motion-ease));
 
   &[hidden] {
     display: none;
   }
 
   &:hover:not(:focus-within) {
-    border-color: var(--color-interactive);
-    box-shadow: var(--shadow-low);
-    @include transform(translateY(-2px));
+    border-bottom-color: var(--color-border-strong);
   }
 
   &:focus-within {
     outline: none;
-    border-radius: var(--radius-sm);
-    border-color: var(--color-interactive);
-    box-shadow: var(--focus-ring);
-    @include transform(none);
+    box-shadow: none;
   }
 }
 
@@ -239,7 +217,6 @@
 
   &:focus-visible {
     outline: none;
-    border-radius: var(--radius-sm);
     box-shadow: var(--focus-ring);
   }
 }
@@ -252,32 +229,28 @@
 
 .tag-card-count {
   flex: 0 0 auto;
-  padding: calc(var(--space-1) / 2) var(--space-2);
-  border-radius: var(--radius-pill);
-  background: var(--color-accent-soft);
-  color: var(--color-accent);
+  color: var(--color-muted);
   font-size: .75rem;
+  font-weight: 400;
 }
 
 .tag-card-bar {
-  height: .3rem;
-  margin: var(--space-3) 0 var(--space-2);
+  height: 1px;
+  margin: .6rem 0 .65rem;
   overflow: hidden;
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-soft);
+  background: var(--color-border-subtle);
 
   span {
     display: block;
     height: 100%;
-    min-width: .55rem;
-    border-radius: inherit;
-    background: linear-gradient(90deg, var(--color-accent), var(--color-interactive));
+    min-width: .25rem;
+    background: var(--color-accent);
   }
 }
 
 .tag-card-posts {
   display: grid;
-  gap: var(--space-2);
+  gap: .35rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -303,7 +276,6 @@
 
     &:focus-visible {
       outline: none;
-      border-radius: var(--radius-sm);
       box-shadow: var(--focus-ring);
     }
   }
@@ -320,10 +292,10 @@
   text-align: center;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 720px) {
   .tag-explorer-controls {
-    flex-direction: column;
     align-items: stretch;
+    flex-direction: column;
   }
 
   .tag-search {
@@ -335,18 +307,6 @@
     justify-content: flex-start;
   }
 
-  .tag-explorer-popular,
-  .tag-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 560px) {
-  .tag-explorer-hero {
-    padding: var(--space-4);
-  }
-
-  .tag-explorer-popular,
   .tag-grid {
     grid-template-columns: 1fr;
   }
