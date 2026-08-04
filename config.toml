@@ -61,6 +61,14 @@ fingerprint = "sha384"
 gitRepo = "https://github.com/DivinerHJF/hugo-blog-Aether"
 images = ["/images/me/favicon.svg"]
 enablePWA = true
+
+[params.author]
+name = "Jianfeng.Hao"
+email = "haojianfeng1997@gmail.com"
+link = "https://philohao.com/"
+avatar = "https://philohao.com/images/me/logo.svg"
+gravatarEmail = ""
+
 # 现代浏览器已原生支持 object-fit，未启用 [params.compatibility] objectFit。
 # 如需兼容 IE/旧版 Safari，请改用 CDN 配置 objectFitImagesJS，或恢复 themes/aether/assets/lib/object-fit-images/。
 
@@ -300,13 +308,6 @@ unsafe = true
 [markup.tableOfContents]
 startLevel = 2
 endLevel = 6
-
-[author]
-name = "Jianfeng.Hao"
-email = "haojianfeng1997@gmail.com"
-link = "https://philohao.com/"
-avatar = "https://philohao.com/images/me/logo.svg"
-gravatarEmail = ""
 
 [sitemap]
 changefreq = "weekly"

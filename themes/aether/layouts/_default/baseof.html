@@ -1,4 +1,8 @@
 {{- partial "init.html" . -}}
+{{- $pageConfig := dict -}}
+{{- if .IsPage -}}
+    {{- $pageConfig = partial "function/page-config.html" . -}}
+{{- end -}}
 
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
@@ -19,7 +23,7 @@
 </head>
 
 <body header-desktop="{{ .Site.Params.header.desktopMode }}" header-mobile="{{ .Site.Params.header.mobileMode }}">
-    {{- /* Check theme isDark before body rendering */ -}}
+    {{- /* 在渲染页面主体前恢复主题 */ -}}
     {{- $theme := .Site.Params.defaulttheme -}}
     <script type="text/javascript">
         function setTheme(theme) {document.body.setAttribute('theme', theme);}
@@ -32,10 +36,10 @@
     <div id="back-to-top"></div>
     <div id="mask"></div>
 
-    {{- /* Body wrapper */ -}}
+    {{- /* 页面主体 */ -}}
     <div class="wrapper">
         {{- partial "header.html" . -}}
-        <main class="main">
+        <main class="main"{{ with $pageConfig.pageStyle }} pageStyle="{{ . }}"{{ end }}{{ with $pageConfig.autoTOC }} autoTOC="{{ . }}"{{ end }}>
             <div class="container">
                 {{- block "content" . }}{{ end -}}
             </div>
@@ -44,22 +48,22 @@
     </div>
 
     <div id="fixed-buttons">
-        {{- /* top button */ -}}
+        {{- /* 返回顶部 */ -}}
         <a href="#back-to-top" id="back-to-top-button" class="fixed-button" title="{{ T `backToTop` }}">
             <i class="fas fa-arrow-up fa-fw"></i>
         </a>
 
-        {{- /* comment button */ -}}
+        {{- /* 查看评论 */ -}}
         <a href="#" id="view-comments" class="fixed-button" title="{{ T `viewComments` }}">
             <i class="fas fa-comment fa-fw"></i>
         </a>
     </div>
 
-    {{- /* Load JavaScript scripts and CSS */ -}}
+    {{- /* 加载脚本与样式 */ -}}
     {{- partial "assets.html" . -}}
 
     {{ if and hugo.IsProduction (not .Site.IsServer) }}
-    <!-- Vercel Analytics -->
+    <!-- Vercel 分析脚本 -->
     <script defer src="/_vercel/insights/script.js"></script>
     <script defer src="/_vercel/speed-insights/script.js"></script>
     {{ end }}

@@ -1,4 +1,4 @@
-{{- $params := .Page.Params | merge .Site.Params.Page | merge (dict "author" .Site.Author.name) -}}
+{{- $params := .Page.Params | merge .Site.Params.Page | merge (dict "author" .Site.Params.author.name) -}}
 {{- $baseURL := strings.TrimSuffix "/" .Site.BaseURL -}}
 {{- $normalizeFeedHTML := printf `${1}%s/${2}` $baseURL -}}
 {{- $summary := .Page.Description -}}
@@ -27,8 +27,8 @@
         {{- end -}}
     {{- else -}}
         <dc:creator>{{- $params.author | default (T "author") -}}</dc:creator>
-        {{- with .Site.Author.email -}}
-            <author>{{- . }}{{ with $.Site.Author.name }} ({{ . }}){{ end -}}</author>
+        {{- with .Site.Params.author.email -}}
+            <author>{{- . }}{{ with $.Site.Params.author.name }} ({{ . }}){{ end -}}</author>
         {{- end -}}
     {{- end -}}
     <guid isPermaLink="true">
