@@ -612,7 +612,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--scan-dir", action="append", default=list(DEFAULT_SCAN_DIRS), help="Directory to scan. Can be repeated.")
     parser.add_argument("--output-dir", default="r2-upload", help="Output directory for processed images.")
     parser.add_argument("--map-path", default="data/image-map.json", help="Path for old-path to R2 URL mapping JSON.")
-    parser.add_argument("--report-path", default="reports/image-migration-report.md", help="Path for the Markdown report.")
+    parser.add_argument("--report-path", default="reports/archive/2026-image-migration/image-migration-report.md", help="Path for the Markdown report.")
     parser.add_argument("--r2-base-url", default=DEFAULT_R2_BASE_URL, help="Base URL for generated R2 object URLs.")
     parser.add_argument("--quality", type=int, default=82, help="WebP quality for JPEG/PNG/WebP output.")
     parser.add_argument("--max-width", type=int, default=1600, help="Resize images wider than this value.")

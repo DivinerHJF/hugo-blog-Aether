@@ -1,4 +1,13 @@
-# 书影游数据维护
+# 内容模型与书影游数据
+
+## 站点内容分层
+
+- `content/posts/<year>/`：文章和月报，使用 front matter 声明标题、日期、分类、系列和标签。
+- `content/pages/`：关于、足迹等独立页面；足迹按 `year/category` 拆分。
+- `data/`：需要跨页面筛选或统计的结构化数据，不直接替代正文 Markdown。
+- `layouts/`：项目级页面覆盖；主题通用渲染位于 `themes/aether/layouts/`。
+
+文章、足迹和书影游数据的当前入口见[写作与内容发布](../workflows/writing.md)。
 
 书影游已合并到足迹页，不再维护独立的 `content/pages/mentalfood.md` 页面，也不再在顶部导航展示「阅览」。当前入口为：
 
@@ -86,6 +95,9 @@
 4. 运行构建确认页面生成：
 
    ```bash
+   npm ci --prefix themes/aether --include=dev --ignore-scripts --no-audit --no-fund
+   npm run build --prefix themes/aether
+   node scripts/check-hugo-version.js
    hugo --gc --minify
    ```
 

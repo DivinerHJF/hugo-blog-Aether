@@ -172,9 +172,12 @@ def write_report(
     protected: dict[str, str],
     unmatched: list[Replacement],
 ) -> None:
-    report_path = root / "reports" / (
-        "r2-link-replacement-report.md" if mode == "apply" else "r2-link-replacement-dry-run.md"
+    report_name = (
+        "r2-link-replacement-report.md"
+        if mode == "apply"
+        else ".generated/r2-link-replacement-dry-run.md"
     )
+    report_path = root / "reports" / "archive" / "2026-image-migration" / report_name
     report_path.parent.mkdir(parents=True, exist_ok=True)
     total = sum(sum(change.counts.values()) for change in changes)
     lines = [

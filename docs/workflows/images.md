@@ -2,6 +2,8 @@
 
 本站已将足迹页图片迁移到 Cloudflare R2，对外统一图片域名为 `https://img.philohao.com/`。以后新增图片、迁移旧图片时，请遵循本文档规范。
 
+历史迁移结果保存在 [`reports/archive/2026-image-migration/`](../../reports/archive/2026-image-migration/)，不作为新增图片的操作入口。
+
 ## 1. 总原则
 
 - 所有新图片统一上传到 Cloudflare R2。
@@ -81,7 +83,7 @@ movies/
 2. 上传到 R2 对应目录。
 3. 复制 `img.philohao.com` 直链。
 4. 写入 Markdown。
-5. 本地运行 `hugo --gc --minify` 检查。
+5. 本地按[构建与部署](deployment.md)的顺序运行主题编译和 `hugo --gc --minify` 检查。
 6. 确认页面图片可正常加载后再提交。
 
 ## 7. 迁移旧图片流程
@@ -92,11 +94,11 @@ movies/
 4. 保持文件名不变，除非确有必要。
 5. 批量替换 Markdown 中旧 URL。
 6. 检查没有遗留 `image.philohao.com`、`photos.philohao.com`、`album.philohao.com/_next/image`、`public.blob.vercel-storage.com` 等旧链接。
-7. 构建并预览。
+7. 按[构建与部署](deployment.md)的顺序构建并预览。
 
 ## 8. Codex 执行要求
 
-- Codex 以后处理图片时，必须先阅读 `docs/image-r2-workflow.md`。
+- Codex 以后处理图片时，必须先阅读本文档。
 - 不要直接提交二进制图片到 Git 仓库。
 - 不要把 R2 本地同步目录提交到 Git。
 - 只修改 Markdown、配置和文档。

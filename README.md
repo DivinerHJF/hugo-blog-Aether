@@ -28,9 +28,15 @@
 ├── layouts/
 │   ├── pages/               # 足迹入口页与年度页的项目级覆盖模板
 │   └── partials/mentalfood/ # 足迹「书影游」年度数据渲染 partial
+├── docs/                    # 当前维护文档与历史归档，入口为 docs/README.md
+├── reports/                 # 一次性迁移最终报告归档
 ├── static/images/me/        # favicon、logo、头像、二维码等个人静态资源
 └── themes/aether/           # Aether 主题源码，作为普通目录随主仓库维护
 ```
+
+## 文档入口
+
+日常维护只需要从 [`docs/README.md`](docs/README.md) 进入：当前架构说明位于 `docs/architecture/`，写作、图片和部署流程位于 `docs/workflows/`；已完成的 Codex 任务、审计记录和 2026 图片迁移报告均已归档，不再作为根目录入口。
 
 ## 内容维护约定
 

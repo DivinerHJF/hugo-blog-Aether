@@ -1,0 +1,2 @@
+# Re-creatable dry-run reports are intentionally not tracked.
+.generated/
