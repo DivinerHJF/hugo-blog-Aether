@@ -1,0 +1,28 @@
+{{- $params := .Scratch.Get "params" | default dict -}}
+{{- $toc := $params.toc -}}
+
+{{- if eq $toc true -}}
+    {{- $toc = .Site.Params.page.toc | default dict -}}
+{{- else if eq $toc false -}}
+    {{- $toc = dict "enable" false -}}
+{{- else -}}
+    {{- $toc = $toc | default dict -}}
+{{- end -}}
+
+{{- $pageStyle := "normal" -}}
+{{- if eq $params.pageStyle "wide" -}}
+    {{- $pageStyle = "wide" -}}
+{{- end -}}
+
+{{- $autoTOC := "" -}}
+{{- if eq $toc.enable true -}}
+    {{- if eq $toc.keepStatic true -}}
+        {{- $autoTOC = "false" -}}
+    {{- else -}}
+        {{- $autoTOC = "true" -}}
+    {{- end -}}
+{{- else if eq $toc.enable false -}}
+    {{- $autoTOC = "false" -}}
+{{- end -}}
+
+{{- return dict "params" $params "toc" $toc "pageStyle" $pageStyle "autoTOC" $autoTOC -}}
