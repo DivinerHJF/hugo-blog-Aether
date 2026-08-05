@@ -9,6 +9,7 @@
         modulePromise: null,
         dimensionsCache: new Map(),
     };
+    const PLACEHOLDER_SOURCE = 'data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=';
 
     function isUsableURL(value) {
         if (!value) return false;
@@ -18,6 +19,64 @@
 
     function shouldReduceMotion() {
         return root.matchMedia && root.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    }
+
+    function getLightboxAppearance() {
+        const theme = (document.body && document.body.getAttribute('theme')) || 'light';
+        const appearances = {
+            light: {
+                bgOpacity: 0.78,
+                mainClass: 'aether-pswp aether-pswp--light',
+            },
+            dark: {
+                bgOpacity: 0.84,
+                mainClass: 'aether-pswp aether-pswp--dark',
+            },
+            black: {
+                bgOpacity: 0.88,
+                mainClass: 'aether-pswp aether-pswp--black',
+            },
+        };
+        return appearances[theme] || appearances.light;
+    }
+
+    function getLightboxPadding(viewport) {
+        if (viewport.x < 680) {
+            return {
+                top: 56,
+                bottom: 68,
+                left: 10,
+                right: 10,
+            };
+        }
+        return {
+            top: 64,
+            bottom: 76,
+            left: 56,
+            right: 56,
+        };
+    }
+
+    function applyLightboxAppearance(lightbox) {
+        const appearance = getLightboxAppearance();
+        const reducedMotion = shouldReduceMotion();
+        if (!lightbox || !lightbox.options) return appearance;
+        Object.assign(lightbox.options, {
+            mainClass: appearance.mainClass,
+            bgOpacity: appearance.bgOpacity,
+            showHideAnimationType: reducedMotion ? 'none' : 'zoom',
+            showAnimationDuration: reducedMotion ? 0 : 280,
+            hideAnimationDuration: reducedMotion ? 0 : 225,
+            zoomAnimationDuration: reducedMotion ? 0 : 260,
+        });
+        const pswp = lightbox.pswp;
+        if (pswp && pswp.element) {
+            pswp.element.classList.remove('aether-pswp', 'aether-pswp--light', 'aether-pswp--dark', 'aether-pswp--black');
+            appearance.mainClass.split(' ').forEach(className => pswp.element.classList.add(className));
+            pswp.options.bgOpacity = appearance.bgOpacity;
+            if (pswp.bg) pswp.bg.style.opacity = String(pswp.bgOpacity * appearance.bgOpacity);
+        }
+        return appearance;
     }
 
     function readDimension(element, attribute) {
@@ -107,6 +166,60 @@
         return shared.modulePromise;
     }
 
+    function createPlaceholderSlide(index, metadata) {
+        return Object.assign({
+            src: PLACEHOLDER_SOURCE,
+            width: 1,
+            height: 1,
+            alt: '',
+            msrc: PLACEHOLDER_SOURCE,
+            placeholder: true,
+            index,
+        }, metadata || {});
+    }
+
+    function updateSlide(lightbox, dataSource, index, item) {
+        const pswp = lightbox && lightbox.pswp;
+        if (!pswp || pswp.options.dataSource !== dataSource) return false;
+        pswp.options.dataSource[index] = item;
+        if (typeof pswp.refreshSlideContent === 'function') pswp.refreshSlideContent(index);
+        return true;
+    }
+
+    function setDataLoading(lightbox, isLoading, dataSource) {
+        const pswp = lightbox && lightbox.pswp;
+        if (!pswp || !pswp.element) return;
+        if (dataSource && pswp.options.dataSource !== dataSource) return;
+        pswp.element.classList.toggle('aether-pswp--data-loading', Boolean(isLoading));
+        pswp.options.allowPanToNext = !isLoading;
+        pswp.element.querySelectorAll('.pswp__button--arrow').forEach(button => {
+            button.disabled = Boolean(isLoading);
+        });
+    }
+
+    function scheduleIdle(callback) {
+        let cancelled = false;
+        let handle = null;
+        const run = deadline => {
+            if (!cancelled) callback(deadline);
+        };
+        if (typeof root.requestIdleCallback === 'function') {
+            handle = { type: 'idle', value: root.requestIdleCallback(run, { timeout: 1000 }) };
+        } else {
+            handle = { type: 'timeout', value: root.setTimeout(run, 100) };
+        }
+        return () => {
+            cancelled = true;
+            if (!handle) return;
+            if (handle.type === 'idle' && typeof root.cancelIdleCallback === 'function') {
+                root.cancelIdleCallback(handle.value);
+            } else if (handle.type === 'timeout') {
+                root.clearTimeout(handle.value);
+            }
+            handle = null;
+        };
+    }
+
     function registerCaption(lightbox) {
         lightbox.on('uiRegister', () => {
             if (!lightbox.pswp || !lightbox.pswp.ui) return;
@@ -134,11 +247,27 @@
 
     function createLightbox(context, options, configure) {
         return load(context).then(loaded => {
+            const appearance = getLightboxAppearance();
+            const reducedMotion = shouldReduceMotion();
             const lightbox = new loaded.PhotoSwipeLightbox(Object.assign({
                 dataSource: [],
                 pswpModule: loaded.PhotoSwipe,
-                showHideAnimationType: shouldReduceMotion() ? 'none' : 'fade',
+                mainClass: appearance.mainClass,
+                bgOpacity: appearance.bgOpacity,
+                showHideAnimationType: reducedMotion ? 'none' : 'zoom',
+                showAnimationDuration: reducedMotion ? 0 : 280,
+                hideAnimationDuration: reducedMotion ? 0 : 225,
+                zoomAnimationDuration: reducedMotion ? 0 : 260,
+                easing: 'cubic-bezier(.22, .8, .2, 1)',
+                spacing: 0.06,
+                initialZoomLevel: 'fit',
+                secondaryZoomLevel: 1,
+                maxZoomLevel: 3,
+                imageClickAction: 'zoom',
                 bgClickAction: 'close',
+                tapAction: 'toggle-controls',
+                doubleTapAction: 'zoom',
+                paddingFn: getLightboxPadding,
                 closeOnVerticalDrag: true,
                 escKey: true,
                 loop: false,
@@ -151,6 +280,14 @@
             }, options || {}));
             registerCaption(lightbox);
             if (typeof configure === 'function') configure(lightbox);
+            applyLightboxAppearance(lightbox);
+            if (context && context.events && context.events.theme) {
+                const updateAppearance = () => applyLightboxAppearance(lightbox);
+                context.events.theme.add(updateAppearance);
+                if (typeof context.addCleanup === 'function') {
+                    context.addCleanup(() => context.events.theme.delete(updateAppearance));
+                }
+            }
             lightbox.init();
             return lightbox;
         });
@@ -164,6 +301,12 @@
         isUsableURL,
         load,
         loadDimensions,
+        getLightboxAppearance,
+        applyLightboxAppearance,
+        createPlaceholderSlide,
+        updateSlide,
+        setDataLoading,
+        scheduleIdle,
         createLightbox,
     };
 })(window);

@@ -132,9 +132,58 @@
                 msrc: modules.photoSwipe.isUsableURL(thumbnail) ? thumbnail : source,
                 contentImageIndex: index,
                 element: image,
+                thumbCropped: false,
             };
             if (srcset) item.srcset = srcset;
             return item;
+        });
+    }
+
+    function bindPreloadIntents(context, triggers) {
+        const preload = () => modules.photoSwipe.load(context).catch(utils.noop);
+        triggers.forEach(trigger => {
+            context.listen(trigger, 'pointerenter', preload, { once: true });
+            context.listen(trigger, 'touchstart', preload, { once: true, passive: true });
+            context.listen(trigger, 'focus', preload, { once: true });
+        });
+    }
+
+    function cancelIdlePreloads(state) {
+        state.idleCleanup.forEach(cancel => cancel());
+        state.idleCleanup = [];
+    }
+
+    function preloadContentSlides(state, dataSource, lightbox, indexes) {
+        return Promise.all(indexes.map(index => {
+            return buildSlide(state.triggers[index], index)
+                .then(slide => {
+                    if (!state.destroyed) {
+                        dataSource[index] = slide;
+                        modules.photoSwipe.updateSlide(lightbox, dataSource, index, slide);
+                    }
+                    return { index, slide };
+                })
+                .catch(error => ({ index, error }));
+        }));
+    }
+
+    function startContentSlidePreload(state, index, dataSource, lightbox) {
+        const adjacentIndexes = [index - 1, index + 1].filter(itemIndex => {
+            return itemIndex >= 0 && itemIndex < state.triggers.length;
+        });
+        const adjacentSet = new Set(adjacentIndexes);
+        const remainingIndexes = state.triggers.map((trigger, itemIndex) => itemIndex).filter(itemIndex => {
+            return itemIndex !== index && !adjacentSet.has(itemIndex);
+        });
+        modules.photoSwipe.setDataLoading(lightbox, adjacentIndexes.length > 0, dataSource);
+        preloadContentSlides(state, dataSource, lightbox, adjacentIndexes).then(() => {
+            if (state.destroyed) return;
+            root.setTimeout(() => modules.photoSwipe.setDataLoading(lightbox, false, dataSource), 0);
+            if (!remainingIndexes.length) return;
+            const cancelIdle = modules.photoSwipe.scheduleIdle(() => {
+                if (!state.destroyed) preloadContentSlides(state, dataSource, lightbox, remainingIndexes);
+            });
+            state.idleCleanup.push(cancelIdle);
         });
     }
 
@@ -151,23 +200,23 @@
         if (state.destroyed || state.opening || !trigger) return;
         state.opening = true;
         state.activeTrigger = trigger;
-        Promise.all(state.triggers.map((item, itemIndex) => {
-            return buildSlide(item, itemIndex)
-                .then(slide => ({ index: itemIndex, slide }))
-                .catch(error => ({ index: itemIndex, error }));
-        })).then(results => {
+        let opened = false;
+        Promise.all([
+            modules.photoSwipe.load(state.context),
+            buildSlide(trigger, index),
+        ]).then(results => {
             if (state.destroyed) return null;
-            const valid = results.filter(result => result.slide);
-            const selected = results.find(result => result.index === index && result.slide);
-            if (!selected || !valid.length) throw new Error('Selected image dimensions unavailable');
-            const dataSource = valid.map(result => result.slide);
-            const startIndex = dataSource.findIndex(slide => slide.contentImageIndex === selected.index);
-            if (startIndex < 0) throw new Error('Selected image not found in article gallery');
+            const currentSlide = results[1];
+            const dataSource = state.triggers.map((item, itemIndex) => {
+                if (itemIndex === index) return currentSlide;
+                return modules.photoSwipe.createPlaceholderSlide(itemIndex, { contentImageIndex: itemIndex });
+            });
             const lightboxPromise = state.lightbox
                 ? Promise.resolve(state.lightbox)
                 : modules.photoSwipe.createLightbox(state.context).then(lightbox => {
                     state.lightbox = lightbox;
                     lightbox.on('destroy', () => {
+                        cancelIdlePreloads(state);
                         if (!state.destroyed) {
                             const activeTrigger = state.activeTrigger;
                             state.activeTrigger = null;
@@ -179,14 +228,17 @@
             return lightboxPromise.then(lightbox => {
                 if (state.destroyed) return null;
                 if (point && typeof point.x === 'number' && typeof point.y === 'number') {
-                    lightbox.loadAndOpen(startIndex, dataSource, point);
+                    lightbox.loadAndOpen(index, dataSource, point);
                 } else {
-                    lightbox.loadAndOpen(startIndex, dataSource);
+                    lightbox.loadAndOpen(index, dataSource);
                 }
+                opened = true;
+                root.setTimeout(() => modules.photoSwipe.setDataLoading(lightbox, dataSource.length > 1, dataSource), 0);
+                startContentSlidePreload(state, index, dataSource, lightbox);
                 return lightbox;
             });
         }).catch(error => {
-            if (state.destroyed) return;
+            if (state.destroyed || opened) return;
             console.warn('Falling back to the original article image link:', error);
             window.location.assign(trigger.getAttribute('href') || trigger.dataset.pswpSrc);
             state.activeTrigger = null;
@@ -211,6 +263,7 @@
             lightbox: null,
             activeTrigger: null,
             opening: false,
+            idleCleanup: [],
             destroyed: false,
         };
         const onClick = event => {
@@ -224,10 +277,12 @@
             openViewer(state, index, trigger, { x: event.clientX, y: event.clientY });
         };
         context.listen(content, 'click', onClick, false);
+        bindPreloadIntents(context, triggers);
         activeRoots.set(content, state);
 
         return () => {
             state.destroyed = true;
+            cancelIdlePreloads(state);
             if (state.lightbox) state.lightbox.destroy();
             if (activeRoots.get(content) === state) activeRoots.delete(content);
         };
