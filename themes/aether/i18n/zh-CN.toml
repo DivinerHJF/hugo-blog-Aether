@@ -92,14 +92,23 @@ other = "取消"
 [noResultsFound]
 other = "没有找到结果"
 
-[lunrLanguageCode]
-other = "zh"
+[searchNoResultsHint]
+other = "试试更短的词或标签"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.zh.js"
+[searchResultCount]
+other = "找到 %d 条结果"
 
-[lunrSegmentitLib]
-other = "lib/lunr/lunr.segmentit.js"
+[searchResults]
+other = "搜索结果"
+
+[searchMoreMatches]
+other = "另有 %d 处匹配"
+
+[searchIntroHeading]
+other = "文章开头"
+
+[searchUnavailable]
+other = "搜索暂时不可用"
 
 [copyToClipboard]
 other = "复制到剪贴板"

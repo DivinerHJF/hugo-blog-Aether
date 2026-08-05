@@ -32,7 +32,7 @@
                     {{- with .Page -}}
                         {{- $url = .RelPermalink -}}
                     {{- end -}}
-                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                    <a class="menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}" href="{{ $url }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if (urls.Parse $url).Host }} rel="noopener noreferrer" target="_blank"{{ end }}>
                         {{- .Pre | safeHTML }} {{ .Name }} {{ .Post | safeHTML -}}
                     </a>
                 {{- end -}}
@@ -63,17 +63,11 @@
                     </a>
                 {{- end -}}
                 {{- if .Site.Params.search.enable -}}
-                    <span class="menu-item search" id="search-desktop">
-                        <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-desktop" name="search-desktop">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-desktop" title="{{ T `search` }}">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-desktop" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-desktop">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
+                    <span class="menu-item search">
+                        <button type="button" class="search-trigger" id="search-toggle-desktop" data-search-open aria-controls="search-dialog" aria-haspopup="dialog" aria-expanded="false" title="{{ T `search` }}">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                            <span class="visually-hidden">{{ T `search` }}</span>
+                        </button>
                     </span>
                 {{- end -}}
                 {{- if eq .Site.Params.header.themeChangeMode "select" -}}
@@ -130,23 +124,10 @@
         </div>
         <div class="menu" id="menu-mobile">
             {{- if .Site.Params.search.enable -}}
-                <div class="search-wrapper">
-                    <div class="search mobile" id="search-mobile">
-                        <input type="text" placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}" id="search-input-mobile" name="search-mobile">
-                        <a href="#" onclick="return false;" class="search-button search-toggle" id="search-toggle-mobile" title="{{ T `search` }}">
-                            <i class="fas fa-search fa-fw"></i>
-                        </a>
-                        <a href="#" onclick="return false;" class="search-button search-clear" id="search-clear-mobile" title="{{ T `clear` }}">
-                            <i class="fas fa-times-circle fa-fw"></i>
-                        </a>
-                        <span class="search-button search-loading" id="search-loading-mobile">
-                            <i class="fas fa-spinner fa-fw fa-spin"></i>
-                        </span>
-                    </div>
-                    <a href="#" onclick="return false;" class="search-cancel" id="search-cancel-mobile">
-                        {{ T `cancel` }}
-                    </a>
-                </div>
+                <button type="button" class="menu-item search-trigger" id="search-toggle-mobile" data-search-open aria-controls="search-dialog" aria-haspopup="dialog" aria-expanded="false">
+                    <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                    {{ T `search` }}
+                </button>
             {{- end -}}
             {{- $currentPage := . -}}
             {{- range .Site.Menus.main -}}
@@ -154,7 +135,7 @@
                 {{- with .Page -}}
                     {{- $url = .RelPermalink -}}
                 {{- end -}}
-                <a class="menu-item" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreffer" target="_blank"{{ end }}>
+                <a class="menu-item" href="{{ $url }}" title="{{ .Title }}"{{ if (urls.Parse $url).Host }} rel="noopener noreferrer" target="_blank"{{ end }}>
                     {{- .Pre | safeHTML }}{{ .Name }}{{ .Post | safeHTML -}}
                 </a>
             {{- end -}}
@@ -199,9 +180,3 @@
         </div>
     </div>
 </header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>

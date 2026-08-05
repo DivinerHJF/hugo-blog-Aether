@@ -77,11 +77,23 @@ other = "Abbrechen"
 [noResultsFound]
 other = "Keine Ergebnisse gefunden"
 
-[lunrLanguageCode]
-other = "de"
+[searchNoResultsHint]
+other = "Versuchen Sie ein kürzeres Wort oder ein Tag"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.de.js"
+[searchResultCount]
+other = "%d Ergebnisse gefunden"
+
+[searchResults]
+other = "Suchergebnisse"
+
+[searchMoreMatches]
+other = "%d weitere Treffer"
+
+[searchIntroHeading]
+other = "Artikelanfang"
+
+[searchUnavailable]
+other = "Suche vorübergehend nicht verfügbar"
 
 [copyToClipboard]
 other = "In Zwischenablage kopieren"

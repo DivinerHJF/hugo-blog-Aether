@@ -77,11 +77,23 @@ other = "Anulare"
 [noResultsFound]
 other = "Nici un rezultat gasit"
 
-[lunrLanguageCode]
-other = "ro"
+[searchNoResultsHint]
+other = "Încercați un cuvânt mai scurt sau o etichetă"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.ro.js"
+[searchResultCount]
+other = "%d rezultate găsite"
+
+[searchResults]
+other = "Rezultatele căutării"
+
+[searchMoreMatches]
+other = "%d potriviri suplimentare"
+
+[searchIntroHeading]
+other = "Începutul articolului"
+
+[searchUnavailable]
+other = "Căutarea este temporar indisponibilă"
 
 [copyToClipboard]
 other = "Copiați în clipboard"

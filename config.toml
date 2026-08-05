@@ -81,27 +81,22 @@ iconColor = "#5bbad5"
 tileColor = "#da532c"
 
 [params.search]
-# 本地 Fuse 搜索；若改用 Algolia，需把 type 改为 "algolia" 并重新补充 algolia 配置。
+# 本地静态 Fuse 搜索；索引和 Worker 在需要时由主题自行加载。
 enable = true
-type = "fuse"
-contentLength = 1000000
-placeholder = "搜索文章"
-maxResultLength = 10
-snippetLength = 50
-highlightTag = "em"
+placeholder = "搜索文章、标签和正文"
+maxResults = 8
+debounce = 100
+minQueryLength = 1
+chunkLength = 1000
+chunkOverlap = 120
 absoluteURL = false
 
 [params.search.fuse]
-findAllMatches = false
-ignoreFieldNorm = false
 isCaseSensitive = false
-includeMatches = false
-minMatchCharLength = 2
+minMatchCharLength = 1
 ignoreLocation = true
-location = 0
 threshold = 0.3
-distance = 100
-useExtendedSearch = false
+ignoreFieldNorm = false
 
 [params.header]
 desktopMode = "auto"

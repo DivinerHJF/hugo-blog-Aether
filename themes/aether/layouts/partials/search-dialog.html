@@ -1,0 +1,45 @@
+{{- if .Site.Params.search.enable -}}
+<div
+    id="search-dialog"
+    class="search-dialog"
+    hidden
+    aria-hidden="true"
+    data-search-no-results="{{ T `noResultsFound` }}"
+    data-search-no-results-hint="{{ T `searchNoResultsHint` }}"
+    data-search-result-count="{{ T `searchResultCount` }}"
+    data-search-results-label="{{ T `searchResults` }}"
+    data-search-more-matches="{{ T `searchMoreMatches` }}"
+    data-search-intro-heading="{{ T `searchIntroHeading` }}"
+    data-search-unavailable="{{ T `searchUnavailable` }}"
+>
+    <div class="search-dialog-backdrop" data-search-close aria-hidden="true"></div>
+    <section class="search-dialog-panel" role="dialog" aria-modal="true" aria-labelledby="search-dialog-title">
+        <h2 id="search-dialog-title" class="visually-hidden">{{ T `search` }}</h2>
+        <div class="search-dialog-toolbar">
+            <button type="button" class="search-dialog-back" data-search-close aria-label="{{ T `cancel` }}">
+                <i class="fas fa-arrow-left fa-fw" aria-hidden="true"></i>
+            </button>
+            <label class="search-dialog-input-wrap" for="search-dialog-input">
+                <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                <input
+                    type="search"
+                    id="search-dialog-input"
+                    placeholder="{{ .Site.Params.search.placeholder | default (T `searchPlaceholder`) }}"
+                    autocomplete="off"
+                    spellcheck="false"
+                    enterkeyhint="search"
+                >
+            </label>
+            <button type="button" class="search-dialog-clear" data-search-clear aria-label="{{ T `clear` }}">
+                <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="search-dialog-close" data-search-close>Esc</button>
+        </div>
+        <div class="search-dialog-status" id="search-dialog-status" aria-live="polite" aria-atomic="true"></div>
+        <span class="search-dialog-loading" data-search-loading hidden aria-hidden="true">
+            <i class="fas fa-spinner fa-fw fa-spin"></i>
+        </span>
+        <div class="search-dialog-results" id="search-dialog-results"></div>
+    </section>
+</div>
+{{- end -}}

@@ -12,7 +12,12 @@ const modules = [
     'core/events.js',
     'core/config.js',
     'features/navigation.js',
-    'features/search.js',
+    'features/search/engine.js',
+    'features/search/text-highlight.js',
+    'features/search/results.js',
+    'features/search/dialog.js',
+    'features/search/landing.js',
+    'features/search/index.js',
     'features/content-enhancements.js',
     'features/toc.js',
     'features/comments.js',
@@ -40,3 +45,17 @@ const result = babel.transformSync(source, {
 fs.mkdirSync(path.dirname(outputFile), { recursive: true });
 fs.writeFileSync(outputFile, result.code);
 fs.writeFileSync(sourceMapFile, JSON.stringify(result.map));
+
+const workerSourceFile = path.join(sourceRoot, 'features', 'search', 'worker.js');
+const workerOutputFile = path.join(themeRoot, 'assets', 'js', 'search-worker.min.js');
+const workerSourceMapFile = `${workerOutputFile}.map`;
+const workerResult = babel.transformSync(fs.readFileSync(workerSourceFile, 'utf8'), {
+    configFile: path.join(themeRoot, '.babelrc'),
+    filename: workerSourceFile,
+    sourceMaps: true,
+    sourceFileName: '../../src/js/features/search/worker.js',
+    comments: false,
+});
+
+fs.writeFileSync(workerOutputFile, workerResult.code);
+fs.writeFileSync(workerSourceMapFile, JSON.stringify(workerResult.map));

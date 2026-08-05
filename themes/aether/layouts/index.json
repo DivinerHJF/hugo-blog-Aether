@@ -1,4 +1,4 @@
-{{- if .Site.Params.search -}}
+{{- if .Site.Params.search | and .Site.Params.search.enable -}}
     {{- $index := slice -}}
     {{- $pages := .Site.RegularPages -}}
     {{- if .Site.Params.page.hiddenFromSearch -}}
@@ -6,37 +6,77 @@
     {{- else -}}
         {{- $pages = where $pages "Params.hiddenfromsearch" "!=" true -}}
     {{- end -}}
-    {{- range $pages -}}
-        {{- $uri := .RelPermalink -}}
+
+    {{- range $page := $pages -}}
+        {{- $uri := $page.RelPermalink -}}
         {{- if $.Site.Params.search.absoluteURL -}}
-            {{- $uri = .Permalink -}}
+            {{- $uri = $page.Permalink -}}
         {{- end -}}
-        {{- $meta := dict "uri" $uri "title" .Title "tags" .Params.tags "categories" .Params.categories "series" .Params.series -}}
-        {{- $meta = $.Site.Params.dateFormat | default "2006-01-02" | .PublishDate.Format | dict "date" | merge $meta -}}
-        {{- with .Description -}}
-            {{- $index = $index | append (dict "content" . "objectID" $uri | merge $meta) -}}
-        {{- end -}}
-        {{- $params := .Params | merge $.Site.Params.page -}}
-        {{/* Extended Markdown syntax */}}
-        {{- $content := dict "Content" .Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" -}}
-        {{/* Remove line number for code */}}
+        {{- $meta := dict
+            "pageId" $uri
+            "uri" $uri
+            "title" $page.Title
+            "kind" $page.Kind
+            "categories" $page.Params.categories
+            "series" $page.Params.series
+            "tags" $page.Params.tags
+        -}}
+        {{- $meta = dict "date" ($page.PublishDate.Format ($.Site.Params.dateFormat | default "2006-01-02")) | merge $meta -}}
+
+        {{- $params := $page.Params | merge $.Site.Params.page -}}
+        {{- $content := dict "Content" $page.Content "Ruby" $params.ruby "Fraction" $params.fraction "Fontawesome" $params.fontawesome | partial "function/content.html" -}}
         {{- $content = $content | replaceRE `<span class="lnt?"> *\d*\n?</span>` "" -}}
-        {{- range $i, $contenti := split $content "<h2 id=" -}}
-            {{- if gt $i 0 -}}
-                {{- $contenti = printf "<h2 id=%v" $contenti -}}
+        {{- $contentParts := split $content "<h2 id=" -}}
+        {{- $intro := index $contentParts 0 -}}
+        {{- $intro = printf "%s %s" ($page.Description | default "") $intro | plainify | htmlUnescape | replaceRE `[^\S\r\n]+` " " | replaceRE `^[\s]+|[\s]+$` "" -}}
+        {{- $introEntries := partial "function/search-index-section.html" (dict
+            "text" $intro
+            "meta" $meta
+            "heading" "文章开头"
+            "anchor" ""
+            "chunkLength" ($.Site.Params.search.chunkLength | default 1000)
+            "chunkOverlap" ($.Site.Params.search.chunkOverlap | default 120)
+        ) -}}
+        {{- range $entry := $introEntries -}}
+            {{- $index = $index | append $entry -}}
+        {{- end -}}
+
+        {{- range $h2Index, $h2Part := after 1 $contentParts -}}
+            {{- $h2HTML := printf "<h2 id=%s" $h2Part -}}
+            {{- $h3Parts := split $h2HTML "<h3 id=" -}}
+            {{- $h2Section := index $h3Parts 0 -}}
+            {{- $h2ID := index (split $h2Section "\"") 1 -}}
+            {{- $h2HeadingHTML := index (split $h2Section "</h2>") 0 -}}
+            {{- $h2Heading := index (split $h2HeadingHTML ">") 1 | plainify | htmlUnescape -}}
+            {{- $h2Text := $h2Section | plainify | htmlUnescape | replaceRE `[^\S\r\n]+` " " | replaceRE `^[\s]+|[\s]+$` "" -}}
+            {{- $h2Entries := partial "function/search-index-section.html" (dict
+                "text" $h2Text
+                "meta" $meta
+                "heading" $h2Heading
+                "anchor" $h2ID
+                "chunkLength" ($.Site.Params.search.chunkLength | default 1000)
+                "chunkOverlap" ($.Site.Params.search.chunkOverlap | default 120)
+            ) -}}
+            {{- range $entry := $h2Entries -}}
+                {{- $index = $index | append $entry -}}
             {{- end -}}
-            {{- range $j, $contentj := split $contenti "<h3 id=" -}}
-                {{- if gt $j 0 -}}
-                    {{- $contentj = printf "<h3 id=%v" $contentj -}}
-                {{- end -}}
-                {{/* Plainify, unescape and remove (\n, \t) */}}
-                {{- $contentj = $contentj | plainify | htmlUnescape | replaceRE `[\n\t ]+` " " -}}
-                {{- if gt $.Site.Params.search.contentLength 0 -}}
-                    {{- $contentj = substr $contentj 0 $.Site.Params.search.contentLength -}}
-                {{- end -}}
-                {{- if $contentj | and (ne $contentj " ") -}}
-                    {{- $one := printf "%v:%v:%v" $uri $i $j | dict "content" $contentj "objectID" | merge $meta -}}
-                    {{- $index = $index | append $one -}}
+
+            {{- range $h3Part := after 1 $h3Parts -}}
+                {{- $h3HTML := printf "<h3 id=%s" $h3Part -}}
+                {{- $h3ID := index (split $h3Part "\"") 1 -}}
+                {{- $h3HeadingHTML := index (split $h3HTML "</h3>") 0 -}}
+                {{- $h3Heading := index (split $h3HeadingHTML ">") 1 | plainify | htmlUnescape -}}
+                {{- $h3Text := $h3HTML | plainify | htmlUnescape | replaceRE `[^\S\r\n]+` " " | replaceRE `^[\s]+|[\s]+$` "" -}}
+                {{- $h3Entries := partial "function/search-index-section.html" (dict
+                    "text" $h3Text
+                    "meta" $meta
+                    "heading" $h3Heading
+                    "anchor" $h3ID
+                    "chunkLength" ($.Site.Params.search.chunkLength | default 1000)
+                    "chunkOverlap" ($.Site.Params.search.chunkOverlap | default 120)
+                ) -}}
+                {{- range $entry := $h3Entries -}}
+                    {{- $index = $index | append $entry -}}
                 {{- end -}}
             {{- end -}}
         {{- end -}}

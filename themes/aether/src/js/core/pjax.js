@@ -11,7 +11,6 @@
         '.menu-item',
         '.pjax-assets',
         '#fixed-buttons',
-        '.search-dropdown',
     ];
 
     function focusMain() {

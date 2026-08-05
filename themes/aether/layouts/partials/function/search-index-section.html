@@ -1,0 +1,53 @@
+{{- $text := .text | default "" -}}
+{{- $meta := .meta | default dict -}}
+{{- $heading := .heading | default "文章开头" -}}
+{{- $anchor := .anchor | default "" -}}
+{{- $chunkLength := .chunkLength | default 1000 -}}
+{{- $chunkOverlap := .chunkOverlap | default 120 -}}
+{{- $entries := slice -}}
+
+{{- if gt (len $text) 0 -}}
+    {{- if le $chunkLength 0 -}}
+        {{- $chunkLength = 1000 -}}
+    {{- end -}}
+    {{- if ge $chunkOverlap $chunkLength -}}
+        {{- $chunkOverlap = 0 -}}
+    {{- end -}}
+    {{- $step := sub $chunkLength $chunkOverlap -}}
+    {{- $length := len $text -}}
+    {{- $chunkNumber := 0 -}}
+    {{- range $start := seq 0 $step $length -}}
+        {{- if lt $start $length -}}
+            {{- $end := add $start $chunkLength -}}
+            {{- if gt $end $length -}}
+                {{- $end = $length -}}
+            {{- end -}}
+            {{- $chunk := substr $text $start (sub $end $start) -}}
+            {{- if gt (len $chunk) 0 -}}
+                {{- $chunkNumber = add $chunkNumber 1 -}}
+                {{- $anchorSuffix := "" -}}
+                {{- if $anchor -}}
+                    {{- $anchorSuffix = printf "#%s" $anchor -}}
+                {{- end -}}
+                {{- $baseID := printf "%s%s" $meta.pageId $anchorSuffix -}}
+                {{- $suffix := cond (eq $chunkNumber 1) "" (printf "--%d" $chunkNumber) -}}
+                {{- $entries = $entries | append (dict
+                    "id" (printf "%s%s" $baseID $suffix)
+                    "pageId" $meta.pageId
+                    "uri" $meta.uri
+                    "anchor" $anchor
+                    "title" $meta.title
+                    "heading" $heading
+                    "date" $meta.date
+                    "kind" $meta.kind
+                    "categories" $meta.categories
+                    "series" $meta.series
+                    "tags" $meta.tags
+                    "text" $chunk
+                ) -}}
+            {{- end -}}
+        {{- end -}}
+    {{- end -}}
+{{- end -}}
+
+{{- return $entries -}}

@@ -91,8 +91,23 @@ other = "Cancel"
 [noResultsFound]
 other = "No results found"
 
-[lunrLanguageCode]
-other = "en"
+[searchNoResultsHint]
+other = "Try a shorter word or a tag"
+
+[searchResultCount]
+other = "%d results found"
+
+[searchResults]
+other = "Search results"
+
+[searchMoreMatches]
+other = "%d more matches"
+
+[searchIntroHeading]
+other = "Article opening"
+
+[searchUnavailable]
+other = "Search is temporarily unavailable"
 
 [copyToClipboard]
 other = "Copy to clipboard"

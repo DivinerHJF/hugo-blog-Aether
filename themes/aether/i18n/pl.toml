@@ -77,8 +77,23 @@ other = "Anuluj"
 [noResultsFound]
 other = "Nie znaleziono wyników"
 
-[lunrLanguageCode]
-other = "pl"
+[searchNoResultsHint]
+other = "Spróbuj krótszego słowa lub tagu"
+
+[searchResultCount]
+other = "Znaleziono %d wyników"
+
+[searchResults]
+other = "Wyniki wyszukiwania"
+
+[searchMoreMatches]
+other = "%d dodatkowych dopasowań"
+
+[searchIntroHeading]
+other = "Początek artykułu"
+
+[searchUnavailable]
+other = "Wyszukiwanie jest tymczasowo niedostępne"
 
 [copyToClipboard]
 other = "Skopiuj do schowka"

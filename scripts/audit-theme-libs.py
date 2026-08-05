@@ -160,8 +160,8 @@ def math_feature_summary(math_features: Counter[str]) -> str:
     return ", ".join(visible)
 
 
-def search_enabled(config: dict[str, Any], search_type: str) -> bool:
-    return is_enabled(nested_get(config, "params.search.enable")) and nested_get(config, "params.search.type") == search_type
+def local_search_enabled(config: dict[str, Any]) -> bool:
+    return is_enabled(nested_get(config, "params.search.enable"))
 
 
 def comment_enabled(config: dict[str, Any], provider: str) -> bool:
@@ -319,20 +319,11 @@ def check_simple_icons(root: Path, config: dict[str, Any]) -> list[str]:
 def build_mappings() -> list[ResourceMapping]:
     return [
         ResourceMapping(
-            "search.lunr",
-            ("themes/aether/assets/lib/lunr",),
-            lambda config, _shortcodes: search_enabled(config, "lunr"),
+            "search.fuse-worker",
+            ("themes/aether/assets/lib/fuse",),
+            lambda config, _shortcodes: local_search_enabled(config),
             lambda config, _shortcodes: "params.search.enable="
-            f"{format_value(nested_get(config, 'params.search.enable'))}; "
-            f"params.search.type={format_value(nested_get(config, 'params.search.type'))}",
-        ),
-        ResourceMapping(
-            "search.algolia",
-            ("themes/aether/assets/lib/algoliasearch",),
-            lambda config, _shortcodes: search_enabled(config, "algolia"),
-            lambda config, _shortcodes: "params.search.enable="
-            f"{format_value(nested_get(config, 'params.search.enable'))}; "
-            f"params.search.type={format_value(nested_get(config, 'params.search.type'))}",
+            f"{format_value(nested_get(config, 'params.search.enable'))}; engine=local Fuse Worker",
         ),
         *[
             ResourceMapping(
@@ -448,7 +439,7 @@ def render_report(root: Path, config: dict[str, Any], shortcodes: Counter[str], 
         "",
         f"- Markdown 短代码统计：{shortcode_summary}",
         f"- `params.search.enable`：{format_value(nested_get(config, 'params.search.enable'))}",
-        f"- `params.search.type`：{format_value(nested_get(config, 'params.search.type'))}",
+        "- 搜索引擎：本地 Fuse Worker（索引由 Hugo 生成）",
         f"- `params.page.twemoji`：{format_value(nested_get(config, 'params.page.twemoji'))}",
         f"- `params.page.lightgallery`：{format_value(nested_get(config, 'params.page.lightgallery'))}",
         f"- `params.page.math.enable`：{format_value(nested_get(config, 'params.page.math.enable'))}",
