@@ -18,7 +18,8 @@
     "babel-preset-minify": "0.5.1"
   },
   "scripts": {
-    "build": "node scripts/check-build-inputs.js && node scripts/build-theme.js && babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments"
+    "build": "node scripts/check-build-inputs.js && node scripts/check-token-language.js && node scripts/build-theme.js && babel src/js/sw.js --out-file assets/sw.min.js --source-maps --no-comments",
+    "check:tokens": "node scripts/check-token-language.js"
   },
   "repository": {
     "type": "git",

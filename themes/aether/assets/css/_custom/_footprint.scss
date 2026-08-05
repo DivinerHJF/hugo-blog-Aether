@@ -16,7 +16,7 @@
   gap: 1.25rem;
   margin: 1.25rem 0 .75rem;
   padding-bottom: .55rem;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--border);
 }
 
 .footprint-categories,
@@ -37,8 +37,8 @@
 
 .footprint-categories a.active,
 .footprint-years a.active {
-  border-bottom-color: var(--color-accent);
-  color: var(--color-accent);
+  border-bottom-color: var(--accent);
+  color: var(--accent);
   font-weight: 700;
 }
 

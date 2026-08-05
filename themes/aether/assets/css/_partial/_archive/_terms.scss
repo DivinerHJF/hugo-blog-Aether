@@ -67,7 +67,7 @@
     box-shadow: none;
 
     &:hover:not(:focus-within) {
-      border-color: var(--color-border-subtle);
+      border-color: var(--border-subtle);
       box-shadow: var(--shadow-low);
     }
   }
