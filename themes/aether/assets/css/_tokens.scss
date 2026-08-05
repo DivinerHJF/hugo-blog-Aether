@@ -16,7 +16,7 @@ body {
   --surface-soft: rgba(0, 0, 0, .025);
   --surface-wash: rgba(255, 255, 255, .24);
   --surface-translucent: rgba(255, 255, 255, .78);
-  --surface-header: #{$header-background-color};
+  --surface-header: var(--surface-page);
   --surface-search: #{$search-background-color};
   --surface-code: #{$code-background-color};
   --surface-code-header: #{darken($code-background-color, 8%)};
