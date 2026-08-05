@@ -8,11 +8,14 @@ header {
     min-height: 1.5em;
     height: 1.5em;
     vertical-align: text-bottom;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .logo, .header-title-pre {
     padding-right: .25rem;
-    box-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    box-shadow: none;
   }
 
   .header-title-post {
