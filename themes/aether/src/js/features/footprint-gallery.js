@@ -235,18 +235,60 @@ function ensureFootprintSlideData(state, slide, index) {
             alt: image ? image.getAttribute('alt') || '' : '',
             msrc: isUsableFootprintImageURL(thumbnail) ? thumbnail : source,
             footprintIndex: index,
+            element: image,
+            thumbCropped: true,
         };
         if (srcset) item.srcset = srcset;
         return item;
     });
 }
 
-function ensureFootprintGalleryData(state, galleryState) {
-    return Promise.all(galleryState.slides.map((slide, index) => {
-        return ensureFootprintSlideData(state, slide, index)
-            .then(item => ({ index, item }))
+function bindPreloadIntents(state, slides) {
+    const preload = () => modules.photoSwipe.load(state.context).catch(Aether.utils.noop);
+    slides.forEach(slide => {
+        state.context.listen(slide, 'pointerenter', preload, { once: true });
+        state.context.listen(slide, 'touchstart', preload, { once: true, passive: true });
+        state.context.listen(slide, 'focus', preload, { once: true });
+    });
+}
+
+function cancelIdlePreloads(state) {
+    state.idleCleanup.forEach(cancel => cancel());
+    state.idleCleanup = [];
+}
+
+function preloadFootprintSlides(state, galleryState, dataSource, lightbox, indexes) {
+    return Promise.all(indexes.map(index => {
+        return ensureFootprintSlideData(state, galleryState.slides[index], index)
+            .then(item => {
+                if (!state.destroyed) {
+                    dataSource[index] = item;
+                    modules.photoSwipe.updateSlide(lightbox, dataSource, index, item);
+                }
+                return { index, item };
+            })
             .catch(error => ({ index, error }));
     }));
+}
+
+function startFootprintSlidePreload(state, galleryState, index, dataSource, lightbox) {
+    const adjacentIndexes = [index - 1, index + 1].filter(itemIndex => {
+        return itemIndex >= 0 && itemIndex < galleryState.slides.length;
+    });
+    const adjacentSet = new Set(adjacentIndexes);
+    const remainingIndexes = galleryState.slides.map((slide, slideIndex) => slideIndex).filter(slideIndex => {
+        return slideIndex !== index && !adjacentSet.has(slideIndex);
+    });
+    modules.photoSwipe.setDataLoading(lightbox, adjacentIndexes.length > 0, dataSource);
+    preloadFootprintSlides(state, galleryState, dataSource, lightbox, adjacentIndexes).then(() => {
+        if (state.destroyed) return;
+        root.setTimeout(() => modules.photoSwipe.setDataLoading(lightbox, false, dataSource), 0);
+        if (!remainingIndexes.length) return;
+        const cancelIdle = modules.photoSwipe.scheduleIdle(() => {
+            if (!state.destroyed) preloadFootprintSlides(state, galleryState, dataSource, lightbox, remainingIndexes);
+        });
+        state.idleCleanup.push(cancelIdle);
+    });
 }
 
 function createFootprintPhotoSwipeLightbox(state) {
@@ -270,6 +312,7 @@ function createFootprintPhotoSwipeLightbox(state) {
             }
         });
         lightbox.on('destroy', () => {
+            cancelIdlePreloads(state);
             if (state.destroyed) return;
             const trigger = state.activeTrigger;
             state.activeTrigger = null;
@@ -300,20 +343,20 @@ function openFootprintPhotoSwipe(state, galleryState, index, trigger, point) {
     let opened = false;
     Promise.all([
         modules.photoSwipe.load(state.context),
-        ensureFootprintGalleryData(state, galleryState),
+        ensureFootprintSlideData(state, galleryState.slides[index], index),
     ]).then(results => {
         if (state.destroyed) return;
-        const dataResults = results[1];
-        const validResults = dataResults.filter(result => result.item);
-        const startResult = dataResults.find(result => result.index === index && result.item);
-        if (!startResult || !validResults.length) throw new Error('Selected image dimensions unavailable');
-        const dataSource = validResults.map(result => result.item);
-        const startIndex = dataSource.findIndex(item => item.footprintIndex === startResult.index);
-        if (startIndex < 0) throw new Error('Selected image not found in gallery');
+        const currentItem = results[1];
+        const dataSource = galleryState.slides.map((slide, slideIndex) => {
+            if (slideIndex === index) return currentItem;
+            return modules.photoSwipe.createPlaceholderSlide(slideIndex, { footprintIndex: slideIndex });
+        });
         return createFootprintPhotoSwipeLightbox(state).then(lightbox => {
-            if (point && typeof point.x === 'number' && typeof point.y === 'number') lightbox.loadAndOpen(startIndex, dataSource, point);
-            else lightbox.loadAndOpen(startIndex, dataSource);
+            if (point && typeof point.x === 'number' && typeof point.y === 'number') lightbox.loadAndOpen(index, dataSource, point);
+            else lightbox.loadAndOpen(index, dataSource);
             opened = true;
+            root.setTimeout(() => modules.photoSwipe.setDataLoading(lightbox, dataSource.length > 1, dataSource), 0);
+            startFootprintSlidePreload(state, galleryState, index, dataSource, lightbox);
         });
     }).catch(error => {
         if (state.destroyed || opened) return;
@@ -333,6 +376,7 @@ function openFootprintPhotoSwipe(state, galleryState, index, trigger, point) {
 function destroyFootprintGalleries(state) {
     if (!state || state.destroyed) return;
     state.destroyed = true;
+    cancelIdlePreloads(state);
     state.observers.forEach(observer => observer.disconnect());
     state.galleries.forEach(galleryState => {
         if (galleryState.scrollFrame) {
@@ -366,6 +410,7 @@ function registerFootprintGalleryState(state, gallery, track, slides, counter) {
         opening: false,
     };
     state.galleries.push(galleryState);
+    bindPreloadIntents(state, slides);
     updateFootprintGalleryActive(galleryState, existingIndex >= 0 ? existingIndex : 0);
     observeFootprintGallerySlide(galleryState, state);
     bindFootprintGalleryInteractions(galleryState, state);
@@ -385,6 +430,7 @@ function initFootprintGallery(context) {
         lightbox: null,
         activeGallery: null,
         activeTrigger: null,
+        idleCleanup: [],
         destroyed: false,
     };
     forEach(root.querySelectorAll('[data-footprint-gallery][data-footprint-gallery-ready="true"]'), gallery => {
