@@ -76,11 +76,23 @@ other = "Huỷ"
 [noResultsFound]
 other = "Không tìm thấy"
 
-[lunrLanguageCode]
-other = "vi"
+[searchNoResultsHint]
+other = "Hãy thử từ ngắn hơn hoặc thẻ"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.vi.js"
+[searchResultCount]
+other = "Tìm thấy %d kết quả"
+
+[searchResults]
+other = "Kết quả tìm kiếm"
+
+[searchMoreMatches]
+other = "%d kết quả trùng khớp khác"
+
+[searchIntroHeading]
+other = "Phần mở đầu bài viết"
+
+[searchUnavailable]
+other = "Tìm kiếm tạm thời không khả dụng"
 
 [copyToClipboard]
 other = "Sao chép vào bộ nhớ tạm"

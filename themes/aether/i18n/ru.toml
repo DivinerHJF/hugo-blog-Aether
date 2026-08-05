@@ -77,11 +77,23 @@ other = "Отменить"
 [noResultsFound]
 other = "Результатов не найдено"
 
-[lunrLanguageCode]
-other = "ru"
+[searchNoResultsHint]
+other = "Попробуйте более короткое слово или тег"
 
-[lunrLanguageLib]
-other = "lib/lunr/lunr.ru.js"
+[searchResultCount]
+other = "Найдено результатов: %d"
+
+[searchResults]
+other = "Результаты поиска"
+
+[searchMoreMatches]
+other = "Ещё совпадений: %d"
+
+[searchIntroHeading]
+other = "Начало статьи"
+
+[searchUnavailable]
+other = "Поиск временно недоступен"
 
 [copyToClipboard]
 other = "Копировать в буфер обмена"

@@ -77,8 +77,23 @@ other = "Поништи"
 [noResultsFound]
 other = "Без резултата"
 
-[lunrLanguageCode]
-other = "sr"
+[searchNoResultsHint]
+other = "Пробајте краћу реч или ознаку"
+
+[searchResultCount]
+other = "Пронађено резултата: %d"
+
+[searchResults]
+other = "Резултати претраге"
+
+[searchMoreMatches]
+other = "%d додатних поклапања"
+
+[searchIntroHeading]
+other = "Почетак чланка"
+
+[searchUnavailable]
+other = "Претрага је привремено недоступна"
 
 [copyToClipboard]
 other = "Копирај на радну таблу"
