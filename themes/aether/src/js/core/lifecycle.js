@@ -476,18 +476,15 @@
             toc.style.position = 'absolute';
             toc.style.top = '';
             const rect = page.getBoundingClientRect();
-            toc.style.left = `${rect.left + rect.width + 20}px`;
-            toc.style.maxWidth = '19%';
+            toc.style.left = `${rect.left + rect.width + 24}px`;
+            toc.style.maxWidth = '15rem';
             toc.style.visibility = 'visible';
 
             const header = document.getElementById('header-desktop');
-            const footer = document.getElementById('post-footer');
             const headerIsFixed = document.body.getAttribute('header-desktop') !== 'normal';
             const headerHeight = header ? header.offsetHeight : 0;
             const topSpacing = 20 + (headerIsFixed ? headerHeight : 0);
             const minTocTop = toc.offsetTop;
-            const footerTop = footer ? footer.offsetTop : Number.POSITIVE_INFINITY;
-            const maxTocTop = footerTop - toc.getBoundingClientRect().height;
 
             layout = {
                 headerIsFixed,
@@ -495,8 +492,6 @@
                 topSpacing,
                 minTocTop,
                 minScrollTop: minTocTop - topSpacing + (headerIsFixed ? 0 : headerHeight),
-                maxTocTop,
-                maxScrollTop: maxTocTop - topSpacing + (headerIsFixed ? 0 : headerHeight),
             };
         };
 
@@ -521,9 +516,6 @@
             if (scrollTop < layout.minScrollTop) {
                 toc.style.position = 'absolute';
                 toc.style.top = `${layout.minTocTop}px`;
-            } else if (scrollTop > layout.maxScrollTop) {
-                toc.style.position = 'absolute';
-                toc.style.top = `${layout.maxTocTop}px`;
             } else {
                 toc.style.position = 'fixed';
                 toc.style.top = `${layout.topSpacing}px`;

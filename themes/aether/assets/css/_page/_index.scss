@@ -11,12 +11,21 @@
     width: unquote("min(100% - 2rem, 900px)");
   }
 
-  [pageStyle=wide][autoTOC=true] & {
-    max-width: 960px;
-    width: unquote("min(100% - 2rem, 960px)");
-    margin-left: auto;
-    margin-right: auto;
+  @media only screen and (min-width: 1001px) {
+    [autoTOC=true] & {
+      width: unquote("min(calc(100% - 18.5rem), 820px)");
+      margin-left: unquote("max(1rem, calc((100% - 1084px) / 2))");
+      margin-right: auto;
+    }
+
+    [pageStyle=wide][autoTOC=true] & {
+      max-width: 960px;
+      width: unquote("min(calc(100% - 18.5rem), 960px)");
+      margin-left: unquote("max(1rem, calc((100% - 1224px) / 2))");
+      margin-right: auto;
+    }
   }
+
   [pageStyle=wide][autoTOC=false] & {
     max-width: 1040px;
     width: unquote("min(100% - 2rem, 1040px)");
