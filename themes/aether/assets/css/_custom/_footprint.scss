@@ -54,7 +54,7 @@
 
 .footprint-year-table-wrapper {
   margin: 0;
-  border: 2px solid var(--border-strong);
+  border: 1.5px solid var(--border-strong);
   border-radius: var(--radius-sm);
   background: transparent;
 }
@@ -74,13 +74,14 @@
 .footprint-page .content .table-wrapper > table.footprint-year-table th,
 .footprint-page .content .table-wrapper > table.footprint-year-table td {
   border: 1px solid var(--border);
+  border-color: color-mix(in srgb, var(--border) 50%, transparent);
   padding: .32rem .58rem;
   vertical-align: top;
 }
 
 .footprint-page .content .table-wrapper > table.footprint-year-table thead {
   background: var(--surface-soft);
-  border-bottom: 2px solid var(--border-strong);
+  border-bottom: 1.5px solid var(--border-strong);
 }
 
 .footprint-page .content .table-wrapper > table.footprint-year-table th {
