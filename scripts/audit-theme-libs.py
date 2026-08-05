@@ -387,13 +387,6 @@ def build_mappings() -> list[ResourceMapping]:
             f"{format_value(nested_get(config, 'params.page.twemoji'))}",
         ),
         ResourceMapping(
-            "page.lightgallery",
-            ("themes/aether/assets/lib/lightgallery", "themes/aether/static/lib/fonts"),
-            lambda config, _shortcodes: is_enabled(nested_get(config, "params.page.lightgallery")),
-            lambda config, _shortcodes: "params.page.lightgallery="
-            f"{format_value(nested_get(config, 'params.page.lightgallery'))}",
-        ),
-        ResourceMapping(
             "cookieconsent",
             ("themes/aether/assets/lib/cookieconsent",),
             lambda config, _shortcodes: is_enabled(nested_get(config, "params.cookieconsent.enable")),
@@ -441,7 +434,6 @@ def render_report(root: Path, config: dict[str, Any], shortcodes: Counter[str], 
         f"- `params.search.enable`：{format_value(nested_get(config, 'params.search.enable'))}",
         "- 搜索引擎：本地 Fuse Worker（索引由 Hugo 生成）",
         f"- `params.page.twemoji`：{format_value(nested_get(config, 'params.page.twemoji'))}",
-        f"- `params.page.lightgallery`：{format_value(nested_get(config, 'params.page.lightgallery'))}",
         f"- `params.page.math.enable`：{format_value(nested_get(config, 'params.page.math.enable'))}",
         f"- content 数学公式特征：{math_feature_summary(math_features)}",
         f"- `params.page.comment.*.enable`：{comment_summary}",

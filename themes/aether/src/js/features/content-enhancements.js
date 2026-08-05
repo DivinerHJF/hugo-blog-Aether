@@ -50,14 +50,6 @@
         return utils.noop;
     }
 
-    function initLightGallery(context) {
-        if (!context.config.lightGallery || typeof root.lightGallery !== 'function') return utils.noop;
-        const content = document.getElementById('content');
-        if (!content) return utils.noop;
-        const instance = root.lightGallery(content, context.config.lightGallery);
-        return () => { if (instance && typeof instance.destroy === 'function') instance.destroy(true); };
-    }
-
     function initHighlight(context) {
         forEach(document.querySelectorAll('.highlight > pre.chroma'), pre => {
             const chroma = document.createElement('div');
@@ -137,7 +129,6 @@
         { name: 'SVG icons', init: initSVGIcon },
         { name: 'Twemoji', init: initTwemoji },
         { name: 'details', init: initDetails },
-        { name: 'light gallery', init: initLightGallery },
         { name: 'highlight', init: initHighlight },
         { name: 'table', init: initTable },
         { name: 'header links', init: initHeaderLink },

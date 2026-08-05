@@ -218,61 +218,11 @@ function bindFootprintGalleryInteractions(galleryState, state) {
     });
 }
 
-function readFootprintImageDimensions(slide, image) {
-    const declaredWidth = Number(slide.dataset.pswpWidth || image.getAttribute('width'));
-    const declaredHeight = Number(slide.dataset.pswpHeight || image.getAttribute('height'));
-    if (declaredWidth > 0 && declaredHeight > 0) return { width: declaredWidth, height: declaredHeight };
-    if (image.naturalWidth > 0 && image.naturalHeight > 0) {
-        return { width: image.naturalWidth, height: image.naturalHeight };
-    }
-    return null;
-}
-
-function loadFootprintImageDimensions(state, source, image) {
-    const cached = state.dimensionsCache.get(source);
-    if (cached) return cached;
-    const existingDimensions = readFootprintImageDimensions({ dataset: {} }, image);
-    if (existingDimensions) {
-        const immediate = Promise.resolve(existingDimensions);
-        state.dimensionsCache.set(source, immediate);
-        return immediate;
-    }
-    const promise = new Promise((resolve, reject) => {
-        const probe = new Image();
-        let settled = false;
-        const finish = (error, dimensions) => {
-            if (settled) return;
-            settled = true;
-            window.clearTimeout(timeout);
-            if (error) reject(error);
-            else resolve(dimensions);
-        };
-        const timeout = window.setTimeout(() => finish(new Error('Image dimensions timed out')), 5000);
-        probe.onload = () => {
-            if (probe.naturalWidth > 0 && probe.naturalHeight > 0) {
-                finish(null, { width: probe.naturalWidth, height: probe.naturalHeight });
-            } else finish(new Error('Image dimensions unavailable'));
-        };
-        probe.onerror = () => finish(new Error('Image failed to load'));
-        probe.src = source;
-    });
-    const tracked = promise.then(dimensions => dimensions, error => {
-        state.dimensionsCache.delete(source);
-        throw error;
-    });
-    state.dimensionsCache.set(source, tracked);
-    return tracked;
-}
-
 function ensureFootprintSlideData(state, slide, index) {
     const image = slide.querySelector('img');
     const source = slide.dataset.pswpSrc || resolveFootprintImageSource(image, slide);
     if (!isUsableFootprintImageURL(source)) return Promise.reject(new Error('Image source unavailable'));
-    const declaredDimensions = readFootprintImageDimensions(slide, image);
-    const dimensionsPromise = declaredDimensions
-        ? Promise.resolve(declaredDimensions)
-        : loadFootprintImageDimensions(state, source, image);
-    return dimensionsPromise.then(dimensions => {
+    return modules.photoSwipe.loadDimensions(source, slide, image).then(dimensions => {
         slide.dataset.pswpSrc = source;
         slide.dataset.pswpWidth = String(dimensions.width);
         slide.dataset.pswpHeight = String(dimensions.height);
@@ -299,71 +249,41 @@ function ensureFootprintGalleryData(state, galleryState) {
     }));
 }
 
-function loadFootprintPhotoSwipeModules(state) {
-    if (state.modulePromise) return state.modulePromise;
-    const galleryConfig = state.context.config && state.context.config.footprintGallery;
-    if (!galleryConfig || !galleryConfig.lightboxModuleURL || !galleryConfig.coreModuleURL) {
-        return Promise.reject(new Error('PhotoSwipe module URLs are not configured'));
-    }
-    state.modulePromise = Promise.all([
-        import(galleryConfig.lightboxModuleURL),
-        import(galleryConfig.coreModuleURL),
-    ]).then(modules => ({
-        PhotoSwipeLightbox: modules[0].default,
-        PhotoSwipe: modules[1].default,
-    })).catch(error => {
-        if (!state.moduleErrorLogged) {
-            console.error('Footprint gallery could not load PhotoSwipe:', error);
-            state.moduleErrorLogged = true;
-        }
-        throw error;
-    });
-    return state.modulePromise;
-}
-
-function createFootprintPhotoSwipeLightbox(state, modules) {
-    if (state.lightbox) return state.lightbox;
-    const lightbox = new modules.PhotoSwipeLightbox({
-        dataSource: [],
-        pswpModule: modules.PhotoSwipe,
-        showHideAnimationType: 'zoom',
-        bgOpacity: .92,
-        loop: false,
-        returnFocus: false,
-    });
-    lightbox.addFilter('thumbEl', (thumbEl, data) => {
-        const activeGallery = state.activeGallery;
-        const originalIndex = data && data.footprintIndex;
-        if (activeGallery && typeof originalIndex === 'number') {
-            const slide = activeGallery.slides[originalIndex];
-            const image = slide && slide.querySelector('img');
-            if (image) return image;
-        }
-        return thumbEl;
-    });
-    lightbox.on('change', () => {
-        if (!state.activeGallery || !lightbox.pswp || !lightbox.pswp.currSlide) return;
-        const data = lightbox.pswp.currSlide.data;
-        if (data && typeof data.footprintIndex === 'number') {
-            updateFootprintGalleryActive(state.activeGallery, data.footprintIndex);
-        }
-    });
-    lightbox.on('destroy', () => {
-        if (state.destroyed) return;
-        const trigger = state.activeTrigger;
-        state.activeTrigger = null;
-        state.activeGallery = null;
-        if (trigger && document.documentElement.contains(trigger)) {
-            try {
-                trigger.focus({ preventScroll: true });
-            } catch (err) {
-                trigger.focus();
+function createFootprintPhotoSwipeLightbox(state) {
+    if (state.lightbox) return Promise.resolve(state.lightbox);
+    return modules.photoSwipe.createLightbox(state.context, null, lightbox => {
+        lightbox.addFilter('thumbEl', (thumbEl, data) => {
+            const activeGallery = state.activeGallery;
+            const originalIndex = data && data.footprintIndex;
+            if (activeGallery && typeof originalIndex === 'number') {
+                const slide = activeGallery.slides[originalIndex];
+                const image = slide && slide.querySelector('img');
+                if (image) return image;
             }
-        }
+            return thumbEl;
+        });
+        lightbox.on('change', () => {
+            if (!state.activeGallery || !lightbox.pswp || !lightbox.pswp.currSlide) return;
+            const data = lightbox.pswp.currSlide.data;
+            if (data && typeof data.footprintIndex === 'number') {
+                updateFootprintGalleryActive(state.activeGallery, data.footprintIndex);
+            }
+        });
+        lightbox.on('destroy', () => {
+            if (state.destroyed) return;
+            const trigger = state.activeTrigger;
+            state.activeTrigger = null;
+            state.activeGallery = null;
+            if (trigger && document.documentElement.contains(trigger)) {
+                try {
+                    trigger.focus({ preventScroll: true });
+                } catch (err) {
+                    trigger.focus();
+                }
+            }
+        });
+        state.lightbox = lightbox;
     });
-    lightbox.init();
-    state.lightbox = lightbox;
-    return lightbox;
 }
 
 function openFootprintPhotoSwipe(state, galleryState, index, trigger, point) {
@@ -379,11 +299,10 @@ function openFootprintPhotoSwipe(state, galleryState, index, trigger, point) {
     galleryState.gallery.setAttribute('aria-busy', 'true');
     let opened = false;
     Promise.all([
-        loadFootprintPhotoSwipeModules(state),
+        modules.photoSwipe.load(state.context),
         ensureFootprintGalleryData(state, galleryState),
     ]).then(results => {
         if (state.destroyed) return;
-        const modules = results[0];
         const dataResults = results[1];
         const validResults = dataResults.filter(result => result.item);
         const startResult = dataResults.find(result => result.index === index && result.item);
@@ -391,10 +310,11 @@ function openFootprintPhotoSwipe(state, galleryState, index, trigger, point) {
         const dataSource = validResults.map(result => result.item);
         const startIndex = dataSource.findIndex(item => item.footprintIndex === startResult.index);
         if (startIndex < 0) throw new Error('Selected image not found in gallery');
-        const lightbox = createFootprintPhotoSwipeLightbox(state, modules);
-        if (point && typeof point.x === 'number' && typeof point.y === 'number') lightbox.loadAndOpen(startIndex, dataSource, point);
-        else lightbox.loadAndOpen(startIndex, dataSource);
-        opened = true;
+        return createFootprintPhotoSwipeLightbox(state).then(lightbox => {
+            if (point && typeof point.x === 'number' && typeof point.y === 'number') lightbox.loadAndOpen(startIndex, dataSource, point);
+            else lightbox.loadAndOpen(startIndex, dataSource);
+            opened = true;
+        });
     }).catch(error => {
         if (state.destroyed || opened) return;
         console.warn('Falling back to the original travel image link:', error);
@@ -426,7 +346,6 @@ function destroyFootprintGalleries(state) {
     state.galleries = [];
     state.observers = [];
     state.cleanup = [];
-    state.dimensionsCache.clear();
     state.lightbox = null;
     state.activeGallery = null;
     state.activeTrigger = null;
@@ -463,9 +382,6 @@ function initFootprintGallery(context) {
         galleries: [],
         observers: [],
         cleanup: [],
-        modulePromise: null,
-        moduleErrorLogged: false,
-        dimensionsCache: new Map(),
         lightbox: null,
         activeGallery: null,
         activeTrigger: null,
