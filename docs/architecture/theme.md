@@ -34,7 +34,9 @@ static/                          # 不经 Hugo 资源管线的站点静态文件
 
 - `core/`：配置、事件、生命周期和 PJAX；
 - `features/tag-explorer.js`：标签筛选；
-- `features/footprint-gallery.js`：足迹相册与 PhotoSwipe。
+- `features/photoswipe.js`：全站共享的 PhotoSwipe 加载、尺寸缓存和查看器工厂；
+- `features/content-image-viewer.js`：普通文章正文图片查看器；
+- `features/footprint-gallery.js`：足迹胶卷布局，并复用共享 PhotoSwipe。
 
 模块通过统一的初始化/销毁生命周期运行：首次加载和 PJAX 成功后初始化，PJAX 发送前销毁监听器、观察器和相册实例。不要在页面模板中重新绑定这些全局功能。
 

@@ -1,10 +1,11 @@
+{{- $options := dict "Src" .Destination "Alt" .Text "Title" .Title "Caption" .Title "ContentImage" true "Resources" .Page.Resources -}}
 {{- if .Title -}}
-    <figure>
-        {{- dict "Src" .Destination "Title" .Text "Caption" .Title "Linked" true "Resources" .Page.Resources | partial "plugin/image.html" -}}
+    <figure class="content-image">
+        {{- partial "plugin/image.html" $options -}}
         <figcaption class="image-caption">
             {{- .Title | safeHTML -}}
         </figcaption>
     </figure>
 {{- else -}}
-    {{- dict "Src" .Destination "Title" .Text "Resources" .Page.Resources | partial "plugin/image.html" -}}
+    {{- partial "plugin/image.html" $options -}}
 {{- end -}}

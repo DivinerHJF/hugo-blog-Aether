@@ -1,4 +1,4 @@
-{{- /* lazysizes and lightgallery.js */ -}}
+{{- /* lazysizes image output; article viewers add PhotoSwipe behavior in JS */ -}}
 {{- $src := .Src -}}
 {{- with dict "Path" .Src "Resources" .Resources | partial "function/resource.html" -}}
     {{- $src = .RelPermalink -}}
@@ -16,13 +16,13 @@
 
 {{- $alt := .Alt | default $src -}}
 {{- if .Linked -}}
-    <a class="lightgallery" href="{{ $large | safeURL }}" title="{{ .Title | default $alt }}" data-thumbnail="{{ $small | safeURL }}"{{ with .Caption }} data-sub-html="<h2>{{ . }}</h2>{{ with $.Title }}<p>{{ . }}</p>{{ end }}"{{ end }}{{ with .Rel }} rel="{{ . }}"{{ end }}>
+    <a class="image-link" href="{{ $large | safeURL }}" title="{{ .Title | default $alt }}"{{ with .Rel }} rel="{{ . }}"{{ end }}>
         <img
             class="lazyload{{ with .Class }} {{ . }}{{ end }}"
             data-src="{{ .Src | safeURL }}"
             data-srcset="{{ $small | safeURL }}, {{ .Src | safeURL }} 1.5x, {{ $large | safeURL }} 2x"
             data-sizes="auto"
-            alt="{{ $alt }}"{{ with .Height }}height="{{ . }}"{{ end }}{{ with .Width }}width="{{ . }}"{{ end }}
+            alt="{{ $alt }}"{{ if .ContentImage }} data-content-image="true"{{ with .Caption }} data-content-image-caption="{{ . | plainify | htmlEscape }}"{{ end }}{{ end }}{{ with .Height }}height="{{ . }}"{{ end }}{{ with .Width }}width="{{ . }}"{{ end }}
         />
     </a>
 {{- else -}}
@@ -31,7 +31,7 @@
         data-src="{{ .Src | safeURL }}"
         data-srcset="{{ $small | safeURL }}, {{ .Src | safeURL }} 1.5x, {{ $large | safeURL }} 2x"
         data-sizes="auto"
-        alt="{{ $alt }}"
+        alt="{{ $alt }}"{{ if .ContentImage }} data-content-image="true"{{ with .Caption }} data-content-image-caption="{{ . | plainify | htmlEscape }}"{{ end }}{{ end }}
         title="{{ .Title | default $alt }}"{{ with .Height }} height="{{ . }}"{{ end }}{{ with .Width }} width="{{ . }}"{{ end }}
     />
 {{- end -}}

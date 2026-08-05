@@ -18,6 +18,8 @@ const modules = [
     'features/search/dialog.js',
     'features/search/landing.js',
     'features/search/index.js',
+    'features/photoswipe.js',
+    'features/content-image-viewer.js',
     'features/content-enhancements.js',
     'features/toc.js',
     'features/comments.js',

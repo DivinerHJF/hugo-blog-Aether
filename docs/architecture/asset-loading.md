@@ -10,9 +10,9 @@
 
 ## 当前保留的本地库
 
-当前配置和内容实际触发的库包括本地 Fuse 搜索、KaTeX、APlayer/Meting、TypeIt、FontAwesome，以及足迹相册使用的 PhotoSwipe 5.4.4。搜索索引由 Hugo 生成，Fuse 在 Worker 中加载；PhotoSwipe 的版本记录在 `themes/aether/assets/lib/VERSION`，主题构建前会校验它没有漂移。
+当前配置和内容实际触发的库包括本地 Fuse 搜索、KaTeX、APlayer/Meting、TypeIt、FontAwesome，以及文章图片查看器和足迹相册共用的 PhotoSwipe 5.4.4。搜索索引由 Hugo 生成，Fuse 在 Worker 中加载；PhotoSwipe 的版本记录在 `themes/aether/assets/lib/VERSION`，主题构建前会校验它没有漂移。
 
-Simple Icons、Twemoji、LightGallery、CookieConsent、Mermaid、ECharts、Mapbox，以及历史评论 provider 的本地目录不属于当前加载链路。重新启用前必须恢复资源或配置 CDN，并运行：
+Simple Icons、Twemoji、CookieConsent、Mermaid、ECharts、Mapbox，以及历史评论 provider 的本地目录不属于当前加载链路。重新启用前必须恢复资源或配置 CDN，并运行：
 
 ```bash
 python3 scripts/audit-theme-libs.py --check-simple-icons

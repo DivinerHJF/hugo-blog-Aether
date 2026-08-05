@@ -161,7 +161,7 @@ hugo new content/posts/2026/20260509.md
 | 评论系统 | `[params.page.comment]` 与 `[params.page.comment.giscus]` | 当前只启用 Giscus；Gitalk / Valine / Waline / Twikoo / Vssue 的本地资源已删除，重新启用前需恢复资源或配置 CDN |
 | 搜索 | `[params.search]` 与 `[params.search.fuse]` | 当前使用本地 Fuse 搜索，`outputs.home` 中的 `JSON` 不要删除 |
 | TypeIt 打字动画 | `[params.typeit]` | 部分月报文章使用 `typeit` 短代码，因此保留全局动画默认值 |
-| CDN / 已裁剪可选资源 | `[params.cdn]` | 默认使用仓库内保留的主题资源；Mermaid、ECharts、Mapbox GL 短代码库以及 Twemoji、LightGallery、CookieConsent 本地库已按当前关闭配置移除，重新启用前需配置 CDN 或恢复本地库 |
+| CDN / 已裁剪可选资源 | `[params.cdn]` | 默认使用仓库内保留的主题资源；Mermaid、ECharts、Mapbox GL 短代码库以及 Twemoji、CookieConsent 本地库已按当前关闭配置移除，重新启用前需配置 CDN 或恢复本地库 |
 | 字体栈 | `themes/aether/assets/css/_variables.scss` | 正文字体、标题装饰字体和代码字体均使用系统字体栈；不再加载外部中文字体 CDN，也不提交字体二进制文件 |
 | Markdown 原文链接 | `[params.page]` 与 `[outputs]` | `linkToMarkdown = true` 依赖 `page = ["HTML", "MarkDown"]` |
 
@@ -176,7 +176,6 @@ hugo new content/posts/2026/20260509.md
 此外，以下页面级可选功能在 `config.toml` 中保持关闭，也已删除对应本地资源：
 
 - `params.page.twemoji = false`：删除 `themes/aether/assets/lib/twemoji/`；
-- `params.page.lightgallery = false`：删除 `themes/aether/assets/lib/lightgallery/` 以及仅供 LightGallery 使用的 `themes/aether/static/lib/fonts/`；
 - `params.cookieconsent.enable = false`：删除 `themes/aether/assets/lib/cookieconsent/`。
 
 Simple Icons 也按当前配置裁剪：`[params.social]` 只启用 Email、GitHub、Mastodon、RSS、Telegram，`[params.page.share]` 只启用 Twitter、Weibo、Wechat、CopyLink，因此不会触发 `Line`、`Instapaper`、`Myspace`、`Baidu` 或任何 `icon.Simpleicons` 社交图标，完整 `themes/aether/assets/lib/simple-icons/` 不再提交。后续若重新启用依赖 Simple Icons 的分享/社交项，不要直接提交完整上游仓库；请先准备一个 simple-icons 的 `icons/` 来源目录，再运行：
@@ -191,7 +190,7 @@ python3 scripts/audit-theme-libs.py --sync-simple-icons --simple-icons-source /p
 python3 scripts/audit-theme-libs.py --check-simple-icons
 ```
 
-后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`（LightGallery 还需恢复 `themes/aether/static/lib/fonts/`）。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 ECharts 目录。
+后续新增或恢复这些短代码、页面功能、Simple Icons 社交/分享项或 Cookie 横幅前，请先运行 `python3 scripts/audit-theme-libs.py` 检查触发来源，并在 `[params.cdn]` 配置可用 CDN，或把对应本地资源恢复到 `themes/aether/assets/lib/`。`themes/aether/layouts/partials/heatmap.html` 的 ECharts 热力图使用外部 CDN，不依赖已删除的本地 ECharts 目录。
 
 ## 构建与版本策略
 
@@ -276,7 +275,7 @@ hugo --gc --minify
 - 不再维护 `.gitmodules`，部署平台 clone 主仓库后即可拿到主题文件。
 - 主题 JS 源码位于 `themes/aether/src/js/`；修改后先执行 `npm ci --prefix themes/aether --include=dev`，再执行 `npm run build --prefix themes/aether`。`assets/js/theme.min.js`、source map、`assets/sw.min.js` 及 source map 均为临时生成物，不要手动提交；`themes/aether/package.json` 中不再保留 `--source=exampleSite` 类独立示例站脚本。
 - 评论功能目前以 Giscus 为唯一启用方案；`themes/aether/assets/lib/gitalk/`、`valine/`、`waline/`、`twikoo/`、`vssue/` 已删除，除非同步恢复资源或改用 CDN，否则不要打开这些历史评论 provider。
-- Twemoji、LightGallery 与 CookieConsent 当前均为关闭状态；对应本地库已删除，重新打开 `params.page.twemoji`、`params.page.lightgallery` 或 `params.cookieconsent.enable` 前需先恢复本地资源或配置 CDN。
+- Twemoji 与 CookieConsent 当前为关闭状态；对应本地库已删除，重新打开 `params.page.twemoji` 或 `params.cookieconsent.enable` 前需先恢复本地资源或配置 CDN。
 - `themes/aether/exampleSite/` 已删除；部署、预览与 README 均以仓库根目录站点为准，不依赖主题示例站。
 - 不再把 `themes/aether/` 作为独立 Hugo 主题发布，因此已移除主题商店展示用的 `themes/aether/images/screenshot.png` 与 `themes/aether/images/tn.png`，后续截图请使用本站实际页面。
 - 如果后续需要把主题重新发布为独立项目，再从 `themes/aether/` 拆分出去并补齐示例站、主题截图和贡献流程即可。

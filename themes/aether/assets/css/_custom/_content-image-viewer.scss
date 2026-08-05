@@ -1,0 +1,51 @@
+// Unified PhotoSwipe affordance for ordinary article images.
+
+.single .content .content-image-viewer__item {
+  display: inline-block;
+  border-bottom: 0;
+  cursor: zoom-in;
+  line-height: 0;
+}
+
+.single .content .content-image-viewer__item img {
+  transition: transform var(--motion-normal) var(--motion-ease), filter var(--motion-normal) var(--motion-ease);
+}
+
+.single .content .content-image-viewer__item:hover img,
+.single .content .content-image-viewer__item:focus-visible img {
+  transform: scale(1.008);
+  filter: brightness(.985);
+}
+
+.pswp__custom-caption {
+  width: 80vw;
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: .55rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--overlay);
+  color: var(--on-overlay);
+  font-size: .875rem;
+  line-height: 1.5;
+  text-align: center;
+  pointer-events: none;
+}
+
+.pswp__custom-caption[hidden] {
+  display: none;
+}
+
+.pswp__button--close {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .single .content .content-image-viewer__item img,
+  .single .content .content-image-viewer__item:hover img,
+  .single .content .content-image-viewer__item:focus-visible img {
+    transform: none;
+    filter: none;
+    transition: none;
+  }
+}

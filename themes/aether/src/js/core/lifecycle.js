@@ -7,6 +7,7 @@
     const features = [
         modules.navigation,
         modules.search,
+        modules.contentImageViewer,
         modules.contentEnhancements,
         modules.toc,
         modules.comments,

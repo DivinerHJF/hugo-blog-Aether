@@ -45,23 +45,13 @@
     {{- $config = dict "twemoji" true | merge $config -}}
 {{- end -}}
 
-{{- /* lightgallery.js */ -}}
-{{- if $params.lightgallery -}}
-    {{- $source := $cdn.lightgalleryCSS | default "lib/lightgallery/lightgallery.min.css" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxStyle.html" -}}
-    {{- $source := $cdn.lightgalleryJS | default "lib/lightgallery/lightgallery.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
-    {{- $source := $cdn.lightgalleryThumbnailJS | default "lib/lightgallery/lg-thumbnail.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
-    {{- $source := $cdn.lightgalleryZoomJS | default "lib/lightgallery/lg-zoom.min.js" -}}
-    {{- dict "Source" $source "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxScript.html" -}}
-    {{- $config = dict "selector" ".lightgallery" "speed" 400 "hideBarsDelay" 2000 "thumbnail" true "exThumbImage" "data-thumbnail" "thumbWidth" 80 "thumbContHeight" 80 "actualSize" false | dict "lightGallery" | merge $config -}}
-{{- end -}}
-
-{{- /* PhotoSwipe for Footprint Travel only */ -}}
 {{- $footprintCategory := .Params.category | default "" -}}
 {{- $isFootprintYear := or (eq .Layout "footprint-year") (eq .Params.layout "footprint-year") -}}
-{{- if and $isFootprintYear (eq $footprintCategory "travel") -}}
+{{- $isFootprintTravel := and $isFootprintYear (eq $footprintCategory "travel") -}}
+{{- $enableContentImageViewer := and (eq .Kind "page") (not $isFootprintTravel) -}}
+{{- $enablePhotoSwipe := or $enableContentImageViewer $isFootprintTravel -}}
+{{- if $enablePhotoSwipe -}}
+    {{- /* PhotoSwipe is shared by article images and the travel filmstrip. */ -}}
     {{- dict "Source" "lib/photoswipe/photoswipe.css" "Fingerprint" $fingerprint | dict "Scratch" .Scratch "Data" | partial "scratch/pjaxStyle.html" -}}
     {{- $photoswipeLightbox := resources.Get "lib/photoswipe/photoswipe-lightbox.esm.min.js" -}}
     {{- $photoswipeCore := resources.Get "lib/photoswipe/photoswipe.esm.min.js" -}}
@@ -69,7 +59,14 @@
         {{- $photoswipeLightbox = $photoswipeLightbox | fingerprint . -}}
         {{- $photoswipeCore = $photoswipeCore | fingerprint . -}}
     {{- end -}}
-    {{- $config = dict "enabled" true "lightboxModuleURL" $photoswipeLightbox.RelPermalink "coreModuleURL" $photoswipeCore.RelPermalink | dict "footprintGallery" | merge $config -}}
+    {{- $photoSwipeConfig := dict "lightboxModuleURL" $photoswipeLightbox.RelPermalink "coreModuleURL" $photoswipeCore.RelPermalink -}}
+    {{- $config = dict "photoSwipe" $photoSwipeConfig | merge $config -}}
+    {{- if $enableContentImageViewer -}}
+        {{- $config = dict "enabled" true | dict "contentImageViewer" | merge $config -}}
+    {{- end -}}
+    {{- if $isFootprintTravel -}}
+        {{- $config = dict "enabled" true | dict "footprintGallery" | merge $config -}}
+    {{- end -}}
 {{- end -}}
 
 {{- $code := $params.code | default dict -}}

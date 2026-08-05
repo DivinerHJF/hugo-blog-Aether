@@ -1,29 +1,36 @@
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)),
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(2)) {
   column-count: 2;
   column-gap: 8px;
   margin: 6px 0;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(3)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(3)),
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(3)) {
   column-count: 3;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(4)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(4)),
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(4)) {
   column-count: 4;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(5)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(5)),
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(5)) {
   column-count: 5;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)) {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)),
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(6)) {
   column-count: 4;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)) img {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(2)) img,
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(2)) .content-image-viewer__item {
   display: inherit;
 }
 
-.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)) img {
+.content:not([data-footprint-layout="footprint-year"]) p:has(> img:nth-child(6)) img,
+.content:not([data-footprint-layout="footprint-year"]) p:has(> .content-image-viewer__item:nth-child(6)) .content-image-viewer__item {
   margin-bottom: 8px;
 }
