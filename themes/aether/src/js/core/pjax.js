@@ -14,6 +14,30 @@
         '.search-dropdown',
     ];
 
+    function focusMain() {
+        const main = document.querySelector('main');
+        if (!main) return;
+        main.setAttribute('tabindex', '-1');
+        try {
+            main.focus({ preventScroll: true });
+        } catch (error) {
+            main.focus();
+        }
+    }
+
+    function announceRoute(context) {
+        const announcer = document.getElementById('route-announcer');
+        if (!announcer) return;
+        const title = document.querySelector('.pjax-title');
+        const message = title && title.textContent.trim() ? `已进入：${title.textContent.trim()}` : '页面已更新';
+        announcer.textContent = '';
+        if (context.state.announcementTimer) root.clearTimeout(context.state.announcementTimer);
+        context.state.announcementTimer = root.setTimeout(() => {
+            announcer.textContent = message;
+            context.state.announcementTimer = null;
+        }, 50);
+    }
+
     modules.pjax = {
         name: 'pjax',
         init(context) {
@@ -22,7 +46,13 @@
                 return noop;
             }
 
-            const pjax = new root.Pjax({ selectors });
+            const pjax = new root.Pjax({
+                selectors,
+                // New links go to the top, popstate restores history, and Pjax
+                // handles a URL hash by scrolling to its target element.
+                scrollTo: true,
+                scrollRestoration: true,
+            });
             const onSend = () => {
                 if (context.pageContext && context.pageContext.emit) {
                     context.pageContext.emit(context.pageContext.events.pjaxSend);
@@ -33,6 +63,8 @@
             };
             const onSuccess = () => {
                 if (typeof context.onPageSuccess === 'function') context.onPageSuccess();
+                focusMain();
+                announceRoute(context);
             };
 
             context.listen(document, 'pjax:send', onSend);
@@ -55,6 +87,7 @@
             }
 
             return () => {
+                if (context.state.announcementTimer) root.clearTimeout(context.state.announcementTimer);
                 if (pjax && typeof pjax.destroy === 'function') pjax.destroy();
             };
         },
