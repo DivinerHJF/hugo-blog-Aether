@@ -94,43 +94,62 @@
   color: var(--ink);
 }
 
-/* --- 标签美化 CSS 代码 (紧凑版) --- */
+.archive-item-content {
+  min-width: 0;
+}
 
 .archive-item-tags {
-    margin-left: 0.8em; /* 您可以调整这个数值来改变距离 */
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .25rem;
+  margin-left: .8em;
+  vertical-align: middle;
 }
 
-/* 标签徽章的基础样式 */
-.archive-item-tags a {
-    display: inline-block;
-    padding: 1px 5px;      /* 减小了内边距，让背景块更紧凑 */
-    margin: 0 1px 1px 0;   /* 徽章之间的间距 */
-    border-radius: 10px;   /* 稍微减小圆角以匹配新的尺寸 */
-    font-size: 0.7em;     /* 字体大小 */
-    line-height: 1.5;      /* 增加行高改善垂直居中感 */
-    color: var(--on-tag) !important;/* 文字颜色 */
-    text-decoration: none;
-    border-radius: var(--radius-pill);
-    transition: transform var(--motion-fast) var(--motion-ease), box-shadow var(--motion-fast) var(--motion-ease);
-}
+.archive-item-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: .1rem .4rem;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: .7em;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: color var(--motion-fast) var(--motion-ease), background-color var(--motion-fast) var(--motion-ease), border-color var(--motion-fast) var(--motion-ease), transform var(--motion-fast) var(--motion-ease);
 
-.archive-item-tags a:hover:not(:focus-visible) {
+  &::before {
+    content: "#";
+    margin-right: .08em;
+    color: var(--accent);
+  }
+
+  &:hover:not(:focus-visible) {
+    color: var(--interactive);
+    background: var(--interactive-soft);
+    border-color: var(--interactive-border);
     transform: translateY(-1px);
-}
+  }
 
-.archive-item-tags a:focus-visible {
+  &:focus-visible {
     outline: none;
-    border-radius: var(--radius-pill);
     box-shadow: var(--focus-ring);
     transform: none;
+  }
 }
 
-/* 颜色部分保持不变 */
-.archive-item-tags a:nth-child(5n + 1) { background-color: #7ab5d8; }
-.archive-item-tags a:nth-child(5n + 2) { background-color: #82c9a1; }
-.archive-item-tags a:nth-child(5n + 3) { background-color: #f2a063; }
-.archive-item-tags a:nth-child(5n + 4) { background-color: #d87a7a; }
-.archive-item-tags a:nth-child(5n + 5) { background-color: #a881c2; }
+.archive-item-tags-more {
+  display: inline-flex;
+  align-items: center;
+  padding: .1rem 0;
+  color: var(--muted);
+  font-size: .7em;
+  line-height: 1.5;
+  white-space: nowrap;
+  cursor: help;
+}
 
 .archive-item-date {
   width: 6em;

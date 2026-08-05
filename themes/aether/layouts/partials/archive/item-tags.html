@@ -1,0 +1,24 @@
+{{- with .tags -}}
+    {{- $tags := . -}}
+    <span class="archive-item-tags" aria-label="文章标签">
+        {{- range first 3 $tags -}}
+            {{- $tag := . -}}
+            <a
+                class="archive-item-tag"
+                href="{{ (printf "tags/%s" ($tag | urlize)) | relLangURL }}"
+                aria-label="标签：{{ $tag }}"
+            >
+                {{- $tag -}}
+            </a>
+        {{- end -}}
+        {{- if gt (len $tags) 3 -}}
+            <span
+                class="archive-item-tags-more"
+                title="{{ delimit (after 3 $tags) "、" }}"
+                aria-label="另有 {{ sub (len $tags) 3 }} 个标签"
+            >
+                +{{ sub (len $tags) 3 }}
+            </span>
+        {{- end -}}
+    </span>
+{{- end -}}
