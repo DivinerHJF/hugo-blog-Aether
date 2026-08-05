@@ -26,6 +26,8 @@ static/                          # 不经 Hugo 资源管线的站点静态文件
 
 组件应优先消费语义变量，不再为 Dark 和 Black 复制整段样式。
 
+颜色和表面只使用 `_tokens.scss` 中的语义变量，例如 `--ink`、`--muted`、`--border`、`--accent` 和 `--interactive`。旧的 `--color-*` 兼容别名已经移除；`npm run check:tokens --prefix themes/aether` 会扫描主题源码并阻止它们重新进入。
+
 ## JavaScript 入口与生命周期
 
 主题 JS 从 `themes/aether/src/js/theme.js` 进入，功能模块位于：

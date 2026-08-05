@@ -208,7 +208,7 @@ header {
 
       a.active {
         font-weight: 900;
-        color: var(--color-accent);
+        color: var(--accent);
       }
     }
   }
@@ -434,7 +434,7 @@ header {
       padding: .5rem 1rem;
       float: right;
       font-size: .8rem;
-      color: var(--color-muted);
+      color: var(--muted);
 
       @include link(false, false);
 
