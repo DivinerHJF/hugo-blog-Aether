@@ -54,12 +54,16 @@
 
 .footprint-year-table-wrapper {
   margin: 0;
+  border: 2px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: transparent;
 }
 
 .footprint-page .content .table-wrapper > table.footprint-year-table {
   width: 100%;
   min-width: 640px;
-  border: 1px solid var(--border-strong);
+  margin: 0;
+  border: 0;
   background: transparent;
   box-shadow: none;
   color: var(--ink);
@@ -76,7 +80,7 @@
 
 .footprint-page .content .table-wrapper > table.footprint-year-table thead {
   background: var(--surface-soft);
-  border-bottom: 1px solid var(--border-strong);
+  border-bottom: 2px solid var(--border-strong);
 }
 
 .footprint-page .content .table-wrapper > table.footprint-year-table th {
