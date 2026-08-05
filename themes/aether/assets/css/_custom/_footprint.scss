@@ -52,70 +52,55 @@
   padding-bottom: .25rem;
 }
 
-.footprint-year-heading {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 1rem;
-  min-width: 640px;
-  margin-bottom: .45rem;
-
-  h2 {
-    margin: 0;
-    font-size: 1.08rem;
-    color: var(--ink);
-  }
-}
-
-.footprint-kicker {
-  color: var(--muted);
-  font-size: .68rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-}
-
 .footprint-year-table-wrapper {
   margin: 0;
 }
 
-.footprint-year-table {
+.footprint-page .content .table-wrapper > table.footprint-year-table {
   width: 100%;
   min-width: 640px;
-  border-collapse: collapse;
-  border: 1.5px solid var(--border-strong);
-  background: var(--surface-card);
-  box-shadow: var(--shadow-card);
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  box-shadow: none;
   color: var(--ink);
   font-size: .82rem;
   line-height: 1.45;
 }
 
-.footprint-year-table th,
-.footprint-year-table td {
+.footprint-page .content .table-wrapper > table.footprint-year-table th,
+.footprint-page .content .table-wrapper > table.footprint-year-table td {
   border: 1px solid var(--border-subtle);
   padding: .32rem .58rem;
   vertical-align: top;
 }
 
-.footprint-year-table th {
+.footprint-page .content .table-wrapper > table.footprint-year-table thead {
+  background: var(--surface-soft);
+  border-bottom: 1px solid var(--border-strong);
+}
+
+.footprint-page .content .table-wrapper > table.footprint-year-table th {
   font-weight: 700;
   text-align: center;
-  background: var(--surface-card-raised);
   color: var(--ink);
 }
 
-.footprint-year-table .footprint-month {
+.footprint-page .content .table-wrapper > table.footprint-year-table th.footprint-activity {
+  text-align: start;
+}
+
+.footprint-page .content .table-wrapper > table.footprint-year-table .footprint-month {
   width: 4.4rem;
   text-align: center;
   font-weight: 700;
 }
 
-.footprint-year-table .footprint-city {
+.footprint-page .content .table-wrapper > table.footprint-year-table .footprint-city {
   width: 5.1rem;
   text-align: center;
 }
 
-.footprint-empty-month td {
+.footprint-page .content .table-wrapper > table.footprint-year-table .footprint-empty-month td {
   height: 1.65rem;
 }
 
@@ -124,6 +109,31 @@
 }
 
 @media (max-width: 720px) {
+  .footprint-year-card {
+    overflow-x: visible;
+    padding-bottom: 0;
+  }
+
+  .footprint-page .content .table-wrapper > table.footprint-year-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+
+  .footprint-page .content .table-wrapper > table.footprint-year-table th,
+  .footprint-page .content .table-wrapper > table.footprint-year-table td {
+    padding-right: .4rem;
+    padding-left: .4rem;
+    overflow-wrap: anywhere;
+  }
+
+  .footprint-page .content .table-wrapper > table.footprint-year-table .footprint-month {
+    width: 3.7rem;
+  }
+
+  .footprint-page .content .table-wrapper > table.footprint-year-table .footprint-city {
+    width: 4.4rem;
+  }
+
   .footprint-topbar {
     display: block;
   }
