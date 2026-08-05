@@ -59,7 +59,7 @@
 .footprint-page .content .table-wrapper > table.footprint-year-table {
   width: 100%;
   min-width: 640px;
-  border: 1px solid var(--border-subtle);
+  border: 1px solid var(--border-strong);
   background: transparent;
   box-shadow: none;
   color: var(--ink);
@@ -76,6 +76,7 @@
 
 .footprint-page .content .table-wrapper > table.footprint-year-table thead {
   background: var(--surface-soft);
+  border-bottom: 1px solid var(--border-strong);
 }
 
 .footprint-page .content .table-wrapper > table.footprint-year-table th {
