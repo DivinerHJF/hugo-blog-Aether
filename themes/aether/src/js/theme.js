@@ -22,8 +22,6 @@
         appContext.pageContext = pageContext;
         utils.safeInit('page config', modules.config.init, pageContext);
         utils.safeInit('page lifecycle', modules.lifecycle.init, pageContext);
-        utils.safeInit('tag explorer', modules.tagExplorer.init, pageContext);
-        utils.safeInit('footprint gallery', modules.footprintGallery.init, pageContext);
     }
 
     appContext.onPageSend = destroyPage;

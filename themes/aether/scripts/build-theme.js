@@ -11,9 +11,15 @@ const sourceMapFile = `${outputFile}.map`;
 const modules = [
     'core/events.js',
     'core/config.js',
-    'core/lifecycle.js',
+    'features/navigation.js',
+    'features/search.js',
+    'features/content-enhancements.js',
+    'features/toc.js',
+    'features/comments.js',
+    'features/integrations.js',
     'features/tag-explorer.js',
     'features/footprint-gallery.js',
+    'core/lifecycle.js',
     'core/pjax.js',
     'theme.js',
 ];
