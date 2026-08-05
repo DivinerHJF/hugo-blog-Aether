@@ -47,18 +47,13 @@
                 </section>
             {{- else -}}
                 <section class="footprint-year-card" aria-label="年度概览">
-                    <div class="footprint-year-heading">
-                        <span class="footprint-kicker">Annual dossier</span>
-                        <h2>{{ $data.title | default .Title }}</h2>
-                    </div>
-
                     <div class="table-wrapper footprint-year-table-wrapper">
                         <table class="footprint-year-table">
                             <thead>
                                 <tr>
                                     <th>月份</th>
                                     <th>城市</th>
-                                    <th>活动</th>
+                                    <th class="footprint-activity">活动</th>
                                 </tr>
                             </thead>
                             <tbody>
