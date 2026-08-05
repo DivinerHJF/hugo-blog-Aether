@@ -29,9 +29,9 @@
         function setTheme(theme) {document.body.setAttribute('theme', theme);}
         function saveTheme(theme) {window.localStorage && localStorage.setItem('theme', theme);}
         function getMeta(metaName) {const metas = document.getElementsByTagName('meta'); for (let i = 0; i < metas.length; i++) if (metas[i].getAttribute('name') === metaName) return metas[i]; return '';}
+        function setThemeColorMeta(theme) {const meta = getMeta('theme-color'); if (!meta) return; const color = meta.getAttribute('data-theme-' + theme) || meta.getAttribute('data-theme-light'); if (color) meta.content = color;}
         if (window.localStorage && localStorage.getItem('theme')) {let theme = localStorage.getItem('theme');theme === 'light' || theme === 'dark' || theme === 'black' ? setTheme(theme) : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light')); } else { if ('{{ $theme }}' === 'light' || '{{ $theme }}' === 'dark' || '{{ $theme }}' === 'black') setTheme('{{ $theme }}'), saveTheme('{{ $theme }}'); else saveTheme('auto'), window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? setTheme('dark') : setTheme('light');}
-        let themeColorMeta = getMeta('theme-color');
-        if (document.body.getAttribute('theme') != 'light') themeColorMeta.content = '#000000';
+        setThemeColorMeta(document.body.getAttribute('theme'));
     </script>
     <div id="back-to-top"></div>
     <div id="mask"></div>

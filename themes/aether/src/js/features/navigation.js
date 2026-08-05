@@ -65,7 +65,11 @@
     function initMeta(context) {
         const meta = document.querySelector('meta[name="theme-color"]');
         if (!meta) return utils.noop;
-        const update = () => { meta.content = context.state.isDark ? '#000000' : '#ffffff'; };
+        const update = () => {
+            const theme = document.body.getAttribute('theme') || 'light';
+            const color = meta.getAttribute(`data-theme-${theme}`) || meta.getAttribute('data-theme-light');
+            if (color) meta.content = color;
+        };
         context.events.theme.add(update);
         update();
         return () => context.events.theme.delete(update);
