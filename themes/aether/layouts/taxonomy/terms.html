@@ -114,27 +114,12 @@
         {{- /* 标签索引页 */ -}}
         {{- else if eq $taxonomies "tags" -}}
             {{- $tags := $.Site.Taxonomies.tags.ByCount -}}
-            {{- $totalRefs := 0 -}}
-            {{- range $tags -}}
-                {{- $totalRefs = add $totalRefs .Count -}}
-            {{- end -}}
             {{- $maxCount := 1 -}}
             {{- with index $tags 0 -}}
                 {{- $maxCount = .Count -}}
             {{- end -}}
 
             <section class="tag-explorer" aria-label="标签索引">
-                <header class="tag-index-heading">
-                    <p class="tag-explorer-description">
-                        输入关键词筛选标签，或按文章数量浏览；每个条目列出最近文章。
-                    </p>
-                    <p class="tag-explorer-summary" aria-label="标签统计">
-                        <strong>{{ len $tags }}</strong> 个标签 ·
-                        <strong>{{ $totalRefs }}</strong> 次引用 ·
-                        最高热度 <strong>{{ $maxCount }}</strong>
-                    </p>
-                </header>
-
                 <p class="tag-explorer-status" data-tag-enhancement-status>筛选功能加载中，未启用时可直接浏览全部标签。</p>
 
                 <div class="tag-explorer-controls" data-enhanced="false" aria-disabled="true">
