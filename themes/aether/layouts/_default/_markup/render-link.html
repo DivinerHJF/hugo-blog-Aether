@@ -2,5 +2,27 @@
 {{- with dict "Path" $destination "Resources" .Page.Resources | partial "function/resource.html" -}}
     {{- $destination = .RelPermalink -}}
 {{- end -}}
-{{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
-{{- partial "plugin/link.html" $options -}}
+{{- $parsed := urls.Parse $destination -}}
+{{- $host := lower $parsed.Host -}}
+{{- $platform := dict -}}
+{{- $platformLinks := index site.Data "platformLinks" -}}
+{{- if not $platformLinks -}}
+    {{- $platformLinks = index site.Data "platform-links" -}}
+{{- end -}}
+{{- range $key, $item := $platformLinks -}}
+    {{- if in $item.hosts $host -}}
+        {{- $platform = merge (dict "key" $key) $item -}}
+    {{- end -}}
+{{- end -}}
+
+{{- if $platform -}}
+    <a href="{{ $destination | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ with $host }} target="_blank" rel="noopener noreferrer"{{ end }} class="platform-link platform-link--{{ $platform.key }}">
+        <span class="platform-link__icon" aria-hidden="true">
+            {{- partial "plugin/platform-icon.html" $platform.icon -}}
+        </span>
+        <span class="platform-link__text">{{ .Text | safeHTML }}</span>
+    </a>
+{{- else -}}
+    {{- $options := dict "Destination" $destination "Title" .Title "Content" .Text -}}
+    {{- partial "plugin/link.html" $options -}}
+{{- end -}}
