@@ -1,7 +1,10 @@
 // Unified PhotoSwipe affordance for ordinary article images.
 
 .single .content .content-image-viewer__item {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  margin-inline: auto;
   border-bottom: 0;
   cursor: zoom-in;
   line-height: 0;
@@ -160,9 +163,14 @@
   text-align: center;
   pointer-events: none;
   display: -webkit-box;
+  visibility: hidden;
   overflow: hidden;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+}
+
+.aether-pswp .pswp__custom-caption--positioned {
+  visibility: visible;
 }
 
 // The original caption remains in the article for normal reading. While the
