@@ -221,9 +221,9 @@
     }
 
     function positionCaption(element, pswp) {
-        if (!element || element.hidden || !pswp || !pswp.element) return;
+        if (!element || element.hidden || !pswp || !pswp.element) return false;
         const image = pswp.element.querySelector('.pswp__item[aria-hidden="false"] .pswp__img') || pswp.element.querySelector('.pswp__img');
-        if (!image) return;
+        if (!image) return false;
 
         const rootRect = pswp.element.getBoundingClientRect();
         const imageRect = image.getBoundingClientRect();
@@ -235,7 +235,7 @@
             Math.max(0, rootRect.width - (safeInline * 2)),
         );
         const captionWidth = Math.min(imageRect.width, maxCaptionWidth);
-        if (!rootRect.width || !imageRect.width || !captionWidth) return;
+        if (!rootRect.width || !imageRect.width || !captionWidth) return false;
 
         const imageCenter = imageRect.left - rootRect.left + (imageRect.width / 2);
         const minLeft = safeInline;
@@ -256,7 +256,7 @@
         element.style.transform = 'none';
 
         const captionRect = element.getBoundingClientRect();
-        if (!rootRect.height || !imageRect.height || !captionRect.height) return;
+        if (!rootRect.height || !imageRect.height || !captionRect.height) return false;
 
         const gap = 12;
         const safeTop = 12;
@@ -279,6 +279,8 @@
             element.style.top = 'auto';
             element.style.bottom = 'var(--aether-pswp-caption-safe-bottom)';
         }
+
+        return true;
     }
 
     function registerCaption(lightbox) {
@@ -293,35 +295,54 @@
                 onInit: (element, pswp) => {
                     element.className = 'pswp__custom-caption';
                     element.setAttribute('aria-live', 'polite');
+                    element.setAttribute('aria-hidden', 'true');
                     let frame = 0;
+                    let revealWhenPositioned = false;
+                    let openingComplete = false;
+                    const setPositioned = positioned => {
+                        element.classList.toggle('pswp__custom-caption--positioned', positioned);
+                        element.setAttribute('aria-hidden', positioned ? 'false' : 'true');
+                    };
                     const cancelFrame = () => {
                         if (!frame) return;
                         if (typeof root.cancelAnimationFrame === 'function') root.cancelAnimationFrame(frame);
                         else root.clearTimeout(frame);
                         frame = 0;
                     };
-                    const schedulePosition = () => {
-                        if (frame || element.hidden) return;
+                    const schedulePosition = reveal => {
+                        if (element.hidden) return;
+                        revealWhenPositioned = revealWhenPositioned || Boolean(reveal);
+                        if (frame) return;
                         const updatePosition = () => {
                             frame = 0;
-                            positionCaption(element, pswp);
+                            const shouldReveal = revealWhenPositioned;
+                            revealWhenPositioned = false;
+                            if (positionCaption(element, pswp) && shouldReveal) setPositioned(true);
                         };
                         frame = typeof root.requestAnimationFrame === 'function'
                             ? root.requestAnimationFrame(updatePosition)
                             : root.setTimeout(updatePosition, 0);
                     };
                     const update = () => {
+                        cancelFrame();
+                        revealWhenPositioned = false;
                         const data = pswp.currSlide && pswp.currSlide.data;
                         const caption = data && data.title ? String(data.title).trim() : '';
+                        setPositioned(false);
                         element.textContent = caption;
                         element.hidden = !caption;
-                        schedulePosition();
+                        if (caption) schedulePosition(openingComplete);
                     };
+                    const finishOpening = () => {
+                        openingComplete = true;
+                        schedulePosition(true);
+                    };
+                    const reposition = () => schedulePosition(false);
                     pswp.on('change', update);
-                    pswp.on('resize', schedulePosition);
-                    pswp.on('zoomPanUpdate', schedulePosition);
-                    pswp.on('initialZoomInEnd', schedulePosition);
-                    pswp.on('openingAnimationEnd', schedulePosition);
+                    pswp.on('resize', reposition);
+                    pswp.on('zoomPanUpdate', reposition);
+                    pswp.on('initialZoomInEnd', finishOpening);
+                    pswp.on('openingAnimationEnd', finishOpening);
                     pswp.on('destroy', cancelFrame);
                     update();
                 },
