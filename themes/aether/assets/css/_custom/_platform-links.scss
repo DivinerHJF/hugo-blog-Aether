@@ -30,24 +30,6 @@
   }
 }
 
-.single .content blockquote > p:has(> .platform-link:only-child) {
-  margin: 0;
-}
-
-.single .content blockquote > p > .platform-link:only-child {
-  align-items: center;
-  gap: .42rem;
-  padding: .28rem .48rem;
-  border-radius: var(--radius-sm);
-  color: var(--interactive);
-  font-weight: 550;
-  text-decoration: none;
-}
-
-.single .content blockquote > p > .platform-link:only-child:hover {
-  background: var(--interactive-soft);
-}
-
 .single .content .platform-link:focus-visible {
   border-radius: var(--radius-sm);
   box-shadow: var(--focus-ring);
