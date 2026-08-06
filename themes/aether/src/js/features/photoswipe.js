@@ -220,6 +220,39 @@
         };
     }
 
+    function positionCaption(element, pswp) {
+        if (!element || element.hidden || !pswp || !pswp.element) return;
+        const image = pswp.element.querySelector('.pswp__item[aria-hidden="false"] .pswp__img') || pswp.element.querySelector('.pswp__img');
+        if (!image) return;
+
+        const rootRect = pswp.element.getBoundingClientRect();
+        const imageRect = image.getBoundingClientRect();
+        const captionRect = element.getBoundingClientRect();
+        if (!rootRect.height || !imageRect.height || !captionRect.height) return;
+
+        const gap = 12;
+        const safeTop = 12;
+        const safeBottom = root.matchMedia && root.matchMedia('(max-width: 680px)').matches ? 16 : 18;
+        const imageBottom = imageRect.bottom - rootRect.top;
+        const imageTop = imageRect.top - rootRect.top;
+        const desiredTop = imageBottom + gap;
+        const maxTop = rootRect.height - safeBottom - captionRect.height;
+        const topSpace = imageTop - captionRect.height - gap;
+
+        if (desiredTop <= maxTop) {
+            element.style.top = `${desiredTop}px`;
+            element.style.bottom = 'auto';
+        } else if (topSpace >= safeTop) {
+            element.style.top = `${topSpace}px`;
+            element.style.bottom = 'auto';
+        } else {
+            // Very tall images leave no room below or above. Keep the caption in
+            // the safe bottom area instead of letting it leave the viewport.
+            element.style.top = 'auto';
+            element.style.bottom = 'var(--aether-pswp-caption-safe-bottom)';
+        }
+    }
+
     function registerCaption(lightbox) {
         lightbox.on('uiRegister', () => {
             if (!lightbox.pswp || !lightbox.pswp.ui) return;
@@ -232,17 +265,46 @@
                 onInit: (element, pswp) => {
                     element.className = 'pswp__custom-caption';
                     element.setAttribute('aria-live', 'polite');
+                    let frame = 0;
+                    const cancelFrame = () => {
+                        if (!frame) return;
+                        if (typeof root.cancelAnimationFrame === 'function') root.cancelAnimationFrame(frame);
+                        else root.clearTimeout(frame);
+                        frame = 0;
+                    };
+                    const schedulePosition = () => {
+                        if (frame || element.hidden) return;
+                        const updatePosition = () => {
+                            frame = 0;
+                            positionCaption(element, pswp);
+                        };
+                        frame = typeof root.requestAnimationFrame === 'function'
+                            ? root.requestAnimationFrame(updatePosition)
+                            : root.setTimeout(updatePosition, 0);
+                    };
                     const update = () => {
                         const data = pswp.currSlide && pswp.currSlide.data;
                         const caption = data && data.title ? String(data.title).trim() : '';
                         element.textContent = caption;
                         element.hidden = !caption;
+                        schedulePosition();
                     };
                     pswp.on('change', update);
+                    pswp.on('resize', schedulePosition);
+                    pswp.on('zoomPanUpdate', schedulePosition);
+                    pswp.on('initialZoomInEnd', schedulePosition);
+                    pswp.on('openingAnimationEnd', schedulePosition);
+                    pswp.on('destroy', cancelFrame);
                     update();
                 },
             });
         });
+    }
+
+    function setPhotoViewerOpen(isOpen) {
+        if (document.documentElement) {
+            document.documentElement.classList.toggle('aether-photo-viewer-open', isOpen);
+        }
     }
 
     function createLightbox(context, options, configure) {
@@ -279,6 +341,9 @@
                 zoomTitle: '缩放',
             }, options || {}));
             registerCaption(lightbox);
+            lightbox.on('beforeOpen', () => setPhotoViewerOpen(true));
+            lightbox.on('close', () => setPhotoViewerOpen(false));
+            lightbox.on('destroy', () => setPhotoViewerOpen(false));
             if (typeof configure === 'function') configure(lightbox);
             applyLightboxAppearance(lightbox);
             if (context && context.events && context.events.theme) {
