@@ -1,0 +1,96 @@
+x:
+  hosts:
+    - x.com
+    - www.x.com
+    - twitter.com
+    - www.twitter.com
+    - mobile.twitter.com
+  title: X
+  icon:
+    src: svg/icons/x.svg
+
+github:
+  hosts:
+    - github.com
+    - www.github.com
+  title: GitHub
+  icon:
+    class: fab fa-github
+
+douban:
+  hosts:
+    - douban.com
+    - www.douban.com
+    - book.douban.com
+    - movie.douban.com
+  title: 豆瓣
+  icon:
+    class: fas fa-book-open
+
+wechat:
+  hosts:
+    - mp.weixin.qq.com
+    - weixin.qq.com
+    - wx.qq.com
+  title: 微信
+  icon:
+    class: fab fa-weixin
+
+bilibili:
+  hosts:
+    - bilibili.com
+    - www.bilibili.com
+    - b23.tv
+  title: 哔哩哔哩
+  icon:
+    src: svg/icons/bilibili.svg
+
+youtube:
+  hosts:
+    - youtube.com
+    - www.youtube.com
+    - youtu.be
+    - m.youtube.com
+  title: YouTube
+  icon:
+    class: fab fa-youtube
+
+zhihu:
+  hosts:
+    - zhihu.com
+    - www.zhihu.com
+    - zhuanlan.zhihu.com
+  title: 知乎
+  icon:
+    class: fab fa-zhihu
+
+podcast:
+  hosts:
+    - xiaoyuzhoufm.com
+    - www.xiaoyuzhoufm.com
+    - pod.link
+    - podcasts.apple.com
+  title: 播客
+  icon:
+    class: fas fa-podcast
+
+steam:
+  hosts:
+    - steampowered.com
+    - store.steampowered.com
+    - steamcommunity.com
+    - www.steampowered.com
+    - www.steamcommunity.com
+  title: Steam
+  icon:
+    class: fab fa-steam
+
+telegram:
+  hosts:
+    - t.me
+    - telegram.me
+    - telegram.org
+    - www.telegram.org
+  title: Telegram
+  icon:
+    class: fab fa-telegram-plane

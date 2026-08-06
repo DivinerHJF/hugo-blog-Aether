@@ -1,0 +1,9 @@
+{{- $class := index . "class" -}}
+{{- $src := index . "src" -}}
+{{- if $class -}}
+    {{- partial "plugin/icon.html" (dict "Class" $class) -}}
+{{- else if $src -}}
+    {{- with resources.Get $src -}}
+        {{- .Content | safeHTML -}}
+    {{- end -}}
+{{- end -}}
