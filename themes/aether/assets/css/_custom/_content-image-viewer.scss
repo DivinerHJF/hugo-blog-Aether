@@ -24,6 +24,7 @@
   --aether-pswp-control-hover: rgba(20, 22, 25, .68);
   --aether-pswp-caption-bg: rgba(20, 22, 25, .58);
   --aether-pswp-caption-color: rgba(255, 255, 255, .94);
+  --aether-pswp-caption-safe-bottom: 18px;
 }
 
 .aether-pswp--light {
@@ -163,6 +164,12 @@
   -webkit-line-clamp: 3;
 }
 
+// The original caption remains in the article for normal reading. While the
+// lightbox is open, the PhotoSwipe caption is the only visible copy.
+html.aether-photo-viewer-open .single .content figure .image-caption {
+  visibility: hidden;
+}
+
 .aether-pswp .pswp__custom-caption[hidden] {
   display: none;
 }
@@ -187,6 +194,11 @@
     left: 10px;
     width: auto;
     max-width: none;
+    transform: none;
+  }
+
+  .aether-pswp {
+    --aether-pswp-caption-safe-bottom: calc(16px + env(safe-area-inset-bottom));
   }
 }
 
