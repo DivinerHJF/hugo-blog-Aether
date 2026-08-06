@@ -227,12 +227,40 @@
 
         const rootRect = pswp.element.getBoundingClientRect();
         const imageRect = image.getBoundingClientRect();
+        const isMobile = root.matchMedia && root.matchMedia('(max-width: 680px)').matches;
+        const safeInline = isMobile ? 10 : 56;
+        const rootFontSize = parseFloat(root.getComputedStyle(document.documentElement).fontSize) || 16;
+        const maxCaptionWidth = Math.min(
+            44 * rootFontSize,
+            Math.max(0, rootRect.width - (safeInline * 2)),
+        );
+        const captionWidth = Math.min(imageRect.width, maxCaptionWidth);
+        if (!rootRect.width || !imageRect.width || !captionWidth) return;
+
+        const imageCenter = imageRect.left - rootRect.left + (imageRect.width / 2);
+        const minLeft = safeInline;
+        const maxLeft = rootRect.width - safeInline - captionWidth;
+        const captionLeft = Math.min(
+            Math.max(imageCenter - (captionWidth / 2), minLeft),
+            maxLeft,
+        );
+
+        // Use explicit geometry instead of transform-based centering. Motion
+        // preferences are then free to disable transforms without moving the
+        // caption, and narrow viewports stay aligned with the visible image.
+        element.style.right = 'auto';
+        element.style.left = `${captionLeft}px`;
+        element.style.width = `${captionWidth}px`;
+        element.style.maxWidth = 'none';
+        element.style.margin = '0';
+        element.style.transform = 'none';
+
         const captionRect = element.getBoundingClientRect();
         if (!rootRect.height || !imageRect.height || !captionRect.height) return;
 
         const gap = 12;
         const safeTop = 12;
-        const safeBottom = root.matchMedia && root.matchMedia('(max-width: 680px)').matches ? 16 : 18;
+        const safeBottom = isMobile ? 16 : 18;
         const imageBottom = imageRect.bottom - rootRect.top;
         const imageTop = imageRect.top - rootRect.top;
         const desiredTop = imageBottom + gap;

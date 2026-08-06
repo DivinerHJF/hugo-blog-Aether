@@ -143,14 +143,15 @@
 .aether-pswp .pswp__custom-caption {
   position: absolute;
   z-index: 2;
-  left: 50%;
+  right: 0;
+  left: 0;
   bottom: 18px;
-  width: calc(100vw - 112px);
+  width: calc(100% - 112px);
   max-width: 44rem;
   max-height: 4.5em;
-  margin: 0;
+  margin-inline: auto;
   padding: .45rem .8rem;
-  transform: translateX(-50%);
+  transform: none;
   border-radius: var(--radius-sm);
   background: var(--aether-pswp-caption-bg);
   color: var(--aether-pswp-caption-color);
@@ -194,6 +195,7 @@ html.aether-photo-viewer-open .single .content figure .image-caption {
     left: 10px;
     width: auto;
     max-width: none;
+    margin: 0;
     transform: none;
   }
 
@@ -207,10 +209,13 @@ html.aether-photo-viewer-open .single .content figure .image-caption {
   .single .content .content-image-viewer__item:hover img,
   .single .content .content-image-viewer__item:focus-visible img,
   .aether-pswp .pswp__button,
-  .aether-pswp .pswp__img,
-  .aether-pswp .pswp__custom-caption {
+  .aether-pswp .pswp__img {
     transform: none;
     filter: none;
+    transition: none !important;
+  }
+
+  .aether-pswp .pswp__custom-caption {
     transition: none !important;
   }
 
