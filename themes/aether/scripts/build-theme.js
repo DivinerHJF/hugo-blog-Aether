@@ -21,6 +21,7 @@ const modules = [
     'features/photoswipe.js',
     'features/content-image-viewer.js',
     'features/content-enhancements.js',
+    'features/article-navigation.js',
     'features/toc.js',
     'features/comments.js',
     'features/integrations.js',

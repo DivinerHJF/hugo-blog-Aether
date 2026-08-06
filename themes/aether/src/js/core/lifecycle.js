@@ -9,6 +9,7 @@
         modules.search,
         modules.contentImageViewer,
         modules.contentEnhancements,
+        modules.articleNavigation,
         modules.toc,
         modules.comments,
         modules.integrations,
