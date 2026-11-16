@@ -1,4 +1,4 @@
-baseURL = "https://philohao.com/"
+baseURL = "https://blog-archive.philohao.com/"
 title = "灿若星河 | 郝建锋"
 # Aether 主题已作为普通目录纳入本仓库（themes/aether），不再依赖 Git submodule。
 theme = "aether"
@@ -65,8 +65,8 @@ enablePWA = true
 [params.author]
 name = "Jianfeng.Hao"
 email = "haojianfeng1997@gmail.com"
-link = "https://philohao.com/"
-avatar = "https://philohao.com/images/me/logo.svg"
+link = "https://blog-archive.philohao.com/"
+avatar = "https://blog-archive.philohao.com/images/me/logo.svg"
 gravatarEmail = ""
 
 # 现代浏览器已原生支持 object-fit，未启用 [params.compatibility] objectFit。
@@ -257,8 +257,8 @@ sogou = ""
 yandex = ""
 
 [params.seo]
-image = "https://philohao.com/images/me/favicon.svg"
-thumbnailUrl = "https://philohao.com/images/me/favicon.svg"
+image = "https://blog-archive.philohao.com/images/me/favicon.svg"
+thumbnailUrl = "https://blog-archive.philohao.com/images/me/favicon.svg"
 
 [params.analytics]
 # 暂未配置统计 ID，默认关闭，避免加载无效脚本或误导维护者。
